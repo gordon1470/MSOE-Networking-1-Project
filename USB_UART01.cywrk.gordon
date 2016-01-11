@@ -191,6 +191,7 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\USB_UART01.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\USB_UART01.cydsn\main.c" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />
