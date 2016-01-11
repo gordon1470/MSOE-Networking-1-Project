@@ -1,6 +1,6 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2016-01-11T01:30:57Z")
+ (DATE "2016-01-11T20:19:27Z")
  (DESIGN "USB_UART01")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")
@@ -38,6 +38,7 @@
     (INTERCONNECT \\LCD\:LCDPort\(4\)_PAD\\ \\LCD\:LCDPort\(4\)\\.pad_in (0.000:0.000:0.000))
     (INTERCONNECT \\LCD\:LCDPort\(5\)_PAD\\ \\LCD\:LCDPort\(5\)\\.pad_in (0.000:0.000:0.000))
     (INTERCONNECT \\LCD\:LCDPort\(6\)_PAD\\ \\LCD\:LCDPort\(6\)\\.pad_in (0.000:0.000:0.000))
+    (INTERCONNECT TX_pin\(0\)_PAD TX_pin\(0\).pad_in (0.000:0.000:0.000))
    )
   )
  )

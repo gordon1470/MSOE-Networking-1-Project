@@ -26,6 +26,8 @@
 #include "USBUART_1_midi.h"
 #include "USBUART_1_pvt.h"
 #include "LCD.h"
+#include "TX_pin_aliases.h"
+#include "TX_pin.h"
 #include "USBUART_1_Dm_aliases.h"
 #include "USBUART_1_Dm.h"
 #include "USBUART_1_Dp_aliases.h"
