@@ -1,0 +1,1 @@
+'\\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\main.c' -o .o -T C_FILE -I '\\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn' -I '\\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\Generated_Source\PSoC5' -f '\\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\ARM_GCC_493\Debug\.deps\C_FILE.d'

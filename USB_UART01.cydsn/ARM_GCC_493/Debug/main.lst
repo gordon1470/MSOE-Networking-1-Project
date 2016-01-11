@@ -1,0 +1,1070 @@
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc23XBrZ.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"main.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global _printf_float
+  19              		.thumb
+  20              		.global	parity
+  21              		.section	.rodata
+  22              		.align	2
+  23              	.LC0:
+  24 0000 4E6F6E65 		.ascii	"None\000"
+  24      00
+  25 0005 000000   		.align	2
+  26              	.LC1:
+  27 0008 4F646400 		.ascii	"Odd\000"
+  28              		.align	2
+  29              	.LC2:
+  30 000c 4576656E 		.ascii	"Even\000"
+  30      00
+  31 0011 000000   		.align	2
+  32              	.LC3:
+  33 0014 4D61726B 		.ascii	"Mark\000"
+  33      00
+  34 0019 000000   		.align	2
+  35              	.LC4:
+  36 001c 53706163 		.ascii	"Space\000"
+  36      6500
+  37              		.data
+  38              		.align	2
+  39              		.type	parity, %object
+  40              		.size	parity, 20
+  41              	parity:
+  42 0000 00000000 		.word	.LC0
+  43 0004 08000000 		.word	.LC1
+  44 0008 0C000000 		.word	.LC2
+  45 000c 14000000 		.word	.LC3
+  46 0010 1C000000 		.word	.LC4
+  47              		.global	stop
+  48              		.section	.rodata
+  49 0022 0000     		.align	2
+  50              	.LC5:
+  51 0024 3100     		.ascii	"1\000"
+  52 0026 0000     		.align	2
+  53              	.LC6:
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc23XBrZ.s 			page 2
+
+
+  54 0028 312E3500 		.ascii	"1.5\000"
+  55              		.align	2
+  56              	.LC7:
+  57 002c 3200     		.ascii	"2\000"
+  58              		.data
+  59              		.align	2
+  60              		.type	stop, %object
+  61              		.size	stop, 12
+  62              	stop:
+  63 0014 24000000 		.word	.LC5
+  64 0018 28000000 		.word	.LC6
+  65 001c 2C000000 		.word	.LC7
+  66              		.section	.rodata
+  67 002e 0000     		.align	2
+  68              	.LC8:
+  69 0030 5553422D 		.ascii	"USB-UART example\000"
+  69      55415254 
+  69      20657861 
+  69      6D706C65 
+  69      00
+  70 0041 000000   		.align	2
+  71              	.LC9:
+  72 0044 42523A25 		.ascii	"BR:%4ld,DB:%d\000"
+  72      346C642C 
+  72      44423A25 
+  72      6400
+  73 0052 0000     		.align	2
+  74              	.LC10:
+  75 0054 20202020 		.ascii	"                    \000"
+  75      20202020 
+  75      20202020 
+  75      20202020 
+  75      20202020 
+  76 0069 000000   		.align	2
+  77              	.LC11:
+  78 006c 53423A25 		.ascii	"SB:%s,Parity:%s\000"
+  78      732C5061 
+  78      72697479 
+  78      3A257300 
+  79              		.align	2
+  80              	.LC12:
+  81 007c 4F4E00   		.ascii	"ON\000"
+  82 007f 00       		.align	2
+  83              	.LC13:
+  84 0080 4F464600 		.ascii	"OFF\000"
+  85              		.align	2
+  86              	.LC14:
+  87 0084 4454523A 		.ascii	"DTR:%s,RTS:%s\000"
+  87      25732C52 
+  87      54533A25 
+  87      7300
+  88 0092 0000     		.section	.text.main,"ax",%progbits
+  89              		.align	2
+  90              		.global	main
+  91              		.thumb
+  92              		.thumb_func
+  93              		.type	main, %function
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc23XBrZ.s 			page 3
+
+
+  94              	main:
+  95              	.LFB63:
+  96              		.file 1 ".\\main.c"
+   1:.\main.c      **** /*******************************************************************************
+   2:.\main.c      **** * File Name: main.c
+   3:.\main.c      **** *
+   4:.\main.c      **** * Version: 1.0
+   5:.\main.c      **** *
+   6:.\main.c      **** * Description:
+   7:.\main.c      **** *   Enumerates as a Virtual Com port.  Receives data from hyper terminal, then 
+   8:.\main.c      **** *   send received data backward. LCD shows the Line settings.
+   9:.\main.c      **** *   
+  10:.\main.c      **** *  To test project:
+  11:.\main.c      **** *   1. Build the project and program the hex file on to the target device.
+  12:.\main.c      **** *   2. Select 3.3V in SW3 and plug-in power to the CY8CKIT-001
+  13:.\main.c      **** *   3. Connect USB cable from the computer to the CY8CKIT-001.
+  14:.\main.c      **** *   4. Select the USB_UART.inf file from the project directory, as the driver 
+  15:.\main.c      **** *      for this example once Windows asks for it.
+  16:.\main.c      **** *   5. Open "Device Manager" and note the COM port number for "Example Project"
+  17:.\main.c      **** *      device.
+  18:.\main.c      **** *   6. Open "HyperTerminal" application and make new connection to noted COM port
+  19:.\main.c      **** *   7. Type the message, observe echo data received.
+  20:.\main.c      **** *
+  21:.\main.c      **** * Related Document:
+  22:.\main.c      **** *  Universal Serial Bus Specification Revision 2.0 
+  23:.\main.c      **** *  Universal Serial Bus Class Definitions for Communications Devices 
+  24:.\main.c      **** *  Revision 1.2
+  25:.\main.c      **** *
+  26:.\main.c      **** ********************************************************************************
+  27:.\main.c      **** * Copyright 2012, Cypress Semiconductor Corporation. All rights reserved.
+  28:.\main.c      **** * This software is owned by Cypress Semiconductor Corporation and is protected
+  29:.\main.c      **** * by and subject to worldwide patent and copyright laws and treaties.
+  30:.\main.c      **** * Therefore, you may use this software only as provided in the license agreement
+  31:.\main.c      **** * accompanying the software package from which you obtained this software.
+  32:.\main.c      **** * CYPRESS AND ITS SUPPLIERS MAKE NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+  33:.\main.c      **** * WITH REGARD TO THIS SOFTWARE, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT,
+  34:.\main.c      **** * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  35:.\main.c      **** *******************************************************************************/
+  36:.\main.c      **** 
+  37:.\main.c      **** #include <device.h>
+  38:.\main.c      **** #include "stdio.h"
+  39:.\main.c      **** 
+  40:.\main.c      **** #if defined (__GNUC__)
+  41:.\main.c      ****     /* Add an explicit reference to the floating point printf library */
+  42:.\main.c      ****     /* to allow the usage of floating point conversion specifiers. */
+  43:.\main.c      ****     /* This is not linked in by default with the newlib-nano library. */
+  44:.\main.c      ****     asm (".global _printf_float");
+  45:.\main.c      **** #endif
+  46:.\main.c      **** 
+  47:.\main.c      **** /* The size of the buffer is equal to maximum packet size of the 
+  48:.\main.c      **** *  IN and OUT bulk endpoints. 
+  49:.\main.c      **** */
+  50:.\main.c      **** #define BUFFER_LEN  64u
+  51:.\main.c      **** 
+  52:.\main.c      **** char8 *parity[] = { "None", "Odd", "Even", "Mark", "Space" };
+  53:.\main.c      **** char8 *stop[] = { "1", "1.5", "2" };
+  54:.\main.c      **** 
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc23XBrZ.s 			page 4
+
+
+  55:.\main.c      **** int main()
+  56:.\main.c      **** {
+  97              		.loc 1 56 0
+  98              		.cfi_startproc
+  99              		@ args = 0, pretend = 0, frame = 88
+ 100              		@ frame_needed = 1, uses_anonymous_args = 0
+ 101 0000 B0B5     		push	{r4, r5, r7, lr}
+ 102              		.cfi_def_cfa_offset 16
+ 103              		.cfi_offset 4, -16
+ 104              		.cfi_offset 5, -12
+ 105              		.cfi_offset 7, -8
+ 106              		.cfi_offset 14, -4
+ 107 0002 96B0     		sub	sp, sp, #88
+ 108              		.cfi_def_cfa_offset 104
+ 109 0004 00AF     		add	r7, sp, #0
+ 110              		.cfi_def_cfa_register 7
+  57:.\main.c      ****     uint16 count;
+  58:.\main.c      ****     uint8 buffer[BUFFER_LEN];
+  59:.\main.c      ****     char8 lineStr[20];
+  60:.\main.c      ****     uint8 state;
+  61:.\main.c      ****     
+  62:.\main.c      ****     /* Enable Global Interrupts */
+  63:.\main.c      ****     CyGlobalIntEnable;                        
+ 111              		.loc 1 63 0
+ 112              	@ 63 ".\main.c" 1
+ 113 0006 62B6     		CPSIE   i
+ 114              	@ 0 "" 2
+  64:.\main.c      **** 
+  65:.\main.c      ****     /* Start USBFS Operation with 3V operation */
+  66:.\main.c      ****     USBUART_1_Start(0u, USBUART_1_3V_OPERATION);
+ 115              		.loc 1 66 0
+ 116              		.thumb
+ 117 0008 0020     		movs	r0, #0
+ 118 000a 0021     		movs	r1, #0
+ 119 000c FFF7FEFF 		bl	USBUART_1_Start
+  67:.\main.c      **** 
+  68:.\main.c      ****     /* Start LCD */
+  69:.\main.c      ****     LCD_Start();
+ 120              		.loc 1 69 0
+ 121 0010 FFF7FEFF 		bl	LCD_Start
+  70:.\main.c      ****     LCD_PrintString("USB-UART example");
+ 122              		.loc 1 70 0
+ 123 0014 6148     		ldr	r0, .L13
+ 124 0016 FFF7FEFF 		bl	LCD_PrintString
+ 125              	.L12:
+  71:.\main.c      ****     
+  72:.\main.c      ****     /* Main Loop: */
+  73:.\main.c      ****     for(;;)
+  74:.\main.c      ****     {
+  75:.\main.c      ****         if(USBUART_1_IsConfigurationChanged() != 0u) /* Host could send double SET_INTERFACE reques
+ 126              		.loc 1 75 0
+ 127 001a FFF7FEFF 		bl	USBUART_1_IsConfigurationChanged
+ 128 001e 0346     		mov	r3, r0
+ 129 0020 002B     		cmp	r3, #0
+ 130 0022 06D0     		beq	.L2
+  76:.\main.c      ****         {
+  77:.\main.c      ****             if(USBUART_1_GetConfiguration() != 0u)   /* Init IN endpoints when device configured */
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc23XBrZ.s 			page 5
+
+
+ 131              		.loc 1 77 0
+ 132 0024 FFF7FEFF 		bl	USBUART_1_GetConfiguration
+ 133 0028 0346     		mov	r3, r0
+ 134 002a 002B     		cmp	r3, #0
+ 135 002c 01D0     		beq	.L2
+  78:.\main.c      ****             {
+  79:.\main.c      ****                 /* Enumeration is done, enable OUT endpoint for receive data from Host */
+  80:.\main.c      ****                 USBUART_1_CDC_Init();
+ 136              		.loc 1 80 0
+ 137 002e FFF7FEFF 		bl	USBUART_1_CDC_Init
+ 138              	.L2:
+  81:.\main.c      ****             }
+  82:.\main.c      ****         }         
+  83:.\main.c      ****         if(USBUART_1_GetConfiguration() != 0u)    /* Service USB CDC when device configured */
+ 139              		.loc 1 83 0
+ 140 0032 FFF7FEFF 		bl	USBUART_1_GetConfiguration
+ 141 0036 0346     		mov	r3, r0
+ 142 0038 002B     		cmp	r3, #0
+ 143 003a 00F0AD80 		beq	.L3
+  84:.\main.c      ****         {
+  85:.\main.c      ****             if(USBUART_1_DataIsReady() != 0u)               /* Check for input data from PC */
+ 144              		.loc 1 85 0
+ 145 003e FFF7FEFF 		bl	USBUART_1_DataIsReady
+ 146 0042 0346     		mov	r3, r0
+ 147 0044 002B     		cmp	r3, #0
+ 148 0046 27D0     		beq	.L4
+  86:.\main.c      ****             {   
+  87:.\main.c      ****                 count = USBUART_1_GetAll(buffer);           /* Read received data and re-enable OUT
+ 149              		.loc 1 87 0
+ 150 0048 07F11403 		add	r3, r7, #20
+ 151 004c 1846     		mov	r0, r3
+ 152 004e FFF7FEFF 		bl	USBUART_1_GetAll
+ 153 0052 0346     		mov	r3, r0
+ 154 0054 A7F85430 		strh	r3, [r7, #84]	@ movhi
+  88:.\main.c      ****                 if(count != 0u)
+ 155              		.loc 1 88 0
+ 156 0058 B7F85430 		ldrh	r3, [r7, #84]
+ 157 005c 002B     		cmp	r3, #0
+ 158 005e 1BD0     		beq	.L4
+  89:.\main.c      ****                 {
+  90:.\main.c      ****                     while(USBUART_1_CDCIsReady() == 0u);    /* Wait till component is ready to send
+ 159              		.loc 1 90 0
+ 160 0060 00BF     		nop
+ 161              	.L5:
+ 162              		.loc 1 90 0 is_stmt 0 discriminator 1
+ 163 0062 FFF7FEFF 		bl	USBUART_1_CDCIsReady
+ 164 0066 0346     		mov	r3, r0
+ 165 0068 002B     		cmp	r3, #0
+ 166 006a FAD0     		beq	.L5
+  91:.\main.c      ****                     USBUART_1_PutData(buffer, count);       /* Send data back to PC */
+ 167              		.loc 1 91 0 is_stmt 1
+ 168 006c 07F11402 		add	r2, r7, #20
+ 169 0070 B7F85430 		ldrh	r3, [r7, #84]
+ 170 0074 1046     		mov	r0, r2
+ 171 0076 1946     		mov	r1, r3
+ 172 0078 FFF7FEFF 		bl	USBUART_1_PutData
+  92:.\main.c      ****                     /* If the last sent packet is exactly maximum packet size, 
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc23XBrZ.s 			page 6
+
+
+  93:.\main.c      ****                     *  it shall be followed by a zero-length packet to assure the
+  94:.\main.c      ****                     *  end of segment is properly identified by the terminal.
+  95:.\main.c      ****                     */
+  96:.\main.c      ****                     if(count == BUFFER_LEN)
+ 173              		.loc 1 96 0
+ 174 007c B7F85430 		ldrh	r3, [r7, #84]
+ 175 0080 402B     		cmp	r3, #64
+ 176 0082 09D1     		bne	.L4
+  97:.\main.c      ****                     {
+  98:.\main.c      ****                         while(USBUART_1_CDCIsReady() == 0u); /* Wait till component is ready to sen
+ 177              		.loc 1 98 0
+ 178 0084 00BF     		nop
+ 179              	.L6:
+ 180              		.loc 1 98 0 is_stmt 0 discriminator 1
+ 181 0086 FFF7FEFF 		bl	USBUART_1_CDCIsReady
+ 182 008a 0346     		mov	r3, r0
+ 183 008c 002B     		cmp	r3, #0
+ 184 008e FAD0     		beq	.L6
+  99:.\main.c      ****                         USBUART_1_PutData(NULL, 0u);         /* Send zero-length packet to PC */
+ 185              		.loc 1 99 0 is_stmt 1
+ 186 0090 0020     		movs	r0, #0
+ 187 0092 0021     		movs	r1, #0
+ 188 0094 FFF7FEFF 		bl	USBUART_1_PutData
+ 189              	.L4:
+ 100:.\main.c      ****                     }
+ 101:.\main.c      ****                 }
+ 102:.\main.c      ****             }  
+ 103:.\main.c      ****             
+ 104:.\main.c      ****             state = USBUART_1_IsLineChanged();              /* Check for Line settings changed */
+ 190              		.loc 1 104 0
+ 191 0098 FFF7FEFF 		bl	USBUART_1_IsLineChanged
+ 192 009c 0346     		mov	r3, r0
+ 193 009e 87F85730 		strb	r3, [r7, #87]
+ 105:.\main.c      ****             if(state != 0u)
+ 194              		.loc 1 105 0
+ 195 00a2 97F85730 		ldrb	r3, [r7, #87]	@ zero_extendqisi2
+ 196 00a6 002B     		cmp	r3, #0
+ 197 00a8 76D0     		beq	.L3
+ 106:.\main.c      ****             {  
+ 107:.\main.c      ****                 if(state & USBUART_1_LINE_CODING_CHANGED)   /* Show new settings */
+ 198              		.loc 1 107 0
+ 199 00aa 97F85730 		ldrb	r3, [r7, #87]	@ zero_extendqisi2
+ 200 00ae 03F00103 		and	r3, r3, #1
+ 201 00b2 002B     		cmp	r3, #0
+ 202 00b4 3FD0     		beq	.L7
+ 108:.\main.c      ****                 {
+ 109:.\main.c      ****                     sprintf(lineStr,"BR:%4ld,DB:%d",USBUART_1_GetDTERate(),(uint16)USBUART_1_GetDat
+ 203              		.loc 1 109 0
+ 204 00b6 FFF7FEFF 		bl	USBUART_1_GetDTERate
+ 205 00ba 0546     		mov	r5, r0
+ 206 00bc FFF7FEFF 		bl	USBUART_1_GetDataBits
+ 207 00c0 0346     		mov	r3, r0
+ 208 00c2 1C46     		mov	r4, r3
+ 209 00c4 3B46     		mov	r3, r7
+ 210 00c6 1846     		mov	r0, r3
+ 211 00c8 3549     		ldr	r1, .L13+4
+ 212 00ca 2A46     		mov	r2, r5
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc23XBrZ.s 			page 7
+
+
+ 213 00cc 2346     		mov	r3, r4
+ 214 00ce FFF7FEFF 		bl	sprintf
+ 110:.\main.c      ****                     LCD_Position(0u, 0u);
+ 215              		.loc 1 110 0
+ 216 00d2 0020     		movs	r0, #0
+ 217 00d4 0021     		movs	r1, #0
+ 218 00d6 FFF7FEFF 		bl	LCD_Position
+ 111:.\main.c      ****                     LCD_PrintString("                    ");
+ 219              		.loc 1 111 0
+ 220 00da 3248     		ldr	r0, .L13+8
+ 221 00dc FFF7FEFF 		bl	LCD_PrintString
+ 112:.\main.c      ****                     LCD_Position(0u, 0u);
+ 222              		.loc 1 112 0
+ 223 00e0 0020     		movs	r0, #0
+ 224 00e2 0021     		movs	r1, #0
+ 225 00e4 FFF7FEFF 		bl	LCD_Position
+ 113:.\main.c      ****                     LCD_PrintString(lineStr);
+ 226              		.loc 1 113 0
+ 227 00e8 3B46     		mov	r3, r7
+ 228 00ea 1846     		mov	r0, r3
+ 229 00ec FFF7FEFF 		bl	LCD_PrintString
+ 114:.\main.c      ****                     sprintf(lineStr,"SB:%s,Parity:%s", stop[(uint16)USBUART_1_GetCharFormat()], \
+ 230              		.loc 1 114 0
+ 231 00f0 FFF7FEFF 		bl	USBUART_1_GetCharFormat
+ 232 00f4 0346     		mov	r3, r0
+ 233 00f6 1A46     		mov	r2, r3
+ 234 00f8 2B4B     		ldr	r3, .L13+12
+ 235 00fa 53F82240 		ldr	r4, [r3, r2, lsl #2]
+ 115:.\main.c      ****                                                          parity[(uint16)USBUART_1_GetParityType()])
+ 236              		.loc 1 115 0
+ 237 00fe FFF7FEFF 		bl	USBUART_1_GetParityType
+ 238 0102 0346     		mov	r3, r0
+ 114:.\main.c      ****                     sprintf(lineStr,"SB:%s,Parity:%s", stop[(uint16)USBUART_1_GetCharFormat()], \
+ 239              		.loc 1 114 0
+ 240 0104 1A46     		mov	r2, r3
+ 241 0106 294B     		ldr	r3, .L13+16
+ 242 0108 53F82230 		ldr	r3, [r3, r2, lsl #2]
+ 243 010c 3A46     		mov	r2, r7
+ 244 010e 1046     		mov	r0, r2
+ 245 0110 2749     		ldr	r1, .L13+20
+ 246 0112 2246     		mov	r2, r4
+ 247 0114 FFF7FEFF 		bl	sprintf
+ 116:.\main.c      ****                     LCD_Position(1u, 0u);
+ 248              		.loc 1 116 0
+ 249 0118 0120     		movs	r0, #1
+ 250 011a 0021     		movs	r1, #0
+ 251 011c FFF7FEFF 		bl	LCD_Position
+ 117:.\main.c      ****                     LCD_PrintString("                    ");
+ 252              		.loc 1 117 0
+ 253 0120 2048     		ldr	r0, .L13+8
+ 254 0122 FFF7FEFF 		bl	LCD_PrintString
+ 118:.\main.c      ****                     LCD_Position(1u, 0u);
+ 255              		.loc 1 118 0
+ 256 0126 0120     		movs	r0, #1
+ 257 0128 0021     		movs	r1, #0
+ 258 012a FFF7FEFF 		bl	LCD_Position
+ 119:.\main.c      ****                     LCD_PrintString(lineStr);
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc23XBrZ.s 			page 8
+
+
+ 259              		.loc 1 119 0
+ 260 012e 3B46     		mov	r3, r7
+ 261 0130 1846     		mov	r0, r3
+ 262 0132 FFF7FEFF 		bl	LCD_PrintString
+ 263              	.L7:
+ 120:.\main.c      ****                 }
+ 121:.\main.c      ****                 if(state & USBUART_1_LINE_CONTROL_CHANGED)  /* Show new settings */
+ 264              		.loc 1 121 0
+ 265 0136 97F85730 		ldrb	r3, [r7, #87]	@ zero_extendqisi2
+ 266 013a 03F00203 		and	r3, r3, #2
+ 267 013e 002B     		cmp	r3, #0
+ 268 0140 2AD0     		beq	.L3
+ 122:.\main.c      ****                 {   
+ 123:.\main.c      ****                     state = USBUART_1_GetLineControl();
+ 269              		.loc 1 123 0
+ 270 0142 FFF7FEFF 		bl	USBUART_1_GetLineControl
+ 271 0146 0346     		mov	r3, r0
+ 272 0148 87F85730 		strb	r3, [r7, #87]
+ 124:.\main.c      ****                     sprintf(lineStr,"DTR:%s,RTS:%s",  (state & USBUART_1_LINE_CONTROL_DTR) ? "ON" :
+ 273              		.loc 1 124 0
+ 274 014c 97F85730 		ldrb	r3, [r7, #87]	@ zero_extendqisi2
+ 275 0150 03F00103 		and	r3, r3, #1
+ 276 0154 002B     		cmp	r3, #0
+ 277 0156 01D0     		beq	.L8
+ 278              		.loc 1 124 0 is_stmt 0 discriminator 1
+ 279 0158 164A     		ldr	r2, .L13+24
+ 280 015a 00E0     		b	.L9
+ 281              	.L8:
+ 282              		.loc 1 124 0 discriminator 2
+ 283 015c 164A     		ldr	r2, .L13+28
+ 284              	.L9:
+ 125:.\main.c      ****                                                         (state & USBUART_1_LINE_CONTROL_RTS) ? "ON"
+ 285              		.loc 1 125 0 is_stmt 1 discriminator 4
+ 286 015e 97F85730 		ldrb	r3, [r7, #87]	@ zero_extendqisi2
+ 287 0162 03F00203 		and	r3, r3, #2
+ 124:.\main.c      ****                     sprintf(lineStr,"DTR:%s,RTS:%s",  (state & USBUART_1_LINE_CONTROL_DTR) ? "ON" :
+ 288              		.loc 1 124 0 discriminator 4
+ 289 0166 002B     		cmp	r3, #0
+ 290 0168 01D0     		beq	.L10
+ 124:.\main.c      ****                     sprintf(lineStr,"DTR:%s,RTS:%s",  (state & USBUART_1_LINE_CONTROL_DTR) ? "ON" :
+ 291              		.loc 1 124 0 is_stmt 0 discriminator 5
+ 292 016a 124B     		ldr	r3, .L13+24
+ 293 016c 00E0     		b	.L11
+ 294              	.L10:
+ 124:.\main.c      ****                     sprintf(lineStr,"DTR:%s,RTS:%s",  (state & USBUART_1_LINE_CONTROL_DTR) ? "ON" :
+ 295              		.loc 1 124 0 discriminator 6
+ 296 016e 124B     		ldr	r3, .L13+28
+ 297              	.L11:
+ 124:.\main.c      ****                     sprintf(lineStr,"DTR:%s,RTS:%s",  (state & USBUART_1_LINE_CONTROL_DTR) ? "ON" :
+ 298              		.loc 1 124 0 discriminator 8
+ 299 0170 3946     		mov	r1, r7
+ 300 0172 0846     		mov	r0, r1
+ 301 0174 1149     		ldr	r1, .L13+32
+ 302 0176 FFF7FEFF 		bl	sprintf
+ 126:.\main.c      ****                     LCD_Position(1u, 0u);
+ 303              		.loc 1 126 0 is_stmt 1 discriminator 8
+ 304 017a 0120     		movs	r0, #1
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc23XBrZ.s 			page 9
+
+
+ 305 017c 0021     		movs	r1, #0
+ 306 017e FFF7FEFF 		bl	LCD_Position
+ 127:.\main.c      ****                     LCD_PrintString("                    ");
+ 307              		.loc 1 127 0 discriminator 8
+ 308 0182 0848     		ldr	r0, .L13+8
+ 309 0184 FFF7FEFF 		bl	LCD_PrintString
+ 128:.\main.c      ****                     LCD_Position(1u, 0u);
+ 310              		.loc 1 128 0 discriminator 8
+ 311 0188 0120     		movs	r0, #1
+ 312 018a 0021     		movs	r1, #0
+ 313 018c FFF7FEFF 		bl	LCD_Position
+ 129:.\main.c      ****                     LCD_PrintString(lineStr);
+ 314              		.loc 1 129 0 discriminator 8
+ 315 0190 3B46     		mov	r3, r7
+ 316 0192 1846     		mov	r0, r3
+ 317 0194 FFF7FEFF 		bl	LCD_PrintString
+ 318              	.L3:
+ 130:.\main.c      ****                 
+ 131:.\main.c      ****                 }
+ 132:.\main.c      ****             }
+ 133:.\main.c      ****         }
+ 134:.\main.c      ****     }   
+ 319              		.loc 1 134 0
+ 320 0198 3FE7     		b	.L12
+ 321              	.L14:
+ 322 019a 00BF     		.align	2
+ 323              	.L13:
+ 324 019c 30000000 		.word	.LC8
+ 325 01a0 44000000 		.word	.LC9
+ 326 01a4 54000000 		.word	.LC10
+ 327 01a8 00000000 		.word	stop
+ 328 01ac 00000000 		.word	parity
+ 329 01b0 6C000000 		.word	.LC11
+ 330 01b4 7C000000 		.word	.LC12
+ 331 01b8 80000000 		.word	.LC13
+ 332 01bc 84000000 		.word	.LC14
+ 333              		.cfi_endproc
+ 334              	.LFE63:
+ 335              		.size	main, .-main
+ 336              		.text
+ 337              	.Letext0:
+ 338              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 339              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 340              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 341              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 342              		.section	.debug_info,"",%progbits
+ 343              	.Ldebug_info0:
+ 344 0000 88010000 		.4byte	0x188
+ 345 0004 0400     		.2byte	0x4
+ 346 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 347 000a 04       		.byte	0x4
+ 348 000b 01       		.uleb128 0x1
+ 349 000c DD000000 		.4byte	.LASF25
+ 350 0010 01       		.byte	0x1
+ 351 0011 6B010000 		.4byte	.LASF26
+ 352 0015 7D000000 		.4byte	.LASF27
+ 353 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc23XBrZ.s 			page 10
+
+
+ 354 001d 00000000 		.4byte	0
+ 355 0021 00000000 		.4byte	.Ldebug_line0
+ 356 0025 02       		.uleb128 0x2
+ 357 0026 01       		.byte	0x1
+ 358 0027 06       		.byte	0x6
+ 359 0028 8D010000 		.4byte	.LASF0
+ 360 002c 02       		.uleb128 0x2
+ 361 002d 01       		.byte	0x1
+ 362 002e 08       		.byte	0x8
+ 363 002f BB000000 		.4byte	.LASF1
+ 364 0033 02       		.uleb128 0x2
+ 365 0034 02       		.byte	0x2
+ 366 0035 05       		.byte	0x5
+ 367 0036 A9010000 		.4byte	.LASF2
+ 368 003a 02       		.uleb128 0x2
+ 369 003b 02       		.byte	0x2
+ 370 003c 07       		.byte	0x7
+ 371 003d 64000000 		.4byte	.LASF3
+ 372 0041 03       		.uleb128 0x3
+ 373 0042 99010000 		.4byte	.LASF9
+ 374 0046 02       		.byte	0x2
+ 375 0047 3F       		.byte	0x3f
+ 376 0048 4C000000 		.4byte	0x4c
+ 377 004c 02       		.uleb128 0x2
+ 378 004d 04       		.byte	0x4
+ 379 004e 05       		.byte	0x5
+ 380 004f D4000000 		.4byte	.LASF4
+ 381 0053 02       		.uleb128 0x2
+ 382 0054 04       		.byte	0x4
+ 383 0055 07       		.byte	0x7
+ 384 0056 3B000000 		.4byte	.LASF5
+ 385 005a 02       		.uleb128 0x2
+ 386 005b 08       		.byte	0x8
+ 387 005c 05       		.byte	0x5
+ 388 005d 00000000 		.4byte	.LASF6
+ 389 0061 02       		.uleb128 0x2
+ 390 0062 08       		.byte	0x8
+ 391 0063 07       		.byte	0x7
+ 392 0064 4D000000 		.4byte	.LASF7
+ 393 0068 04       		.uleb128 0x4
+ 394 0069 04       		.byte	0x4
+ 395 006a 05       		.byte	0x5
+ 396 006b 696E7400 		.ascii	"int\000"
+ 397 006f 02       		.uleb128 0x2
+ 398 0070 04       		.byte	0x4
+ 399 0071 07       		.byte	0x7
+ 400 0072 15000000 		.4byte	.LASF8
+ 401 0076 03       		.uleb128 0x3
+ 402 0077 BA010000 		.4byte	.LASF10
+ 403 007b 03       		.byte	0x3
+ 404 007c 2C       		.byte	0x2c
+ 405 007d 41000000 		.4byte	0x41
+ 406 0081 03       		.uleb128 0x3
+ 407 0082 35000000 		.4byte	.LASF11
+ 408 0086 04       		.byte	0x4
+ 409 0087 C2       		.byte	0xc2
+ 410 0088 2C000000 		.4byte	0x2c
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc23XBrZ.s 			page 11
+
+
+ 411 008c 03       		.uleb128 0x3
+ 412 008d B3010000 		.4byte	.LASF12
+ 413 0091 04       		.byte	0x4
+ 414 0092 C3       		.byte	0xc3
+ 415 0093 3A000000 		.4byte	0x3a
+ 416 0097 02       		.uleb128 0x2
+ 417 0098 04       		.byte	0x4
+ 418 0099 04       		.byte	0x4
+ 419 009a A3010000 		.4byte	.LASF13
+ 420 009e 02       		.uleb128 0x2
+ 421 009f 08       		.byte	0x8
+ 422 00a0 04       		.byte	0x4
+ 423 00a1 74010000 		.4byte	.LASF14
+ 424 00a5 03       		.uleb128 0x3
+ 425 00a6 77000000 		.4byte	.LASF15
+ 426 00aa 04       		.byte	0x4
+ 427 00ab D3       		.byte	0xd3
+ 428 00ac B0000000 		.4byte	0xb0
+ 429 00b0 02       		.uleb128 0x2
+ 430 00b1 01       		.byte	0x1
+ 431 00b2 08       		.byte	0x8
+ 432 00b3 C9000000 		.4byte	.LASF16
+ 433 00b7 02       		.uleb128 0x2
+ 434 00b8 04       		.byte	0x4
+ 435 00b9 07       		.byte	0x7
+ 436 00ba C9010000 		.4byte	.LASF17
+ 437 00be 05       		.uleb128 0x5
+ 438 00bf 22000000 		.4byte	.LASF28
+ 439 00c3 01       		.byte	0x1
+ 440 00c4 37       		.byte	0x37
+ 441 00c5 68000000 		.4byte	0x68
+ 442 00c9 00000000 		.4byte	.LFB63
+ 443 00cd C0010000 		.4byte	.LFE63-.LFB63
+ 444 00d1 01       		.uleb128 0x1
+ 445 00d2 9C       		.byte	0x9c
+ 446 00d3 12010000 		.4byte	0x112
+ 447 00d7 06       		.uleb128 0x6
+ 448 00d8 CE000000 		.4byte	.LASF18
+ 449 00dc 01       		.byte	0x1
+ 450 00dd 39       		.byte	0x39
+ 451 00de 8C000000 		.4byte	0x8c
+ 452 00e2 02       		.uleb128 0x2
+ 453 00e3 91       		.byte	0x91
+ 454 00e4 6C       		.sleb128 -20
+ 455 00e5 06       		.uleb128 0x6
+ 456 00e6 C2010000 		.4byte	.LASF19
+ 457 00ea 01       		.byte	0x1
+ 458 00eb 3A       		.byte	0x3a
+ 459 00ec 12010000 		.4byte	0x112
+ 460 00f0 03       		.uleb128 0x3
+ 461 00f1 91       		.byte	0x91
+ 462 00f2 AC7F     		.sleb128 -84
+ 463 00f4 06       		.uleb128 0x6
+ 464 00f5 2D000000 		.4byte	.LASF20
+ 465 00f9 01       		.byte	0x1
+ 466 00fa 3B       		.byte	0x3b
+ 467 00fb 22010000 		.4byte	0x122
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc23XBrZ.s 			page 12
+
+
+ 468 00ff 03       		.uleb128 0x3
+ 469 0100 91       		.byte	0x91
+ 470 0101 987F     		.sleb128 -104
+ 471 0103 06       		.uleb128 0x6
+ 472 0104 27000000 		.4byte	.LASF21
+ 473 0108 01       		.byte	0x1
+ 474 0109 3C       		.byte	0x3c
+ 475 010a 81000000 		.4byte	0x81
+ 476 010e 02       		.uleb128 0x2
+ 477 010f 91       		.byte	0x91
+ 478 0110 6F       		.sleb128 -17
+ 479 0111 00       		.byte	0
+ 480 0112 07       		.uleb128 0x7
+ 481 0113 81000000 		.4byte	0x81
+ 482 0117 22010000 		.4byte	0x122
+ 483 011b 08       		.uleb128 0x8
+ 484 011c B7000000 		.4byte	0xb7
+ 485 0120 3F       		.byte	0x3f
+ 486 0121 00       		.byte	0
+ 487 0122 07       		.uleb128 0x7
+ 488 0123 A5000000 		.4byte	0xa5
+ 489 0127 32010000 		.4byte	0x132
+ 490 012b 08       		.uleb128 0x8
+ 491 012c B7000000 		.4byte	0xb7
+ 492 0130 13       		.byte	0x13
+ 493 0131 00       		.byte	0
+ 494 0132 09       		.uleb128 0x9
+ 495 0133 80010000 		.4byte	.LASF22
+ 496 0137 05       		.byte	0x5
+ 497 0138 2A06     		.2byte	0x62a
+ 498 013a 3E010000 		.4byte	0x13e
+ 499 013e 0A       		.uleb128 0xa
+ 500 013f 76000000 		.4byte	0x76
+ 501 0143 07       		.uleb128 0x7
+ 502 0144 53010000 		.4byte	0x153
+ 503 0148 53010000 		.4byte	0x153
+ 504 014c 08       		.uleb128 0x8
+ 505 014d B7000000 		.4byte	0xb7
+ 506 0151 04       		.byte	0x4
+ 507 0152 00       		.byte	0
+ 508 0153 0B       		.uleb128 0xb
+ 509 0154 04       		.byte	0x4
+ 510 0155 A5000000 		.4byte	0xa5
+ 511 0159 0C       		.uleb128 0xc
+ 512 015a 0E000000 		.4byte	.LASF23
+ 513 015e 01       		.byte	0x1
+ 514 015f 34       		.byte	0x34
+ 515 0160 43010000 		.4byte	0x143
+ 516 0164 05       		.uleb128 0x5
+ 517 0165 03       		.byte	0x3
+ 518 0166 00000000 		.4byte	parity
+ 519 016a 07       		.uleb128 0x7
+ 520 016b 53010000 		.4byte	0x153
+ 521 016f 7A010000 		.4byte	0x17a
+ 522 0173 08       		.uleb128 0x8
+ 523 0174 B7000000 		.4byte	0xb7
+ 524 0178 02       		.byte	0x2
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc23XBrZ.s 			page 13
+
+
+ 525 0179 00       		.byte	0
+ 526 017a 0C       		.uleb128 0xc
+ 527 017b 7B010000 		.4byte	.LASF24
+ 528 017f 01       		.byte	0x1
+ 529 0180 35       		.byte	0x35
+ 530 0181 6A010000 		.4byte	0x16a
+ 531 0185 05       		.uleb128 0x5
+ 532 0186 03       		.byte	0x3
+ 533 0187 00000000 		.4byte	stop
+ 534 018b 00       		.byte	0
+ 535              		.section	.debug_abbrev,"",%progbits
+ 536              	.Ldebug_abbrev0:
+ 537 0000 01       		.uleb128 0x1
+ 538 0001 11       		.uleb128 0x11
+ 539 0002 01       		.byte	0x1
+ 540 0003 25       		.uleb128 0x25
+ 541 0004 0E       		.uleb128 0xe
+ 542 0005 13       		.uleb128 0x13
+ 543 0006 0B       		.uleb128 0xb
+ 544 0007 03       		.uleb128 0x3
+ 545 0008 0E       		.uleb128 0xe
+ 546 0009 1B       		.uleb128 0x1b
+ 547 000a 0E       		.uleb128 0xe
+ 548 000b 55       		.uleb128 0x55
+ 549 000c 17       		.uleb128 0x17
+ 550 000d 11       		.uleb128 0x11
+ 551 000e 01       		.uleb128 0x1
+ 552 000f 10       		.uleb128 0x10
+ 553 0010 17       		.uleb128 0x17
+ 554 0011 00       		.byte	0
+ 555 0012 00       		.byte	0
+ 556 0013 02       		.uleb128 0x2
+ 557 0014 24       		.uleb128 0x24
+ 558 0015 00       		.byte	0
+ 559 0016 0B       		.uleb128 0xb
+ 560 0017 0B       		.uleb128 0xb
+ 561 0018 3E       		.uleb128 0x3e
+ 562 0019 0B       		.uleb128 0xb
+ 563 001a 03       		.uleb128 0x3
+ 564 001b 0E       		.uleb128 0xe
+ 565 001c 00       		.byte	0
+ 566 001d 00       		.byte	0
+ 567 001e 03       		.uleb128 0x3
+ 568 001f 16       		.uleb128 0x16
+ 569 0020 00       		.byte	0
+ 570 0021 03       		.uleb128 0x3
+ 571 0022 0E       		.uleb128 0xe
+ 572 0023 3A       		.uleb128 0x3a
+ 573 0024 0B       		.uleb128 0xb
+ 574 0025 3B       		.uleb128 0x3b
+ 575 0026 0B       		.uleb128 0xb
+ 576 0027 49       		.uleb128 0x49
+ 577 0028 13       		.uleb128 0x13
+ 578 0029 00       		.byte	0
+ 579 002a 00       		.byte	0
+ 580 002b 04       		.uleb128 0x4
+ 581 002c 24       		.uleb128 0x24
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc23XBrZ.s 			page 14
+
+
+ 582 002d 00       		.byte	0
+ 583 002e 0B       		.uleb128 0xb
+ 584 002f 0B       		.uleb128 0xb
+ 585 0030 3E       		.uleb128 0x3e
+ 586 0031 0B       		.uleb128 0xb
+ 587 0032 03       		.uleb128 0x3
+ 588 0033 08       		.uleb128 0x8
+ 589 0034 00       		.byte	0
+ 590 0035 00       		.byte	0
+ 591 0036 05       		.uleb128 0x5
+ 592 0037 2E       		.uleb128 0x2e
+ 593 0038 01       		.byte	0x1
+ 594 0039 3F       		.uleb128 0x3f
+ 595 003a 19       		.uleb128 0x19
+ 596 003b 03       		.uleb128 0x3
+ 597 003c 0E       		.uleb128 0xe
+ 598 003d 3A       		.uleb128 0x3a
+ 599 003e 0B       		.uleb128 0xb
+ 600 003f 3B       		.uleb128 0x3b
+ 601 0040 0B       		.uleb128 0xb
+ 602 0041 49       		.uleb128 0x49
+ 603 0042 13       		.uleb128 0x13
+ 604 0043 11       		.uleb128 0x11
+ 605 0044 01       		.uleb128 0x1
+ 606 0045 12       		.uleb128 0x12
+ 607 0046 06       		.uleb128 0x6
+ 608 0047 40       		.uleb128 0x40
+ 609 0048 18       		.uleb128 0x18
+ 610 0049 9642     		.uleb128 0x2116
+ 611 004b 19       		.uleb128 0x19
+ 612 004c 01       		.uleb128 0x1
+ 613 004d 13       		.uleb128 0x13
+ 614 004e 00       		.byte	0
+ 615 004f 00       		.byte	0
+ 616 0050 06       		.uleb128 0x6
+ 617 0051 34       		.uleb128 0x34
+ 618 0052 00       		.byte	0
+ 619 0053 03       		.uleb128 0x3
+ 620 0054 0E       		.uleb128 0xe
+ 621 0055 3A       		.uleb128 0x3a
+ 622 0056 0B       		.uleb128 0xb
+ 623 0057 3B       		.uleb128 0x3b
+ 624 0058 0B       		.uleb128 0xb
+ 625 0059 49       		.uleb128 0x49
+ 626 005a 13       		.uleb128 0x13
+ 627 005b 02       		.uleb128 0x2
+ 628 005c 18       		.uleb128 0x18
+ 629 005d 00       		.byte	0
+ 630 005e 00       		.byte	0
+ 631 005f 07       		.uleb128 0x7
+ 632 0060 01       		.uleb128 0x1
+ 633 0061 01       		.byte	0x1
+ 634 0062 49       		.uleb128 0x49
+ 635 0063 13       		.uleb128 0x13
+ 636 0064 01       		.uleb128 0x1
+ 637 0065 13       		.uleb128 0x13
+ 638 0066 00       		.byte	0
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc23XBrZ.s 			page 15
+
+
+ 639 0067 00       		.byte	0
+ 640 0068 08       		.uleb128 0x8
+ 641 0069 21       		.uleb128 0x21
+ 642 006a 00       		.byte	0
+ 643 006b 49       		.uleb128 0x49
+ 644 006c 13       		.uleb128 0x13
+ 645 006d 2F       		.uleb128 0x2f
+ 646 006e 0B       		.uleb128 0xb
+ 647 006f 00       		.byte	0
+ 648 0070 00       		.byte	0
+ 649 0071 09       		.uleb128 0x9
+ 650 0072 34       		.uleb128 0x34
+ 651 0073 00       		.byte	0
+ 652 0074 03       		.uleb128 0x3
+ 653 0075 0E       		.uleb128 0xe
+ 654 0076 3A       		.uleb128 0x3a
+ 655 0077 0B       		.uleb128 0xb
+ 656 0078 3B       		.uleb128 0x3b
+ 657 0079 05       		.uleb128 0x5
+ 658 007a 49       		.uleb128 0x49
+ 659 007b 13       		.uleb128 0x13
+ 660 007c 3F       		.uleb128 0x3f
+ 661 007d 19       		.uleb128 0x19
+ 662 007e 3C       		.uleb128 0x3c
+ 663 007f 19       		.uleb128 0x19
+ 664 0080 00       		.byte	0
+ 665 0081 00       		.byte	0
+ 666 0082 0A       		.uleb128 0xa
+ 667 0083 35       		.uleb128 0x35
+ 668 0084 00       		.byte	0
+ 669 0085 49       		.uleb128 0x49
+ 670 0086 13       		.uleb128 0x13
+ 671 0087 00       		.byte	0
+ 672 0088 00       		.byte	0
+ 673 0089 0B       		.uleb128 0xb
+ 674 008a 0F       		.uleb128 0xf
+ 675 008b 00       		.byte	0
+ 676 008c 0B       		.uleb128 0xb
+ 677 008d 0B       		.uleb128 0xb
+ 678 008e 49       		.uleb128 0x49
+ 679 008f 13       		.uleb128 0x13
+ 680 0090 00       		.byte	0
+ 681 0091 00       		.byte	0
+ 682 0092 0C       		.uleb128 0xc
+ 683 0093 34       		.uleb128 0x34
+ 684 0094 00       		.byte	0
+ 685 0095 03       		.uleb128 0x3
+ 686 0096 0E       		.uleb128 0xe
+ 687 0097 3A       		.uleb128 0x3a
+ 688 0098 0B       		.uleb128 0xb
+ 689 0099 3B       		.uleb128 0x3b
+ 690 009a 0B       		.uleb128 0xb
+ 691 009b 49       		.uleb128 0x49
+ 692 009c 13       		.uleb128 0x13
+ 693 009d 3F       		.uleb128 0x3f
+ 694 009e 19       		.uleb128 0x19
+ 695 009f 02       		.uleb128 0x2
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc23XBrZ.s 			page 16
+
+
+ 696 00a0 18       		.uleb128 0x18
+ 697 00a1 00       		.byte	0
+ 698 00a2 00       		.byte	0
+ 699 00a3 00       		.byte	0
+ 700              		.section	.debug_aranges,"",%progbits
+ 701 0000 1C000000 		.4byte	0x1c
+ 702 0004 0200     		.2byte	0x2
+ 703 0006 00000000 		.4byte	.Ldebug_info0
+ 704 000a 04       		.byte	0x4
+ 705 000b 00       		.byte	0
+ 706 000c 0000     		.2byte	0
+ 707 000e 0000     		.2byte	0
+ 708 0010 00000000 		.4byte	.LFB63
+ 709 0014 C0010000 		.4byte	.LFE63-.LFB63
+ 710 0018 00000000 		.4byte	0
+ 711 001c 00000000 		.4byte	0
+ 712              		.section	.debug_ranges,"",%progbits
+ 713              	.Ldebug_ranges0:
+ 714 0000 00000000 		.4byte	.LFB63
+ 715 0004 C0010000 		.4byte	.LFE63
+ 716 0008 00000000 		.4byte	0
+ 717 000c 00000000 		.4byte	0
+ 718              		.section	.debug_line,"",%progbits
+ 719              	.Ldebug_line0:
+ 720 0000 CA010000 		.section	.debug_str,"MS",%progbits,1
+ 720      02004901 
+ 720      00000201 
+ 720      FB0E0D00 
+ 720      01010101 
+ 721              	.LASF6:
+ 722 0000 6C6F6E67 		.ascii	"long long int\000"
+ 722      206C6F6E 
+ 722      6720696E 
+ 722      7400
+ 723              	.LASF23:
+ 724 000e 70617269 		.ascii	"parity\000"
+ 724      747900
+ 725              	.LASF8:
+ 726 0015 756E7369 		.ascii	"unsigned int\000"
+ 726      676E6564 
+ 726      20696E74 
+ 726      00
+ 727              	.LASF28:
+ 728 0022 6D61696E 		.ascii	"main\000"
+ 728      00
+ 729              	.LASF21:
+ 730 0027 73746174 		.ascii	"state\000"
+ 730      6500
+ 731              	.LASF20:
+ 732 002d 6C696E65 		.ascii	"lineStr\000"
+ 732      53747200 
+ 733              	.LASF11:
+ 734 0035 75696E74 		.ascii	"uint8\000"
+ 734      3800
+ 735              	.LASF5:
+ 736 003b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 736      20756E73 
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc23XBrZ.s 			page 17
+
+
+ 736      69676E65 
+ 736      6420696E 
+ 736      7400
+ 737              	.LASF7:
+ 738 004d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 738      206C6F6E 
+ 738      6720756E 
+ 738      7369676E 
+ 738      65642069 
+ 739              	.LASF3:
+ 740 0064 73686F72 		.ascii	"short unsigned int\000"
+ 740      7420756E 
+ 740      7369676E 
+ 740      65642069 
+ 740      6E7400
+ 741              	.LASF15:
+ 742 0077 63686172 		.ascii	"char8\000"
+ 742      3800
+ 743              	.LASF27:
+ 744 007d 5C5C4D61 		.ascii	"\\\\Mac\\Home\\Documents\\PSoC Creator\\USB_UART01\\"
+ 744      635C486F 
+ 744      6D655C44 
+ 744      6F63756D 
+ 744      656E7473 
+ 745 00aa 5553425F 		.ascii	"USB_UART01.cydsn\000"
+ 745      55415254 
+ 745      30312E63 
+ 745      7964736E 
+ 745      00
+ 746              	.LASF1:
+ 747 00bb 756E7369 		.ascii	"unsigned char\000"
+ 747      676E6564 
+ 747      20636861 
+ 747      7200
+ 748              	.LASF16:
+ 749 00c9 63686172 		.ascii	"char\000"
+ 749      00
+ 750              	.LASF18:
+ 751 00ce 636F756E 		.ascii	"count\000"
+ 751      7400
+ 752              	.LASF4:
+ 753 00d4 6C6F6E67 		.ascii	"long int\000"
+ 753      20696E74 
+ 753      00
+ 754              	.LASF25:
+ 755 00dd 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 755      4320342E 
+ 755      392E3320 
+ 755      32303135 
+ 755      30333033 
+ 756 0110 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 756      20726576 
+ 756      6973696F 
+ 756      6E203232 
+ 756      31323230 
+ 757 0143 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 757      66756E63 
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc23XBrZ.s 			page 18
+
+
+ 757      74696F6E 
+ 757      2D736563 
+ 757      74696F6E 
+ 758              	.LASF26:
+ 759 016b 2E5C6D61 		.ascii	".\\main.c\000"
+ 759      696E2E63 
+ 759      00
+ 760              	.LASF14:
+ 761 0174 646F7562 		.ascii	"double\000"
+ 761      6C6500
+ 762              	.LASF24:
+ 763 017b 73746F70 		.ascii	"stop\000"
+ 763      00
+ 764              	.LASF22:
+ 765 0180 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 765      52784275 
+ 765      66666572 
+ 765      00
+ 766              	.LASF0:
+ 767 018d 7369676E 		.ascii	"signed char\000"
+ 767      65642063 
+ 767      68617200 
+ 768              	.LASF9:
+ 769 0199 5F5F696E 		.ascii	"__int32_t\000"
+ 769      7433325F 
+ 769      7400
+ 770              	.LASF13:
+ 771 01a3 666C6F61 		.ascii	"float\000"
+ 771      7400
+ 772              	.LASF2:
+ 773 01a9 73686F72 		.ascii	"short int\000"
+ 773      7420696E 
+ 773      7400
+ 774              	.LASF12:
+ 775 01b3 75696E74 		.ascii	"uint16\000"
+ 775      313600
+ 776              	.LASF10:
+ 777 01ba 696E7433 		.ascii	"int32_t\000"
+ 777      325F7400 
+ 778              	.LASF19:
+ 779 01c2 62756666 		.ascii	"buffer\000"
+ 779      657200
+ 780              	.LASF17:
+ 781 01c9 73697A65 		.ascii	"sizetype\000"
+ 781      74797065 
+ 781      00
+ 782              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
