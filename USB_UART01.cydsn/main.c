@@ -48,6 +48,8 @@ int main()
 
     /* Start USBFS Operation with 3V operation */
     USBUART_1_Start(0u, USBUART_1_3V_OPERATION);
+    
+    TX_pin_Write(1);
     /* Main Loop: */
     for(;;)
     {
@@ -92,12 +94,15 @@ int main()
                 }
             }
             if(flag && position != 0){
+                int i = 0;
                 flag = 0;
                 TX_pin_Write(0);
                 CyDelayUs(250);//1/4000th of a sec, or 2000 baud with diff man
                 TX_pin_Write(1);
                 CyDelayUs(250);
-                
+                for(i = 0; i < position; i++){
+                    atoB(lineStr[i]);
+                }
             }else flag = 0;
         }
     }   
@@ -105,8 +110,8 @@ int main()
 
 void atoB(uint8 dec)
     {
-	  int a[20]; 
-      int i=0,j;
+	  int a[20];//flag "ten" checks if 1 is represented as "10" or "01",
+      int i=0,j,ten = 0;
       while(dec>0) 
       { 
            a[i]=dec%2; 
@@ -115,8 +120,22 @@ void atoB(uint8 dec)
       }
       for(j=i-1;j>=0;j--) 
       {
-            printf("%d",a[j]);
+        if(a[j]){//if 1, ten flag is changed
+            ten = !ten;   
+        }
+        if(ten){
+            TX_pin_Write(1);
+            CyDelayUs(250);//1/4000th of a sec, or 2000 baud with diff man
+            TX_pin_Write(0);
+            CyDelayUs(250);
+        }else{
+            TX_pin_Write(0);
+            CyDelayUs(250);//1/4000th of a sec, or 2000 baud with diff man
+            TX_pin_Write(1);
+            CyDelayUs(250);
+        }
       }
+    TX_pin_Write(1);//set to HIGH at the end
     }
 
 /* [] END OF FILE */
