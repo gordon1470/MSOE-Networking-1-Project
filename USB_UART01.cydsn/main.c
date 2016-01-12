@@ -37,6 +37,15 @@
 #include <device.h>
 #include "stdio.h"
 void atoB(uint8 dec);
+int binary[800];
+int binPos = 0,k,startBit = 1;
+CY_ISR(TimerHandler){
+    Timer_STATUS;
+    if(k < binPos){
+        TX_pin_Write(binary[k]);
+        k++;
+    }
+}
 int main()
 {
     char rx;
@@ -45,10 +54,10 @@ int main()
     uint8 position = 0;
     /* Enable Global Interrupts */
     CyGlobalIntEnable;                        
-
+    
     /* Start USBFS Operation with 3V operation */
     USBUART_1_Start(0u, USBUART_1_3V_OPERATION);
-    
+    TimerISR_StartEx(TimerHandler);
     TX_pin_Write(1);
     /* Main Loop: */
     for(;;)
@@ -96,13 +105,17 @@ int main()
             if(flag && position != 0){
                 int i = 0;
                 flag = 0;
-                TX_pin_Write(0);
-                CyDelayUs(250);//1/4000th of a sec, or 2000 baud with diff man
-                TX_pin_Write(1);
-                CyDelayUs(250);
+                binary[binPos] = 0;
+                binPos++;
+                binary[binPos] = 1;
+                binPos++;
                 for(i = 0; i < position; i++){
                     atoB(lineStr[i]);
                 }
+                binary[binPos] = 1;//set to high at the end
+                binPos++;
+                Timer_Start();
+                position = 0;
             }else flag = 0;
         }
     }   
@@ -111,31 +124,41 @@ int main()
 void atoB(uint8 dec)
     {
 	  int a[20];//flag "ten" checks if 1 is represented as "10" or "01",
-      int i=0,j,ten = 0;
+      int i=0,j;
       while(dec>0) 
       { 
            a[i]=dec%2; 
            i++; 
            dec=dec/2;
       }
+    if(startBit){
+      binary[binPos] = 1;
+      binPos++;
+      binary[binPos] = 0;
+      binPos++;
+    }else{
+      binary[binPos] = 0;
+      binPos++;
+      binary[binPos] = 1;
+      binPos++;
+    }  
       for(j=i-1;j>=0;j--) 
       {
         if(a[j]){//if 1, ten flag is changed
-            ten = !ten;   
+            if (startBit == 0){startBit = 1;} else startBit = 0;  
         }
-        if(ten){
-            TX_pin_Write(1);
-            CyDelayUs(250);//1/4000th of a sec, or 2000 baud with diff man
-            TX_pin_Write(0);
-            CyDelayUs(250);
+        if(startBit){
+            binary[binPos] = 1;
+            binPos++;
+            binary[binPos] = 0;
+            binPos++;
         }else{
-            TX_pin_Write(0);
-            CyDelayUs(250);//1/4000th of a sec, or 2000 baud with diff man
-            TX_pin_Write(1);
-            CyDelayUs(250);
+            binary[binPos] = 0;
+            binPos++;
+            binary[binPos] = 1;
+            binPos++;
         }
       }
-    TX_pin_Write(1);//set to HIGH at the end
-    }
+   }
 
 /* [] END OF FILE */

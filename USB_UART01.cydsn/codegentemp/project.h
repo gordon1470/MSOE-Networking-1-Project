@@ -28,6 +28,8 @@
 #include "LCD.h"
 #include "TX_pin_aliases.h"
 #include "TX_pin.h"
+#include "Timer.h"
+#include "TimerISR.h"
 #include "USBUART_1_Dm_aliases.h"
 #include "USBUART_1_Dm.h"
 #include "USBUART_1_Dp_aliases.h"

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
   29:.\Generated_Source\PSoC5/USBUART_1_std.c **** #if defined(USBUART_1_ENABLE_FWSN_STRING)
   30:.\Generated_Source\PSoC5/USBUART_1_std.c ****     static volatile uint8 *USBUART_1_fwSerialNumberStringDescriptor;
   31:.\Generated_Source\PSoC5/USBUART_1_std.c ****     static volatile uint8 USBUART_1_snStringConfirm = USBUART_1_FALSE;
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 2
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/USBUART_1_std.c **** #endif  /* USBUART_1_ENABLE_FWSN_STRING */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
   86:.\Generated_Source\PSoC5/USBUART_1_std.c **** *
   87:.\Generated_Source\PSoC5/USBUART_1_std.c **** *******************************************************************************/
   88:.\Generated_Source\PSoC5/USBUART_1_std.c **** uint8 USBUART_1_HandleStandardRqst(void) 
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 3
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 3
 
 
   89:.\Generated_Source\PSoC5/USBUART_1_std.c **** {
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
   62 002c 00F2FE80 		bhi	.L56
   63 0030 01A2     		adr	r2, .L5
   64 0032 52F823F0 		ldr	pc, [r2, r3, lsl #2]
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 4
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 4
 
 
   65 0036 00BF     		.p2align 2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  109 0094 24D1     		bne	.L11
  118:.\Generated_Source\PSoC5/USBUART_1_std.c ****                 {
  119:.\Generated_Source\PSoC5/USBUART_1_std.c ****                     pTmp = USBUART_1_GetConfigTablePtr(CY_GET_REG8(USBUART_1_wValueLo));
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 5
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 5
 
 
  110              		.loc 1 119 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  129:.\Generated_Source\PSoC5/USBUART_1_std.c ****                 #if defined(USBUART_1_ENABLE_STRINGS)
  130:.\Generated_Source\PSoC5/USBUART_1_std.c ****                 else if (CY_GET_REG8(USBUART_1_wValueHi) == USBUART_1_DESCR_STRING)
  131:.\Generated_Source\PSoC5/USBUART_1_std.c ****                 {
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 6
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 6
 
 
  132:.\Generated_Source\PSoC5/USBUART_1_std.c ****                     /* Descriptor Strings*/
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  186:.\Generated_Source\PSoC5/USBUART_1_std.c ****                 {
  187:.\Generated_Source\PSoC5/USBUART_1_std.c ****                     requestHandled = USBUART_1_DispatchClassRqst();
  188:.\Generated_Source\PSoC5/USBUART_1_std.c ****                 }
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 7
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 7
 
 
  189:.\Generated_Source\PSoC5/USBUART_1_std.c ****                 break;
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  197 011c EAD1     		bne	.L16
  198              	.L15:
  147:.\Generated_Source\PSoC5/USBUART_1_std.c ****                         {
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 8
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 8
 
 
  199              		.loc 1 147 0 is_stmt 1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  244 0162 1A80     		strh	r2, [r3]	@ movhi
  180:.\Generated_Source\PSoC5/USBUART_1_std.c ****                         requestHandled  = USBUART_1_InitControlRead();
  245              		.loc 1 180 0
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 9
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 9
 
 
  246 0164 474A     		ldr	r2, .L60
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  194:.\Generated_Source\PSoC5/USBUART_1_std.c ****                         USBUART_1_tBuffer[0u] = USBUART_1_EP[ \
  278              		.loc 1 194 0
  279 0194 3B4B     		ldr	r3, .L60
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 10
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 10
 
 
  280 0196 0222     		movs	r2, #2
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  325 01e0 0022     		movs	r2, #0
  326 01e2 5A70     		strb	r2, [r3, #1]
  205:.\Generated_Source\PSoC5/USBUART_1_std.c ****                         requestHandled  = USBUART_1_InitControlRead();
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 11
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 11
 
 
  327              		.loc 1 205 0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  367 021c 1344     		add	r3, r3, r2
  368 021e 194A     		ldr	r2, .L60
  369 0220 5360     		str	r3, [r2, #4]
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 12
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 12
 
 
  221:.\Generated_Source\PSoC5/USBUART_1_std.c ****                 requestHandled  = USBUART_1_InitControlRead();
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  233:.\Generated_Source\PSoC5/USBUART_1_std.c ****                 requestHandled = USBUART_1_InitNoDataControlTransfer();
  412              		.loc 1 233 0
  413 027a FFF7FEFF 		bl	USBUART_1_InitNoDataControlTransfer
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 13
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 13
 
 
  414 027e 0346     		mov	r3, r0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  459 02e4 BB68     		ldr	r3, [r7, #8]
  460 02e6 002B     		cmp	r3, #0
  461 02e8 02D1     		bne	.L35
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 14
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 14
 
 
  462              	.L34:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  501              		.loc 1 257 0
  502 0324 584B     		ldr	r3, .L62+12
  503 0326 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 15
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 15
 
 
  504 0328 7B71     		strb	r3, [r7, #5]
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  541 0362 012B     		cmp	r3, #1
  542 0364 0DD3     		bcc	.L41
  543 0366 022B     		cmp	r3, #2
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 16
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 16
 
 
  544 0368 00D0     		beq	.L42
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  568 038a 0CD1     		bne	.L45
  285:.\Generated_Source\PSoC5/USBUART_1_std.c ****                             requestHandled = USBUART_1_InitNoDataControlTransfer();
  569              		.loc 1 285 0
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 17
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 17
 
 
  570 038c 434B     		ldr	r3, .L62+32
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  616              		.loc 1 297 0
  617 03dc FFE7     		b	.L58
  618              	.L46:
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 18
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 18
 
 
  619              	.L58:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  642 03fe DBB2     		uxtb	r3, r3
  643 0400 002B     		cmp	r3, #0
  644 0402 04D1     		bne	.L51
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 19
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 19
 
 
  308:.\Generated_Source\PSoC5/USBUART_1_std.c ****                         }
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  323:.\Generated_Source\PSoC5/USBUART_1_std.c ****                                                                 (uint8)~(CY_GET_REG8(USBUART_1_wVal
  690              		.loc 1 323 0
  691 044a 0F4A     		ldr	r2, .L62+12
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 20
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 20
 
 
  692 044c 1278     		ldrb	r2, [r2]
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  736 048c 00000000 		.word	USBUART_1_interfaceNumber
  737 0490 00000000 		.word	USBUART_1_interfaceSetting
  738 0494 00000000 		.word	USBUART_1_interfaceSetting_last
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 21
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 21
 
 
  739 0498 00600040 		.word	1073766400
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  766 0002 88B0     		sub	sp, sp, #32
  767              		.cfi_def_cfa_offset 40
  768 0004 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 22
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 22
 
 
  769              		.cfi_def_cfa_register 7
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  377:.\Generated_Source\PSoC5/USBUART_1_std.c ****                 descr[i] = (uint8)hex[value >> 4u];
  807              		.loc 1 377 0 discriminator 3
  808 0046 FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 23
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 23
 
 
  809 0048 7A68     		ldr	r2, [r7, #4]
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  857              		.section	.text.USBUART_1_ConfigReg,"ax",%progbits
  858              		.align	2
  859              		.global	USBUART_1_ConfigReg
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 24
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 24
 
 
  860              		.thumb
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  883 000e 97E0     		b	.L71
  884              	.L76:
  413:.\Generated_Source\PSoC5/USBUART_1_std.c ****     {
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 25
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 25
 
 
  414:.\Generated_Source\PSoC5/USBUART_1_std.c ****         CY_SET_REG8((reg8 *)(USBUART_1_ARB_EP1_CFG_IND + i), USBUART_1_ARB_EPX_CFG_DEFAULT);
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  428:.\Generated_Source\PSoC5/USBUART_1_std.c ****                 CY_SET_REG8((reg8 *)(USBUART_1_SIE_EP1_CR0_IND + i), USBUART_1_MODE_NAK_OUT);
  925              		.loc 1 428 0
  926 005a BA79     		ldrb	r2, [r7, #6]	@ zero_extendqisi2
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 26
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 26
 
 
  927 005c 404B     		ldr	r3, .L77+4
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  967 00a2 5B00     		lsls	r3, r3, #1
  968 00a4 1344     		add	r3, r3, r2
  969 00a6 9B00     		lsls	r3, r3, #2
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 27
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 27
 
 
  970 00a8 0B44     		add	r3, r3, r1
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  1020 0106 9B00     		lsls	r3, r3, #2
  1021 0108 0B44     		add	r3, r3, r1
  1022 010a DB88     		ldrh	r3, [r3, #6]	@ movhi
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 28
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 28
 
 
  1023 010c 9BB2     		uxth	r3, r3
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  464:.\Generated_Source\PSoC5/USBUART_1_std.c ****         USBUART_1_ARB_CFG_REG = USBUART_1_ARB_CFG_AUTO_DMA | USBUART_1_ARB_CFG_AUTO_MEM;
  465:.\Generated_Source\PSoC5/USBUART_1_std.c ****     #endif /*  USBUART_1_EP_MM == USBUART_1__EP_DMAAUTO */
  466:.\Generated_Source\PSoC5/USBUART_1_std.c **** 
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 29
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 29
 
 
  467:.\Generated_Source\PSoC5/USBUART_1_std.c ****     CY_SET_REG8(USBUART_1_SIE_EP_INT_EN_PTR, 0xFFu);
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  484:.\Generated_Source\PSoC5/USBUART_1_std.c **** *
  485:.\Generated_Source\PSoC5/USBUART_1_std.c **** * USBUART_1_interfaceClass - Initialized class array for each interface.
  486:.\Generated_Source\PSoC5/USBUART_1_std.c **** *   It is used for handling Class specific requests depend on interface class.
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 30
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 30
 
 
  487:.\Generated_Source\PSoC5/USBUART_1_std.c **** *   Different classes in multiple Alternate settings does not supported.
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  1125 0022 0022     		movs	r2, #0
  1126 0024 1A70     		strb	r2, [r3]
  511:.\Generated_Source\PSoC5/USBUART_1_std.c ****         USBUART_1_EP[ep].hwEpState = 0u;
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 31
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 31
 
 
  1127              		.loc 1 511 0 discriminator 3
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  1177 0080 1A80     		strh	r2, [r3]	@ movhi
  516:.\Generated_Source\PSoC5/USBUART_1_std.c ****         USBUART_1_EP[ep].interface = 0u;
  1178              		.loc 1 516 0 discriminator 3
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 32
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 32
 
 
  1179 0082 FA7F     		ldrb	r2, [r7, #31]	@ zero_extendqisi2
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  1220 00c2 7B77     		strb	r3, [r7, #29]
  1221              	.L83:
  523:.\Generated_Source\PSoC5/USBUART_1_std.c ****         {
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 33
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 33
 
 
  1222              		.loc 1 523 0 is_stmt 0 discriminator 1
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  540:.\Generated_Source\PSoC5/USBUART_1_std.c ****         else
  541:.\Generated_Source\PSoC5/USBUART_1_std.c ****         {
  542:.\Generated_Source\PSoC5/USBUART_1_std.c ****             USBUART_1_deviceStatus &=  (uint8)~USBUART_1_DEVICE_STATUS_SELF_POWERED;
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 34
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 34
 
 
  1263              		.loc 1 542 0
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  580:.\Generated_Source\PSoC5/USBUART_1_std.c ****                             }
  581:.\Generated_Source\PSoC5/USBUART_1_std.c ****                         #endif  /*  USBUART_1_ENABLE_MIDI_STREAMING*/
  582:.\Generated_Source\PSoC5/USBUART_1_std.c ****                     }
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 35
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 35
 
 
  583:.\Generated_Source\PSoC5/USBUART_1_std.c ****                     else
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  1294              		.loc 1 622 0
  1295 013c 7A7F     		ldrb	r2, [r7, #29]	@ zero_extendqisi2
  1296 013e 7B69     		ldr	r3, [r7, #20]
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 36
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 36
 
 
  1297 0140 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  1342 0194 7B69     		ldr	r3, [r7, #20]
  1343 0196 DB78     		ldrb	r3, [r3, #3]	@ zero_extendqisi2
  1344 0198 03F00303 		and	r3, r3, #3
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 37
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 37
 
 
  1345 019c FB72     		strb	r3, [r7, #11]
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  1389              		.loc 1 641 0 discriminator 1
  1390 01e2 7B69     		ldr	r3, [r7, #20]
  1391 01e4 9B79     		ldrb	r3, [r3, #6]	@ zero_extendqisi2
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 38
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 38
 
 
  640:.\Generated_Source\PSoC5/USBUART_1_std.c ****                                         (pEP->bMisc == USBUART_1_CLASS_CDC)) &&
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  1426 0216 0920     		movs	r0, #9
  1427              	.L99:
  1428              		.loc 1 660 0 discriminator 4
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 39
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 39
 
 
  1429 0218 2149     		ldr	r1, .L107
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  1462 024a 1549     		ldr	r1, .L107
  1463 024c 1346     		mov	r3, r2
  1464 024e 5B00     		lsls	r3, r3, #1
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 40
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 40
 
 
  1465 0250 1344     		add	r3, r3, r2
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  690:.\Generated_Source\PSoC5/USBUART_1_std.c ****             }
  691:.\Generated_Source\PSoC5/USBUART_1_std.c ****         #endif /*  (USBUART_1_EP_MA == USBUART_1__MA_DYNAMIC) */
  692:.\Generated_Source\PSoC5/USBUART_1_std.c **** 
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 41
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 41
 
 
  693:.\Generated_Source\PSoC5/USBUART_1_std.c ****         /* Init class array for each interface and interface number for each EP.
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  1548              	.L103:
  699:.\Generated_Source\PSoC5/USBUART_1_std.c ****         for (i = 0u; i < ep; i++)
  1549              		.loc 1 699 0 is_stmt 0 discriminator 1
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 42
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 42
 
 
  1550 02e6 7A7F     		ldrb	r2, [r7, #29]	@ zero_extendqisi2
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  710:.\Generated_Source\PSoC5/USBUART_1_std.c ****             {
  1593              		.loc 1 710 0 is_stmt 0 discriminator 1
  1594 0330 FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 43
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 43
 
 
  1595 0332 082B     		cmp	r3, #8
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  740:.\Generated_Source\PSoC5/USBUART_1_std.c **** *******************************************************************************/
  741:.\Generated_Source\PSoC5/USBUART_1_std.c **** void USBUART_1_ConfigAltChanged(void) 
  742:.\Generated_Source\PSoC5/USBUART_1_std.c **** {
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 44
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 44
 
 
  1623              		.loc 1 742 0
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  762:.\Generated_Source\PSoC5/USBUART_1_std.c ****         /* p_list points the endpoint setting table. */
  763:.\Generated_Source\PSoC5/USBUART_1_std.c ****         pEP = (const T_USBUART_1_EP_SETTINGS_BLOCK CYCODE *) pTmp->p_list;
  1658              		.loc 1 763 0
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 45
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 45
 
 
  1659 0030 7B68     		ldr	r3, [r7, #4]
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  1703 007a 9A42     		cmp	r2, r3
  1704 007c 40F0D880 		bne	.L114
  771:.\Generated_Source\PSoC5/USBUART_1_std.c ****             {
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 46
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 46
 
 
  772:.\Generated_Source\PSoC5/USBUART_1_std.c ****                 cur_ep = pEP->addr & USBUART_1_DIR_UNUSED;
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  1751 00ca 6449     		ldr	r1, .L122+16
  1752 00cc 1346     		mov	r3, r2
  1753 00ce 5B00     		lsls	r3, r3, #1
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 47
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 47
 
 
  1754 00d0 1344     		add	r3, r3, r2
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  1797 0112 0122     		movs	r2, #1
  1798 0114 1A70     		strb	r2, [r3]
  791:.\Generated_Source\PSoC5/USBUART_1_std.c ****                 USBUART_1_EP[cur_ep].bufferSize = pEP->bufferSize;
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 48
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 48
 
 
  1799              		.loc 1 791 0
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  799:.\Generated_Source\PSoC5/USBUART_1_std.c ****             #if(USBUART_1_EP_MM == USBUART_1__EP_DMAAUTO)
  800:.\Generated_Source\PSoC5/USBUART_1_std.c ****                 /* In_data_rdy for selected EP should be set to 0 */
  801:.\Generated_Source\PSoC5/USBUART_1_std.c ****                 * (reg8 *)(USBUART_1_ARB_EP1_CFG_IND + ri) &= (uint8)~USBUART_1_ARB_EPX_CFG_IN_DATA
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 49
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 49
 
 
  802:.\Generated_Source\PSoC5/USBUART_1_std.c **** 
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  1867 0192 354B     		ldr	r3, .L122+28
  1868 0194 1344     		add	r3, r3, r2
  1869 0196 1846     		mov	r0, r3
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 50
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 50
 
 
  1870 0198 BA78     		ldrb	r2, [r7, #2]	@ zero_extendqisi2
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  1918 01f2 204B     		ldr	r3, .L122+40
  1919 01f4 1344     		add	r3, r3, r2
  1920 01f6 1846     		mov	r0, r3
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 51
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 51
 
 
  1921 01f8 BA78     		ldrb	r2, [r7, #2]	@ zero_extendqisi2
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  848:.\Generated_Source\PSoC5/USBUART_1_std.c ****         }
  849:.\Generated_Source\PSoC5/USBUART_1_std.c ****     }   /* USBUART_1_configuration > 0 */
  850:.\Generated_Source\PSoC5/USBUART_1_std.c **** }
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 52
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 52
 
 
  1966              		.loc 1 850 0 is_stmt 1
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  2001              		@ args = 0, pretend = 0, frame = 16
  2002              		@ frame_needed = 1, uses_anonymous_args = 0
  2003              		@ link register save eliminated.
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 53
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 53
 
 
  2004 0000 80B4     		push	{r7}
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  2040 0034 FA68     		ldr	r2, [r7, #12]
  2041 0036 1344     		add	r3, r3, r2
  2042 0038 5B68     		ldr	r3, [r3, #4]
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 54
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 54
 
 
  2043 003a FB60     		str	r3, [r7, #12]
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  2074              		.loc 1 910 0
  2075              		.cfi_startproc
  2076              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 55
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 55
 
 
  2077              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  925:.\Generated_Source\PSoC5/USBUART_1_std.c **** *  None.
  926:.\Generated_Source\PSoC5/USBUART_1_std.c **** *
  927:.\Generated_Source\PSoC5/USBUART_1_std.c **** * Return:
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 56
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 56
 
 
  928:.\Generated_Source\PSoC5/USBUART_1_std.c **** *  Interface Class table pointer.
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  945:.\Generated_Source\PSoC5/USBUART_1_std.c ****         pInterfaceClass = (const uint8 CYCODE *) pTmp->p_list;
  2154              		.loc 1 945 0
  2155 0032 BB68     		ldr	r3, [r7, #8]
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 57
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 57
 
 
  2156 0034 5B68     		ldr	r3, [r3, #4]
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  967:.\Generated_Source\PSoC5/USBUART_1_std.c **** * Return:
  968:.\Generated_Source\PSoC5/USBUART_1_std.c **** *  None.
  969:.\Generated_Source\PSoC5/USBUART_1_std.c **** *
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 58
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 58
 
 
  970:.\Generated_Source\PSoC5/USBUART_1_std.c **** * Reentrant:
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  2228 0034 9B00     		lsls	r3, r3, #2
  2229 0036 0344     		add	r3, r3, r0
  2230 0038 9B78     		ldrb	r3, [r3, #2]
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 59
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 59
 
 
  2231 003a DBB2     		uxtb	r3, r3
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  2276              		.loc 1 993 0
  2277 0090 FA7B     		ldrb	r2, [r7, #15]	@ zero_extendqisi2
  2278 0092 084B     		ldr	r3, .L143+4
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 60
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 60
 
 
  2279 0094 1344     		add	r3, r3, r2
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
 1010:.\Generated_Source\PSoC5/USBUART_1_std.c **** *
 1011:.\Generated_Source\PSoC5/USBUART_1_std.c **** * Parameters:
 1012:.\Generated_Source\PSoC5/USBUART_1_std.c **** *  None.
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 61
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 61
 
 
 1013:.\Generated_Source\PSoC5/USBUART_1_std.c **** *
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
 1032:.\Generated_Source\PSoC5/USBUART_1_std.c ****     {
 1033:.\Generated_Source\PSoC5/USBUART_1_std.c ****         /* Set the endpoint Halt */
 1034:.\Generated_Source\PSoC5/USBUART_1_std.c ****         USBUART_1_EP[ep].hwEpState |= (USBUART_1_ENDPOINT_STATUS_HALT);
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 62
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 62
 
 
  2352              		.loc 1 1034 0 is_stmt 1
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  2402 008e 0246     		mov	r2, r0
  2403 0090 5A70     		strb	r2, [r3, #1]
 1039:.\Generated_Source\PSoC5/USBUART_1_std.c **** 
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 63
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 63
 
 
 1040:.\Generated_Source\PSoC5/USBUART_1_std.c ****         if ((USBUART_1_EP[ep].addr & USBUART_1_DIR_IN) != 0u)
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  2441 00cc 1846     		mov	r0, r3
  2442 00ce 0837     		adds	r7, r7, #8
  2443              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 64
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 64
 
 
  2444 00d0 BD46     		mov	sp, r7
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
 1078:.\Generated_Source\PSoC5/USBUART_1_std.c ****     uint8 ep;
 1079:.\Generated_Source\PSoC5/USBUART_1_std.c ****     uint8 ri;
 1080:.\Generated_Source\PSoC5/USBUART_1_std.c ****     uint8 requestHandled = USBUART_1_FALSE;
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 65
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 65
 
 
  2477              		.loc 1 1080 0
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
 1091:.\Generated_Source\PSoC5/USBUART_1_std.c ****         /* Clear the data toggle */
 1092:.\Generated_Source\PSoC5/USBUART_1_std.c ****         USBUART_1_EP[ep].epToggle = 0u;
  2521              		.loc 1 1092 0
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 66
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 66
 
 
  2522 0058 BA79     		ldrb	r2, [r7, #6]	@ zero_extendqisi2
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  2569 00b4 5B00     		lsls	r3, r3, #1
  2570 00b6 1344     		add	r3, r3, r2
  2571 00b8 9B00     		lsls	r3, r3, #2
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 67
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 67
 
 
  2572 00ba 0B44     		add	r3, r3, r1
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  2611 00fc 5B00     		lsls	r3, r3, #1
  2612 00fe 1344     		add	r3, r3, r2
  2613 0100 9B00     		lsls	r3, r3, #2
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 68
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 68
 
 
  2614 0102 0B44     		add	r3, r3, r1
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  2655 0140 0E600040 		.word	1073766414
  2656              		.cfi_endproc
  2657              	.LFE10:
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 69
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 69
 
 
  2658              		.size	USBUART_1_ClearEndpointHalt, .-USBUART_1_ClearEndpointHalt
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  2685 000e BB73     		strb	r3, [r7, #14]
 1155:.\Generated_Source\PSoC5/USBUART_1_std.c ****     /* Validate interface setting, stall if invalid. */
 1156:.\Generated_Source\PSoC5/USBUART_1_std.c ****     pTmp = USBUART_1_GetConfigTablePtr(USBUART_1_configuration - 1u);
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 70
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 70
 
 
  2686              		.loc 1 1156 0
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  2729 0056 D154     		strb	r1, [r2, r3]
  2730              	.L165:
 1168:.\Generated_Source\PSoC5/USBUART_1_std.c ****     }
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 71
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 71
 
 
 1169:.\Generated_Source\PSoC5/USBUART_1_std.c **** 
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  2782 002e 08       		.byte	0x8
  2783 002f 28050000 		.4byte	.LASF1
  2784 0033 02       		.uleb128 0x2
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 72
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 72
 
 
  2785 0034 02       		.byte	0x2
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  2839 009a 02       		.uleb128 0x2
  2840 009b 01       		.byte	0x1
  2841 009c 08       		.byte	0x8
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 73
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 73
 
 
  2842 009d E7050000 		.4byte	.LASF14
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  2896 010a 06060000 		.4byte	.LASF23
  2897 010e 03       		.byte	0x3
  2898 010f 85       		.byte	0x85
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 74
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 74
 
 
  2899 0110 76000000 		.4byte	0x76
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  2953 017c 04       		.byte	0x4
  2954 017d 08       		.uleb128 0x8
  2955 017e 4B060000 		.4byte	.LASF29
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 75
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 75
 
 
  2956 0182 03       		.byte	0x3
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  3010 01e8 F4010000 		.4byte	0x1f4
  3011 01ec 08       		.byte	0x8
  3012 01ed 00       		.byte	0
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 76
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 76
 
 
  3013 01ee 09       		.uleb128 0x9
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  3067 025b 91       		.byte	0x91
  3068 025c 77       		.sleb128 -9
  3069 025d 0D       		.uleb128 0xd
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 77
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 77
 
 
  3070 025e BD000000 		.4byte	.LASF41
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  3124 02c1 68       		.sleb128 -24
  3125 02c2 00       		.byte	0
  3126 02c3 0E       		.uleb128 0xe
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 78
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 78
 
 
  3127 02c4 6B000000 		.4byte	0x6b
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  3181 0331 13       		.uleb128 0x13
  3182 0332 68657800 		.ascii	"hex\000"
  3183 0336 01       		.byte	0x1
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 79
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 79
 
 
  3184 0337 6C01     		.2byte	0x16c
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  3238 03a5 39010000 		.4byte	.LASF53
  3239 03a9 01       		.byte	0x1
  3240 03aa ED01     		.2byte	0x1ed
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 80
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 80
 
 
  3241 03ac 6B000000 		.4byte	0x6b
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  3295 040f 01       		.byte	0x1
  3296 0410 F801     		.2byte	0x1f8
  3297 0412 D8020000 		.4byte	0x2d8
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 81
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 81
 
 
  3298 0416 02       		.uleb128 0x2
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  3352 047e 77       		.sleb128 -9
  3353 047f 14       		.uleb128 0x14
  3354 0480 1B020000 		.4byte	.LASF55
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 82
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 82
 
 
  3355 0484 01       		.byte	0x1
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  3409 04f0 02       		.uleb128 0x2
  3410 04f1 91       		.byte	0x91
  3411 04f2 74       		.sleb128 -12
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 83
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 83
 
 
  3412 04f3 00       		.byte	0
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  3466 0568 19       		.uleb128 0x19
  3467 0569 657000   		.ascii	"ep\000"
  3468 056c 01       		.byte	0x1
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 84
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 84
 
 
  3469 056d CE03     		.2byte	0x3ce
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  3523 05d7 00000000 		.4byte	.LFB10
  3524 05db 44010000 		.4byte	.LFE10-.LFB10
  3525 05df 01       		.uleb128 0x1
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 85
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 85
 
 
  3526 05e0 9C       		.byte	0x9c
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  3580 064a AC030000 		.4byte	.LASF47
  3581 064e 01       		.byte	0x1
  3582 064f 7F04     		.2byte	0x47f
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 86
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 86
 
 
  3583 0651 D8020000 		.4byte	0x2d8
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  3637 06c5 C9060000 		.4byte	0x6c9
  3638 06c9 10       		.uleb128 0x10
  3639 06ca AE060000 		.4byte	0x6ae
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 87
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 87
 
 
  3640 06ce 0E       		.uleb128 0xe
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  3694 0749 05       		.byte	0x5
  3695 074a 2F       		.byte	0x2f
  3696 074b 4F070000 		.4byte	0x74f
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 88
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 88
 
 
  3697 074f 06       		.uleb128 0x6
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  3751 0004 0E       		.uleb128 0xe
  3752 0005 13       		.uleb128 0x13
  3753 0006 0B       		.uleb128 0xb
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 89
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 89
 
 
  3754 0007 03       		.uleb128 0x3
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  3808 003d 3B       		.uleb128 0x3b
  3809 003e 05       		.uleb128 0x5
  3810 003f 49       		.uleb128 0x49
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 90
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 90
 
 
  3811 0040 13       		.uleb128 0x13
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  3865 0076 3B       		.uleb128 0x3b
  3866 0077 0B       		.uleb128 0xb
  3867 0078 49       		.uleb128 0x49
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 91
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 91
 
 
  3868 0079 13       		.uleb128 0x13
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  3922 00b0 01       		.byte	0x1
  3923 00b1 49       		.uleb128 0x49
  3924 00b2 13       		.uleb128 0x13
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 92
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 92
 
 
  3925 00b3 01       		.uleb128 0x1
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  3979 00ea 49       		.uleb128 0x49
  3980 00eb 13       		.uleb128 0x13
  3981 00ec 02       		.uleb128 0x2
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 93
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 93
 
 
  3982 00ed 18       		.uleb128 0x18
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  4036 0124 01       		.uleb128 0x1
  4037 0125 13       		.uleb128 0x13
  4038 0126 00       		.byte	0
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 94
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 94
 
 
  4039 0127 00       		.byte	0
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  4093 015f 2E       		.uleb128 0x2e
  4094 0160 01       		.byte	0x1
  4095 0161 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 95
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 95
 
 
  4096 0162 19       		.uleb128 0x19
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  4150 0199 00       		.byte	0
  4151 019a 1B       		.uleb128 0x1b
  4152 019b 34       		.uleb128 0x34
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 96
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 96
 
 
  4153 019c 00       		.byte	0
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  4207 0008 00000000 		.4byte	.LFB1
  4208 000c 90000000 		.4byte	.LFE1
  4209 0010 00000000 		.4byte	.LFB2
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 97
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 97
 
 
  4210 0014 80010000 		.4byte	.LFE2
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  4245      6D655C44 
  4245      6F63756D 
  4245      656E7473 
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 98
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 98
 
 
  4246 006c 5553425F 		.ascii	"USB_UART01.cydsn\000"
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  4266      74436F6E 
  4266      66696754 
  4267              	.LASF53:
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 99
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 99
 
 
  4268 0139 636C6561 		.ascii	"clearAltSetting\000"
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  4290 01e1 55534255 		.ascii	"USBUART_1_ConfigAltChanged\000"
  4290      4152545F 
  4290      315F436F 
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 100
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 100
 
 
  4290      6E666967 
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  4313              	.LASF72:
  4314 02a7 55534255 		.ascii	"USBUART_1_configurationChanged\000"
  4314      4152545F 
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 101
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 101
 
 
  4314      315F636F 
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  4334      6500
  4335              	.LASF45:
  4336 0397 64657363 		.ascii	"descrLength\000"
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 102
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 102
 
 
  4336      724C656E 
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  4358 04bc 63757272 		.ascii	"currentInterfacesNum\000"
  4358      656E7449 
  4358      6E746572 
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 103
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 103
 
 
  4358      66616365 
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  4382      7400
  4383              	.LASF67:
  4384 0574 55534255 		.ascii	"USBUART_1_ClearEndpointHalt\000"
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 104
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 104
 
 
  4384      4152545F 
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 1
  4410      4152545F 
  4410      315F696E 
  4410      74657266 
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccMNj5mU.s 			page 105
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPakniU.s 			page 105
 
 
  4410      6163654E 

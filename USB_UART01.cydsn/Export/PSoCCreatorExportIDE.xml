@@ -115,6 +115,11 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\TX_pin_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\TX_pin.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\TX_pin.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Timer.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Timer.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Timer_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\TimerISR.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\TimerISR.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="\\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\Export\ARM_GCC_Generic">

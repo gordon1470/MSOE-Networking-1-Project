@@ -45,6 +45,11 @@
   <file name="\\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\codegentemp\TX_pin_aliases.h" value="NONE;TX_pin" />
   <file name="\\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\codegentemp\TX_pin.c" value="ARM_C_FILE;TX_pin" />
   <file name="\\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\codegentemp\TX_pin.h" value="NONE;TX_pin" />
+  <file name="\\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\codegentemp\Timer.c" value="ARM_C_FILE;Timer" />
+  <file name="\\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\codegentemp\Timer.h" value="NONE;Timer" />
+  <file name="\\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\codegentemp\Timer_PM.c" value="ARM_C_FILE;Timer" />
+  <file name="\\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\codegentemp\TimerISR.c" value="ARM_C_FILE;TimerISR" />
+  <file name="\\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\codegentemp\TimerISR.h" value="NONE;TimerISR" />
   <file name="\\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\codegentemp\USBUART_1_Dm_aliases.h" value="NONE;USBUART_1_Dm" />
   <file name="\\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\codegentemp\USBUART_1_Dm.c" value="ARM_C_FILE;USBUART_1_Dm" />
   <file name="\\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\codegentemp\USBUART_1_Dm.h" value="NONE;USBUART_1_Dm" />
