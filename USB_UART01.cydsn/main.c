@@ -35,30 +35,51 @@
 *******************************************************************************/
 
 #include <device.h>
+#include <stdbool.h>
 #include "stdio.h"
-void atoB(uint8 dec);
-int binary[800];
-int binPos = 0,k,startBit = 1;
+
+#define INDEX_OF_MSB 6
+void initDiffManEncodedArray();
+void transmitData(char*, uint8);
+void asciiToDiffMan(char);
+
+int diffManEncodedData[800];
+int halfBitIndex = 0, currentDataPos=0, lengthOfData;
+bool timerExpired;
+
 CY_ISR(TimerHandler){
-    Timer_STATUS;
-    if(k < binPos){
-        TX_pin_Write(binary[k]);
-        k++;
-    }
+    Timer_STATUS;//clear the timer interrupt
+    Timer_Stop();
+    timerExpired = true;
+    
+    /*if(currentDataPos < halfBitIndex){
+        TX_pin_Write(diffManEncodedData[currentDataPos]);
+        currentDataPos++;
+    }*/
 }
+
 int main()
 {
     char rx;
-    uint8 flag = 0;
-    char lineStr[100];
-    uint8 position = 0;
+    char lineString[100];
+    uint8 stringPosition = 0;
+    timerExpired = false;
     /* Enable Global Interrupts */
     CyGlobalIntEnable;                        
     
+    initDiffManEncodedArray();
+
     /* Start USBFS Operation with 3V operation */
     USBUART_1_Start(0u, USBUART_1_3V_OPERATION);
     TimerISR_StartEx(TimerHandler);
+    
     TX_pin_Write(1);
+    
+    //test
+    LCD_Start();
+    //end test
+    
+    
     /* Main Loop: */
     for(;;)
     {
@@ -77,88 +98,159 @@ int main()
                 rx = USBUART_1_GetChar();
                 switch(rx){
                     case 8://backspace
-                    if(position>0){
-                        position--;
-                        lineStr[position] = '\0';
-                        //backspace space backspace
-                        while(USBUART_1_CDCIsReady() == 0u); 
-                        USBUART_1_PutChar(8);
-                        USBUART_1_PutChar(32);
-                        USBUART_1_PutChar(8);
-                    }
+                        if(stringPosition>0){
+                            stringPosition--;
+                            lineString[stringPosition] = '\0';
+                            //backspace space backspace
+                            while(USBUART_1_CDCIsReady() == 0u); 
+                            USBUART_1_PutChar(8);
+                            USBUART_1_PutChar(32);
+                            USBUART_1_PutChar(8);
+                        }
                     break;
                     case 13://enter (carriage return)
-                    flag = 1;
-                    while(USBUART_1_CDCIsReady() == 0u);
-                    USBUART_1_PutCRLF();
+                        transmitData(lineString, stringPosition);
+                        while(USBUART_1_CDCIsReady() == 0u);
+                        USBUART_1_PutCRLF();
+                        
+                        //trans data
+                        int i;
+                        int x = 0;
+                        for(i = 0;i < halfBitIndex; i++){
+                            TX_pin_Write(diffManEncodedData[i]);
+                            Timer_Start();
+                            while(!timerExpired); 
+                            timerExpired = false;
+                        }
+                        TX_pin_Write(1);
+                        //end trans data
+                        
+                        halfBitIndex = 0;
+                        stringPosition = 0;
+                        //halfBitIndex = 0;
+                        
                     break;
                     case 27://escape
                     break;
                     default://everything else
-                    lineStr[position] = rx;
-                    position++;
-                    while(USBUART_1_CDCIsReady() == 0u); 
-                    USBUART_1_PutChar(rx);       /* Send data back to PC */
+                        lineString[stringPosition] = rx;
+                        stringPosition++;
+                        while(USBUART_1_CDCIsReady() == 0u); 
+                        USBUART_1_PutChar(rx);       /* Send data back to PC */
                     break;
                 }
             }
-            if(flag && position != 0){
-                int i = 0;
-                flag = 0;
-                binary[binPos] = 0;
-                binPos++;
-                binary[binPos] = 1;
-                binPos++;
-                for(i = 0; i < position; i++){
-                    atoB(lineStr[i]);
-                }
-                binary[binPos] = 1;//set to high at the end
-                binPos++;
-                Timer_Start();
-                position = 0;
-            }else flag = 0;
         }
     }   
 }
 
-void atoB(uint8 dec)
-    {
-	  int a[20];//flag "ten" checks if 1 is represented as "10" or "01",
-      int i=0,j;
-      while(dec>0) 
-      { 
-           a[i]=dec%2; 
-           i++; 
-           dec=dec/2;
-      }
-    if(startBit){
-      binary[binPos] = 1;
-      binPos++;
-      binary[binPos] = 0;
-      binPos++;
+/*
+init dif man encoded data array with a leading "starting bit". The starting bit is madeup of the 
+half bits 01.
+*/
+void initDiffManEncodedArray(){
+    halfBitIndex = 0;
+    diffManEncodedData[halfBitIndex] = 0;
+    halfBitIndex++;
+    diffManEncodedData[halfBitIndex] = 1;
+    halfBitIndex++;
+}
+
+/*
+enter key has been pressed, transmit diff man data
+*/
+void transmitData(char lineString[], uint8 stringPosition){
+
+    unsigned int i = 0;
+    for(i = 0; i < stringPosition; i++){
+        asciiToDiffMan(lineString[i]);
+    }
+}
+
+/*
+Helper method
+Converts a ascii char to a differental manchester line encoded version
+*/
+void asciiToDiffMan(char asciiChar)
+{
+    uint8 previousHalfBit = diffManEncodedData[halfBitIndex-1];
+    //send starting 1 bit (encoded)
+    if(previousHalfBit == 1){
+        diffManEncodedData[halfBitIndex] = 1;
+        halfBitIndex++;
+        diffManEncodedData[halfBitIndex] = 0;
+        halfBitIndex++;
     }else{
-      binary[binPos] = 0;
-      binPos++;
-      binary[binPos] = 1;
-      binPos++;
-    }  
-      for(j=i-1;j>=0;j--) 
-      {
-        if(a[j]){//if 1, ten flag is changed
-            if (startBit == 0){startBit = 1;} else startBit = 0;  
+        diffManEncodedData[halfBitIndex] = 0;
+        halfBitIndex++;
+        diffManEncodedData[halfBitIndex] = 1;
+        halfBitIndex++;
+    } 
+    previousHalfBit = diffManEncodedData[halfBitIndex-1];
+
+    
+    //convert asciil char to binary value (which will be 7 bits)
+    unsigned int binaryValueOfChar[20];//index zero is LSB 
+    int i;
+    for(i=0; asciiChar>0; i++)
+    { 
+        binaryValueOfChar[i]=asciiChar%2; 
+        asciiChar=asciiChar/2;
+    }
+
+    //differential encode the 7 bits (from the binary version of the char)
+    //must start at the end of the array so to encode the MSB first 
+    int j;
+    for(j=INDEX_OF_MSB;j>=0;j--) 
+    {
+        if(binaryValueOfChar[j] == 1)
+        {
+            //bit == 1
+            if(previousHalfBit == 1)
+            {
+                diffManEncodedData[halfBitIndex] = 1;
+                halfBitIndex++;
+                diffManEncodedData[halfBitIndex] = 0;
+                halfBitIndex++;    
+            }
+            else
+            {
+                diffManEncodedData[halfBitIndex] = 0;
+                halfBitIndex++;
+                diffManEncodedData[halfBitIndex] = 1;
+                halfBitIndex++;
+            }
+            
         }
-        if(startBit){
-            binary[binPos] = 1;
-            binPos++;
-            binary[binPos] = 0;
-            binPos++;
-        }else{
-            binary[binPos] = 0;
-            binPos++;
-            binary[binPos] = 1;
-            binPos++;
+        else
+        {
+            //bit == 0
+            if(previousHalfBit == 1)
+            {
+                diffManEncodedData[halfBitIndex] = 0;
+                halfBitIndex++;
+                diffManEncodedData[halfBitIndex] = 1;
+                halfBitIndex++;
+            }
+            else
+            {
+                diffManEncodedData[halfBitIndex] = 1;
+                halfBitIndex++;
+                diffManEncodedData[halfBitIndex] = 0;
+                halfBitIndex++;
+            }
         }
-      }
-   }
+        
+        previousHalfBit = diffManEncodedData[halfBitIndex-1];
+    }//end for
+   
+    //test
+   
+    /*for(i=0;i<halfBitIndex; i++){
+        LCD_PrintNumber(diffManEncodedData[i]);
+    }*/
+    //end test
+   
+}//end function
 
 /* [] END OF FILE */
