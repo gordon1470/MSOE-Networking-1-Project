@@ -303,6 +303,7 @@
 <OpenDocs>
 <name v=".\USB_UART01.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\USB_UART01.cydsn\main.c" />
+<name v=".\USB_UART01.cydsn\USB_UART01.cydwr" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />
