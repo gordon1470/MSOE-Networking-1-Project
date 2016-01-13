@@ -2,7 +2,7 @@
 --	Conversion of USB_UART01.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed Jan 13 09:41:56 2016
+--	Wed Jan 13 10:26:35 2016
 --
 
 USE cypress.cypress.all;

@@ -1,61 +1,26 @@
 /*******************************************************************************
-* File Name: main.c
-*
-* Version: 1.0
-*
-* Description:
-*   Enumerates as a Virtual Com port.  Receives data from hyper terminal, then 
-*   send received data backward. LCD shows the Line settings.
-*   
-*  To test project:
-*   1. Build the project and program the hex file on to the target device.
-*   2. Select 3.3V in SW3 and plug-in power to the CY8CKIT-001
-*   3. Connect USB cable from the computer to the CY8CKIT-001.
-*   4. Select the USB_UART.inf file from the project directory, as the driver 
-*      for this example once Windows asks for it.
-*   5. Open "Device Manager" and note the COM port number for "Example Project"
-*      device.
-*   6. Open "HyperTerminal" application and make new connection to noted COM port
-*   7. Type the message, observe echo data received.
-*
-* Related Document:
-*  Universal Serial Bus Specification Revision 2.0 
-*  Universal Serial Bus Class Definitions for Communications Devices 
-*  Revision 1.2
-*
-********************************************************************************
-* Copyright 2012, Cypress Semiconductor Corporation. All rights reserved.
-* This software is owned by Cypress Semiconductor Corporation and is protected
-* by and subject to worldwide patent and copyright laws and treaties.
-* Therefore, you may use this software only as provided in the license agreement
-* accompanying the software package from which you obtained this software.
-* CYPRESS AND ITS SUPPLIERS MAKE NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
-* WITH REGARD TO THIS SOFTWARE, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT,
-* IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+This file performs a transmit. No collision is detected. 
 *******************************************************************************/
 
 #include <device.h>
 #include <stdbool.h>
 #include "stdio.h"
 
-#define INDEX_OF_MSB 6
 void initDiffManEncodedArray();
-void transmitData(char*, uint8);
+void stringToDiffMan(char*, uint8);
 void asciiToDiffMan(char);
+void transmitData();
+
+#define INDEX_OF_MSB 6
 
 int diffManEncodedData[800];
 int halfBitIndex = 0, currentDataPos=0, lengthOfData;
 bool timerExpired;
 
 CY_ISR(TimerHandler){
-    Timer_STATUS;//clear the timer interrupt
+    Timer_STATUS;   //clear the timer interrupt
     Timer_Stop();
     timerExpired = true;
-    
-    /*if(currentDataPos < halfBitIndex){
-        TX_pin_Write(diffManEncodedData[currentDataPos]);
-        currentDataPos++;
-    }*/
 }
 
 int main()
@@ -68,17 +33,11 @@ int main()
     CyGlobalIntEnable;                        
     
     initDiffManEncodedArray();
+    TX_pin_Write(1);  //set TX line to high to start
 
     /* Start USBFS Operation with 3V operation */
     USBUART_1_Start(0u, USBUART_1_3V_OPERATION);
     TimerISR_StartEx(TimerHandler);
-    
-    TX_pin_Write(1);
-    
-    //test
-    LCD_Start();
-    //end test
-    
     
     /* Main Loop: */
     for(;;)
@@ -107,37 +66,26 @@ int main()
                             USBUART_1_PutChar(32);
                             USBUART_1_PutChar(8);
                         }
-                    break;
+                        break;
                     case 13://enter (carriage return)
-                        transmitData(lineString, stringPosition);
+                        stringToDiffMan(lineString, stringPosition);
                         while(USBUART_1_CDCIsReady() == 0u);
                         USBUART_1_PutCRLF();
+
+                        transmitData();
                         
-                        //trans data
-                        int i;
-                        int x = 0;
-                        for(i = 0;i < halfBitIndex; i++){
-                            TX_pin_Write(diffManEncodedData[i]);
-                            Timer_Start();
-                            while(!timerExpired); 
-                            timerExpired = false;
-                        }
-                        TX_pin_Write(1);
-                        //end trans data
-                        
+                        //reset index
                         halfBitIndex = 0;
                         stringPosition = 0;
-                        //halfBitIndex = 0;
-                        
-                    break;
+                        break;
                     case 27://escape
-                    break;
+                        break;
                     default://everything else
                         lineString[stringPosition] = rx;
                         stringPosition++;
                         while(USBUART_1_CDCIsReady() == 0u); 
                         USBUART_1_PutChar(rx);       /* Send data back to PC */
-                    break;
+                        break;
                 }
             }
         }
@@ -146,7 +94,8 @@ int main()
 
 /*
 init dif man encoded data array with a leading "starting bit". The starting bit is madeup of the 
-half bits 01.
+half bits 01. 
+Only call when starting to transfer a new string
 */
 void initDiffManEncodedArray(){
     halfBitIndex = 0;
@@ -157,9 +106,10 @@ void initDiffManEncodedArray(){
 }
 
 /*
-enter key has been pressed, transmit diff man data
+Enter key has been pressed, change binary data into diff man data.
+Call from main. Requires main to access diffManEncodedData array
 */
-void transmitData(char lineString[], uint8 stringPosition){
+void stringToDiffMan(char lineString[], uint8 stringPosition){
 
     unsigned int i = 0;
     for(i = 0; i < stringPosition; i++){
@@ -168,7 +118,7 @@ void transmitData(char lineString[], uint8 stringPosition){
 }
 
 /*
-Helper method
+Helper method. Do not call from main.
 Converts a ascii char to a differental manchester line encoded version
 */
 void asciiToDiffMan(char asciiChar)
@@ -244,13 +194,20 @@ void asciiToDiffMan(char asciiChar)
         previousHalfBit = diffManEncodedData[halfBitIndex-1];
     }//end for
    
-    //test
-   
-    /*for(i=0;i<halfBitIndex; i++){
-        LCD_PrintNumber(diffManEncodedData[i]);
-    }*/
-    //end test
-   
 }//end function
+
+/*
+Transmits the diff man encoded data. Must have converted string to diff man before calling this method.
+*/
+void transmitData(){
+    int i;
+    for(i = 0;i < halfBitIndex; i++){
+        TX_pin_Write(diffManEncodedData[i]);
+        Timer_Start();
+        while(!timerExpired); 
+        timerExpired = false;
+    }
+    TX_pin_Write(1);    //set line to logic-1 after transmission
+}
 
 /* [] END OF FILE */
