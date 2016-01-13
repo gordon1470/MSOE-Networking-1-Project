@@ -32,7 +32,6 @@ int main()
     /* Enable Global Interrupts */
     CyGlobalIntEnable;                        
     
-    initDiffManEncodedArray();
     TX_pin_Write(1);  //set TX line to high to start
 
     /* Start USBFS Operation with 3V operation */
@@ -68,6 +67,7 @@ int main()
                         }
                         break;
                     case 13://enter (carriage return)
+                        initDiffManEncodedArray();
                         stringToDiffMan(lineString, stringPosition);
                         while(USBUART_1_CDCIsReady() == 0u);
                         USBUART_1_PutCRLF();
@@ -76,7 +76,7 @@ int main()
                         
                         //reset index
                         halfBitIndex = 0;
-                        stringPosition = 0;
+                        stringPosition = 0; 
                         break;
                     case 27://escape
                         break;

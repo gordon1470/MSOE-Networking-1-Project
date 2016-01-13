@@ -123,6 +123,8 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\led4_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\led4.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\led4.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Clock.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Clock.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="D:\MyDocs\Documents\CE4950\Networking\Networking\USB_UART01\USB_UART01.cydsn\Export\ARM_GCC_Generic">

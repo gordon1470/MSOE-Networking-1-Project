@@ -53,6 +53,8 @@
   <file name="D:\MyDocs\Documents\CE4950\Networking\Networking\USB_UART01\USB_UART01.cydsn\codegentemp\led4_aliases.h" value="NONE;led4" />
   <file name="D:\MyDocs\Documents\CE4950\Networking\Networking\USB_UART01\USB_UART01.cydsn\codegentemp\led4.c" value="ARM_C_FILE;led4" />
   <file name="D:\MyDocs\Documents\CE4950\Networking\Networking\USB_UART01\USB_UART01.cydsn\codegentemp\led4.h" value="NONE;led4" />
+  <file name="D:\MyDocs\Documents\CE4950\Networking\Networking\USB_UART01\USB_UART01.cydsn\codegentemp\Clock.c" value="ARM_C_FILE;Clock" />
+  <file name="D:\MyDocs\Documents\CE4950\Networking\Networking\USB_UART01\USB_UART01.cydsn\codegentemp\Clock.h" value="NONE;Clock" />
   <file name="D:\MyDocs\Documents\CE4950\Networking\Networking\USB_UART01\USB_UART01.cydsn\codegentemp\USBUART_1_Dm_aliases.h" value="NONE;USBUART_1_Dm" />
   <file name="D:\MyDocs\Documents\CE4950\Networking\Networking\USB_UART01\USB_UART01.cydsn\codegentemp\USBUART_1_Dm.c" value="ARM_C_FILE;USBUART_1_Dm" />
   <file name="D:\MyDocs\Documents\CE4950\Networking\Networking\USB_UART01\USB_UART01.cydsn\codegentemp\USBUART_1_Dm.h" value="NONE;USBUART_1_Dm" />

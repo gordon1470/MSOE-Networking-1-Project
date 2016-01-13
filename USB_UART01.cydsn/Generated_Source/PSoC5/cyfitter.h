@@ -101,6 +101,17 @@
 #define led4__SHIFT 3
 #define led4__SLW CYREG_PRT6_SLW
 
+/* Clock */
+#define Clock__CFG0 CYREG_CLKDIST_DCFG0_CFG0
+#define Clock__CFG1 CYREG_CLKDIST_DCFG0_CFG1
+#define Clock__CFG2 CYREG_CLKDIST_DCFG0_CFG2
+#define Clock__CFG2_SRC_SEL_MASK 0x07u
+#define Clock__INDEX 0x00u
+#define Clock__PM_ACT_CFG CYREG_PM_ACT_CFG2
+#define Clock__PM_ACT_MSK 0x01u
+#define Clock__PM_STBY_CFG CYREG_PM_STBY_CFG2
+#define Clock__PM_STBY_MSK 0x01u
+
 /* Timer_TimerUDB */
 #define Timer_TimerUDB_rstSts_stsreg__0__MASK 0x01u
 #define Timer_TimerUDB_rstSts_stsreg__0__POS 0

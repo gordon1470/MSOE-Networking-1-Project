@@ -1,6 +1,6 @@
 // ======================================================================
 // USB_UART01.v generated from TopDesign.cysch
-// 01/13/2016 at 10:26
+// 01/13/2016 at 12:42
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -651,6 +651,7 @@ endmodule
 // top
 module top ;
 
+          wire  Net_123;
           wire  Net_96;
           wire  Net_95;
           wire  Net_94;
@@ -658,9 +659,10 @@ module top ;
           wire  Net_92;
           wire  Net_81;
           wire  Net_97;
+          wire  Net_10;
           wire  Net_62;
           wire  Net_61;
-          wire  Net_10;
+          wire  Net_122;
           wire  Net_12;
 
     USBFS_v2_80_0 USBUART_1 (
@@ -743,18 +745,6 @@ module top ;
 
 	assign tmpOE__TX_pin_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-
-	cy_clock_v1_0
-		#(.id("c0fb34bd-1044-4931-9788-16b01ce89812"),
-		  .source_clock_id("75C2148C-3656-4d8a-846D-0CAE99AB6FF7"),
-		  .divisor(0),
-		  .period("0"),
-		  .is_direct(1),
-		  .is_digital(1))
-		timer_clock
-		 (.clock_out(Net_10));
-
-
     ZeroTerminal ZeroTerminal_1 (
         .z(Net_12));
 
@@ -766,7 +756,7 @@ module top ;
         .capture(1'b0),
         .capture_out(Net_95),
         .tc(Net_96),
-        .clock(Net_10));
+        .clock(Net_122));
     defparam Timer.CaptureCount = 2;
     defparam Timer.CaptureCounterEnabled = 0;
     defparam Timer.DeviceFamily = "PSoC5";
@@ -854,6 +844,18 @@ module top ;
 		  .out_reset({1'b0}));
 
 	assign tmpOE__led4_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+
+	cy_clock_v1_0
+		#(.id("0d576b0b-63d1-4189-b745-1ac782edfbef"),
+		  .source_clock_id(""),
+		  .divisor(0),
+		  .period("15625000"),
+		  .is_direct(0),
+		  .is_digital(1))
+		Clock
+		 (.clock_out(Net_122));
+
 
 
 

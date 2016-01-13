@@ -101,6 +101,17 @@
 .set led4__SHIFT, 3
 .set led4__SLW, CYREG_PRT6_SLW
 
+/* Clock */
+.set Clock__CFG0, CYREG_CLKDIST_DCFG0_CFG0
+.set Clock__CFG1, CYREG_CLKDIST_DCFG0_CFG1
+.set Clock__CFG2, CYREG_CLKDIST_DCFG0_CFG2
+.set Clock__CFG2_SRC_SEL_MASK, 0x07
+.set Clock__INDEX, 0x00
+.set Clock__PM_ACT_CFG, CYREG_PM_ACT_CFG2
+.set Clock__PM_ACT_MSK, 0x01
+.set Clock__PM_STBY_CFG, CYREG_PM_STBY_CFG2
+.set Clock__PM_STBY_MSK, 0x01
+
 /* Timer_TimerUDB */
 .set Timer_TimerUDB_rstSts_stsreg__0__MASK, 0x01
 .set Timer_TimerUDB_rstSts_stsreg__0__POS, 0
