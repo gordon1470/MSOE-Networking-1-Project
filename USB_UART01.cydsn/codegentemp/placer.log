@@ -6,7 +6,7 @@
 
 #Build Date:         Aug 18 2015 10:30:14
 
-#File Generated:     Jan 13 2016 10:26:37
+#File Generated:     Jan 13 2016 12:42:49
 
 #Purpose:            
 
@@ -79,8 +79,9 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 5
-Clock: CyBUS_CLK            | Frequency:  59.7 MHz | Target:  64.0 MHz
+Number of clocks: 6
+Clock: Clock                | Frequency:  59.7 MHz | Target:  64.0 MHz
+Clock: CyBUS_CLK            | Frequency: N/A       | Target:  64.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.1 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  64.0 MHz
@@ -96,8 +97,9 @@ Phase 7
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 5
-Clock: CyBUS_CLK            | Frequency:  59.7 MHz | Target:  64.0 MHz
+Number of clocks: 6
+Clock: Clock                | Frequency:  59.7 MHz | Target:  64.0 MHz
+Clock: CyBUS_CLK            | Frequency: N/A       | Target:  64.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.1 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  64.0 MHz
@@ -136,8 +138,9 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 5
-Clock: CyBUS_CLK            | Frequency:  59.7 MHz | Target:  64.0 MHz
+Number of clocks: 6
+Clock: Clock                | Frequency:  59.7 MHz | Target:  64.0 MHz
+Clock: CyBUS_CLK            | Frequency: N/A       | Target:  64.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.1 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  64.0 MHz
@@ -152,5 +155,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 0.7 sec.
+I2076: Total run-time: 0.8 sec.
 

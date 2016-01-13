@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
   13:.\main.c      **** 
   14:.\main.c      **** #define INDEX_OF_MSB 6
   15:.\main.c      **** 
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 2
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 2
 
 
   16:.\main.c      **** int diffManEncodedData[800];
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
   85              		.cfi_def_cfa_offset 8
   86              		.cfi_offset 7, -8
   87              		.cfi_offset 14, -4
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 3
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 3
 
 
   88 0002 9AB0     		sub	sp, sp, #104
@@ -143,133 +143,133 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  101 0012 62B6     		CPSIE   i
  102              	@ 0 "" 2
   34:.\main.c      ****     
-  35:.\main.c      ****     initDiffManEncodedArray();
+  35:.\main.c      ****     TX_pin_Write(1);  //set TX line to high to start
  103              		.loc 1 35 0
  104              		.thumb
- 105 0014 FFF7FEFF 		bl	initDiffManEncodedArray
-  36:.\main.c      ****     TX_pin_Write(1);  //set TX line to high to start
- 106              		.loc 1 36 0
- 107 0018 0120     		movs	r0, #1
- 108 001a FFF7FEFF 		bl	TX_pin_Write
-  37:.\main.c      **** 
-  38:.\main.c      ****     /* Start USBFS Operation with 3V operation */
-  39:.\main.c      ****     USBUART_1_Start(0u, USBUART_1_3V_OPERATION);
- 109              		.loc 1 39 0
- 110 001e 0020     		movs	r0, #0
- 111 0020 0021     		movs	r1, #0
- 112 0022 FFF7FEFF 		bl	USBUART_1_Start
-  40:.\main.c      ****     TimerISR_StartEx(TimerHandler);
- 113              		.loc 1 40 0
- 114 0026 3F48     		ldr	r0, .L18+4
- 115 0028 FFF7FEFF 		bl	TimerISR_StartEx
- 116              	.L15:
-  41:.\main.c      ****     
-  42:.\main.c      ****     /* Main Loop: */
-  43:.\main.c      ****     for(;;)
-  44:.\main.c      ****     {
-  45:.\main.c      ****         if(USBUART_1_IsConfigurationChanged() != 0u) /* Host could send double SET_INTERFACE reques
- 117              		.loc 1 45 0
- 118 002c FFF7FEFF 		bl	USBUART_1_IsConfigurationChanged
- 119 0030 0346     		mov	r3, r0
- 120 0032 002B     		cmp	r3, #0
- 121 0034 06D0     		beq	.L5
-  46:.\main.c      ****         {
-  47:.\main.c      ****             if(USBUART_1_GetConfiguration() != 0u)   /* Init IN endpoints when device configured */
- 122              		.loc 1 47 0
- 123 0036 FFF7FEFF 		bl	USBUART_1_GetConfiguration
- 124 003a 0346     		mov	r3, r0
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 4
+ 105 0014 0120     		movs	r0, #1
+ 106 0016 FFF7FEFF 		bl	TX_pin_Write
+  36:.\main.c      **** 
+  37:.\main.c      ****     /* Start USBFS Operation with 3V operation */
+  38:.\main.c      ****     USBUART_1_Start(0u, USBUART_1_3V_OPERATION);
+ 107              		.loc 1 38 0
+ 108 001a 0020     		movs	r0, #0
+ 109 001c 0021     		movs	r1, #0
+ 110 001e FFF7FEFF 		bl	USBUART_1_Start
+  39:.\main.c      ****     TimerISR_StartEx(TimerHandler);
+ 111              		.loc 1 39 0
+ 112 0022 4048     		ldr	r0, .L18+4
+ 113 0024 FFF7FEFF 		bl	TimerISR_StartEx
+ 114              	.L15:
+  40:.\main.c      ****     
+  41:.\main.c      ****     /* Main Loop: */
+  42:.\main.c      ****     for(;;)
+  43:.\main.c      ****     {
+  44:.\main.c      ****         if(USBUART_1_IsConfigurationChanged() != 0u) /* Host could send double SET_INTERFACE reques
+ 115              		.loc 1 44 0
+ 116 0028 FFF7FEFF 		bl	USBUART_1_IsConfigurationChanged
+ 117 002c 0346     		mov	r3, r0
+ 118 002e 002B     		cmp	r3, #0
+ 119 0030 06D0     		beq	.L5
+  45:.\main.c      ****         {
+  46:.\main.c      ****             if(USBUART_1_GetConfiguration() != 0u)   /* Init IN endpoints when device configured */
+ 120              		.loc 1 46 0
+ 121 0032 FFF7FEFF 		bl	USBUART_1_GetConfiguration
+ 122 0036 0346     		mov	r3, r0
+ 123 0038 002B     		cmp	r3, #0
+ 124 003a 01D0     		beq	.L5
+  47:.\main.c      ****             {
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 4
 
 
- 125 003c 002B     		cmp	r3, #0
- 126 003e 01D0     		beq	.L5
-  48:.\main.c      ****             {
-  49:.\main.c      ****                 /* Enumeration is done, enable OUT endpoint for receive data from Host */
-  50:.\main.c      ****                 USBUART_1_CDC_Init();
- 127              		.loc 1 50 0
- 128 0040 FFF7FEFF 		bl	USBUART_1_CDC_Init
- 129              	.L5:
-  51:.\main.c      ****             }
-  52:.\main.c      ****         }         
-  53:.\main.c      ****         if(USBUART_1_GetConfiguration() != 0u)    /* Service USB CDC when device configured */
- 130              		.loc 1 53 0
- 131 0044 FFF7FEFF 		bl	USBUART_1_GetConfiguration
- 132 0048 0346     		mov	r3, r0
- 133 004a 002B     		cmp	r3, #0
- 134 004c 66D0     		beq	.L6
-  54:.\main.c      ****         {
-  55:.\main.c      ****             if(USBUART_1_DataIsReady() != 0u)               /* Check for input data from PC */
- 135              		.loc 1 55 0
- 136 004e FFF7FEFF 		bl	USBUART_1_DataIsReady
- 137 0052 0346     		mov	r3, r0
- 138 0054 002B     		cmp	r3, #0
- 139 0056 61D0     		beq	.L6
-  56:.\main.c      ****             {   
-  57:.\main.c      ****                 rx = USBUART_1_GetChar();
- 140              		.loc 1 57 0
- 141 0058 FFF7FEFF 		bl	USBUART_1_GetChar
- 142 005c 0346     		mov	r3, r0
- 143 005e 87F86630 		strb	r3, [r7, #102]
-  58:.\main.c      ****                 switch(rx){
- 144              		.loc 1 58 0
- 145 0062 97F86630 		ldrb	r3, [r7, #102]	@ zero_extendqisi2
- 146 0066 0D2B     		cmp	r3, #13
- 147 0068 25D0     		beq	.L8
- 148 006a 1B2B     		cmp	r3, #27
- 149 006c 55D0     		beq	.L17
- 150 006e 082B     		cmp	r3, #8
- 151 0070 39D1     		bne	.L16
-  59:.\main.c      ****                     case 8://backspace
-  60:.\main.c      ****                         if(stringPosition>0){
- 152              		.loc 1 60 0
- 153 0072 97F86730 		ldrb	r3, [r7, #103]	@ zero_extendqisi2
- 154 0076 002B     		cmp	r3, #0
- 155 0078 1CD0     		beq	.L11
-  61:.\main.c      ****                             stringPosition--;
- 156              		.loc 1 61 0
- 157 007a 97F86730 		ldrb	r3, [r7, #103]	@ zero_extendqisi2
- 158 007e 013B     		subs	r3, r3, #1
- 159 0080 87F86730 		strb	r3, [r7, #103]
-  62:.\main.c      ****                             lineString[stringPosition] = '\0';
- 160              		.loc 1 62 0
- 161 0084 97F86730 		ldrb	r3, [r7, #103]	@ zero_extendqisi2
- 162 0088 07F16802 		add	r2, r7, #104
- 163 008c 1344     		add	r3, r3, r2
- 164 008e 0022     		movs	r2, #0
- 165 0090 03F8682C 		strb	r2, [r3, #-104]
-  63:.\main.c      ****                             //backspace space backspace
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 5
+  48:.\main.c      ****                 /* Enumeration is done, enable OUT endpoint for receive data from Host */
+  49:.\main.c      ****                 USBUART_1_CDC_Init();
+ 125              		.loc 1 49 0
+ 126 003c FFF7FEFF 		bl	USBUART_1_CDC_Init
+ 127              	.L5:
+  50:.\main.c      ****             }
+  51:.\main.c      ****         }         
+  52:.\main.c      ****         if(USBUART_1_GetConfiguration() != 0u)    /* Service USB CDC when device configured */
+ 128              		.loc 1 52 0
+ 129 0040 FFF7FEFF 		bl	USBUART_1_GetConfiguration
+ 130 0044 0346     		mov	r3, r0
+ 131 0046 002B     		cmp	r3, #0
+ 132 0048 68D0     		beq	.L6
+  53:.\main.c      ****         {
+  54:.\main.c      ****             if(USBUART_1_DataIsReady() != 0u)               /* Check for input data from PC */
+ 133              		.loc 1 54 0
+ 134 004a FFF7FEFF 		bl	USBUART_1_DataIsReady
+ 135 004e 0346     		mov	r3, r0
+ 136 0050 002B     		cmp	r3, #0
+ 137 0052 63D0     		beq	.L6
+  55:.\main.c      ****             {   
+  56:.\main.c      ****                 rx = USBUART_1_GetChar();
+ 138              		.loc 1 56 0
+ 139 0054 FFF7FEFF 		bl	USBUART_1_GetChar
+ 140 0058 0346     		mov	r3, r0
+ 141 005a 87F86630 		strb	r3, [r7, #102]
+  57:.\main.c      ****                 switch(rx){
+ 142              		.loc 1 57 0
+ 143 005e 97F86630 		ldrb	r3, [r7, #102]	@ zero_extendqisi2
+ 144 0062 0D2B     		cmp	r3, #13
+ 145 0064 25D0     		beq	.L8
+ 146 0066 1B2B     		cmp	r3, #27
+ 147 0068 57D0     		beq	.L17
+ 148 006a 082B     		cmp	r3, #8
+ 149 006c 3BD1     		bne	.L16
+  58:.\main.c      ****                     case 8://backspace
+  59:.\main.c      ****                         if(stringPosition>0){
+ 150              		.loc 1 59 0
+ 151 006e 97F86730 		ldrb	r3, [r7, #103]	@ zero_extendqisi2
+ 152 0072 002B     		cmp	r3, #0
+ 153 0074 1CD0     		beq	.L11
+  60:.\main.c      ****                             stringPosition--;
+ 154              		.loc 1 60 0
+ 155 0076 97F86730 		ldrb	r3, [r7, #103]	@ zero_extendqisi2
+ 156 007a 013B     		subs	r3, r3, #1
+ 157 007c 87F86730 		strb	r3, [r7, #103]
+  61:.\main.c      ****                             lineString[stringPosition] = '\0';
+ 158              		.loc 1 61 0
+ 159 0080 97F86730 		ldrb	r3, [r7, #103]	@ zero_extendqisi2
+ 160 0084 07F16802 		add	r2, r7, #104
+ 161 0088 1344     		add	r3, r3, r2
+ 162 008a 0022     		movs	r2, #0
+ 163 008c 03F8682C 		strb	r2, [r3, #-104]
+  62:.\main.c      ****                             //backspace space backspace
+  63:.\main.c      ****                             while(USBUART_1_CDCIsReady() == 0u); 
+ 164              		.loc 1 63 0
+ 165 0090 00BF     		nop
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 5
 
 
-  64:.\main.c      ****                             while(USBUART_1_CDCIsReady() == 0u); 
- 166              		.loc 1 64 0
- 167 0094 00BF     		nop
- 168              	.L12:
- 169              		.loc 1 64 0 is_stmt 0 discriminator 1
- 170 0096 FFF7FEFF 		bl	USBUART_1_CDCIsReady
- 171 009a 0346     		mov	r3, r0
- 172 009c 002B     		cmp	r3, #0
- 173 009e FAD0     		beq	.L12
-  65:.\main.c      ****                             USBUART_1_PutChar(8);
- 174              		.loc 1 65 0 is_stmt 1
- 175 00a0 0820     		movs	r0, #8
- 176 00a2 FFF7FEFF 		bl	USBUART_1_PutChar
-  66:.\main.c      ****                             USBUART_1_PutChar(32);
- 177              		.loc 1 66 0
- 178 00a6 2020     		movs	r0, #32
- 179 00a8 FFF7FEFF 		bl	USBUART_1_PutChar
-  67:.\main.c      ****                             USBUART_1_PutChar(8);
- 180              		.loc 1 67 0
- 181 00ac 0820     		movs	r0, #8
- 182 00ae FFF7FEFF 		bl	USBUART_1_PutChar
-  68:.\main.c      ****                         }
-  69:.\main.c      ****                         break;
- 183              		.loc 1 69 0
- 184 00b2 33E0     		b	.L6
- 185              	.L11:
- 186 00b4 32E0     		b	.L6
- 187              	.L8:
-  70:.\main.c      ****                     case 13://enter (carriage return)
+ 166              	.L12:
+ 167              		.loc 1 63 0 is_stmt 0 discriminator 1
+ 168 0092 FFF7FEFF 		bl	USBUART_1_CDCIsReady
+ 169 0096 0346     		mov	r3, r0
+ 170 0098 002B     		cmp	r3, #0
+ 171 009a FAD0     		beq	.L12
+  64:.\main.c      ****                             USBUART_1_PutChar(8);
+ 172              		.loc 1 64 0 is_stmt 1
+ 173 009c 0820     		movs	r0, #8
+ 174 009e FFF7FEFF 		bl	USBUART_1_PutChar
+  65:.\main.c      ****                             USBUART_1_PutChar(32);
+ 175              		.loc 1 65 0
+ 176 00a2 2020     		movs	r0, #32
+ 177 00a4 FFF7FEFF 		bl	USBUART_1_PutChar
+  66:.\main.c      ****                             USBUART_1_PutChar(8);
+ 178              		.loc 1 66 0
+ 179 00a8 0820     		movs	r0, #8
+ 180 00aa FFF7FEFF 		bl	USBUART_1_PutChar
+  67:.\main.c      ****                         }
+  68:.\main.c      ****                         break;
+ 181              		.loc 1 68 0
+ 182 00ae 35E0     		b	.L6
+ 183              	.L11:
+ 184 00b0 34E0     		b	.L6
+ 185              	.L8:
+  69:.\main.c      ****                     case 13://enter (carriage return)
+  70:.\main.c      ****                         initDiffManEncodedArray();
+ 186              		.loc 1 70 0
+ 187 00b2 FFF7FEFF 		bl	initDiffManEncodedArray
   71:.\main.c      ****                         stringToDiffMan(lineString, stringPosition);
  188              		.loc 1 71 0
  189 00b6 3A46     		mov	r2, r7
@@ -298,12 +298,12 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
   78:.\main.c      ****                         halfBitIndex = 0;
  206              		.loc 1 78 0
  207 00d8 134B     		ldr	r3, .L18+8
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 6
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 6
 
 
  208 00da 0022     		movs	r2, #0
  209 00dc 1A60     		str	r2, [r3]
-  79:.\main.c      ****                         stringPosition = 0;
+  79:.\main.c      ****                         stringPosition = 0; 
  210              		.loc 1 79 0
  211 00de 0023     		movs	r3, #0
  212 00e0 87F86730 		strb	r3, [r7, #103]
@@ -353,12 +353,12 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
   91:.\main.c      ****         }
   92:.\main.c      ****     }   
  244              		.loc 1 92 0 discriminator 1
- 245 011c 86E7     		b	.L15
+ 245 011c 84E7     		b	.L15
  246              	.L19:
  247 011e 00BF     		.align	2
  248              	.L18:
  249 0120 00000000 		.word	timerExpired
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 7
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 7
 
 
  250 0124 00000000 		.word	TimerHandler
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  292 0024 074A     		ldr	r2, .L21+4
  293 0026 0121     		movs	r1, #1
  294 0028 42F82310 		str	r1, [r2, r3, lsl #2]
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 8
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 8
 
 
  105:.\main.c      ****     halfBitIndex++;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  114:.\main.c      ****     unsigned int i = 0;
  340              		.loc 1 114 0
  341 000c 0023     		movs	r3, #0
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 9
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 9
 
 
  342 000e FB60     		str	r3, [r7, #12]
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  383              		.loc 1 125 0
  384              		.cfi_startproc
  385              		@ args = 0, pretend = 0, frame = 104
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 10
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 10
 
 
  386              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  433              	.L27:
  133:.\main.c      ****     }else{
  134:.\main.c      ****         diffManEncodedData[halfBitIndex] = 0;
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 11
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 11
 
 
  434              		.loc 1 134 0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  475 009a 9B00     		lsls	r3, r3, #2
  476 009c 07F16801 		add	r1, r7, #104
  477 00a0 0B44     		add	r3, r3, r1
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 12
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 12
 
 
  478 00a2 43F85C2C 		str	r2, [r3, #-92]
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  515              		.loc 1 162 0
  516 00e4 354B     		ldr	r3, .L38
  517 00e6 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 13
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 13
 
 
  518 00e8 0133     		adds	r3, r3, #1
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  174:.\main.c      ****         }
  175:.\main.c      ****         else
  176:.\main.c      ****         {
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 14
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 14
 
 
  177:.\main.c      ****             //bit == 0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  189:.\main.c      ****                 diffManEncodedData[halfBitIndex] = 0;
  603              		.loc 1 189 0
  604 0180 0E4B     		ldr	r3, .L38
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 15
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 15
 
 
  605 0182 1B68     		ldr	r3, [r3]
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  649              		.size	asciiToDiffMan, .-asciiToDiffMan
  650              		.section	.text.transmitData,"ax",%progbits
  651              		.align	2
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 16
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 16
 
 
  652              		.global	transmitData
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  695 0030 094B     		ldr	r3, .L44+4
  696 0032 0022     		movs	r2, #0
  697 0034 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 17
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 17
 
 
  204:.\main.c      ****         TX_pin_Write(diffManEncodedData[i]);
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  747 0021 00000000 		.4byte	.Ldebug_line0
  748 0025 02       		.uleb128 0x2
  749 0026 01       		.byte	0x1
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 18
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 18
 
 
  750 0027 06       		.byte	0x6
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  804 008d 04       		.byte	0x4
  805 008e 04       		.byte	0x4
  806 008f 1D010000 		.4byte	.LASF12
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 19
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 19
 
 
  807 0093 02       		.uleb128 0x2
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  861 0102 91       		.byte	0x91
  862 0103 907F     		.sleb128 -112
  863 0105 0B       		.uleb128 0xb
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 20
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 20
 
 
  864 0106 F8000000 		.4byte	.LASF18
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  918 0170 91       		.byte	0x91
  919 0171 74       		.sleb128 -12
  920 0172 00       		.byte	0
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 21
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 21
 
 
  921 0173 11       		.uleb128 0x11
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  975 01d7 B2000000 		.4byte	0xb2
  976 01db 13       		.byte	0x13
  977 01dc 00       		.byte	0
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 22
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 22
 
 
  978 01dd 12       		.uleb128 0x12
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  1032 024f 03       		.byte	0x3
  1033 0250 00000000 		.4byte	currentDataPos
  1034 0254 15       		.uleb128 0x15
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 23
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 23
 
 
  1035 0255 F5010000 		.4byte	.LASF29
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  1089 0020 00       		.byte	0
  1090 0021 03       		.uleb128 0x3
  1091 0022 0E       		.uleb128 0xe
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 24
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 24
 
 
  1092 0023 3A       		.uleb128 0x3a
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  1146 0059 0E       		.uleb128 0xe
  1147 005a 3A       		.uleb128 0x3a
  1148 005b 0B       		.uleb128 0xb
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 25
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 25
 
 
  1149 005c 3B       		.uleb128 0x3b
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  1203 0094 0B       		.uleb128 0xb
  1204 0095 34       		.uleb128 0x34
  1205 0096 00       		.byte	0
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 26
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 26
 
 
  1206 0097 03       		.uleb128 0x3
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  1260 00ce 3F       		.uleb128 0x3f
  1261 00cf 19       		.uleb128 0x19
  1262 00d0 03       		.uleb128 0x3
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 27
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 27
 
 
  1263 00d1 0E       		.uleb128 0xe
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  1317 0109 19       		.uleb128 0x19
  1318 010a 01       		.uleb128 0x1
  1319 010b 13       		.uleb128 0x13
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 28
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 28
 
 
  1320 010c 00       		.byte	0
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  1374 0143 03       		.uleb128 0x3
  1375 0144 0E       		.uleb128 0xe
  1376 0145 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 29
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 29
 
 
  1377 0146 0B       		.uleb128 0xb
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  1429      00000201 
  1429      FB0E0D00 
  1429      01010101 
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 30
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 30
 
 
  1430              	.LASF26:
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  1449              	.LASF37:
  1450 0123 7472616E 		.ascii	"transmitData\000"
  1450      736D6974 
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 31
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 31
 
 
  1450      44617461 
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  1474      20696E74 
  1474      00
  1475              	.LASF7:
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 32
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 32
 
 
  1476 01bf 6C6F6E67 		.ascii	"long long unsigned int\000"
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 1
  1500      48616C66 
  1500      42697400 
  1501              	.LASF20:
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccqHj4N9.s 			page 33
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccSGGtUs.s 			page 33
 
 
  1502 0261 73747269 		.ascii	"stringToDiffMan\000"

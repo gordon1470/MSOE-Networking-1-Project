@@ -1,5 +1,5 @@
 -- Project:   USB_UART01
--- Generated: 01/13/2016 10:26:38
+-- Generated: 01/13/2016 12:42:50
 -- PSoC Creator  3.3 CP1
 
 ENTITY USB_UART01 IS
@@ -28,7 +28,6 @@ ARCHITECTURE __DEFAULT__ OF USB_UART01 IS
     SIGNAL ClockBlock_1k : bit;
     SIGNAL ClockBlock_32k : bit;
     SIGNAL ClockBlock_BUS_CLK : bit;
-    ATTRIBUTE udbclken_assigned OF ClockBlock_BUS_CLK : SIGNAL IS "True";
     ATTRIBUTE global_signal OF ClockBlock_BUS_CLK : SIGNAL IS true;
     SIGNAL ClockBlock_BUS_CLK_local : bit;
     SIGNAL ClockBlock_ILO : bit;
@@ -37,6 +36,10 @@ ARCHITECTURE __DEFAULT__ OF USB_UART01 IS
     SIGNAL ClockBlock_PLL_OUT : bit;
     SIGNAL ClockBlock_XTAL : bit;
     SIGNAL \ClockBlock_XTAL 32kHz\ : bit;
+    SIGNAL Net_122 : bit;
+    ATTRIBUTE udbclken_assigned OF Net_122 : SIGNAL IS "True";
+    ATTRIBUTE global_signal OF Net_122 : SIGNAL IS true;
+    SIGNAL Net_122_local : bit;
     SIGNAL Net_61 : bit;
     SIGNAL Net_81 : bit;
     SIGNAL TX_pin(0)__PA : bit;
@@ -475,7 +478,9 @@ BEGIN
             clk_bus_glb => ClockBlock_BUS_CLK,
             clk_bus => ClockBlock_BUS_CLK_local,
             dsi_clkin_div => open,
-            dsi_glb_div => open);
+            dsi_glb_div => open,
+            dclk_glb_0 => Net_122,
+            dclk_0 => Net_122_local);
 
     \USBUART_1:Dm\:logicalport
         GENERIC MAP(
@@ -1150,7 +1155,7 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => ClockBlock_BUS_CLK,
+            clock => Net_122,
             control_7 => \Timer:TimerUDB:control_7\,
             control_6 => \Timer:TimerUDB:control_6\,
             control_5 => \Timer:TimerUDB:control_5\,
@@ -1169,7 +1174,7 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => ClockBlock_BUS_CLK,
+            clock => Net_122,
             status_6 => open,
             status_5 => open,
             status_4 => open,
@@ -1207,7 +1212,7 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => ClockBlock_BUS_CLK,
+            clock => Net_122,
             cs_addr_1 => \Timer:TimerUDB:control_7\,
             cs_addr_0 => \Timer:TimerUDB:per_zero\,
             busclk => ClockBlock_BUS_CLK,
@@ -1253,7 +1258,7 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => ClockBlock_BUS_CLK,
+            clock => Net_122,
             cs_addr_1 => \Timer:TimerUDB:control_7\,
             cs_addr_0 => \Timer:TimerUDB:per_zero\,
             z0_comb => \Timer:TimerUDB:per_zero\,

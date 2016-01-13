@@ -1,6 +1,6 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2016-01-13T16:26:40Z")
+ (DATE "2016-01-13T18:42:52Z")
  (DESIGN "USB_UART01")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")
@@ -12,10 +12,6 @@
   (INSTANCE *)
   (DELAY
    (ABSOLUTE
-    (INTERCONNECT ClockBlock.clk_bus_glb \\Timer\:TimerUDB\:rstSts\:stsreg\\.clock (0.000:0.000:0.000))
-    (INTERCONNECT ClockBlock.clk_bus_glb \\Timer\:TimerUDB\:sCTRLReg\:SyncCtl\:ctrlreg\\.clock (0.000:0.000:0.000))
-    (INTERCONNECT ClockBlock.clk_bus_glb \\Timer\:TimerUDB\:sT16\:timerdp\:u0\\.clock (0.000:0.000:0.000))
-    (INTERCONNECT ClockBlock.clk_bus_glb \\Timer\:TimerUDB\:sT16\:timerdp\:u1\\.clock (0.000:0.000:0.000))
     (INTERCONNECT ClockBlock.clk_bus_glb \\USBUART_1\:Dp\(0\)\\.in_clock (0.000:0.000:0.000))
     (INTERCONNECT ClockBlock.clk_bus_glb \\USBUART_1\:ep_0\\.clock (0.000:0.000:0.000))
     (INTERCONNECT ClockBlock.clk_bus_glb \\USBUART_1\:bus_reset\\.clock (0.000:0.000:0.000))
@@ -30,6 +26,10 @@
     (INTERCONNECT ClockBlock.clk_bus_glb \\Timer\:TimerUDB\:sT16\:timerdp\:u0\\.busclk (0.000:0.000:0.000))
     (INTERCONNECT ClockBlock.clk_bus_glb \\Timer\:TimerUDB\:sT16\:timerdp\:u1\\.busclk (0.000:0.000:0.000))
     (INTERCONNECT ClockBlock.clk_bus_glb TimerISR.clock (0.000:0.000:0.000))
+    (INTERCONNECT ClockBlock.dclk_glb_0 \\Timer\:TimerUDB\:rstSts\:stsreg\\.clock (0.000:0.000:0.000))
+    (INTERCONNECT ClockBlock.dclk_glb_0 \\Timer\:TimerUDB\:sCTRLReg\:SyncCtl\:ctrlreg\\.clock (0.000:0.000:0.000))
+    (INTERCONNECT ClockBlock.dclk_glb_0 \\Timer\:TimerUDB\:sT16\:timerdp\:u0\\.clock (0.000:0.000:0.000))
+    (INTERCONNECT ClockBlock.dclk_glb_0 \\Timer\:TimerUDB\:sT16\:timerdp\:u1\\.clock (0.000:0.000:0.000))
     (INTERCONNECT \\USBUART_1\:USB\\.sof_int \\USBUART_1\:sof_int\\.interrupt (1.000:1.000:1.000))
     (INTERCONNECT \\Timer\:TimerUDB\:rstSts\:stsreg\\.interrupt TimerISR.interrupt (7.780:7.780:7.780))
     (INTERCONNECT \\Timer\:TimerUDB\:sCTRLReg\:SyncCtl\:ctrlreg\\.control_7 \\Timer\:TimerUDB\:sT16\:timerdp\:u0\\.cs_addr_1 (2.963:2.963:2.963))

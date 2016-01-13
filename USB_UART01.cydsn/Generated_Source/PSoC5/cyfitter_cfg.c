@@ -187,6 +187,10 @@ static void ClockSetup(void)
 	uint8 pllLock;
 
 
+	/* Configure Digital Clocks based on settings from Clock DWR */
+	CY_SET_XTND_REG16((void CYFAR *)(CYREG_CLKDIST_DCFG0_CFG0), 0x0000u);
+	CY_SET_XTND_REG8((void CYFAR *)(CYREG_CLKDIST_DCFG0_CFG0 + 0x2u), 0x58u);
+
 	/* Configure ILO based on settings from Clock DWR */
 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_SLOWCLK_ILO_CR0), 0x06u);
 
@@ -220,6 +224,8 @@ static void ClockSetup(void)
 	/* Configure USB Clock based on settings from Clock DWR */
 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_CLKDIST_UCFG), 0x00u);
 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_CLKDIST_LD), 0x02u);
+
+	CY_SET_XTND_REG8((void CYFAR *)(CYREG_PM_ACT_CFG2), ((CY_GET_XTND_REG8((void CYFAR *)CYREG_PM_ACT_CFG2) | 0x01u)));
 }
 
 
@@ -345,7 +351,7 @@ void cyfitter_cfg(void)
 			0x40010101u, /* Base address: 0x40010100 Count: 1 */
 			0x40010301u, /* Base address: 0x40010300 Count: 1 */
 			0x40010501u, /* Base address: 0x40010500 Count: 1 */
-			0x40010A32u, /* Base address: 0x40010A00 Count: 50 */
+			0x40010A30u, /* Base address: 0x40010A00 Count: 48 */
 			0x40010B17u, /* Base address: 0x40010B00 Count: 23 */
 			0x40010D01u, /* Base address: 0x40010D00 Count: 1 */
 			0x40010F01u, /* Base address: 0x40010F00 Count: 1 */
@@ -379,7 +385,6 @@ void cyfitter_cfg(void)
 			{0x4Fu, 0x01u},
 			{0x50u, 0x18u},
 			{0x5Au, 0x04u},
-			{0x5Du, 0x09u},
 			{0x5Fu, 0x01u},
 			{0x60u, 0x40u},
 			{0x62u, 0x40u},
@@ -411,7 +416,6 @@ void cyfitter_cfg(void)
 			{0xD8u, 0x04u},
 			{0xDAu, 0x04u},
 			{0xDBu, 0x04u},
-			{0xDDu, 0x99u},
 			{0xDFu, 0x01u},
 			{0xE0u, 0x40u},
 			{0xE2u, 0x40u},
@@ -480,8 +484,8 @@ void cyfitter_cfg(void)
 			{0xAEu, 0x40u},
 			{0xEEu, 0x40u},
 			{0xAFu, 0x40u},
-			{0x01u, 0x01u},
-			{0x0Du, 0x01u},
+			{0x00u, 0x01u},
+			{0x0Cu, 0x01u},
 			{0x00u, 0xABu},
 		};
 
