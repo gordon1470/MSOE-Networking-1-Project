@@ -30,6 +30,8 @@
 #include "TX_pin.h"
 #include "Timer.h"
 #include "TimerISR.h"
+#include "led4_aliases.h"
+#include "led4.h"
 #include "USBUART_1_Dm_aliases.h"
 #include "USBUART_1_Dm.h"
 #include "USBUART_1_Dp_aliases.h"

@@ -1,3 +1,3 @@
-# Component constraints for \\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\TopDesign\TopDesign.cysch
-# Project: \\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\USB_UART01.cyprj
-# Date: Mon, 11 Jan 2016 23:41:52 GMT
+# Component constraints for D:\MyDocs\Documents\CE4950\Networking\Networking\USB_UART01\USB_UART01.cydsn\TopDesign\TopDesign.cysch
+# Project: D:\MyDocs\Documents\CE4950\Networking\Networking\USB_UART01\USB_UART01.cydsn\USB_UART01.cyprj
+# Date: Wed, 13 Jan 2016 15:41:55 GMT
