@@ -1,0 +1,13 @@
+--------------- Rebuild Started: 01/11/2016 20:14:27 Project: main.c, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Debug/main.lst -g -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\main.c -o .\ARM_GCC_493\Debug\main.o
+.\main.c: In function 'main':
+.\main.c:109:34: warning: passing argument 1 of 'transmitData' from incompatible pointer type
+                     transmitData(lineString);
+                                  ^
+.\main.c:52:6: note: expected 'int *' but argument is of type 'char *'
+ void transmitData(int *lineString){
+      ^
+.\main.c:70:10: warning: unused variable 'enterKeyPressed' [-Wunused-variable]
+     bool enterKeyPressed = false;
+          ^
+--------------- Rebuild Succeeded: 01/11/2016 20:14:27 ---------------
