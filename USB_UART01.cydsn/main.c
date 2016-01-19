@@ -10,7 +10,7 @@ void initDiffManEncodedArray();
 void stringToDiffMan(char*, uint8);
 void asciiToDiffMan(char);
 void transmitData();
-void setLEDNetworkState();
+void setNetworkStateOnLEDs();
 
 #define INDEX_OF_MSB 6
 #define HIGH 1
@@ -100,6 +100,7 @@ int main()
                          
                         while(!dataTransmissionComplete){
                             transmitData();
+                            setNetworkStateOnLEDs();
                         }
                         
                         TX_pin_Write(1);    //set line to logic-1 after transmission
@@ -244,7 +245,9 @@ void transmitData(){
     }
     
     //when finished transmitting diff manchester encoded data, set flag 
-    if(i == 
+    if(i == halfBitIndex){
+        dataTransmissionComplete = true;
+    }
 }
 
 void setLEDNetworkState(){
