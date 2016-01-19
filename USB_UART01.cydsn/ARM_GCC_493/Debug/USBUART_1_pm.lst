@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
   25:.\Generated_Source\PSoC5/USBUART_1_pm.c **** ***************************************/
   26:.\Generated_Source\PSoC5/USBUART_1_pm.c **** /* `#START PM_CUSTOM_DECLARATIONS` Place your declaration here */
   27:.\Generated_Source\PSoC5/USBUART_1_pm.c **** 
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 2
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 2
 
 
   28:.\Generated_Source\PSoC5/USBUART_1_pm.c **** /* `#END` */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
   69:.\Generated_Source\PSoC5/USBUART_1_pm.c ****             USBUART_1_DP_ISR_ExitCallback();
   70:.\Generated_Source\PSoC5/USBUART_1_pm.c ****         #endif /* USBUART_1_DP_ISR_EXIT_CALLBACK */
   71:.\Generated_Source\PSoC5/USBUART_1_pm.c ****     }
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 3
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 3
 
 
   44              		.loc 1 71 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
   75 0002 00AF     		add	r7, sp, #0
   76              		.cfi_def_cfa_register 7
   95:.\Generated_Source\PSoC5/USBUART_1_pm.c **** 
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 4
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 4
 
 
   96:.\Generated_Source\PSoC5/USBUART_1_pm.c **** }
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  108 0006 1B78     		ldrb	r3, [r3]
  109 0008 DBB2     		uxtb	r3, r3
  110 000a 002B     		cmp	r3, #0
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 5
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 5
 
 
  111 000c 01D0     		beq	.L5
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  137              		.cfi_def_cfa_offset 8
  138              		.cfi_offset 7, -8
  139              		.cfi_offset 14, -4
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 6
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 6
 
 
  140 0002 82B0     		sub	sp, sp, #8
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  177 0044 DBB2     		uxtb	r3, r3
  178 0046 1370     		strb	r3, [r2]
  164:.\Generated_Source\PSoC5/USBUART_1_pm.c ****                                 (uint8)~(USBUART_1_PM_USB_CR0_PD_N | USBUART_1_PM_USB_CR0_PD_PULLUP
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 7
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 7
 
 
  165:.\Generated_Source\PSoC5/USBUART_1_pm.c **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  218 0094 1F4A     		ldr	r2, .L12+20
  219 0096 1F4B     		ldr	r3, .L12+20
  220 0098 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 8
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 8
 
 
  221 009a DBB2     		uxtb	r3, r3
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  257 00dc 1049     		ldr	r1, .L12+32
  258 00de FFF7FEFF 		bl	CyIntSetVector
  198:.\Generated_Source\PSoC5/USBUART_1_pm.c ****         CyIntSetPriority(USBUART_1_DP_INTC_VECT_NUM, USBUART_1_DP_INTC_PRIOR);
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 9
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 9
 
 
  259              		.loc 1 198 0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  209:.\Generated_Source\PSoC5/USBUART_1_pm.c **** * Summary:
  210:.\Generated_Source\PSoC5/USBUART_1_pm.c **** *  This function enables the USBFS block after power down mode.
  211:.\Generated_Source\PSoC5/USBUART_1_pm.c **** *
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 10
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 10
 
 
  212:.\Generated_Source\PSoC5/USBUART_1_pm.c **** * Parameters:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  331 0022 1B78     		ldrb	r3, [r3]
  332 0024 DBB2     		uxtb	r3, r3
  333 0026 43F00103 		orr	r3, r3, #1
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 11
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 11
 
 
  334 002a DBB2     		uxtb	r3, r3
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  250:.\Generated_Source\PSoC5/USBUART_1_pm.c ****         /* Enable USBIO */
  251:.\Generated_Source\PSoC5/USBUART_1_pm.c ****         USBUART_1_PM_USB_CR0_REG |= USBUART_1_PM_USB_CR0_PD_N;
  376              		.loc 1 251 0
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 12
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 12
 
 
  377 007c 1B4A     		ldr	r2, .L16+20
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  409 00ba FFF7FEFF 		bl	CyDelayCycles
  274:.\Generated_Source\PSoC5/USBUART_1_pm.c ****         /* Finally, Enable d+ pullup and select iomode to USB mode*/
  275:.\Generated_Source\PSoC5/USBUART_1_pm.c ****         CY_SET_REG8(USBUART_1_USBIO_CR1_PTR, USBUART_1_USBIO_CR1_USBPUEN);
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 13
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 13
 
 
  410              		.loc 1 275 0
@@ -764,8 +764,8 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  443              		.size	USBUART_1_Resume, .-USBUART_1_Resume
  444              		.text
  445              	.Letext0:
- 446              		.file 2 "d:\\program files\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.3\\arm
- 447              		.file 3 "d:\\program files\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.3\\arm
+ 446              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 447              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
  448              		.file 4 ".\\Generated_Source\\PSoC5\\cytypes.h"
  449              		.file 5 ".\\Generated_Source\\PSoC5\\USBUART_1.h"
  450              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
@@ -776,32 +776,32 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  455 0006 00000000 		.4byte	.Ldebug_abbrev0
  456 000a 04       		.byte	0x4
  457 000b 01       		.uleb128 0x1
- 458 000c 9C000000 		.4byte	.LASF31
+ 458 000c 4F000000 		.4byte	.LASF31
  459 0010 01       		.byte	0x1
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 14
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 14
 
 
- 460 0011 75020000 		.4byte	.LASF32
- 461 0015 4F000000 		.4byte	.LASF33
+ 460 0011 66020000 		.4byte	.LASF32
+ 461 0015 62010000 		.4byte	.LASF33
  462 0019 00000000 		.4byte	.Ldebug_ranges0+0
  463 001d 00000000 		.4byte	0
  464 0021 00000000 		.4byte	.Ldebug_line0
  465 0025 02       		.uleb128 0x2
  466 0026 01       		.byte	0x1
  467 0027 06       		.byte	0x6
- 468 0028 58020000 		.4byte	.LASF0
+ 468 0028 49020000 		.4byte	.LASF0
  469 002c 02       		.uleb128 0x2
  470 002d 01       		.byte	0x1
  471 002e 08       		.byte	0x8
- 472 002f 41010000 		.4byte	.LASF1
+ 472 002f F4000000 		.4byte	.LASF1
  473 0033 02       		.uleb128 0x2
  474 0034 02       		.byte	0x2
  475 0035 05       		.byte	0x5
- 476 0036 1B020000 		.4byte	.LASF2
+ 476 0036 0C020000 		.4byte	.LASF2
  477 003a 02       		.uleb128 0x2
  478 003b 02       		.byte	0x2
  479 003c 07       		.byte	0x7
- 480 003d 66010000 		.4byte	.LASF3
+ 480 003d 19010000 		.4byte	.LASF3
  481 0041 03       		.uleb128 0x3
  482 0042 33000000 		.4byte	.LASF9
  483 0046 02       		.byte	0x2
@@ -810,19 +810,19 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  486 004c 02       		.uleb128 0x2
  487 004d 04       		.byte	0x4
  488 004e 05       		.byte	0x5
- 489 004f 43020000 		.4byte	.LASF4
+ 489 004f 34020000 		.4byte	.LASF4
  490 0053 02       		.uleb128 0x2
  491 0054 04       		.byte	0x4
  492 0055 07       		.byte	0x7
- 493 0056 54010000 		.4byte	.LASF5
+ 493 0056 07010000 		.4byte	.LASF5
  494 005a 02       		.uleb128 0x2
  495 005b 08       		.byte	0x8
  496 005c 05       		.byte	0x5
- 497 005d 08020000 		.4byte	.LASF6
+ 497 005d F9010000 		.4byte	.LASF6
  498 0061 02       		.uleb128 0x2
  499 0062 08       		.byte	0x8
  500 0063 07       		.byte	0x7
- 501 0064 DB010000 		.4byte	.LASF7
+ 501 0064 CC010000 		.4byte	.LASF7
  502 0068 04       		.uleb128 0x4
  503 0069 04       		.byte	0x4
  504 006a 05       		.byte	0x5
@@ -830,39 +830,39 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  506 006f 02       		.uleb128 0x2
  507 0070 04       		.byte	0x4
  508 0071 07       		.byte	0x7
- 509 0072 CE010000 		.4byte	.LASF8
+ 509 0072 BF010000 		.4byte	.LASF8
  510 0076 03       		.uleb128 0x3
- 511 0077 F7010000 		.4byte	.LASF10
+ 511 0077 E8010000 		.4byte	.LASF10
  512 007b 03       		.byte	0x3
  513 007c 2C       		.byte	0x2c
  514 007d 41000000 		.4byte	0x41
  515 0081 03       		.uleb128 0x3
- 516 0082 25020000 		.4byte	.LASF11
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 15
+ 516 0082 16020000 		.4byte	.LASF11
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 15
 
 
  517 0086 04       		.byte	0x4
  518 0087 C2       		.byte	0xc2
  519 0088 2C000000 		.4byte	0x2c
  520 008c 03       		.uleb128 0x3
- 521 008d C7010000 		.4byte	.LASF12
+ 521 008d B8010000 		.4byte	.LASF12
  522 0091 04       		.byte	0x4
  523 0092 C4       		.byte	0xc4
  524 0093 53000000 		.4byte	0x53
  525 0097 02       		.uleb128 0x2
  526 0098 04       		.byte	0x4
  527 0099 04       		.byte	0x4
- 528 009a 3B010000 		.4byte	.LASF13
+ 528 009a EE000000 		.4byte	.LASF13
  529 009e 02       		.uleb128 0x2
  530 009f 08       		.byte	0x8
  531 00a0 04       		.byte	0x4
- 532 00a1 A8010000 		.4byte	.LASF14
+ 532 00a1 5B010000 		.4byte	.LASF14
  533 00a5 02       		.uleb128 0x2
  534 00a6 01       		.byte	0x1
  535 00a7 08       		.byte	0x8
- 536 00a8 16020000 		.4byte	.LASF15
+ 536 00a8 07020000 		.4byte	.LASF15
  537 00ac 05       		.uleb128 0x5
- 538 00ad 4F010000 		.4byte	.LASF16
+ 538 00ad 02010000 		.4byte	.LASF16
  539 00b1 04       		.byte	0x4
  540 00b2 6C01     		.2byte	0x16c
  541 00b4 B8000000 		.4byte	0xb8
@@ -878,35 +878,35 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  551 00ce 02       		.uleb128 0x2
  552 00cf 04       		.byte	0x4
  553 00d0 07       		.byte	0x7
- 554 00d1 FF010000 		.4byte	.LASF18
+ 554 00d1 F0010000 		.4byte	.LASF18
  555 00d5 07       		.uleb128 0x7
  556 00d6 02       		.byte	0x2
  557 00d7 05       		.byte	0x5
  558 00d8 A9       		.byte	0xa9
  559 00d9 F6000000 		.4byte	0xf6
  560 00dd 08       		.uleb128 0x8
- 561 00de 4C020000 		.4byte	.LASF19
+ 561 00de 3D020000 		.4byte	.LASF19
  562 00e2 05       		.byte	0x5
  563 00e3 AB       		.byte	0xab
  564 00e4 81000000 		.4byte	0x81
  565 00e8 00       		.byte	0
  566 00e9 08       		.uleb128 0x8
- 567 00ea F2010000 		.4byte	.LASF20
+ 567 00ea E3010000 		.4byte	.LASF20
  568 00ee 05       		.byte	0x5
  569 00ef AC       		.byte	0xac
  570 00f0 81000000 		.4byte	0x81
  571 00f4 01       		.byte	0x1
  572 00f5 00       		.byte	0
  573 00f6 03       		.uleb128 0x3
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 16
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 16
 
 
- 574 00f7 2B020000 		.4byte	.LASF21
+ 574 00f7 1C020000 		.4byte	.LASF21
  575 00fb 05       		.byte	0x5
  576 00fc AD       		.byte	0xad
  577 00fd D5000000 		.4byte	0xd5
  578 0101 09       		.uleb128 0x9
- 579 0102 64020000 		.4byte	.LASF22
+ 579 0102 55020000 		.4byte	.LASF22
  580 0106 01       		.byte	0x1
  581 0107 37       		.byte	0x37
  582 0108 00000000 		.4byte	.LFB63
@@ -939,7 +939,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  609 0144 9C       		.byte	0x9c
  610 0145 58010000 		.4byte	0x158
  611 0149 0C       		.uleb128 0xc
- 612 014a 97010000 		.4byte	.LASF27
+ 612 014a 4A010000 		.4byte	.LASF27
  613 014e 01       		.byte	0x1
  614 014f 93       		.byte	0x93
  615 0150 81000000 		.4byte	0x81
@@ -948,7 +948,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  618 0156 77       		.sleb128 -9
  619 0157 00       		.byte	0
  620 0158 0B       		.uleb128 0xb
- 621 0159 2A010000 		.4byte	.LASF26
+ 621 0159 DD000000 		.4byte	.LASF26
  622 015d 01       		.byte	0x1
  623 015e E1       		.byte	0xe1
  624 015f 00000000 		.4byte	.LFB67
@@ -957,8 +957,8 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  627 0168 9C       		.byte	0x9c
  628 0169 7C010000 		.4byte	0x17c
  629 016d 0C       		.uleb128 0xc
- 630 016e 97010000 		.4byte	.LASF27
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 17
+ 630 016e 4A010000 		.4byte	.LASF27
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 17
 
 
  631 0172 01       		.byte	0x1
@@ -969,7 +969,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  636 017a 77       		.sleb128 -9
  637 017b 00       		.byte	0
  638 017c 0C       		.uleb128 0xc
- 639 017d 79010000 		.4byte	.LASF28
+ 639 017d 2C010000 		.4byte	.LASF28
  640 0181 01       		.byte	0x1
  641 0182 23       		.byte	0x23
  642 0183 F6000000 		.4byte	0xf6
@@ -977,12 +977,12 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  644 0188 03       		.byte	0x3
  645 0189 00000000 		.4byte	USBUART_1_backup
  646 018d 0D       		.uleb128 0xd
- 647 018e AF010000 		.4byte	.LASF29
+ 647 018e A0010000 		.4byte	.LASF29
  648 0192 05       		.byte	0x5
  649 0193 5102     		.2byte	0x251
  650 0195 B8000000 		.4byte	0xb8
  651 0199 0D       		.uleb128 0xd
- 652 019a 8A010000 		.4byte	.LASF30
+ 652 019a 3D010000 		.4byte	.LASF30
  653 019e 06       		.byte	0x6
  654 019f 2A06     		.2byte	0x62a
  655 01a1 A5010000 		.4byte	0x1a5
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  685 0018 3E       		.uleb128 0x3e
  686 0019 0B       		.uleb128 0xb
  687 001a 03       		.uleb128 0x3
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 18
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 18
 
 
  688 001b 0E       		.uleb128 0xe
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  742 0051 3B       		.uleb128 0x3b
  743 0052 0B       		.uleb128 0xb
  744 0053 01       		.uleb128 0x1
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 19
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 19
 
 
  745 0054 13       		.uleb128 0x13
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  799 008b 11       		.uleb128 0x11
  800 008c 01       		.uleb128 0x1
  801 008d 12       		.uleb128 0x12
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 20
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 20
 
 
  802 008e 06       		.uleb128 0x6
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  856 00c6 3B       		.uleb128 0x3b
  857 00c7 05       		.uleb128 0x5
  858 00c8 49       		.uleb128 0x49
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 21
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 21
 
 
  859 00c9 13       		.uleb128 0x13
@@ -1245,8 +1245,8 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  900 002c 00000000 		.4byte	0
  901              		.section	.debug_line,"",%progbits
  902              	.Ldebug_line0:
- 903 0000 F5010000 		.section	.debug_str,"MS",%progbits,1
- 903      02006B01 
+ 903 0000 01020000 		.section	.debug_str,"MS",%progbits,1
+ 903      02007701 
  903      00000201 
  903      FB0E0D00 
  903      01010101 
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  905      65436F6E 
  906              	.LASF17:
  907 0018 72656733 		.ascii	"reg32\000"
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 22
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 22
 
 
  907      3200
@@ -1278,159 +1278,159 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 1
  913      315F5375 
  913      7370656E 
  913      6400
- 914              	.LASF33:
- 915 004f 443A5C4D 		.ascii	"D:\\MyDocs\\Documents\\CE4950\\Networking\\Networki"
- 915      79446F63 
- 915      735C446F 
- 915      63756D65 
- 915      6E74735C 
- 916 007d 6E675C55 		.ascii	"ng\\USB_UART01\\USB_UART01.cydsn\000"
- 916      53425F55 
- 916      41525430 
- 916      315C5553 
- 916      425F5541 
- 917              	.LASF31:
- 918 009c 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 918      4320342E 
- 918      392E3320 
- 918      32303135 
- 918      30333033 
- 919 00cf 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 919      20726576 
- 919      6973696F 
- 919      6E203232 
- 919      31323230 
- 920 0102 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 920      66756E63 
- 920      74696F6E 
- 920      2D736563 
- 920      74696F6E 
- 921              	.LASF26:
- 922 012a 55534255 		.ascii	"USBUART_1_Resume\000"
- 922      4152545F 
- 922      315F5265 
- 922      73756D65 
- 922      00
- 923              	.LASF13:
- 924 013b 666C6F61 		.ascii	"float\000"
- 924      7400
- 925              	.LASF1:
- 926 0141 756E7369 		.ascii	"unsigned char\000"
- 926      676E6564 
- 926      20636861 
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 23
+ 914              	.LASF31:
+ 915 004f 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 915      4320342E 
+ 915      392E3320 
+ 915      32303135 
+ 915      30333033 
+ 916 0082 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 916      20726576 
+ 916      6973696F 
+ 916      6E203232 
+ 916      31323230 
+ 917 00b5 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 917      66756E63 
+ 917      74696F6E 
+ 917      2D736563 
+ 917      74696F6E 
+ 918              	.LASF26:
+ 919 00dd 55534255 		.ascii	"USBUART_1_Resume\000"
+ 919      4152545F 
+ 919      315F5265 
+ 919      73756D65 
+ 919      00
+ 920              	.LASF13:
+ 921 00ee 666C6F61 		.ascii	"float\000"
+ 921      7400
+ 922              	.LASF1:
+ 923 00f4 756E7369 		.ascii	"unsigned char\000"
+ 923      676E6564 
+ 923      20636861 
+ 923      7200
+ 924              	.LASF16:
+ 925 0102 72656738 		.ascii	"reg8\000"
+ 925      00
+ 926              	.LASF5:
+ 927 0107 6C6F6E67 		.ascii	"long unsigned int\000"
+ 927      20756E73 
+ 927      69676E65 
+ 927      6420696E 
+ 927      7400
+ 928              	.LASF3:
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 23
 
 
- 926      7200
- 927              	.LASF16:
- 928 014f 72656738 		.ascii	"reg8\000"
- 928      00
- 929              	.LASF5:
- 930 0154 6C6F6E67 		.ascii	"long unsigned int\000"
- 930      20756E73 
- 930      69676E65 
- 930      6420696E 
- 930      7400
- 931              	.LASF3:
- 932 0166 73686F72 		.ascii	"short unsigned int\000"
- 932      7420756E 
- 932      7369676E 
- 932      65642069 
- 932      6E7400
- 933              	.LASF28:
- 934 0179 55534255 		.ascii	"USBUART_1_backup\000"
- 934      4152545F 
- 934      315F6261 
- 934      636B7570 
- 934      00
- 935              	.LASF30:
- 936 018a 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 936      52784275 
- 936      66666572 
- 936      00
- 937              	.LASF27:
- 938 0197 656E6162 		.ascii	"enableInterrupts\000"
- 938      6C65496E 
- 938      74657272 
- 938      75707473 
- 938      00
- 939              	.LASF14:
- 940 01a8 646F7562 		.ascii	"double\000"
- 940      6C6500
+ 929 0119 73686F72 		.ascii	"short unsigned int\000"
+ 929      7420756E 
+ 929      7369676E 
+ 929      65642069 
+ 929      6E7400
+ 930              	.LASF28:
+ 931 012c 55534255 		.ascii	"USBUART_1_backup\000"
+ 931      4152545F 
+ 931      315F6261 
+ 931      636B7570 
+ 931      00
+ 932              	.LASF30:
+ 933 013d 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 933      52784275 
+ 933      66666572 
+ 933      00
+ 934              	.LASF27:
+ 935 014a 656E6162 		.ascii	"enableInterrupts\000"
+ 935      6C65496E 
+ 935      74657272 
+ 935      75707473 
+ 935      00
+ 936              	.LASF14:
+ 937 015b 646F7562 		.ascii	"double\000"
+ 937      6C6500
+ 938              	.LASF33:
+ 939 0162 5C5C4D61 		.ascii	"\\\\Mac\\Home\\Documents\\PSoC Creator\\USB_UART01\\"
+ 939      635C486F 
+ 939      6D655C44 
+ 939      6F63756D 
+ 939      656E7473 
+ 940 018f 5553425F 		.ascii	"USB_UART01.cydsn\000"
+ 940      55415254 
+ 940      30312E63 
+ 940      7964736E 
+ 940      00
  941              	.LASF29:
- 942 01af 55534255 		.ascii	"USBUART_1_configuration\000"
+ 942 01a0 55534255 		.ascii	"USBUART_1_configuration\000"
  942      4152545F 
  942      315F636F 
  942      6E666967 
  942      75726174 
  943              	.LASF12:
- 944 01c7 75696E74 		.ascii	"uint32\000"
+ 944 01b8 75696E74 		.ascii	"uint32\000"
  944      333200
  945              	.LASF8:
- 946 01ce 756E7369 		.ascii	"unsigned int\000"
+ 946 01bf 756E7369 		.ascii	"unsigned int\000"
  946      676E6564 
  946      20696E74 
  946      00
  947              	.LASF7:
- 948 01db 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 948 01cc 6C6F6E67 		.ascii	"long long unsigned int\000"
  948      206C6F6E 
  948      6720756E 
  948      7369676E 
  948      65642069 
  949              	.LASF20:
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccB8nH6u.s 			page 24
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPniBeK.s 			page 24
 
 
- 950 01f2 6D6F6465 		.ascii	"mode\000"
+ 950 01e3 6D6F6465 		.ascii	"mode\000"
  950      00
  951              	.LASF10:
- 952 01f7 696E7433 		.ascii	"int32_t\000"
+ 952 01e8 696E7433 		.ascii	"int32_t\000"
  952      325F7400 
  953              	.LASF18:
- 954 01ff 73697A65 		.ascii	"sizetype\000"
+ 954 01f0 73697A65 		.ascii	"sizetype\000"
  954      74797065 
  954      00
  955              	.LASF6:
- 956 0208 6C6F6E67 		.ascii	"long long int\000"
+ 956 01f9 6C6F6E67 		.ascii	"long long int\000"
  956      206C6F6E 
  956      6720696E 
  956      7400
  957              	.LASF15:
- 958 0216 63686172 		.ascii	"char\000"
+ 958 0207 63686172 		.ascii	"char\000"
  958      00
  959              	.LASF2:
- 960 021b 73686F72 		.ascii	"short int\000"
+ 960 020c 73686F72 		.ascii	"short int\000"
  960      7420696E 
  960      7400
  961              	.LASF11:
- 962 0225 75696E74 		.ascii	"uint8\000"
+ 962 0216 75696E74 		.ascii	"uint8\000"
  962      3800
  963              	.LASF21:
- 964 022b 55534255 		.ascii	"USBUART_1_BACKUP_STRUCT\000"
+ 964 021c 55534255 		.ascii	"USBUART_1_BACKUP_STRUCT\000"
  964      4152545F 
  964      315F4241 
  964      434B5550 
  964      5F535452 
  965              	.LASF4:
- 966 0243 6C6F6E67 		.ascii	"long int\000"
+ 966 0234 6C6F6E67 		.ascii	"long int\000"
  966      20696E74 
  966      00
  967              	.LASF19:
- 968 024c 656E6162 		.ascii	"enableState\000"
+ 968 023d 656E6162 		.ascii	"enableState\000"
  968      6C655374 
  968      61746500 
  969              	.LASF0:
- 970 0258 7369676E 		.ascii	"signed char\000"
+ 970 0249 7369676E 		.ascii	"signed char\000"
  970      65642063 
  970      68617200 
  971              	.LASF22:
- 972 0264 55534255 		.ascii	"USBUART_1_DP_ISR\000"
+ 972 0255 55534255 		.ascii	"USBUART_1_DP_ISR\000"
  972      4152545F 
  972      315F4450 
  972      5F495352 
  972      00
  973              	.LASF32:
- 974 0275 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\USBUART_1_pm.c\000"
+ 974 0266 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\USBUART_1_pm.c\000"
  974      6E657261 
  974      7465645F 
  974      536F7572 

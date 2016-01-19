@@ -1,10 +1,10 @@
-D:/MyDocs/Documents/CE4950/Networking/Networking/USB_UART01/USB_UART01.cydsn/ARM_GCC_493/Debug/CyBootAsmGnu.o : D:/MyDocs/Documents/CE4950/Networking/Networking/USB_UART01/USB_UART01.cydsn/Generated_Source/PSoC5/CyBootAsmGnu.s D:/MyDocs/Documents/CE4950/Networking/Networking/USB_UART01/USB_UART01.cydsn/Generated_Source/PSoC5/cydevicegnu.inc D:/MyDocs/Documents/CE4950/Networking/Networking/USB_UART01/USB_UART01.cydsn/Generated_Source/PSoC5/cydevicegnu_trm.inc D:/MyDocs/Documents/CE4950/Networking/Networking/USB_UART01/USB_UART01.cydsn/Generated_Source/PSoC5/cyfittergnu.inc 
+//Mac/Home/Documents/PSoC\ Creator/USB_UART01/USB_UART01.cydsn/ARM_GCC_493/Debug/CyBootAsmGnu.o : //Mac/Home/Documents/PSoC\ Creator/USB_UART01/USB_UART01.cydsn/Generated_Source/PSoC5/CyBootAsmGnu.s //Mac/Home/Documents/PSoC\ Creator/USB_UART01/USB_UART01.cydsn/Generated_Source/PSoC5/cydevicegnu.inc //Mac/Home/Documents/PSoC\ Creator/USB_UART01/USB_UART01.cydsn/Generated_Source/PSoC5/cydevicegnu_trm.inc //Mac/Home/Documents/PSoC\ Creator/USB_UART01/USB_UART01.cydsn/Generated_Source/PSoC5/cyfittergnu.inc 
 
-D:/MyDocs/Documents/CE4950/Networking/Networking/USB_UART01/USB_UART01.cydsn/Generated_Source/PSoC5/CyBootAsmGnu.s : 
+//Mac/Home/Documents/PSoC\ Creator/USB_UART01/USB_UART01.cydsn/Generated_Source/PSoC5/CyBootAsmGnu.s : 
 
-D:/MyDocs/Documents/CE4950/Networking/Networking/USB_UART01/USB_UART01.cydsn/Generated_Source/PSoC5/cydevicegnu.inc : 
+//Mac/Home/Documents/PSoC\ Creator/USB_UART01/USB_UART01.cydsn/Generated_Source/PSoC5/cydevicegnu.inc : 
 
-D:/MyDocs/Documents/CE4950/Networking/Networking/USB_UART01/USB_UART01.cydsn/Generated_Source/PSoC5/cydevicegnu_trm.inc : 
+//Mac/Home/Documents/PSoC\ Creator/USB_UART01/USB_UART01.cydsn/Generated_Source/PSoC5/cydevicegnu_trm.inc : 
 
-D:/MyDocs/Documents/CE4950/Networking/Networking/USB_UART01/USB_UART01.cydsn/Generated_Source/PSoC5/cyfittergnu.inc : 
+//Mac/Home/Documents/PSoC\ Creator/USB_UART01/USB_UART01.cydsn/Generated_Source/PSoC5/cyfittergnu.inc : 
 

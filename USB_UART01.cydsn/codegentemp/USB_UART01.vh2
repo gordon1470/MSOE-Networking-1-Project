@@ -2,7 +2,7 @@
 --	Conversion of USB_UART01.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Jan 18 19:33:50 2016
+--	Tue Jan 19 10:00:42 2016
 --
 
 USE cypress.cypress.all;
@@ -314,6 +314,17 @@ SIGNAL tmpFB_0__LED2_net_0 : bit;
 SIGNAL tmpIO_0__LED2_net_0 : bit;
 TERMINAL tmpSIOVREF__LED2_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__LED2_net_0 : bit;
+SIGNAL Net_155 : bit;
+SIGNAL \Counter:Net_82\ : bit;
+SIGNAL \Counter:Net_91\ : bit;
+SIGNAL \Counter:Net_48\ : bit;
+SIGNAL \Counter:Net_47\ : bit;
+SIGNAL \Counter:Net_42\ : bit;
+SIGNAL Net_188 : bit;
+SIGNAL Net_186 : bit;
+SIGNAL \Counter:Net_89\ : bit;
+SIGNAL \Counter:Net_95\ : bit;
+SIGNAL \Counter:Net_102\ : bit;
 SIGNAL \Timer:TimerUDB:capture_last\\D\ : bit;
 SIGNAL \Timer:TimerUDB:tc_reg_i\\D\ : bit;
 SIGNAL \Timer:TimerUDB:hwEnable_reg\\D\ : bit;
@@ -1183,6 +1194,26 @@ LED2:cy_psoc3_pins_v1_10
 		out_clock_en=>one,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__LED2_net_0);
+\Counter:CounterHW\:cy_psoc3_timer_v1_0
+	GENERIC MAP(cy_registers=>"")
+	PORT MAP(clock=>Net_155,
+		kill=>zero,
+		enable=>zero,
+		capture=>zero,
+		timer_reset=>zero,
+		tc=>\Counter:Net_48\,
+		compare=>\Counter:Net_47\,
+		interrupt=>\Counter:Net_42\);
+Clock_2:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"7c33c615-d8e3-4fb6-9477-e486f4df647e",
+		source_clock_id=>"",
+		divisor=>0,
+		period=>"83333333.3333333",
+		is_direct=>'0',
+		is_digital=>'1')
+	PORT MAP(clock_out=>Net_155,
+		dig_domain_out=>open);
 \Timer:TimerUDB:capture_last\:cy_dff
 	PORT MAP(d=>zero,
 		clk=>\Timer:TimerUDB:ClockOutFromEnBlock\,

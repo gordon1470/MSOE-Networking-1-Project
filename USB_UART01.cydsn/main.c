@@ -51,6 +51,8 @@ int main()
     /* Enable Global Interrupts */
     CyGlobalIntEnable;                        
     
+    Counter_Start();//start counter for random number generation
+    
     TX_pin_Write(1);  //set TX line to high to start
     
     //enable collision detection
@@ -238,6 +240,9 @@ void transmitData(){
         //check for idle, if network is idle, cotinue to transmit data. 
         //Else break out of transmition and wait random time
         if(networkState != idle){
+            if(networkState == collision){
+                CyDelay((Counter_ReadCounter()/128)*800);
+            }
             break;
         }
         /*
@@ -245,7 +250,7 @@ void transmitData(){
         Need to check if we are in collide specifically and wait for a random time if we are at some point
         We could probably do this inside the if loop above
         For the random wait value, there isn't any easy way to generate random numbers in PSoC
-        We could use a rapidly running continuous counter between 1 and 128 and grab the counter value when we need a number
+        We could use a rapidly running continuous counter between 0 and 128 and grab the counter value when we need a number
         this would probably be as random as we need
         Our equation would be (from the spec)
         ([Random input from counter]/128)*(800 ms)
@@ -265,7 +270,7 @@ void transmitData(){
     }
 }
 
-void setLEDNetworkState(){
+void setNetworkStateOnLEDs(){
 	 switch(networkState){
         case busy:
         {

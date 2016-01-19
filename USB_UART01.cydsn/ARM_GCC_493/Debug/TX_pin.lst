@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 1
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccOEH5Pl.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 1
   29:.\Generated_Source\PSoC5/TX_pin.c **** * Summary:
   30:.\Generated_Source\PSoC5/TX_pin.c **** *  Assign a new value to the digital port's data output register.  
   31:.\Generated_Source\PSoC5/TX_pin.c **** *
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 2
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccOEH5Pl.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/TX_pin.c **** * Parameters:  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 1
   69 0036 00BF     		.align	2
   70              	.L2:
   71 0038 C0510040 		.word	1073762752
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 3
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccOEH5Pl.s 			page 3
 
 
   72              		.cfi_endproc
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 1
   98 000a 0A4B     		ldr	r3, .L5
   99 000c 094A     		ldr	r2, .L5
  100 000e 1278     		ldrb	r2, [r2]
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 4
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccOEH5Pl.s 			page 4
 
 
  101 0010 D2B2     		uxtb	r2, r2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 1
   90:.\Generated_Source\PSoC5/TX_pin.c **** *  Macro TX_pin_ReadPS calls this function. 
   91:.\Generated_Source\PSoC5/TX_pin.c **** *  
   92:.\Generated_Source\PSoC5/TX_pin.c **** *******************************************************************************/
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 5
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccOEH5Pl.s 			page 5
 
 
   93:.\Generated_Source\PSoC5/TX_pin.c **** uint8 TX_pin_Read(void) 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 1
  106:.\Generated_Source\PSoC5/TX_pin.c **** * Parameters:  
  107:.\Generated_Source\PSoC5/TX_pin.c **** *  None 
  108:.\Generated_Source\PSoC5/TX_pin.c **** *
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 6
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccOEH5Pl.s 			page 6
 
 
  109:.\Generated_Source\PSoC5/TX_pin.c **** * Return: 
@@ -352,48 +352,48 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 1
  218 0006 00000000 		.4byte	.Ldebug_abbrev0
  219 000a 04       		.byte	0x4
  220 000b 01       		.uleb128 0x1
- 221 000c 75000000 		.4byte	.LASF20
+ 221 000c 33000000 		.4byte	.LASF20
  222 0010 01       		.byte	0x1
  223 0011 00000000 		.4byte	.LASF21
- 224 0015 28000000 		.4byte	.LASF22
+ 224 0015 32010000 		.4byte	.LASF22
  225 0019 00000000 		.4byte	.Ldebug_ranges0+0
  226 001d 00000000 		.4byte	0
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 7
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccOEH5Pl.s 			page 7
 
 
  227 0021 00000000 		.4byte	.Ldebug_line0
  228 0025 02       		.uleb128 0x2
  229 0026 01       		.byte	0x1
  230 0027 06       		.byte	0x6
- 231 0028 E8010000 		.4byte	.LASF0
+ 231 0028 D9010000 		.4byte	.LASF0
  232 002c 02       		.uleb128 0x2
  233 002d 01       		.byte	0x1
  234 002e 08       		.byte	0x8
- 235 002f 29010000 		.4byte	.LASF1
+ 235 002f E7000000 		.4byte	.LASF1
  236 0033 02       		.uleb128 0x2
  237 0034 02       		.byte	0x2
  238 0035 05       		.byte	0x5
- 239 0036 CF010000 		.4byte	.LASF2
+ 239 0036 C0010000 		.4byte	.LASF2
  240 003a 02       		.uleb128 0x2
  241 003b 02       		.byte	0x2
  242 003c 07       		.byte	0x7
- 243 003d 65010000 		.4byte	.LASF3
+ 243 003d 18010000 		.4byte	.LASF3
  244 0041 02       		.uleb128 0x2
  245 0042 04       		.byte	0x4
  246 0043 05       		.byte	0x5
- 247 0044 DF010000 		.4byte	.LASF4
+ 247 0044 D0010000 		.4byte	.LASF4
  248 0048 02       		.uleb128 0x2
  249 0049 04       		.byte	0x4
  250 004a 07       		.byte	0x7
- 251 004b 47010000 		.4byte	.LASF5
+ 251 004b FA000000 		.4byte	.LASF5
  252 004f 02       		.uleb128 0x2
  253 0050 08       		.byte	0x8
  254 0051 05       		.byte	0x5
- 255 0052 BC010000 		.4byte	.LASF6
+ 255 0052 AD010000 		.4byte	.LASF6
  256 0056 02       		.uleb128 0x2
  257 0057 08       		.byte	0x8
  258 0058 07       		.byte	0x7
- 259 0059 8C010000 		.4byte	.LASF7
+ 259 0059 7D010000 		.4byte	.LASF7
  260 005d 03       		.uleb128 0x3
  261 005e 04       		.byte	0x4
  262 005f 05       		.byte	0x5
@@ -401,36 +401,36 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 1
  264 0064 02       		.uleb128 0x2
  265 0065 04       		.byte	0x4
  266 0066 07       		.byte	0x7
- 267 0067 7F010000 		.4byte	.LASF8
+ 267 0067 70010000 		.4byte	.LASF8
  268 006b 04       		.uleb128 0x4
- 269 006c D9010000 		.4byte	.LASF12
+ 269 006c CA010000 		.4byte	.LASF12
  270 0070 02       		.byte	0x2
  271 0071 C2       		.byte	0xc2
  272 0072 2C000000 		.4byte	0x2c
  273 0076 02       		.uleb128 0x2
  274 0077 04       		.byte	0x4
  275 0078 04       		.byte	0x4
- 276 0079 23010000 		.4byte	.LASF9
+ 276 0079 E1000000 		.4byte	.LASF9
  277 007d 02       		.uleb128 0x2
  278 007e 08       		.byte	0x8
  279 007f 04       		.byte	0x4
- 280 0080 78010000 		.4byte	.LASF10
+ 280 0080 2B010000 		.4byte	.LASF10
  281 0084 02       		.uleb128 0x2
  282 0085 01       		.byte	0x1
  283 0086 08       		.byte	0x8
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 8
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccOEH5Pl.s 			page 8
 
 
- 284 0087 CA010000 		.4byte	.LASF11
+ 284 0087 BB010000 		.4byte	.LASF11
  285 008b 05       		.uleb128 0x5
- 286 008c 42010000 		.4byte	.LASF13
+ 286 008c F5000000 		.4byte	.LASF13
  287 0090 02       		.byte	0x2
  288 0091 6C01     		.2byte	0x16c
  289 0093 97000000 		.4byte	0x97
  290 0097 06       		.uleb128 0x6
  291 0098 6B000000 		.4byte	0x6b
  292 009c 07       		.uleb128 0x7
- 293 009d 16010000 		.4byte	.LASF14
+ 293 009d D4000000 		.4byte	.LASF14
  294 00a1 01       		.byte	0x1
  295 00a2 27       		.byte	0x27
  296 00a3 00000000 		.4byte	.LFB0
@@ -447,7 +447,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 1
  307 00bd 91       		.byte	0x91
  308 00be 6F       		.sleb128 -17
  309 00bf 09       		.uleb128 0x9
- 310 00c0 37010000 		.4byte	.LASF23
+ 310 00c0 28000000 		.4byte	.LASF23
  311 00c4 01       		.byte	0x1
  312 00c5 29       		.byte	0x29
  313 00c6 6B000000 		.4byte	0x6b
@@ -456,7 +456,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 1
  316 00cc 77       		.sleb128 -9
  317 00cd 00       		.byte	0
  318 00ce 07       		.uleb128 0x7
- 319 00cf A3010000 		.4byte	.LASF15
+ 319 00cf 94010000 		.4byte	.LASF15
  320 00d3 01       		.byte	0x1
  321 00d4 45       		.byte	0x45
  322 00d5 00000000 		.4byte	.LFB1
@@ -465,7 +465,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 1
  325 00de 9C       		.byte	0x9c
  326 00df F2000000 		.4byte	0xf2
  327 00e3 08       		.uleb128 0x8
- 328 00e4 B7010000 		.4byte	.LASF17
+ 328 00e4 A8010000 		.4byte	.LASF17
  329 00e8 01       		.byte	0x1
  330 00e9 45       		.byte	0x45
  331 00ea 6B000000 		.4byte	0x6b
@@ -474,11 +474,11 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 1
  334 00f0 77       		.sleb128 -9
  335 00f1 00       		.byte	0
  336 00f2 0A       		.uleb128 0xa
- 337 00f3 59010000 		.4byte	.LASF18
+ 337 00f3 0C010000 		.4byte	.LASF18
  338 00f7 01       		.byte	0x1
  339 00f8 5D       		.byte	0x5d
  340 00f9 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 9
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccOEH5Pl.s 			page 9
 
 
  341 00fd 00000000 		.4byte	.LFB2
@@ -486,7 +486,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 1
  343 0105 01       		.uleb128 0x1
  344 0106 9C       		.byte	0x9c
  345 0107 0A       		.uleb128 0xa
- 346 0108 03010000 		.4byte	.LASF19
+ 346 0108 C1000000 		.4byte	.LASF19
  347 010c 01       		.byte	0x1
  348 010d 71       		.byte	0x71
  349 010e 6B000000 		.4byte	0x6b
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 1
  395 0026 08       		.uleb128 0x8
  396 0027 00       		.byte	0
  397 0028 00       		.byte	0
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 10
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccOEH5Pl.s 			page 10
 
 
  398 0029 04       		.uleb128 0x4
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 1
  452 0060 01       		.uleb128 0x1
  453 0061 13       		.uleb128 0x13
  454 0062 00       		.byte	0
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 11
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccOEH5Pl.s 			page 11
 
 
  455 0063 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 1
  509 009a 00       		.byte	0
  510 009b 00       		.byte	0
  511 009c 00       		.byte	0
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 12
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccOEH5Pl.s 			page 12
 
 
  512              		.section	.debug_aranges,"",%progbits
@@ -707,125 +707,125 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 1
  547              	.LASF16:
  548 0022 76616C75 		.ascii	"value\000"
  548      6500
- 549              	.LASF22:
- 550 0028 443A5C4D 		.ascii	"D:\\MyDocs\\Documents\\CE4950\\Networking\\Networki"
- 550      79446F63 
- 550      735C446F 
- 550      63756D65 
- 550      6E74735C 
- 551 0056 6E675C55 		.ascii	"ng\\USB_UART01\\USB_UART01.cydsn\000"
- 551      53425F55 
- 551      41525430 
- 551      315C5553 
- 551      425F5541 
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 13
+ 549              	.LASF23:
+ 550 0028 73746174 		.ascii	"staticBits\000"
+ 550      69634269 
+ 550      747300
+ 551              	.LASF20:
+ 552 0033 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 552      4320342E 
+ 552      392E3320 
+ 552      32303135 
+ 552      30333033 
+ 553 0066 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccOEH5Pl.s 			page 13
 
 
- 552              	.LASF20:
- 553 0075 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 553      4320342E 
- 553      392E3320 
- 553      32303135 
- 553      30333033 
- 554 00a8 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 554      20726576 
- 554      6973696F 
- 554      6E203232 
- 554      31323230 
- 555 00db 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 555      66756E63 
- 555      74696F6E 
- 555      2D736563 
- 555      74696F6E 
- 556              	.LASF19:
- 557 0103 54585F70 		.ascii	"TX_pin_ReadDataReg\000"
- 557      696E5F52 
- 557      65616444 
- 557      61746152 
- 557      656700
- 558              	.LASF14:
- 559 0116 54585F70 		.ascii	"TX_pin_Write\000"
- 559      696E5F57 
- 559      72697465 
- 559      00
- 560              	.LASF9:
- 561 0123 666C6F61 		.ascii	"float\000"
- 561      7400
- 562              	.LASF1:
- 563 0129 756E7369 		.ascii	"unsigned char\000"
- 563      676E6564 
- 563      20636861 
- 563      7200
- 564              	.LASF23:
- 565 0137 73746174 		.ascii	"staticBits\000"
- 565      69634269 
- 565      747300
- 566              	.LASF13:
- 567 0142 72656738 		.ascii	"reg8\000"
- 567      00
- 568              	.LASF5:
- 569 0147 6C6F6E67 		.ascii	"long unsigned int\000"
- 569      20756E73 
- 569      69676E65 
- 569      6420696E 
- 569      7400
- 570              	.LASF18:
- 571 0159 54585F70 		.ascii	"TX_pin_Read\000"
- 571      696E5F52 
- 571      65616400 
- 572              	.LASF3:
- 573 0165 73686F72 		.ascii	"short unsigned int\000"
- 573      7420756E 
- 573      7369676E 
- 573      65642069 
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccN3QNRh.s 			page 14
+ 553      20726576 
+ 553      6973696F 
+ 553      6E203232 
+ 553      31323230 
+ 554 0099 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 554      66756E63 
+ 554      74696F6E 
+ 554      2D736563 
+ 554      74696F6E 
+ 555              	.LASF19:
+ 556 00c1 54585F70 		.ascii	"TX_pin_ReadDataReg\000"
+ 556      696E5F52 
+ 556      65616444 
+ 556      61746152 
+ 556      656700
+ 557              	.LASF14:
+ 558 00d4 54585F70 		.ascii	"TX_pin_Write\000"
+ 558      696E5F57 
+ 558      72697465 
+ 558      00
+ 559              	.LASF9:
+ 560 00e1 666C6F61 		.ascii	"float\000"
+ 560      7400
+ 561              	.LASF1:
+ 562 00e7 756E7369 		.ascii	"unsigned char\000"
+ 562      676E6564 
+ 562      20636861 
+ 562      7200
+ 563              	.LASF13:
+ 564 00f5 72656738 		.ascii	"reg8\000"
+ 564      00
+ 565              	.LASF5:
+ 566 00fa 6C6F6E67 		.ascii	"long unsigned int\000"
+ 566      20756E73 
+ 566      69676E65 
+ 566      6420696E 
+ 566      7400
+ 567              	.LASF18:
+ 568 010c 54585F70 		.ascii	"TX_pin_Read\000"
+ 568      696E5F52 
+ 568      65616400 
+ 569              	.LASF3:
+ 570 0118 73686F72 		.ascii	"short unsigned int\000"
+ 570      7420756E 
+ 570      7369676E 
+ 570      65642069 
+ 570      6E7400
+ 571              	.LASF10:
+ 572 012b 646F7562 		.ascii	"double\000"
+ 572      6C6500
+ 573              	.LASF22:
+ 574 0132 5C5C4D61 		.ascii	"\\\\Mac\\Home\\Documents\\PSoC Creator\\USB_UART01\\"
+ 574      635C486F 
+ 574      6D655C44 
+ 574      6F63756D 
+ 574      656E7473 
+ 575 015f 5553425F 		.ascii	"USB_UART01.cydsn\000"
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccOEH5Pl.s 			page 14
 
 
- 573      6E7400
- 574              	.LASF10:
- 575 0178 646F7562 		.ascii	"double\000"
- 575      6C6500
+ 575      55415254 
+ 575      30312E63 
+ 575      7964736E 
+ 575      00
  576              	.LASF8:
- 577 017f 756E7369 		.ascii	"unsigned int\000"
+ 577 0170 756E7369 		.ascii	"unsigned int\000"
  577      676E6564 
  577      20696E74 
  577      00
  578              	.LASF7:
- 579 018c 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 579 017d 6C6F6E67 		.ascii	"long long unsigned int\000"
  579      206C6F6E 
  579      6720756E 
  579      7369676E 
  579      65642069 
  580              	.LASF15:
- 581 01a3 54585F70 		.ascii	"TX_pin_SetDriveMode\000"
+ 581 0194 54585F70 		.ascii	"TX_pin_SetDriveMode\000"
  581      696E5F53 
  581      65744472 
  581      6976654D 
  581      6F646500 
  582              	.LASF17:
- 583 01b7 6D6F6465 		.ascii	"mode\000"
+ 583 01a8 6D6F6465 		.ascii	"mode\000"
  583      00
  584              	.LASF6:
- 585 01bc 6C6F6E67 		.ascii	"long long int\000"
+ 585 01ad 6C6F6E67 		.ascii	"long long int\000"
  585      206C6F6E 
  585      6720696E 
  585      7400
  586              	.LASF11:
- 587 01ca 63686172 		.ascii	"char\000"
+ 587 01bb 63686172 		.ascii	"char\000"
  587      00
  588              	.LASF2:
- 589 01cf 73686F72 		.ascii	"short int\000"
+ 589 01c0 73686F72 		.ascii	"short int\000"
  589      7420696E 
  589      7400
  590              	.LASF12:
- 591 01d9 75696E74 		.ascii	"uint8\000"
+ 591 01ca 75696E74 		.ascii	"uint8\000"
  591      3800
  592              	.LASF4:
- 593 01df 6C6F6E67 		.ascii	"long int\000"
+ 593 01d0 6C6F6E67 		.ascii	"long int\000"
  593      20696E74 
  593      00
  594              	.LASF0:
- 595 01e8 7369676E 		.ascii	"signed char\000"
+ 595 01d9 7369676E 		.ascii	"signed char\000"
  595      65642063 
  595      68617200 
  596              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

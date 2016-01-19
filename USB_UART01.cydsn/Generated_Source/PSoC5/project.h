@@ -43,6 +43,8 @@
 #include "LED3.h"
 #include "LED2_aliases.h"
 #include "LED2.h"
+#include "Counter.h"
+#include "Clock_2.h"
 #include "USBUART_1_Dm_aliases.h"
 #include "USBUART_1_Dm.h"
 #include "USBUART_1_Dp_aliases.h"

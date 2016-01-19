@@ -18,10 +18,12 @@
 ##################################################################### 
                     1::Clock Frequency Summary
 ===================================================================== 
-Number of clocks: 8
+Number of clocks: 10
 Clock: Clock                    | Frequency: 63.71 MHz  | Target: 64.00 MHz  | 
 Clock: Clock_1                  | N/A                   | Target: 1.00 MHz   | 
 Clock: Clock_1(fixed-function)  | N/A                   | Target: 1.00 MHz   | 
+Clock: Clock_2                  | N/A                   | Target: 12.80 MHz  | 
+Clock: Clock_2(fixed-function)  | N/A                   | Target: 12.80 MHz  | 
 Clock: CyBUS_CLK                | N/A                   | Target: 64.00 MHz  | 
 Clock: CyILO                    | N/A                   | Target: 0.10 MHz   | 
 Clock: CyIMO                    | N/A                   | Target: 24.00 MHz  | 

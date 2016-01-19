@@ -1,5 +1,5 @@
 # USB_UART01
-# 2016-01-19 01:33:52Z
+# 2016-01-19 16:00:43Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -38,11 +38,13 @@ set_location "\USBUART_1:ord_int\" interrupt -1 -1 25
 set_location "\USBUART_1:ep_3\" interrupt -1 -1 5
 set_location "\USBUART_1:sof_int\" interrupt -1 -1 21
 set_location "\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\" 3 0 6
+set_location "__ZERO__" 3 2 0 1
 set_location "\Timer:TimerUDB:rstSts:stsreg\" 3 0 4
 set_location "\Timer:TimerUDB:sT16:timerdp:u0\" 2 0 2
 set_location "\Timer:TimerUDB:sT16:timerdp:u1\" 3 0 2
 set_location "TimerISR" interrupt -1 -1 2
-set_location "\Idle_Collision_Timer:TimerHW\" timercell -1 -1 0
+set_location "\Idle_Collision_Timer:TimerHW\" timercell -1 -1 1
 set_location "__ONE__" 3 2 0 0
 set_location "Edge_detect_IRQ" interrupt -1 -1 0
 set_location "Idle_Collision_IRQ" interrupt -1 -1 1
+set_location "\Counter:CounterHW\" timercell -1 -1 0

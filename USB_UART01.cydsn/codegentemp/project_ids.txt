@@ -1,6 +1,6 @@
-D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\USB_UART01.cyprj|367fdefa-d106-44d4-ae8f-d3c8f218b5e5
-D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|3e3fd511-4db0-4194-bafe-8da52ade8d2b
-D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|66000be8-bbbb-452c-b920-6edfb524cbfa
-D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|5cc86c26-83cd-4bbb-a35a-746b09833b74
-D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|4dc1b7c4-c217-417e-b801-6a1b6426fcc2
-D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|fc684ad7-2851-4e53-8321-aac4495a2af7
+\\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\USB_UART01.cyprj|cbb157ac-1120-4e3d-b7ec-534e6c1aa4c5
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|4da4dd9f-aa24-4c43-ad4e-7b31ce58f8e2
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|fae72b3d-d01e-4e4b-9f1c-87d901e51287
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|78353797-fbf4-4671-9991-ad489102a534
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|ca3cc0ba-730a-4e53-98d8-f41f94046c91
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|1a98799e-b144-46d0-87d1-44a417a4b91c
