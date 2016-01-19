@@ -97,7 +97,8 @@ int main()
                         stringToDiffMan(lineString, stringPosition);
                         while(USBUART_1_CDCIsReady() == 0u);
                         USBUART_1_PutCRLF();
-                         
+                        
+                        //keep looping until data is transmitted
                         while(!dataTransmissionComplete){
                             transmitData();
                             setNetworkStateOnLEDs();
@@ -234,10 +235,12 @@ Note: halfBitIndex will be equal to the size of the diffManEncodedData array at 
 void transmitData(){
     int i;
     for(i = 0;i < halfBitIndex; i++){
-        //check for idle
+        //check for idle, if network is idle, cotinue to transmit data. 
+        //Else break out of transmition and wait random time
         if(networkState != idle){
             break;
         }
+        
         TX_pin_Write(diffManEncodedData[i]);
         Timer_Start();
         while(!timerExpired); 
