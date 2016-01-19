@@ -12,10 +12,27 @@ void asciiToDiffMan(char);
 void transmitData();
 
 #define INDEX_OF_MSB 6
+#define HIGH 1
 
 int diffManEncodedData[800];
 int halfBitIndex = 0, currentDataPos=0, lengthOfData;
 bool timerExpired;
+enum state {busy, idle, collision} networkState; 
+
+CY_ISR(Idle_Collision_ISR){
+    if(Receive_Read() == HIGH){
+        networkState = idle;  
+    }
+    else{
+        networkState = collision;
+    }
+}
+
+CY_ISR(Edge_detect_ISR){
+    networkState = busy;
+    Idle_Collision_Timer_Start();
+    Receive_ClearInterrupt();
+}
 
 CY_ISR(TimerHandler){
     Timer_STATUS;   //clear the timer interrupt
@@ -71,7 +88,7 @@ int main()
                         stringToDiffMan(lineString, stringPosition);
                         while(USBUART_1_CDCIsReady() == 0u);
                         USBUART_1_PutCRLF();
-
+                            
                         transmitData();
                         
                         //reset index
@@ -201,6 +218,7 @@ Transmits the diff man encoded data. Must have converted string to diff man befo
 */
 void transmitData(){
     int i;
+    //wait for idle
     for(i = 0;i < halfBitIndex; i++){
         TX_pin_Write(diffManEncodedData[i]);
         Timer_Start();
