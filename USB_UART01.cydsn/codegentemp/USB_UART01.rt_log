@@ -13,8 +13,8 @@ I1206: Completed Reading of file USB_UART01.sdc
 I1204: Reading architecture from file D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\dev/psoc5/psoc5lp/route_arch-rrg.cydata
 I1206: Completed Reading of file D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\dev/psoc5/psoc5lp/route_arch-rrg.cydata
 I1209: Started routing
-I1223: Total Nets : 30 
-I1212: Iteration  1 :     5 unrouted : 0 seconds
+I1223: Total Nets : 33 
+I1212: Iteration  1 :     7 unrouted : 0 seconds
 I1212: Iteration  2 :     0 unrouted : 0 seconds
 I1215: Routing is successful
 Warning-1366: Setup time violation found in a path from clock ( Clock ) to clock ( Clock ).
