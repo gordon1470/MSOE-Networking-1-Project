@@ -227,18 +227,24 @@ void asciiToDiffMan(char asciiChar)
 
 /*
 Transmits the diff man encoded data. Must have converted string to diff man before calling this method.
+Checks network state before transmitting.
+Note: halfBitIndex will be equal to the size of the diffManEncodedData array at this point.
 */
 void transmitData(){
     int i;
-    //wait for idle
-    //call setLEDNetworkState
     for(i = 0;i < halfBitIndex; i++){
         //check for idle
+        if(networkState != idle){
+            break;
+        }
         TX_pin_Write(diffManEncodedData[i]);
         Timer_Start();
         while(!timerExpired); 
         timerExpired = false;
     }
+    
+    //when finished transmitting diff manchester encoded data, set flag 
+    if(i == 
 }
 
 void setLEDNetworkState(){
