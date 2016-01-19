@@ -265,7 +265,7 @@ void transmitData(){
     }
     
     //when finished transmitting diff manchester encoded data, set flag 
-    if(i == halfBitIndex - 1){//i should be halfBitIndex - 1 at end of loop
+    if(i == halfBitIndex){
         dataTransmissionComplete = true;
     }
 }
