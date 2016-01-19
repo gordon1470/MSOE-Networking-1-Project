@@ -83,14 +83,10 @@
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED3\LED3.c</v>
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED3\LED3.h</v>
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED3\LED3_aliases.h</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\led4</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\led4\led4.c</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\led4\led4.h</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\led4\led4_aliases.h</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED4_1</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED4_1\LED4_1.c</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED4_1\LED4_1.h</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED4_1\LED4_1_aliases.h</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED4</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED4\LED4.c</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED4\LED4.h</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED4\LED4_aliases.h</v>
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\Receive</v>
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\Receive\Receive.c</v>
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\Receive\Receive.h</v>
@@ -240,7 +236,6 @@
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_LCDPort.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_PM.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\led4.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer_PM.lst</v>
@@ -290,7 +285,6 @@
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_LCDPort.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_PM.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\led4.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer_PM.lst</v>
@@ -314,6 +308,7 @@
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\USB_UART01.elf</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\USB_UART01.hex</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\USB_UART01.map</v>
+<v>USB_UART01\USB_UART01\USB_UART01.gpdsc</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>

@@ -2,7 +2,7 @@
 --	Conversion of USB_UART01.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Jan 18 19:03:57 2016
+--	Mon Jan 18 19:33:50 2016
 --
 
 USE cypress.cypress.all;
@@ -285,11 +285,6 @@ SIGNAL \Timer:TimerUDB:sT16:timerdp:f1_blk_stat_reg_1\ : bit;
 ATTRIBUTE port_state_att of \Timer:TimerUDB:sT16:timerdp:f1_blk_stat_reg_1\:SIGNAL IS 2;
 SIGNAL \Timer:Net_102\ : bit;
 SIGNAL \Timer:Net_266\ : bit;
-SIGNAL tmpOE__led4_net_0 : bit;
-SIGNAL tmpFB_0__led4_net_0 : bit;
-SIGNAL tmpIO_0__led4_net_0 : bit;
-TERMINAL tmpSIOVREF__led4_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__led4_net_0 : bit;
 SIGNAL Net_149 : bit;
 SIGNAL \Idle_Collision_Timer:Net_260\ : bit;
 SIGNAL \Idle_Collision_Timer:Net_266\ : bit;
@@ -304,11 +299,11 @@ SIGNAL tmpOE__Receive_net_0 : bit;
 SIGNAL tmpFB_0__Receive_net_0 : bit;
 SIGNAL tmpIO_0__Receive_net_0 : bit;
 TERMINAL tmpSIOVREF__Receive_net_0 : bit;
-SIGNAL tmpOE__LED4_1_net_0 : bit;
-SIGNAL tmpFB_0__LED4_1_net_0 : bit;
-SIGNAL tmpIO_0__LED4_1_net_0 : bit;
-TERMINAL tmpSIOVREF__LED4_1_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__LED4_1_net_0 : bit;
+SIGNAL tmpOE__LED4_net_0 : bit;
+SIGNAL tmpFB_0__LED4_net_0 : bit;
+SIGNAL tmpIO_0__LED4_net_0 : bit;
+TERMINAL tmpSIOVREF__LED4_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__LED4_net_0 : bit;
 SIGNAL tmpOE__LED3_net_0 : bit;
 SIGNAL tmpFB_0__LED3_net_0 : bit;
 SIGNAL tmpIO_0__LED3_net_0 : bit;
@@ -872,76 +867,6 @@ TX_pin:cy_psoc3_pins_v1_10
 TimerISR:cy_isr_v1_0
 	GENERIC MAP(int_type=>"10")
 	PORT MAP(int_signal=>Net_81);
-led4:cy_psoc3_pins_v1_10
-	GENERIC MAP(id=>"8fa3d722-0cb5-408c-87dc-accc4d28d5b8",
-		drive_mode=>"110",
-		ibuf_enabled=>"1",
-		init_dr_st=>"0",
-		input_sync=>"1",
-		input_clk_en=>'0',
-		input_sync_mode=>"0",
-		intr_mode=>"00",
-		invert_in_clock=>'0',
-		invert_in_clock_en=>'0',
-		invert_in_reset=>'0',
-		invert_out_clock=>'0',
-		invert_out_clock_en=>'0',
-		invert_out_reset=>'0',
-		io_voltage=>"",
-		layout_mode=>"CONTIGUOUS",
-		output_conn=>"0",
-		output_sync=>"0",
-		output_clk_en=>'0',
-		output_mode=>"0",
-		output_reset=>'0',
-		output_clock_mode=>"0",
-		oe_sync=>"0",
-		oe_conn=>"0",
-		oe_reset=>'0',
-		pin_aliases=>"",
-		pin_mode=>"O",
-		por_state=>4,
-		sio_group_cnt=>0,
-		sio_hifreq=>"",
-		sio_hyst=>"1",
-		sio_ibuf=>"00000000",
-		sio_info=>"00",
-		sio_obuf=>"00000000",
-		sio_refsel=>"00000000",
-		sio_vtrip=>"00000000",
-		sio_vohsel=>"",
-		slew_rate=>"0",
-		spanning=>'0',
-		sw_only=>'0',
-		vtrip=>"10",
-		width=>1,
-		port_alias_required=>'0',
-		port_alias_group=>"",
-		use_annotation=>"0",
-		pa_in_clock=>-1,
-		pa_in_clock_en=>-1,
-		pa_in_reset=>-1,
-		pa_out_clock=>-1,
-		pa_out_clock_en=>-1,
-		pa_out_reset=>-1,
-		ovt_needed=>"0",
-		ovt_slew_control=>"00",
-		ovt_hyst_trim=>"0",
-		input_buffer_sel=>"00")
-	PORT MAP(oe=>(one),
-		y=>(zero),
-		fb=>(tmpFB_0__led4_net_0),
-		analog=>(open),
-		io=>(tmpIO_0__led4_net_0),
-		siovref=>(tmpSIOVREF__led4_net_0),
-		annotation=>(open),
-		in_clock=>zero,
-		in_clock_en=>one,
-		in_reset=>zero,
-		out_clock=>zero,
-		out_clock_en=>one,
-		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__led4_net_0);
 Clock:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		id=>"0d576b0b-63d1-4189-b745-1ac782edfbef",
@@ -1048,7 +973,7 @@ Clock_1:cy_clock_v1_0
 		is_digital=>'1')
 	PORT MAP(clock_out=>Net_149,
 		dig_domain_out=>open);
-LED4_1:cy_psoc3_pins_v1_10
+LED4:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"815e00fc-0a02-4cff-8345-08b406e37b94",
 		drive_mode=>"110",
 		ibuf_enabled=>"1",
@@ -1106,10 +1031,10 @@ LED4_1:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(one),
 		y=>(zero),
-		fb=>(tmpFB_0__LED4_1_net_0),
+		fb=>(tmpFB_0__LED4_net_0),
 		analog=>(open),
-		io=>(tmpIO_0__LED4_1_net_0),
-		siovref=>(tmpSIOVREF__LED4_1_net_0),
+		io=>(tmpIO_0__LED4_net_0),
+		siovref=>(tmpSIOVREF__LED4_net_0),
 		annotation=>(open),
 		in_clock=>zero,
 		in_clock_en=>one,
@@ -1117,7 +1042,7 @@ LED4_1:cy_psoc3_pins_v1_10
 		out_clock=>zero,
 		out_clock_en=>one,
 		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__LED4_1_net_0);
+		interrupt=>tmpINTERRUPT_0__LED4_net_0);
 LED3:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"b4788912-8a9e-4528-a35c-732b9753d064",
 		drive_mode=>"110",

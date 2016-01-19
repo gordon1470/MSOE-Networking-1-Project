@@ -467,45 +467,6 @@
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\Custom\custom.cs</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\PSoC5\API\intc.c</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\PSoC5\API\intc.h</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\cy_pins_v2_10.cysym</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\cy_pins_v2_10.pdf</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\cy_pins_v2_10.cystate</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\cy_pins_v2_10.cyprimitive</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\custom.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyenums.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinsdata.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinpicture.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinutils.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cygeneralcontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cygeneralcontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyinputcontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyinputcontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cymappingcontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cymappingcontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyoutputcontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyoutputcontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinaliasdialog.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinaliasdialog.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinscontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinscontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyporcontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyporcontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\Resource1.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyclockingcontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyclockingcontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cygeneralcontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyinputcontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cymappingcontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyoutputcontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinaliasdialog.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinscontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyporcontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\Resource1.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyclockingcontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\PSoC5\API\aliases.h</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\PSoC5\API\pins.c</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\PSoC5\API\pins.h</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_20\cy_clock_v2_20.cyprimitive</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_20\cy_clock_v2_20.cysym</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
@@ -838,9 +799,9 @@
 <v>.\Generated_Source\PSoC5\Timer_PM.c</v>
 <v>.\Generated_Source\PSoC5\TimerISR.c</v>
 <v>.\Generated_Source\PSoC5\TimerISR.h</v>
-<v>.\Generated_Source\PSoC5\led4_aliases.h</v>
-<v>.\Generated_Source\PSoC5\led4.c</v>
-<v>.\Generated_Source\PSoC5\led4.h</v>
+<v>.\Generated_Source\PSoC5\LED4_aliases.h</v>
+<v>.\Generated_Source\PSoC5\LED4.c</v>
+<v>.\Generated_Source\PSoC5\LED4.h</v>
 <v>.\Generated_Source\PSoC5\Clock_1.c</v>
 <v>.\Generated_Source\PSoC5\Clock_1.h</v>
 <v>.\Generated_Source\PSoC5\Clock.c</v>
@@ -873,7 +834,7 @@
 <v>D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="130976390463282962" />
+<deps_time v="130976408374018277" />
 <top_block v="TopDesign" />
 <last_generation v="2" />
 </CyGuid_925cc1e1-309e-4e08-b0a1-09a83c35b157>
@@ -1544,7 +1505,7 @@
 <name_val_pair name=".\Generated_Source\PSoC5\Clock.c" v="-mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -Wall -ffunction-sections -O0 -ffat-lto-objects" />
 </name>
 </genericCmdLineData>
-<codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\mrowiecn\AppData\Local\Cypress Semiconductor\PSoC Creator\3.3&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p D:\MyDocs\Documents\CE4950\Networking\Networking\USB_UART01\USB_UART01.cydsn\USB_UART01.cyprj -d CY8C5868AXI-LP035 -s D:\MyDocs\Documents\CE4950\Networking\Networking\USB_UART01\USB_UART01.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
+<codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\mrowiecn\AppData\Local\Cypress Semiconductor\PSoC Creator\3.3&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\USB_UART01.cyprj -d CY8C5868AXI-LP035 -s D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
 </CyGuid_b0374e30-ce3a-47f2-ad85-821643292c68>
 </dataGuid>
 <dataGuid v="504337dd-7d07-4bc7-9057-90e60cf6c469">

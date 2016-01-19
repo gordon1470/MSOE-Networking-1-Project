@@ -17,7 +17,7 @@ void setLEDNetworkState();
 
 int diffManEncodedData[800];
 int halfBitIndex = 0, currentDataPos=0, lengthOfData;
-bool timerExpired;
+bool timerExpired, dataTransmissionComplete;
 enum state {busy, idle, collision} networkState; 
 
 CY_ISR(Idle_Collision_ISR){
@@ -47,13 +47,21 @@ int main()
     char lineString[100];
     uint8 stringPosition = 0;
     timerExpired = false;
+    dataTransmissionComplete = false;
     /* Enable Global Interrupts */
     CyGlobalIntEnable;                        
     
     TX_pin_Write(1);  //set TX line to high to start
+    
+    //enable collision detection
+    Idle_Collision_IRQ_StartEx(Idle_Collision_ISR);
+    Edge_detect_IRQ_StartEx(Edge_detect_ISR);
+    Idle_Collision_Timer_Start();
 
     /* Start USBFS Operation with 3V operation */
     USBUART_1_Start(0u, USBUART_1_3V_OPERATION);
+    
+    //start tranmission timer
     TimerISR_StartEx(TimerHandler);
     
     /* Main Loop: */
@@ -89,9 +97,12 @@ int main()
                         stringToDiffMan(lineString, stringPosition);
                         while(USBUART_1_CDCIsReady() == 0u);
                         USBUART_1_PutCRLF();
-                            
-                        transmitData();
+                         
+                        while(!dataTransmissionComplete){
+                            transmitData();
+                        }
                         
+                        TX_pin_Write(1);    //set line to logic-1 after transmission
                         //reset index
                         halfBitIndex = 0;
                         stringPosition = 0; 
@@ -220,13 +231,14 @@ Transmits the diff man encoded data. Must have converted string to diff man befo
 void transmitData(){
     int i;
     //wait for idle
+    //call setLEDNetworkState
     for(i = 0;i < halfBitIndex; i++){
+        //check for idle
         TX_pin_Write(diffManEncodedData[i]);
         Timer_Start();
         while(!timerExpired); 
         timerExpired = false;
     }
-    TX_pin_Write(1);    //set line to logic-1 after transmission
 }
 
 void setLEDNetworkState(){

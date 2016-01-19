@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: led4.h  
+* File Name: LED4.h  
 * Version 2.10
 *
 * Description:
@@ -14,8 +14,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_led4_ALIASES_H) /* Pins led4_ALIASES_H */
-#define CY_PINS_led4_ALIASES_H
+#if !defined(CY_PINS_LED4_ALIASES_H) /* Pins LED4_ALIASES_H */
+#define CY_PINS_LED4_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -25,8 +25,8 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define led4_0		(led4__0__PC)
+#define LED4_0		(LED4__0__PC)
 
-#endif /* End Pins led4_ALIASES_H */
+#endif /* End Pins LED4_ALIASES_H */
 
 /* [] END OF FILE */

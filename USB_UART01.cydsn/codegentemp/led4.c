@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: led4.c  
+* File Name: LED4.c  
 * Version 2.10
 *
 * Description:
@@ -15,15 +15,15 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "led4.h"
+#include "LED4.h"
 
 /* APIs are not generated for P15[7:6] on PSoC 5 */
 #if !(CY_PSOC5A &&\
-	 led4__PORT == 15 && ((led4__MASK & 0xC0) != 0))
+	 LED4__PORT == 15 && ((LED4__MASK & 0xC0) != 0))
 
 
 /*******************************************************************************
-* Function Name: led4_Write
+* Function Name: LED4_Write
 ********************************************************************************
 *
 * Summary:
@@ -36,15 +36,15 @@
 *  None
 *  
 *******************************************************************************/
-void led4_Write(uint8 value) 
+void LED4_Write(uint8 value) 
 {
-    uint8 staticBits = (led4_DR & (uint8)(~led4_MASK));
-    led4_DR = staticBits | ((uint8)(value << led4_SHIFT) & led4_MASK);
+    uint8 staticBits = (LED4_DR & (uint8)(~LED4_MASK));
+    LED4_DR = staticBits | ((uint8)(value << LED4_SHIFT) & LED4_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: led4_SetDriveMode
+* Function Name: LED4_SetDriveMode
 ********************************************************************************
 *
 * Summary:
@@ -53,27 +53,27 @@ void led4_Write(uint8 value)
 * Parameters:  
 *  mode:  Change the pins to one of the following drive modes.
 *
-*  led4_DM_STRONG     Strong Drive 
-*  led4_DM_OD_HI      Open Drain, Drives High 
-*  led4_DM_OD_LO      Open Drain, Drives Low 
-*  led4_DM_RES_UP     Resistive Pull Up 
-*  led4_DM_RES_DWN    Resistive Pull Down 
-*  led4_DM_RES_UPDWN  Resistive Pull Up/Down 
-*  led4_DM_DIG_HIZ    High Impedance Digital 
-*  led4_DM_ALG_HIZ    High Impedance Analog 
+*  LED4_DM_STRONG     Strong Drive 
+*  LED4_DM_OD_HI      Open Drain, Drives High 
+*  LED4_DM_OD_LO      Open Drain, Drives Low 
+*  LED4_DM_RES_UP     Resistive Pull Up 
+*  LED4_DM_RES_DWN    Resistive Pull Down 
+*  LED4_DM_RES_UPDWN  Resistive Pull Up/Down 
+*  LED4_DM_DIG_HIZ    High Impedance Digital 
+*  LED4_DM_ALG_HIZ    High Impedance Analog 
 *
 * Return: 
 *  None
 *
 *******************************************************************************/
-void led4_SetDriveMode(uint8 mode) 
+void LED4_SetDriveMode(uint8 mode) 
 {
-	CyPins_SetPinDriveMode(led4_0, mode);
+	CyPins_SetPinDriveMode(LED4_0, mode);
 }
 
 
 /*******************************************************************************
-* Function Name: led4_Read
+* Function Name: LED4_Read
 ********************************************************************************
 *
 * Summary:
@@ -87,17 +87,17 @@ void led4_SetDriveMode(uint8 mode)
 *  Returns the current value of the Digital Port as a right justified number
 *  
 * Note:
-*  Macro led4_ReadPS calls this function. 
+*  Macro LED4_ReadPS calls this function. 
 *  
 *******************************************************************************/
-uint8 led4_Read(void) 
+uint8 LED4_Read(void) 
 {
-    return (led4_PS & led4_MASK) >> led4_SHIFT;
+    return (LED4_PS & LED4_MASK) >> LED4_SHIFT;
 }
 
 
 /*******************************************************************************
-* Function Name: led4_ReadDataReg
+* Function Name: LED4_ReadDataReg
 ********************************************************************************
 *
 * Summary:
@@ -110,17 +110,17 @@ uint8 led4_Read(void)
 *  Returns the current value assigned to the Digital Port's data output register
 *  
 *******************************************************************************/
-uint8 led4_ReadDataReg(void) 
+uint8 LED4_ReadDataReg(void) 
 {
-    return (led4_DR & led4_MASK) >> led4_SHIFT;
+    return (LED4_DR & LED4_MASK) >> LED4_SHIFT;
 }
 
 
 /* If Interrupts Are Enabled for this Pins component */ 
-#if defined(led4_INTSTAT) 
+#if defined(LED4_INTSTAT) 
 
     /*******************************************************************************
-    * Function Name: led4_ClearInterrupt
+    * Function Name: LED4_ClearInterrupt
     ********************************************************************************
     * Summary:
     *  Clears any active interrupts attached to port and returns the value of the 
@@ -133,9 +133,9 @@ uint8 led4_ReadDataReg(void)
     *  Returns the value of the interrupt status register
     *  
     *******************************************************************************/
-    uint8 led4_ClearInterrupt(void) 
+    uint8 LED4_ClearInterrupt(void) 
     {
-        return (led4_INTSTAT & led4_MASK) >> led4_SHIFT;
+        return (LED4_INTSTAT & LED4_MASK) >> LED4_SHIFT;
     }
 
 #endif /* If Interrupts Are Enabled for this Pins component */ 

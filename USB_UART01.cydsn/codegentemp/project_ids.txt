@@ -1,6 +1,6 @@
-D:\MyDocs\Documents\CE4950\Networking\Networking\USB_UART01\USB_UART01.cydsn\USB_UART01.cyprj|1acdc7c1-e9db-4301-8512-d660c48b8a9e
-D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|7ff9c547-7b65-48f5-96c4-27b4fd2170fa
-D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|6dd3fc9c-870e-424a-940b-8aa7d72ee450
-D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|cf182e63-39cb-451b-aee9-d4d7514ab927
-D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|65dbcda5-f657-4e87-91c0-0a1bb972385a
-D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|abe3862b-1e8d-4c09-9255-92827210f9fe
+D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\USB_UART01.cyprj|367fdefa-d106-44d4-ae8f-d3c8f218b5e5
+D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|3e3fd511-4db0-4194-bafe-8da52ade8d2b
+D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|66000be8-bbbb-452c-b920-6edfb524cbfa
+D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|5cc86c26-83cd-4bbb-a35a-746b09833b74
+D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|4dc1b7c4-c217-417e-b801-6a1b6426fcc2
+D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|fc684ad7-2851-4e53-8321-aac4495a2af7
