@@ -10,6 +10,7 @@ void initDiffManEncodedArray();
 void stringToDiffMan(char*, uint8);
 void asciiToDiffMan(char);
 void transmitData();
+void setLEDNetworkState();
 
 #define INDEX_OF_MSB 6
 #define HIGH 1
@@ -228,4 +229,34 @@ void transmitData(){
     TX_pin_Write(1);    //set line to logic-1 after transmission
 }
 
+void setLEDNetworkState(){
+	 switch(networkState){
+        case busy:
+        {
+            LED4_Write(1);
+            LED3_Write(0);
+            LED2_Write(0);
+            break;
+        }
+        case idle:
+        {
+            LED3_Write(1);
+            LED4_Write(0);
+            LED2_Write(0);
+            break;
+        }
+        case collision:
+        {
+            LED2_Write(1);
+            LED4_Write(0);
+            LED3_Write(0);
+            break;
+        }
+        default:
+        {
+           //error
+            break;
+        } 
+	}
+}
 /* [] END OF FILE */
