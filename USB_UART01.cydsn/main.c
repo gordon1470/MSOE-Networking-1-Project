@@ -99,13 +99,11 @@ int main()
                         stringToDiffMan(lineString, stringPosition);
                         while(USBUART_1_CDCIsReady() == 0u);
                         USBUART_1_PutCRLF();
-                        
                         //keep looping until data is transmitted
                         while(!dataTransmissionComplete){
                             transmitData();
                             setNetworkStateOnLEDs();
                         }
-                        
                         TX_pin_Write(1);    //set line to logic-1 after transmission
                         //reset index
                         halfBitIndex = 0;
