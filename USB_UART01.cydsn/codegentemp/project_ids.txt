@@ -1,6 +1,6 @@
-\\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\USB_UART01.cyprj|d23242f9-94dd-4b42-b45f-b5008938c0f8
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|400fc025-21ba-4c38-a733-19adaa9d55a3
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|53407638-9bd1-4e13-b059-d5c7e96d64cb
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|80a19da1-d7fc-4800-a81b-cbe2774657b9
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|2e2a2476-e03c-43a4-806b-5182f7ef54ce
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|51c7ced8-111f-4007-b2fb-bc3c89ffee23
+D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\USB_UART01.cyprj|0143c07b-10f2-4d9b-8219-a04712e23f74
+D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|42aaa24d-ce22-472a-a946-b47797284cf7
+D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|f02a3227-9a5a-4a10-8041-1e981d3b2ba1
+D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|9b995107-04ff-40ea-b9b9-78b3c1920a2d
+D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|a3fd9393-05ad-4714-9d54-a38f60121ee7
+D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|4d0c0719-782f-4070-aec8-7d12dc5e3569

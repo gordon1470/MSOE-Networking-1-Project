@@ -169,6 +169,8 @@
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\Clock_1</v>
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\Clock_1\Clock_1.c</v>
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\Clock_1\Clock_1.h</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\Clock_2</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\Counter</v>
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\cy_boot</v>
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
@@ -195,8 +197,6 @@
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\cy_boot\cytypes.h</v>
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\cy_boot\cyutils.c</v>
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\Edge_detect_IRQ</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\Edge_detect_IRQ\Edge_detect_IRQ.c</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\Edge_detect_IRQ\Edge_detect_IRQ.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -223,7 +223,10 @@
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_1.lst</v>
+<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_2.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Counter.lst</v>
+<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Counter_PM.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
@@ -233,10 +236,17 @@
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Edge_detect_IRQ.lst</v>
+<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Idle_Collision_IRQ.lst</v>
+<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Idle_Collision_Timer.lst</v>
+<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Idle_Collision_Timer_PM.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_LCDPort.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_PM.lst</v>
+<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\LED2.lst</v>
+<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\LED3.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Receive.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer_PM.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\TimerISR.lst</v>
@@ -272,7 +282,10 @@
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_1.lst</v>
+<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_2.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Counter.lst</v>
+<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Counter_PM.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
@@ -282,10 +295,17 @@
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Edge_detect_IRQ.lst</v>
+<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Idle_Collision_IRQ.lst</v>
+<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Idle_Collision_Timer.lst</v>
+<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Idle_Collision_Timer_PM.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_LCDPort.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_PM.lst</v>
+<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\LED2.lst</v>
+<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\LED3.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Receive.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer_PM.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\TimerISR.lst</v>
@@ -299,16 +319,6 @@
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_Dm.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_Dp.lst</v>
 <v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_drv.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_episr.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_hid.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_midi.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_pm.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_std.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_vnd.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\USB_UART01.elf</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\USB_UART01.hex</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\USB_UART01.map</v>
-<v>USB_UART01\USB_UART01\USB_UART01.gpdsc</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -325,6 +335,7 @@
 <v>USB_UART01\USB_UART01\System Reference Guides</v>
 <v>USB_UART01\USB_UART01\System Reference Guides\cy_boot_v5_20</v>
 <v>USB_UART01\USB_UART01\CharLCD_v2_10.pdf</v>
+<v>USB_UART01\USB_UART01\Counter_v3_0.pdf</v>
 <v>USB_UART01\USB_UART01\cy_clock_v2_20</v>
 <v>USB_UART01\USB_UART01\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
 <v>USB_UART01\USB_UART01\cy_isr_v1_70</v>
@@ -344,6 +355,7 @@
 <v>USB_UART01\USB_UART01\System Reference Guides</v>
 <v>USB_UART01\USB_UART01\System Reference Guides\cy_boot_v5_20</v>
 <v>USB_UART01\USB_UART01\CharLCD_v2_10.pdf</v>
+<v>USB_UART01\USB_UART01\Counter_v3_0.pdf</v>
 <v>USB_UART01\USB_UART01\cy_clock_v2_20</v>
 <v>USB_UART01\USB_UART01\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
 <v>USB_UART01\USB_UART01\cy_isr_v1_70</v>
@@ -368,6 +380,7 @@
 <name v=".\USB_UART01.cydsn\device.h" />
 <name v=".\USB_UART01.cydsn\main.c" />
 <name v=".\USB_UART01.cydsn\USB_UART01.cydwr" />
+<name v=".\USB_UART01.cydsn\Generated_Source\PSoC5\USBUART_1.c" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />

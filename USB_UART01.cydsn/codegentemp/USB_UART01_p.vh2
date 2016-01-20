@@ -1,5 +1,5 @@
 -- Project:   USB_UART01
--- Generated: 01/20/2016 09:44:08
+-- Generated: 01/20/2016 13:45:54
 -- PSoC Creator  3.3 CP1
 
 ENTITY USB_UART01 IS
@@ -149,7 +149,14 @@ ARCHITECTURE __DEFAULT__ OF USB_UART01 IS
     ATTRIBUTE Location OF \LCD:LCDPort(6)\ : LABEL IS "P2[6]";
     ATTRIBUTE lib_model OF TX_pin(0) : LABEL IS "iocell10";
     ATTRIBUTE Location OF TX_pin(0) : LABEL IS "P12[4]";
-    ATTRIBUTE lib_model OF Receive(0) : LABEL IS "iocell_ireg";
+    ATTRIBUTE lib_model OF Receive(0) : LABEL IS "iocell11";
+    ATTRIBUTE Location OF Receive(0) : LABEL IS "P3[0]";
+    ATTRIBUTE lib_model OF LED4(0) : LABEL IS "iocell12";
+    ATTRIBUTE Location OF LED4(0) : LABEL IS "P6[3]";
+    ATTRIBUTE lib_model OF LED3(0) : LABEL IS "iocell13";
+    ATTRIBUTE Location OF LED3(0) : LABEL IS "P6[2]";
+    ATTRIBUTE lib_model OF LED2(0) : LABEL IS "iocell14";
+    ATTRIBUTE Location OF LED2(0) : LABEL IS "P0[7]";
     ATTRIBUTE lib_model OF \Timer:TimerUDB:status_tc\ : LABEL IS "macrocell1";
     ATTRIBUTE Location OF \USBUART_1:USB\ : LABEL IS "F(USB,0)";
     ATTRIBUTE lib_model OF \Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell1";

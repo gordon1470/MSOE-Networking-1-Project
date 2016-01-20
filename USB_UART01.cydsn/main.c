@@ -21,6 +21,7 @@ bool timerExpired, dataTransmissionComplete;
 enum state {busy, idle, collision} networkState; 
 
 CY_ISR(Idle_Collision_ISR){
+    networkState = idle; 
     if(Receive_Read() == HIGH){
         networkState = idle;  
     }
@@ -66,9 +67,12 @@ int main()
     //start tranmission timer
     TimerISR_StartEx(TimerHandler);
     
+    
+    
     /* Main Loop: */
     for(;;)
     {
+        setNetworkStateOnLEDs();
         if(USBUART_1_IsConfigurationChanged() != 0u) /* Host could send double SET_INTERFACE request */
         {
             if(USBUART_1_GetConfiguration() != 0u)   /* Init IN endpoints when device configured */
@@ -99,11 +103,13 @@ int main()
                         stringToDiffMan(lineString, stringPosition);
                         while(USBUART_1_CDCIsReady() == 0u);
                         USBUART_1_PutCRLF();
+                        
                         //keep looping until data is transmitted
                         while(!dataTransmissionComplete){
                             transmitData();
                             setNetworkStateOnLEDs();
                         }
+                        dataTransmissionComplete = false;
                         TX_pin_Write(1);    //set line to logic-1 after transmission
                         //reset index
                         halfBitIndex = 0;
