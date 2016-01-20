@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
   23:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** 
   24:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** #include "Idle_Collision_Timer.h"
   25:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** 
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 2
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 2
 
 
   26:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** uint8 Idle_Collision_Timer_initVar = 0u;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
   52 0014 224A     		ldr	r2, .L2+4
   53 0016 224B     		ldr	r3, .L2+4
   54 0018 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 3
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 3
 
 
   55 001a DBB2     		uxtb	r3, r3
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  103:.\Generated_Source\PSoC5/Idle_Collision_Timer.c ****         #endif /* Configure Run Mode with hardware enable */
  104:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** 
  105:.\Generated_Source\PSoC5/Idle_Collision_Timer.c ****         /* Clear and Set SYNCTC and SYNCCMP bits of RT1 register */
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 4
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 4
 
 
  106:.\Generated_Source\PSoC5/Idle_Collision_Timer.c ****         Idle_Collision_Timer_RT1 &= ((uint8)(~Idle_Collision_Timer_RT1_MASK));
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  108 0084 4FF40D70 		mov	r0, #564
  109 0088 FFF7FEFF 		bl	Idle_Collision_Timer_WritePeriod
  119:.\Generated_Source\PSoC5/Idle_Collision_Timer.c ****     Idle_Collision_Timer_WriteCounter(Idle_Collision_Timer_INIT_PERIOD);
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 5
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 5
 
 
  110              		.loc 1 119 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  120              	.L2:
  121 009c 0C4F0040 		.word	1073762060
  122 00a0 0E4F0040 		.word	1073762062
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 6
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 6
 
 
  123 00a4 174F0040 		.word	1073762071
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  155 0014 0A4A     		ldr	r2, .L5+4
  156 0016 0A4B     		ldr	r3, .L5+4
  157 0018 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 7
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 7
 
 
  158 001a DBB2     		uxtb	r3, r3
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  203:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** *
  204:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** * Parameters:
  205:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** *  void
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 8
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 8
 
 
  206:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** *
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  228              		.section	.text.Idle_Collision_Timer_Stop,"ax",%progbits
  229              		.align	2
  230              		.global	Idle_Collision_Timer_Stop
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 9
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 9
 
 
  231              		.thumb
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  255 0014 0A4A     		ldr	r2, .L12+4
  256 0016 0A4B     		ldr	r3, .L12+4
  257 0018 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 10
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 10
 
 
  258 001a DBB2     		uxtb	r3, r3
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  274:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** *
  275:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** * Return:
  276:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** *  void
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 11
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 11
 
 
  277:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** *
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  288:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** *
  289:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** * Summary:
  290:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** *  This function forces a capture independent of the capture signal.
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 12
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 12
 
 
  291:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** *
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  371              		.type	Idle_Collision_Timer_ReadStatusRegister, %function
  372              	Idle_Collision_Timer_ReadStatusRegister:
  373              	.LFB6:
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 13
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 13
 
 
  312:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  403              		.size	Idle_Collision_Timer_ReadStatusRegister, .-Idle_Collision_Timer_ReadStatusRegister
  404              		.section	.text.Idle_Collision_Timer_ReadControlRegister,"ax",%progbits
  405              		.align	2
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 14
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 14
 
 
  406              		.global	Idle_Collision_Timer_ReadControlRegister
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  433              		.cfi_def_cfa_offset 0
  434 0012 7047     		bx	lr
  435              	.L27:
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 15
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 15
 
 
  436              		.align	2
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  386:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** }
  468              		.loc 1 386 0
  469 0010 0C37     		adds	r7, r7, #12
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 16
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 16
 
 
  470              		.cfi_def_cfa_offset 4
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  408:.\Generated_Source\PSoC5/Idle_Collision_Timer.c ****        return ((uint16)CY_GET_REG16(Idle_Collision_Timer_PERIOD_LSB_PTR));
  503              		.loc 1 408 0
  504 0004 034B     		ldr	r3, .L33
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 17
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 17
 
 
  505 0006 1B88     		ldrh	r3, [r3]	@ movhi
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  535              		@ link register save eliminated.
  536 0000 80B4     		push	{r7}
  537              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 18
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 18
 
 
  538              		.cfi_offset 7, -4
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  448:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** *
  449:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** * Parameters:
  450:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** *  void
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 19
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 19
 
 
  451:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** *
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  467:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** * Function Name: Idle_Collision_Timer_WriteCounter
  468:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** ********************************************************************************
  469:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** *
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 20
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 20
 
 
  470:.\Generated_Source\PSoC5/Idle_Collision_Timer.c **** * Summary:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  647              		.cfi_endproc
  648              	.LFE12:
  649              		.size	Idle_Collision_Timer_WriteCounter, .-Idle_Collision_Timer_WriteCounter
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 21
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 21
 
 
  650              		.section	.text.Idle_Collision_Timer_ReadCounter,"ax",%progbits
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  674 000c 9BB2     		uxth	r3, r3
  522:.\Generated_Source\PSoC5/Idle_Collision_Timer.c ****     #else
  523:.\Generated_Source\PSoC5/Idle_Collision_Timer.c ****         return (CY_GET_REG16(Idle_Collision_Timer_CAPTURE_LSB_PTR));
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 22
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 22
 
 
  524:.\Generated_Source\PSoC5/Idle_Collision_Timer.c ****     #endif /* (Idle_Collision_Timer_UsingFixedFunction) */
@@ -1290,17 +1290,17 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  699 0006 00000000 		.4byte	.Ldebug_abbrev0
  700 000a 04       		.byte	0x4
  701 000b 01       		.uleb128 0x1
- 702 000c B0010000 		.4byte	.LASF35
+ 702 000c E7010000 		.4byte	.LASF35
  703 0010 01       		.byte	0x1
- 704 0011 A7030000 		.4byte	.LASF36
- 705 0015 6D020000 		.4byte	.LASF37
+ 704 0011 A0030000 		.4byte	.LASF36
+ 705 0015 43010000 		.4byte	.LASF37
  706 0019 00000000 		.4byte	.Ldebug_ranges0+0
  707 001d 00000000 		.4byte	0
  708 0021 00000000 		.4byte	.Ldebug_line0
  709 0025 02       		.uleb128 0x2
  710 0026 01       		.byte	0x1
  711 0027 06       		.byte	0x6
- 712 0028 7A030000 		.4byte	.LASF0
+ 712 0028 73030000 		.4byte	.LASF0
  713 002c 02       		.uleb128 0x2
  714 002d 01       		.byte	0x1
  715 002e 08       		.byte	0x8
@@ -1308,7 +1308,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  717 0033 02       		.uleb128 0x2
  718 0034 02       		.byte	0x2
  719 0035 05       		.byte	0x5
- 720 0036 62030000 		.4byte	.LASF2
+ 720 0036 5B030000 		.4byte	.LASF2
  721 003a 02       		.uleb128 0x2
  722 003b 02       		.byte	0x2
  723 003c 07       		.byte	0x7
@@ -1316,22 +1316,22 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  725 0041 02       		.uleb128 0x2
  726 0042 04       		.byte	0x4
  727 0043 05       		.byte	0x5
- 728 0044 6C030000 		.4byte	.LASF4
+ 728 0044 65030000 		.4byte	.LASF4
  729 0048 02       		.uleb128 0x2
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 23
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 23
 
 
  730 0049 04       		.byte	0x4
  731 004a 07       		.byte	0x7
- 732 004b 88010000 		.4byte	.LASF5
+ 732 004b BF010000 		.4byte	.LASF5
  733 004f 02       		.uleb128 0x2
  734 0050 08       		.byte	0x8
  735 0051 05       		.byte	0x5
- 736 0052 46030000 		.4byte	.LASF6
+ 736 0052 3F030000 		.4byte	.LASF6
  737 0056 02       		.uleb128 0x2
  738 0057 08       		.byte	0x8
  739 0058 07       		.byte	0x7
- 740 0059 D5020000 		.4byte	.LASF7
+ 740 0059 CE020000 		.4byte	.LASF7
  741 005d 03       		.uleb128 0x3
  742 005e 04       		.byte	0x4
  743 005f 05       		.byte	0x5
@@ -1339,14 +1339,14 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  745 0064 02       		.uleb128 0x2
  746 0065 04       		.byte	0x4
  747 0066 07       		.byte	0x7
- 748 0067 AB020000 		.4byte	.LASF8
+ 748 0067 A4020000 		.4byte	.LASF8
  749 006b 04       		.uleb128 0x4
- 750 006c 9A010000 		.4byte	.LASF9
+ 750 006c D1010000 		.4byte	.LASF9
  751 0070 02       		.byte	0x2
  752 0071 C2       		.byte	0xc2
  753 0072 2C000000 		.4byte	0x2c
  754 0076 04       		.uleb128 0x4
- 755 0077 66020000 		.4byte	.LASF10
+ 755 0077 9D020000 		.4byte	.LASF10
  756 007b 02       		.byte	0x2
  757 007c C3       		.byte	0xc3
  758 007d 3A000000 		.4byte	0x3a
@@ -1357,13 +1357,13 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  763 0088 02       		.uleb128 0x2
  764 0089 08       		.byte	0x8
  765 008a 04       		.byte	0x4
- 766 008b 3E020000 		.4byte	.LASF12
+ 766 008b 75020000 		.4byte	.LASF12
  767 008f 02       		.uleb128 0x2
  768 0090 01       		.byte	0x1
  769 0091 08       		.byte	0x8
- 770 0092 75030000 		.4byte	.LASF13
+ 770 0092 6E030000 		.4byte	.LASF13
  771 0096 05       		.uleb128 0x5
- 772 0097 38030000 		.4byte	.LASF14
+ 772 0097 31030000 		.4byte	.LASF14
  773 009b 02       		.byte	0x2
  774 009c 6C01     		.2byte	0x16c
  775 009e A2000000 		.4byte	0xa2
@@ -1378,11 +1378,11 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  784 00b4 76000000 		.4byte	0x76
  785 00b8 02       		.uleb128 0x2
  786 00b9 04       		.byte	0x4
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 24
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 24
 
 
  787 00ba 07       		.byte	0x7
- 788 00bb 3D030000 		.4byte	.LASF16
+ 788 00bb 36030000 		.4byte	.LASF16
  789 00bf 07       		.uleb128 0x7
  790 00c0 1B010000 		.4byte	.LASF17
  791 00c4 01       		.byte	0x1
@@ -1392,7 +1392,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  795 00ce 01       		.uleb128 0x1
  796 00cf 9C       		.byte	0x9c
  797 00d0 08       		.uleb128 0x8
- 798 00d1 43010000 		.4byte	.LASF18
+ 798 00d1 7A010000 		.4byte	.LASF18
  799 00d5 01       		.byte	0x1
  800 00d6 B4       		.byte	0xb4
  801 00d7 00000000 		.4byte	.LFB1
@@ -1408,7 +1408,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  811 00f0 01       		.uleb128 0x1
  812 00f1 9C       		.byte	0x9c
  813 00f2 08       		.uleb128 0x8
- 814 00f3 EC020000 		.4byte	.LASF20
+ 814 00f3 E5020000 		.4byte	.LASF20
  815 00f7 01       		.byte	0x1
  816 00f8 F7       		.byte	0xf7
  817 00f9 00000000 		.4byte	.LFB3
@@ -1416,7 +1416,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  819 0101 01       		.uleb128 0x1
  820 0102 9C       		.byte	0x9c
  821 0103 09       		.uleb128 0x9
- 822 0104 06030000 		.4byte	.LASF24
+ 822 0104 FF020000 		.4byte	.LASF24
  823 0108 01       		.byte	0x1
  824 0109 1701     		.2byte	0x117
  825 010b 00000000 		.4byte	.LFB4
@@ -1425,7 +1425,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  828 0114 9C       		.byte	0x9c
  829 0115 29010000 		.4byte	0x129
  830 0119 0A       		.uleb128 0xa
- 831 011a 54030000 		.4byte	.LASF26
+ 831 011a 4D030000 		.4byte	.LASF26
  832 011e 01       		.byte	0x1
  833 011f 1701     		.2byte	0x117
  834 0121 6B000000 		.4byte	0x6b
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  841 012e 01       		.byte	0x1
  842 012f 2E01     		.2byte	0x12e
  843 0131 00000000 		.4byte	.LFB5
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 25
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 25
 
 
  844 0135 14000000 		.4byte	.LFE5-.LFB5
@@ -1454,7 +1454,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  854 014f 01       		.uleb128 0x1
  855 0150 9C       		.byte	0x9c
  856 0151 0C       		.uleb128 0xc
- 857 0152 5F010000 		.4byte	.LASF23
+ 857 0152 96010000 		.4byte	.LASF23
  858 0156 01       		.byte	0x1
  859 0157 6401     		.2byte	0x164
  860 0159 6B000000 		.4byte	0x6b
@@ -1472,7 +1472,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  872 0178 9C       		.byte	0x9c
  873 0179 8D010000 		.4byte	0x18d
  874 017d 0A       		.uleb128 0xa
- 875 017e A0010000 		.4byte	.LASF27
+ 875 017e D7010000 		.4byte	.LASF27
  876 0182 01       		.byte	0x1
  877 0183 7B01     		.2byte	0x17b
  878 0185 6B000000 		.4byte	0x6b
@@ -1490,7 +1490,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  890 01a1 01       		.uleb128 0x1
  891 01a2 9C       		.byte	0x9c
  892 01a3 09       		.uleb128 0x9
- 893 01a4 45020000 		.4byte	.LASF29
+ 893 01a4 7C020000 		.4byte	.LASF29
  894 01a8 01       		.byte	0x1
  895 01a9 AF01     		.2byte	0x1af
  896 01ab 00000000 		.4byte	.LFB10
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  898 01b3 01       		.uleb128 0x1
  899 01b4 9C       		.byte	0x9c
  900 01b5 D8010000 		.4byte	0x1d8
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 26
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 26
 
 
  901 01b9 0A       		.uleb128 0xa
@@ -1510,7 +1510,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  907 01c6 91       		.byte	0x91
  908 01c7 6E       		.sleb128 -18
  909 01c8 0D       		.uleb128 0xd
- 910 01c9 2C030000 		.4byte	.LASF38
+ 910 01c9 25030000 		.4byte	.LASF38
  911 01cd 01       		.byte	0x1
  912 01ce B201     		.2byte	0x1b2
  913 01d0 76000000 		.4byte	0x76
@@ -1519,7 +1519,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  916 01d6 76       		.sleb128 -10
  917 01d7 00       		.byte	0
  918 01d8 0C       		.uleb128 0xc
- 919 01d9 86030000 		.4byte	.LASF31
+ 919 01d9 7F030000 		.4byte	.LASF31
  920 01dd 01       		.byte	0x1
  921 01de C801     		.2byte	0x1c8
  922 01e0 76000000 		.4byte	0x76
@@ -1537,7 +1537,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  934 01ff 9C       		.byte	0x9c
  935 0200 14020000 		.4byte	0x214
  936 0204 0A       		.uleb128 0xa
- 937 0205 A8010000 		.4byte	.LASF33
+ 937 0205 DF010000 		.4byte	.LASF33
  938 0209 01       		.byte	0x1
  939 020a E001     		.2byte	0x1e0
  940 020c 76000000 		.4byte	0x76
@@ -1555,10 +1555,10 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  952 0228 01       		.uleb128 0x1
  953 0229 9C       		.byte	0x9c
  954 022a 0E       		.uleb128 0xe
- 955 022b B8020000 		.4byte	.LASF39
+ 955 022b B1020000 		.4byte	.LASF39
  956 022f 01       		.byte	0x1
  957 0230 1A       		.byte	0x1a
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 27
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 27
 
 
  958 0231 6B000000 		.4byte	0x6b
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  1012 002f 0B       		.uleb128 0xb
  1013 0030 3B       		.uleb128 0x3b
  1014 0031 0B       		.uleb128 0xb
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 28
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 28
 
 
  1015 0032 49       		.uleb128 0x49
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  1069 0069 3A       		.uleb128 0x3a
  1070 006a 0B       		.uleb128 0xb
  1071 006b 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 29
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 29
 
 
  1072 006c 0B       		.uleb128 0xb
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  1126 00a4 2E       		.uleb128 0x2e
  1127 00a5 00       		.byte	0
  1128 00a6 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 30
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 30
 
 
  1129 00a7 19       		.uleb128 0x19
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  1183 00df 13       		.uleb128 0x13
  1184 00e0 02       		.uleb128 0x2
  1185 00e1 18       		.uleb128 0x18
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 31
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 31
 
 
  1186 00e2 00       		.byte	0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  1240 0078 00000000 		.4byte	.LFB13
  1241 007c 20000000 		.4byte	.LFE13-.LFB13
  1242 0080 00000000 		.4byte	0
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 32
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 32
 
 
  1243 0084 00000000 		.4byte	0
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  1284      696D6572 
  1285              	.LASF22:
  1286 0048 49646C65 		.ascii	"Idle_Collision_Timer_ReadStatusRegister\000"
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 33
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 33
 
 
  1286      5F436F6C 
@@ -1972,154 +1972,152 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 1
  1304      676E6564 
  1304      20636861 
  1304      7200
- 1305              	.LASF18:
- 1306 0143 49646C65 		.ascii	"Idle_Collision_Timer_Enable\000"
- 1306      5F436F6C 
- 1306      6C697369 
- 1306      6F6E5F54 
- 1306      696D6572 
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 34
+ 1305              	.LASF37:
+ 1306 0143 443A5C4D 		.ascii	"D:\\MyDocs\\Documents\\CE4950\\USB_UART01\\USB_UART"
+ 1306      79446F63 
+ 1306      735C446F 
+ 1306      63756D65 
+ 1306      6E74735C 
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 34
 
 
- 1307              	.LASF23:
- 1308 015f 49646C65 		.ascii	"Idle_Collision_Timer_ReadControlRegister\000"
- 1308      5F436F6C 
- 1308      6C697369 
- 1308      6F6E5F54 
- 1308      696D6572 
- 1309              	.LASF5:
- 1310 0188 6C6F6E67 		.ascii	"long unsigned int\000"
- 1310      20756E73 
- 1310      69676E65 
- 1310      6420696E 
- 1310      7400
- 1311              	.LASF9:
- 1312 019a 75696E74 		.ascii	"uint8\000"
- 1312      3800
- 1313              	.LASF27:
- 1314 01a0 636F6E74 		.ascii	"control\000"
- 1314      726F6C00 
- 1315              	.LASF33:
- 1316 01a8 636F756E 		.ascii	"counter\000"
- 1316      74657200 
- 1317              	.LASF35:
- 1318 01b0 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 1318      4320342E 
- 1318      392E3320 
- 1318      32303135 
- 1318      30333033 
- 1319 01e3 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 1319      20726576 
- 1319      6973696F 
- 1319      6E203232 
- 1319      31323230 
- 1320 0216 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 1320      66756E63 
- 1320      74696F6E 
- 1320      2D736563 
- 1320      74696F6E 
- 1321              	.LASF12:
- 1322 023e 646F7562 		.ascii	"double\000"
- 1322      6C6500
- 1323              	.LASF29:
- 1324 0245 49646C65 		.ascii	"Idle_Collision_Timer_WritePeriod\000"
- 1324      5F436F6C 
- 1324      6C697369 
- 1324      6F6E5F54 
- 1324      696D6572 
- 1325              	.LASF10:
- 1326 0266 75696E74 		.ascii	"uint16\000"
- 1326      313600
- 1327              	.LASF37:
- 1328 026d 5C5C4D61 		.ascii	"\\\\Mac\\Home\\Documents\\PSoC Creator\\USB_UART01\\"
- 1328      635C486F 
- 1328      6D655C44 
- 1328      6F63756D 
- 1328      656E7473 
- 1329 029a 5553425F 		.ascii	"USB_UART01.cydsn\000"
- 1329      55415254 
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 35
+ 1307 0171 30312E63 		.ascii	"01.cydsn\000"
+ 1307      7964736E 
+ 1307      00
+ 1308              	.LASF18:
+ 1309 017a 49646C65 		.ascii	"Idle_Collision_Timer_Enable\000"
+ 1309      5F436F6C 
+ 1309      6C697369 
+ 1309      6F6E5F54 
+ 1309      696D6572 
+ 1310              	.LASF23:
+ 1311 0196 49646C65 		.ascii	"Idle_Collision_Timer_ReadControlRegister\000"
+ 1311      5F436F6C 
+ 1311      6C697369 
+ 1311      6F6E5F54 
+ 1311      696D6572 
+ 1312              	.LASF5:
+ 1313 01bf 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1313      20756E73 
+ 1313      69676E65 
+ 1313      6420696E 
+ 1313      7400
+ 1314              	.LASF9:
+ 1315 01d1 75696E74 		.ascii	"uint8\000"
+ 1315      3800
+ 1316              	.LASF27:
+ 1317 01d7 636F6E74 		.ascii	"control\000"
+ 1317      726F6C00 
+ 1318              	.LASF33:
+ 1319 01df 636F756E 		.ascii	"counter\000"
+ 1319      74657200 
+ 1320              	.LASF35:
+ 1321 01e7 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1321      4320342E 
+ 1321      392E3320 
+ 1321      32303135 
+ 1321      30333033 
+ 1322 021a 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1322      20726576 
+ 1322      6973696F 
+ 1322      6E203232 
+ 1322      31323230 
+ 1323 024d 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1323      66756E63 
+ 1323      74696F6E 
+ 1323      2D736563 
+ 1323      74696F6E 
+ 1324              	.LASF12:
+ 1325 0275 646F7562 		.ascii	"double\000"
+ 1325      6C6500
+ 1326              	.LASF29:
+ 1327 027c 49646C65 		.ascii	"Idle_Collision_Timer_WritePeriod\000"
+ 1327      5F436F6C 
+ 1327      6C697369 
+ 1327      6F6E5F54 
+ 1327      696D6572 
+ 1328              	.LASF10:
+ 1329 029d 75696E74 		.ascii	"uint16\000"
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 35
 
 
- 1329      30312E63 
- 1329      7964736E 
- 1329      00
+ 1329      313600
  1330              	.LASF8:
- 1331 02ab 756E7369 		.ascii	"unsigned int\000"
+ 1331 02a4 756E7369 		.ascii	"unsigned int\000"
  1331      676E6564 
  1331      20696E74 
  1331      00
  1332              	.LASF39:
- 1333 02b8 49646C65 		.ascii	"Idle_Collision_Timer_initVar\000"
+ 1333 02b1 49646C65 		.ascii	"Idle_Collision_Timer_initVar\000"
  1333      5F436F6C 
  1333      6C697369 
  1333      6F6E5F54 
  1333      696D6572 
  1334              	.LASF7:
- 1335 02d5 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1335 02ce 6C6F6E67 		.ascii	"long long unsigned int\000"
  1335      206C6F6E 
  1335      6720756E 
  1335      7369676E 
  1335      65642069 
  1336              	.LASF20:
- 1337 02ec 49646C65 		.ascii	"Idle_Collision_Timer_Stop\000"
+ 1337 02e5 49646C65 		.ascii	"Idle_Collision_Timer_Stop\000"
  1337      5F436F6C 
  1337      6C697369 
  1337      6F6E5F54 
  1337      696D6572 
  1338              	.LASF24:
- 1339 0306 49646C65 		.ascii	"Idle_Collision_Timer_SetInterruptMode\000"
+ 1339 02ff 49646C65 		.ascii	"Idle_Collision_Timer_SetInterruptMode\000"
  1339      5F436F6C 
  1339      6C697369 
  1339      6F6E5F54 
  1339      696D6572 
  1340              	.LASF38:
- 1341 032c 70657269 		.ascii	"period_temp\000"
+ 1341 0325 70657269 		.ascii	"period_temp\000"
  1341      6F645F74 
  1341      656D7000 
  1342              	.LASF14:
- 1343 0338 72656738 		.ascii	"reg8\000"
+ 1343 0331 72656738 		.ascii	"reg8\000"
  1343      00
  1344              	.LASF16:
- 1345 033d 73697A65 		.ascii	"sizetype\000"
+ 1345 0336 73697A65 		.ascii	"sizetype\000"
  1345      74797065 
  1345      00
  1346              	.LASF6:
- 1347 0346 6C6F6E67 		.ascii	"long long int\000"
+ 1347 033f 6C6F6E67 		.ascii	"long long int\000"
  1347      206C6F6E 
  1347      6720696E 
  1347      7400
  1348              	.LASF26:
- 1349 0354 696E7465 		.ascii	"interruptMode\000"
+ 1349 034d 696E7465 		.ascii	"interruptMode\000"
  1349      72727570 
  1349      744D6F64 
  1349      6500
  1350              	.LASF2:
- 1351 0362 73686F72 		.ascii	"short int\000"
+ 1351 035b 73686F72 		.ascii	"short int\000"
  1351      7420696E 
  1351      7400
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\cc7TtTaT.s 			page 36
-
-
  1352              	.LASF4:
- 1353 036c 6C6F6E67 		.ascii	"long int\000"
+ 1353 0365 6C6F6E67 		.ascii	"long int\000"
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\cccwTtpc.s 			page 36
+
+
  1353      20696E74 
  1353      00
  1354              	.LASF13:
- 1355 0375 63686172 		.ascii	"char\000"
+ 1355 036e 63686172 		.ascii	"char\000"
  1355      00
  1356              	.LASF0:
- 1357 037a 7369676E 		.ascii	"signed char\000"
+ 1357 0373 7369676E 		.ascii	"signed char\000"
  1357      65642063 
  1357      68617200 
  1358              	.LASF31:
- 1359 0386 49646C65 		.ascii	"Idle_Collision_Timer_ReadCapture\000"
+ 1359 037f 49646C65 		.ascii	"Idle_Collision_Timer_ReadCapture\000"
  1359      5F436F6C 
  1359      6C697369 
  1359      6F6E5F54 
  1359      696D6572 
  1360              	.LASF36:
- 1361 03a7 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Idle_Collision_Timer.c\000"
+ 1361 03a0 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Idle_Collision_Timer.c\000"
  1361      6E657261 
  1361      7465645F 
  1361      536F7572 

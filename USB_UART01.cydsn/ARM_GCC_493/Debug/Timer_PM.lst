@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 1
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccm5KLGo.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 1
   24:.\Generated_Source\PSoC5/Timer_PM.c **** /*******************************************************************************
   25:.\Generated_Source\PSoC5/Timer_PM.c **** * Function Name: Timer_SaveConfig
   26:.\Generated_Source\PSoC5/Timer_PM.c **** ********************************************************************************
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 2
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccm5KLGo.s 			page 2
 
 
   27:.\Generated_Source\PSoC5/Timer_PM.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 1
   58 0024 5A71     		strb	r2, [r3, #5]
   54:.\Generated_Source\PSoC5/Timer_PM.c ****         #endif /* Backup the enable state of the Timer component */
   55:.\Generated_Source\PSoC5/Timer_PM.c ****     #endif /* Backup non retention registers in UDB implementation. All fixed function registers ar
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 3
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccm5KLGo.s 			page 3
 
 
   56:.\Generated_Source\PSoC5/Timer_PM.c **** }
@@ -128,7 +128,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 1
   62              		.align	2
   63              	.L2:
   64 0028 00000000 		.word	Timer_backup
-  65 002c 85650040 		.word	1073767813
+  65 002c 8B640040 		.word	1073767563
   66              		.cfi_endproc
   67              	.LFE0:
   68              		.size	Timer_SaveConfig, .-Timer_SaveConfig
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 1
   87              		.loc 1 81 0
   88 0004 074B     		ldr	r3, .L5
   89 0006 5B88     		ldrh	r3, [r3, #2]
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 4
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccm5KLGo.s 			page 4
 
 
   90 0008 1846     		mov	r0, r3
@@ -209,7 +209,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 1
  105 0022 00BF     		.align	2
  106              	.L5:
  107 0024 00000000 		.word	Timer_backup
- 108 0028 85650040 		.word	1073767813
+ 108 0028 8B640040 		.word	1073767563
  109              		.cfi_endproc
  110              	.LFE1:
  111              		.size	Timer_RestoreConfig, .-Timer_RestoreConfig
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 1
  106:.\Generated_Source\PSoC5/Timer_PM.c **** *
  107:.\Generated_Source\PSoC5/Timer_PM.c **** * Global variables:
  108:.\Generated_Source\PSoC5/Timer_PM.c **** *  Timer_backup.TimerEnableState:  Is modified depending on the
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 5
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccm5KLGo.s 			page 5
 
 
  109:.\Generated_Source\PSoC5/Timer_PM.c **** *  enable state of the block before entering sleep mode.
@@ -298,12 +298,12 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 1
  153              		.loc 1 129 0
  154 0028 80BD     		pop	{r7, pc}
  155              	.L11:
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 6
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccm5KLGo.s 			page 6
 
 
  156 002a 00BF     		.align	2
  157              	.L10:
- 158 002c 75650040 		.word	1073767797
+ 158 002c 7B640040 		.word	1073767547
  159 0030 00000000 		.word	Timer_backup
  160              		.cfi_endproc
  161              	.LFE2:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 1
  185 000a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  186 000c 012B     		cmp	r3, #1
  187 000e 01D1     		bne	.L12
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 7
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccm5KLGo.s 			page 7
 
 
  155:.\Generated_Source\PSoC5/Timer_PM.c ****         {     /* Enable Timer's operation */
@@ -389,7 +389,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 1
  208 0006 00000000 		.4byte	.Ldebug_abbrev0
  209 000a 04       		.byte	0x4
  210 000b 01       		.uleb128 0x1
- 211 000c 25010000 		.4byte	.LASF25
+ 211 000c 1E010000 		.4byte	.LASF25
  212 0010 01       		.byte	0x1
  213 0011 96000000 		.4byte	.LASF26
  214 0015 CB000000 		.4byte	.LASF27
@@ -399,26 +399,26 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 1
  218 0025 02       		.uleb128 0x2
  219 0026 01       		.byte	0x1
  220 0027 06       		.byte	0x6
- 221 0028 E4010000 		.4byte	.LASF0
+ 221 0028 DD010000 		.4byte	.LASF0
  222 002c 02       		.uleb128 0x2
  223 002d 01       		.byte	0x1
  224 002e 08       		.byte	0x8
- 225 002f 09010000 		.4byte	.LASF1
+ 225 002f 02010000 		.4byte	.LASF1
  226 0033 02       		.uleb128 0x2
  227 0034 02       		.byte	0x2
  228 0035 05       		.byte	0x5
- 229 0036 B3010000 		.4byte	.LASF2
+ 229 0036 AC010000 		.4byte	.LASF2
  230 003a 02       		.uleb128 0x2
  231 003b 02       		.byte	0x2
  232 003c 07       		.byte	0x7
- 233 003d D1010000 		.4byte	.LASF3
+ 233 003d CA010000 		.4byte	.LASF3
  234 0041 02       		.uleb128 0x2
  235 0042 04       		.byte	0x4
  236 0043 05       		.byte	0x5
- 237 0044 1C010000 		.4byte	.LASF4
+ 237 0044 15010000 		.4byte	.LASF4
  238 0048 02       		.uleb128 0x2
  239 0049 04       		.byte	0x4
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 8
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccm5KLGo.s 			page 8
 
 
  240 004a 07       		.byte	0x7
@@ -445,22 +445,22 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 1
  261 0071 C2       		.byte	0xc2
  262 0072 2C000000 		.4byte	0x2c
  263 0076 04       		.uleb128 0x4
- 264 0077 12020000 		.4byte	.LASF10
+ 264 0077 0B020000 		.4byte	.LASF10
  265 007b 02       		.byte	0x2
  266 007c C3       		.byte	0xc3
  267 007d 3A000000 		.4byte	0x3a
  268 0081 02       		.uleb128 0x2
  269 0082 04       		.byte	0x4
  270 0083 04       		.byte	0x4
- 271 0084 F0010000 		.4byte	.LASF11
+ 271 0084 E9010000 		.4byte	.LASF11
  272 0088 02       		.uleb128 0x2
  273 0089 08       		.byte	0x8
  274 008a 04       		.byte	0x4
- 275 008b CA010000 		.4byte	.LASF12
+ 275 008b C3010000 		.4byte	.LASF12
  276 008f 02       		.uleb128 0x2
  277 0090 01       		.byte	0x1
  278 0091 08       		.byte	0x8
- 279 0092 17010000 		.4byte	.LASF13
+ 279 0092 10010000 		.4byte	.LASF13
  280 0096 05       		.uleb128 0x5
  281 0097 39000000 		.4byte	.LASF14
  282 009b 02       		.byte	0x2
@@ -471,14 +471,14 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 1
  287 00a7 02       		.uleb128 0x2
  288 00a8 04       		.byte	0x4
  289 00a9 07       		.byte	0x7
- 290 00aa 38020000 		.4byte	.LASF15
+ 290 00aa 31020000 		.4byte	.LASF15
  291 00ae 07       		.uleb128 0x7
  292 00af 06       		.byte	0x6
  293 00b0 03       		.byte	0x3
  294 00b1 43       		.byte	0x43
  295 00b2 E7000000 		.4byte	0xe7
  296 00b6 08       		.uleb128 0x8
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 9
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccm5KLGo.s 			page 9
 
 
  297 00b7 BA000000 		.4byte	.LASF16
@@ -487,13 +487,13 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 1
  300 00bd 6B000000 		.4byte	0x6b
  301 00c1 00       		.byte	0
  302 00c2 08       		.uleb128 0x8
- 303 00c3 09020000 		.4byte	.LASF17
+ 303 00c3 02020000 		.4byte	.LASF17
  304 00c7 03       		.byte	0x3
  305 00c8 48       		.byte	0x48
  306 00c9 76000000 		.4byte	0x76
  307 00cd 02       		.byte	0x2
  308 00ce 08       		.uleb128 0x8
- 309 00cf 19020000 		.4byte	.LASF18
+ 309 00cf 12020000 		.4byte	.LASF18
  310 00d3 03       		.byte	0x3
  311 00d4 49       		.byte	0x49
  312 00d5 6B000000 		.4byte	0x6b
@@ -506,7 +506,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 1
  319 00e5 05       		.byte	0x5
  320 00e6 00       		.byte	0
  321 00e7 04       		.uleb128 0x4
- 322 00e8 F6010000 		.4byte	.LASF20
+ 322 00e8 EF010000 		.4byte	.LASF20
  323 00ec 03       		.byte	0x3
  324 00ed 53       		.byte	0x53
  325 00ee AE000000 		.4byte	0xae
@@ -527,7 +527,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 1
  340 0112 01       		.uleb128 0x1
  341 0113 9C       		.byte	0x9c
  342 0114 09       		.uleb128 0x9
- 343 0115 2C020000 		.4byte	.LASF23
+ 343 0115 25020000 		.4byte	.LASF23
  344 0119 01       		.byte	0x1
  345 011a 70       		.byte	0x70
  346 011b 00000000 		.4byte	.LFB2
@@ -535,10 +535,10 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 1
  348 0123 01       		.uleb128 0x1
  349 0124 9C       		.byte	0x9c
  350 0125 09       		.uleb128 0x9
- 351 0126 BD010000 		.4byte	.LASF24
+ 351 0126 B6010000 		.4byte	.LASF24
  352 012a 01       		.byte	0x1
  353 012b 96       		.byte	0x96
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 10
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccm5KLGo.s 			page 10
 
 
  354 012c 00000000 		.4byte	.LFB3
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 1
  408 0027 00       		.byte	0
  409 0028 00       		.byte	0
  410 0029 04       		.uleb128 0x4
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 11
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccm5KLGo.s 			page 11
 
 
  411 002a 16       		.uleb128 0x16
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 1
  465 0060 49       		.uleb128 0x49
  466 0061 13       		.uleb128 0x13
  467 0062 38       		.uleb128 0x38
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 12
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccm5KLGo.s 			page 12
 
 
  468 0063 0B       		.uleb128 0xb
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 1
  522 0020 00000000 		.4byte	.LFB2
  523 0024 34000000 		.4byte	.LFE2-.LFB2
  524 0028 00000000 		.4byte	.LFB3
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 13
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccm5KLGo.s 			page 13
 
 
  525 002c 1C000000 		.4byte	.LFE3-.LFB3
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 1
  556      7400
  557              	.LASF7:
  558 0056 6C6F6E67 		.ascii	"long long unsigned int\000"
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 14
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccm5KLGo.s 			page 14
 
 
  558      206C6F6E 
@@ -810,100 +810,98 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 1
  566      74617465 
  566      00
  567              	.LASF27:
- 568 00cb 5C5C4D61 		.ascii	"\\\\Mac\\Home\\Documents\\PSoC Creator\\USB_UART01\\"
- 568      635C486F 
- 568      6D655C44 
- 568      6F63756D 
- 568      656E7473 
- 569 00f8 5553425F 		.ascii	"USB_UART01.cydsn\000"
- 569      55415254 
- 569      30312E63 
+ 568 00cb 443A5C4D 		.ascii	"D:\\MyDocs\\Documents\\CE4950\\USB_UART01\\USB_UART"
+ 568      79446F63 
+ 568      735C446F 
+ 568      63756D65 
+ 568      6E74735C 
+ 569 00f9 30312E63 		.ascii	"01.cydsn\000"
  569      7964736E 
  569      00
  570              	.LASF1:
- 571 0109 756E7369 		.ascii	"unsigned char\000"
+ 571 0102 756E7369 		.ascii	"unsigned char\000"
  571      676E6564 
  571      20636861 
  571      7200
  572              	.LASF13:
- 573 0117 63686172 		.ascii	"char\000"
+ 573 0110 63686172 		.ascii	"char\000"
  573      00
  574              	.LASF4:
- 575 011c 6C6F6E67 		.ascii	"long int\000"
+ 575 0115 6C6F6E67 		.ascii	"long int\000"
  575      20696E74 
  575      00
  576              	.LASF25:
- 577 0125 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 577 011e 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
  577      4320342E 
  577      392E3320 
  577      32303135 
  577      30333033 
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 15
-
-
- 578 0158 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 578 0151 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
  578      20726576 
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccm5KLGo.s 			page 15
+
+
  578      6973696F 
  578      6E203232 
  578      31323230 
- 579 018b 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 579 0184 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
  579      66756E63 
  579      74696F6E 
  579      2D736563 
  579      74696F6E 
  580              	.LASF2:
- 581 01b3 73686F72 		.ascii	"short int\000"
+ 581 01ac 73686F72 		.ascii	"short int\000"
  581      7420696E 
  581      7400
  582              	.LASF24:
- 583 01bd 54696D65 		.ascii	"Timer_Wakeup\000"
+ 583 01b6 54696D65 		.ascii	"Timer_Wakeup\000"
  583      725F5761 
  583      6B657570 
  583      00
  584              	.LASF12:
- 585 01ca 646F7562 		.ascii	"double\000"
+ 585 01c3 646F7562 		.ascii	"double\000"
  585      6C6500
  586              	.LASF3:
- 587 01d1 73686F72 		.ascii	"short unsigned int\000"
+ 587 01ca 73686F72 		.ascii	"short unsigned int\000"
  587      7420756E 
  587      7369676E 
  587      65642069 
  587      6E7400
  588              	.LASF0:
- 589 01e4 7369676E 		.ascii	"signed char\000"
+ 589 01dd 7369676E 		.ascii	"signed char\000"
  589      65642063 
  589      68617200 
  590              	.LASF11:
- 591 01f0 666C6F61 		.ascii	"float\000"
+ 591 01e9 666C6F61 		.ascii	"float\000"
  591      7400
  592              	.LASF20:
- 593 01f6 54696D65 		.ascii	"Timer_backupStruct\000"
+ 593 01ef 54696D65 		.ascii	"Timer_backupStruct\000"
  593      725F6261 
  593      636B7570 
  593      53747275 
  593      637400
  594              	.LASF17:
- 595 0209 54696D65 		.ascii	"TimerUdb\000"
+ 595 0202 54696D65 		.ascii	"TimerUdb\000"
  595      72556462 
  595      00
  596              	.LASF10:
- 597 0212 75696E74 		.ascii	"uint16\000"
+ 597 020b 75696E74 		.ascii	"uint16\000"
  597      313600
  598              	.LASF18:
- 599 0219 496E7465 		.ascii	"InterruptMaskValue\000"
+ 599 0212 496E7465 		.ascii	"InterruptMaskValue\000"
  599      72727570 
  599      744D6173 
  599      6B56616C 
  599      756500
  600              	.LASF23:
- 601 022c 54696D65 		.ascii	"Timer_Sleep\000"
+ 601 0225 54696D65 		.ascii	"Timer_Sleep\000"
  601      725F536C 
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccsiIR0y.s 			page 16
-
-
  601      65657000 
  602              	.LASF15:
- 603 0238 73697A65 		.ascii	"sizetype\000"
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccm5KLGo.s 			page 16
+
+
+ 603 0231 73697A65 		.ascii	"sizetype\000"
  603      74797065 
  603      00
  604              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
