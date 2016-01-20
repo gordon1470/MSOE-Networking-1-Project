@@ -1,5 +1,5 @@
 -- Project:   D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\USB_UART01.cyprj
--- Generated: 01/20/2016 13:45:57
+-- Generated: 01/20/2016 15:43:23
 -- PSoC Creator  3.3 CP1
 
 ENTITY USB_UART01 IS

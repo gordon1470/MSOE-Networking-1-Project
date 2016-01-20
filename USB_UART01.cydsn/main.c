@@ -245,23 +245,11 @@ void transmitData(){
         //Else break out of transmition and wait random time
         if(networkState != idle){
             if(networkState == collision){
+                TX_pin_Write(1);
                 CyDelay((Counter_ReadCounter()/128)*800);
             }
-            break;
+            break;//TODO check this... seems weird
         }
-        /*
-        Notes:
-        Need to check if we are in collide specifically and wait for a random time if we are at some point
-        We could probably do this inside the if loop above
-        For the random wait value, there isn't any easy way to generate random numbers in PSoC
-        We could use a rapidly running continuous counter between 0 and 128 and grab the counter value when we need a number
-        this would probably be as random as we need
-        Our equation would be (from the spec)
-        ([Random input from counter]/128)*(800 ms)
-        So our random delay time statement would be something like
-        CyDelay(([Counter Read Input]/128)*(800));
-        This would delay for a random value between 0 & 800 ms, which is what we want
-        */
         TX_pin_Write(diffManEncodedData[i]);
         Timer_Start();
         while(!timerExpired); 
