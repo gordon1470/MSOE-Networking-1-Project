@@ -127,12 +127,6 @@
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\project.h</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>USB_UART01</v>
-<v>USB_UART01\USB_UART01</v>
-<v>USB_UART01\USB_UART01\TopDesign</v>
-<v>USB_UART01\USB_UART01\USB_UART01.cydwr</v>
-<v>USB_UART01\USB_UART01\Header Files</v>
-<v>USB_UART01\USB_UART01\Header Files\cyapicallbacks.h</v>
 <v>USB_UART01\USB_UART01\Header Files\device.h</v>
 <v>USB_UART01\USB_UART01\Source Files</v>
 <v>USB_UART01\USB_UART01\Source Files\main.c</v>
@@ -162,6 +156,12 @@
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\cy_boot\CyDmac.c</v>
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\cy_boot\CyDmac.h</v>
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\cy_boot\CyFlash.c</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\cy_boot\CyFlash.h</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\cy_boot\CyLib.c</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\cy_boot\CyLib.h</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\cy_boot\cypins.h</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\cy_boot\cyPm.c</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\cy_boot\cyPm.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">

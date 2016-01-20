@@ -1,5 +1,5 @@
 -- Project:   USB_UART01
--- Generated: 01/19/2016 10:00:43
+-- Generated: 01/20/2016 09:44:09
 -- PSoC Creator  3.3 CP1
 
 ENTITY USB_UART01 IS

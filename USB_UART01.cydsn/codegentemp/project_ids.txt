@@ -1,6 +1,6 @@
-\\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\USB_UART01.cyprj|cbb157ac-1120-4e3d-b7ec-534e6c1aa4c5
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|4da4dd9f-aa24-4c43-ad4e-7b31ce58f8e2
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|fae72b3d-d01e-4e4b-9f1c-87d901e51287
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|78353797-fbf4-4671-9991-ad489102a534
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|ca3cc0ba-730a-4e53-98d8-f41f94046c91
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|1a98799e-b144-46d0-87d1-44a417a4b91c
+\\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\USB_UART01.cyprj|d23242f9-94dd-4b42-b45f-b5008938c0f8
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|400fc025-21ba-4c38-a733-19adaa9d55a3
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|53407638-9bd1-4e13-b059-d5c7e96d64cb
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|80a19da1-d7fc-4800-a81b-cbe2774657b9
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|2e2a2476-e03c-43a4-806b-5182f7ef54ce
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|51c7ced8-111f-4007-b2fb-bc3c89ffee23

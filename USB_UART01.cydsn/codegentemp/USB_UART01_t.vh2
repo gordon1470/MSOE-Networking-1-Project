@@ -1,5 +1,5 @@
 -- Project:   \\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\USB_UART01.cyprj
--- Generated: 01/19/2016 10:00:45
+-- Generated: 01/20/2016 09:44:10
 -- PSoC Creator  3.3 CP1
 
 ENTITY USB_UART01 IS
