@@ -247,8 +247,8 @@ void transmitData(){
             if(networkState == collision){
                 TX_pin_Write(1);
                 CyDelay((Counter_ReadCounter()/128)*800);
+                break;
             }
-            break;//TODO check this... seems weird
         }
         TX_pin_Write(diffManEncodedData[i]);
         Timer_Start();

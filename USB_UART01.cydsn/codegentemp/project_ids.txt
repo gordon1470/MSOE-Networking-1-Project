@@ -1,6 +1,6 @@
-D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\USB_UART01.cyprj|0143c07b-10f2-4d9b-8219-a04712e23f74
-D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|42aaa24d-ce22-472a-a946-b47797284cf7
-D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|f02a3227-9a5a-4a10-8041-1e981d3b2ba1
-D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|9b995107-04ff-40ea-b9b9-78b3c1920a2d
-D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|a3fd9393-05ad-4714-9d54-a38f60121ee7
-D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|4d0c0719-782f-4070-aec8-7d12dc5e3569
+\\Mac\Home\Documents\PSoC Creator\USB_UART01\USB_UART01.cydsn\USB_UART01.cyprj|32ae03f2-8a62-4d4a-aaa6-dbecd2bdbe66
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|8712e3ca-de95-4c66-bc7d-107a5c8f2ffd
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|a0e68249-5e38-45c7-b1a3-489b4b796085
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|2f8c6ba2-4de5-470c-8c3f-826feef74403
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|0eac7ced-0906-4659-baff-fb909f8723ba
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|3b4dfbd6-e37a-4d46-82f2-594348a2c29d
