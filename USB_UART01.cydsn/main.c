@@ -1,19 +1,22 @@
 /*******************************************************************************
 This file performs a transmit. No collision is detected. 
 *******************************************************************************/
+#define INDEX_OF_MSB 6
+#define HIGH 1
 
 #include <device.h>
 #include <stdbool.h>
+#include <stdlib.h> //For random number generator
+#include <time.h>
 #include "stdio.h"
 
+
+int getRandomNumber();
 void initDiffManEncodedArray();
 void stringToDiffMan(char*, uint8);
 void asciiToDiffMan(char);
 void transmitData();
 void setNetworkStateOnLEDs();
-
-#define INDEX_OF_MSB 6
-#define HIGH 1
 
 int diffManEncodedData[800];
 int halfBitIndex = 0, currentDataPos=0, lengthOfData;
@@ -44,15 +47,27 @@ CY_ISR(TimerHandler){
 
 int main()
 {
+
     char rx;
     char lineString[100];
     uint8 stringPosition = 0;
     timerExpired = false;
     dataTransmissionComplete = false;
+    /*
+    Get value from system clock and
+    place in seconds variable.
+    */
+    time_t seconds; 
+    time(&seconds);
+    /*
+    Convert seconds to a unsigned
+    integer for seed for random number generator
+    */
+    srand((unsigned int) seconds);
+    
+    
     /* Enable Global Interrupts */
     CyGlobalIntEnable;                        
-    
-    Counter_Start();//start counter for random number generation
     
     TX_pin_Write(1);  //set TX line to high to start
     
@@ -66,8 +81,7 @@ int main()
     
     //start tranmission timer
     TimerISR_StartEx(TimerHandler);
-    
-    
+
     
     /* Main Loop: */
     for(;;)
@@ -246,7 +260,12 @@ void transmitData(){
         if(networkState != idle){
             if(networkState == collision){
                 TX_pin_Write(1);
-                CyDelay((Counter_ReadCounter()/128)*800);
+                int value = (getRandomNumber()/128.0)*800.0;
+               
+                //Back-off a random time between 0 and 0.8 seconds
+                CyDelay(value);
+                LCD_Position(0,0);
+                LCD_PrintNumber(value);
                 break;
             }
         }
@@ -292,4 +311,21 @@ void setNetworkStateOnLEDs(){
         } 
 	}
 }
+
+/*
+Generates a random value from 1 to 128. Used in the random backoff time equation: (N/128)(0.800 seconds)
+*/
+int getRandomNumber()
+{
+    const int MIN_N = 1;
+    const int MAX_N = 128;
+        
+    int n;
+/*
+    Get first and second random numbers.
+    */
+    n =rand() % (MAX_N - MIN_N + 1) + MIN_N;
+    return n;
+}
+
 /* [] END OF FILE */
