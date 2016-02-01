@@ -143,11 +143,13 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\LED2_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\LED2.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\LED2.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Counter.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Counter.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Counter_PM.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Clock_2.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Clock_2.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\ReceiveTimerIRQ.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\ReceiveTimerIRQ.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Receive_Timer.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Receive_Timer.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Receive_Timer_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\Export\ARM_GCC_Generic">

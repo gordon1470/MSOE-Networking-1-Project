@@ -170,15 +170,15 @@
 .set LED4__SLW, CYREG_PRT6_SLW
 
 /* Clock */
-.set Clock__CFG0, CYREG_CLKDIST_DCFG0_CFG0
-.set Clock__CFG1, CYREG_CLKDIST_DCFG0_CFG1
-.set Clock__CFG2, CYREG_CLKDIST_DCFG0_CFG2
+.set Clock__CFG0, CYREG_CLKDIST_DCFG1_CFG0
+.set Clock__CFG1, CYREG_CLKDIST_DCFG1_CFG1
+.set Clock__CFG2, CYREG_CLKDIST_DCFG1_CFG2
 .set Clock__CFG2_SRC_SEL_MASK, 0x07
-.set Clock__INDEX, 0x00
+.set Clock__INDEX, 0x01
 .set Clock__PM_ACT_CFG, CYREG_PM_ACT_CFG2
-.set Clock__PM_ACT_MSK, 0x01
+.set Clock__PM_ACT_MSK, 0x02
 .set Clock__PM_STBY_CFG, CYREG_PM_STBY_CFG2
-.set Clock__PM_STBY_MSK, 0x01
+.set Clock__PM_STBY_MSK, 0x02
 
 /* Clock_1 */
 .set Clock_1__CFG0, CYREG_CLKDIST_DCFG2_CFG0
@@ -192,15 +192,15 @@
 .set Clock_1__PM_STBY_MSK, 0x04
 
 /* Clock_2 */
-.set Clock_2__CFG0, CYREG_CLKDIST_DCFG1_CFG0
-.set Clock_2__CFG1, CYREG_CLKDIST_DCFG1_CFG1
-.set Clock_2__CFG2, CYREG_CLKDIST_DCFG1_CFG2
+.set Clock_2__CFG0, CYREG_CLKDIST_DCFG0_CFG0
+.set Clock_2__CFG1, CYREG_CLKDIST_DCFG0_CFG1
+.set Clock_2__CFG2, CYREG_CLKDIST_DCFG0_CFG2
 .set Clock_2__CFG2_SRC_SEL_MASK, 0x07
-.set Clock_2__INDEX, 0x01
+.set Clock_2__INDEX, 0x00
 .set Clock_2__PM_ACT_CFG, CYREG_PM_ACT_CFG2
-.set Clock_2__PM_ACT_MSK, 0x02
+.set Clock_2__PM_ACT_MSK, 0x01
 .set Clock_2__PM_STBY_CFG, CYREG_PM_STBY_CFG2
-.set Clock_2__PM_STBY_MSK, 0x02
+.set Clock_2__PM_STBY_MSK, 0x01
 
 /* Timer_TimerUDB */
 .set Timer_TimerUDB_rstSts_stsreg__0__MASK, 0x01
@@ -309,24 +309,6 @@
 .set TX_pin__SIO_REG_HIFREQ, CYREG_PRT12_SIO_REG_HIFREQ
 .set TX_pin__SLW, CYREG_PRT12_SLW
 
-/* Counter_CounterHW */
-.set Counter_CounterHW__CAP0, CYREG_TMR0_CAP0
-.set Counter_CounterHW__CAP1, CYREG_TMR0_CAP1
-.set Counter_CounterHW__CFG0, CYREG_TMR0_CFG0
-.set Counter_CounterHW__CFG1, CYREG_TMR0_CFG1
-.set Counter_CounterHW__CFG2, CYREG_TMR0_CFG2
-.set Counter_CounterHW__CNT_CMP0, CYREG_TMR0_CNT_CMP0
-.set Counter_CounterHW__CNT_CMP1, CYREG_TMR0_CNT_CMP1
-.set Counter_CounterHW__PER0, CYREG_TMR0_PER0
-.set Counter_CounterHW__PER1, CYREG_TMR0_PER1
-.set Counter_CounterHW__PM_ACT_CFG, CYREG_PM_ACT_CFG3
-.set Counter_CounterHW__PM_ACT_MSK, 0x01
-.set Counter_CounterHW__PM_STBY_CFG, CYREG_PM_STBY_CFG3
-.set Counter_CounterHW__PM_STBY_MSK, 0x01
-.set Counter_CounterHW__RT0, CYREG_TMR0_RT0
-.set Counter_CounterHW__RT1, CYREG_TMR0_RT1
-.set Counter_CounterHW__SR0, CYREG_TMR0_SR0
-
 /* Receive */
 .set Receive__0__INTTYPE, CYREG_PICU3_INTTYPE0
 .set Receive__0__MASK, 0x01
@@ -363,13 +345,71 @@
 .set Receive__SLW, CYREG_PRT3_SLW
 .set Receive__SNAP, CYREG_PICU3_SNAP
 
+/* Receive_Timer_TimerUDB */
+.set Receive_Timer_TimerUDB_rstSts_stsreg__0__MASK, 0x01
+.set Receive_Timer_TimerUDB_rstSts_stsreg__0__POS, 0
+.set Receive_Timer_TimerUDB_rstSts_stsreg__2__MASK, 0x04
+.set Receive_Timer_TimerUDB_rstSts_stsreg__2__POS, 2
+.set Receive_Timer_TimerUDB_rstSts_stsreg__3__MASK, 0x08
+.set Receive_Timer_TimerUDB_rstSts_stsreg__3__POS, 3
+.set Receive_Timer_TimerUDB_rstSts_stsreg__MASK, 0x0D
+.set Receive_Timer_TimerUDB_rstSts_stsreg__MASK_REG, CYREG_B0_UDB15_MSK
+.set Receive_Timer_TimerUDB_rstSts_stsreg__MASK_ST_AUX_CTL_REG, CYREG_B0_UDB15_MSK_ACTL
+.set Receive_Timer_TimerUDB_rstSts_stsreg__PER_ST_AUX_CTL_REG, CYREG_B0_UDB15_MSK_ACTL
+.set Receive_Timer_TimerUDB_rstSts_stsreg__STATUS_AUX_CTL_REG, CYREG_B0_UDB15_ACTL
+.set Receive_Timer_TimerUDB_rstSts_stsreg__STATUS_CNT_REG, CYREG_B0_UDB15_ST_CTL
+.set Receive_Timer_TimerUDB_rstSts_stsreg__STATUS_CONTROL_REG, CYREG_B0_UDB15_ST_CTL
+.set Receive_Timer_TimerUDB_rstSts_stsreg__STATUS_REG, CYREG_B0_UDB15_ST
+.set Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__4__MASK, 0x10
+.set Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__4__POS, 4
+.set Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__7__MASK, 0x80
+.set Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__7__POS, 7
+.set Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__CONTROL_AUX_CTL_REG, CYREG_B0_UDB15_ACTL
+.set Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__CONTROL_REG, CYREG_B0_UDB15_CTL
+.set Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__CONTROL_ST_REG, CYREG_B0_UDB15_ST_CTL
+.set Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__COUNT_REG, CYREG_B0_UDB15_CTL
+.set Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__COUNT_ST_REG, CYREG_B0_UDB15_ST_CTL
+.set Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__MASK, 0x90
+.set Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__MASK_CTL_AUX_CTL_REG, CYREG_B0_UDB15_MSK_ACTL
+.set Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__PER_CTL_AUX_CTL_REG, CYREG_B0_UDB15_MSK_ACTL
+.set Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__PERIOD_REG, CYREG_B0_UDB15_MSK
+.set Receive_Timer_TimerUDB_sT16_timerdp_u0__16BIT_A0_REG, CYREG_B0_UDB14_15_A0
+.set Receive_Timer_TimerUDB_sT16_timerdp_u0__16BIT_A1_REG, CYREG_B0_UDB14_15_A1
+.set Receive_Timer_TimerUDB_sT16_timerdp_u0__16BIT_D0_REG, CYREG_B0_UDB14_15_D0
+.set Receive_Timer_TimerUDB_sT16_timerdp_u0__16BIT_D1_REG, CYREG_B0_UDB14_15_D1
+.set Receive_Timer_TimerUDB_sT16_timerdp_u0__16BIT_DP_AUX_CTL_REG, CYREG_B0_UDB14_15_ACTL
+.set Receive_Timer_TimerUDB_sT16_timerdp_u0__16BIT_F0_REG, CYREG_B0_UDB14_15_F0
+.set Receive_Timer_TimerUDB_sT16_timerdp_u0__16BIT_F1_REG, CYREG_B0_UDB14_15_F1
+.set Receive_Timer_TimerUDB_sT16_timerdp_u0__A0_A1_REG, CYREG_B0_UDB14_A0_A1
+.set Receive_Timer_TimerUDB_sT16_timerdp_u0__A0_REG, CYREG_B0_UDB14_A0
+.set Receive_Timer_TimerUDB_sT16_timerdp_u0__A1_REG, CYREG_B0_UDB14_A1
+.set Receive_Timer_TimerUDB_sT16_timerdp_u0__D0_D1_REG, CYREG_B0_UDB14_D0_D1
+.set Receive_Timer_TimerUDB_sT16_timerdp_u0__D0_REG, CYREG_B0_UDB14_D0
+.set Receive_Timer_TimerUDB_sT16_timerdp_u0__D1_REG, CYREG_B0_UDB14_D1
+.set Receive_Timer_TimerUDB_sT16_timerdp_u0__DP_AUX_CTL_REG, CYREG_B0_UDB14_ACTL
+.set Receive_Timer_TimerUDB_sT16_timerdp_u0__F0_F1_REG, CYREG_B0_UDB14_F0_F1
+.set Receive_Timer_TimerUDB_sT16_timerdp_u0__F0_REG, CYREG_B0_UDB14_F0
+.set Receive_Timer_TimerUDB_sT16_timerdp_u0__F1_REG, CYREG_B0_UDB14_F1
+.set Receive_Timer_TimerUDB_sT16_timerdp_u1__A0_A1_REG, CYREG_B0_UDB15_A0_A1
+.set Receive_Timer_TimerUDB_sT16_timerdp_u1__A0_REG, CYREG_B0_UDB15_A0
+.set Receive_Timer_TimerUDB_sT16_timerdp_u1__A1_REG, CYREG_B0_UDB15_A1
+.set Receive_Timer_TimerUDB_sT16_timerdp_u1__D0_D1_REG, CYREG_B0_UDB15_D0_D1
+.set Receive_Timer_TimerUDB_sT16_timerdp_u1__D0_REG, CYREG_B0_UDB15_D0
+.set Receive_Timer_TimerUDB_sT16_timerdp_u1__D1_REG, CYREG_B0_UDB15_D1
+.set Receive_Timer_TimerUDB_sT16_timerdp_u1__DP_AUX_CTL_REG, CYREG_B0_UDB15_ACTL
+.set Receive_Timer_TimerUDB_sT16_timerdp_u1__F0_F1_REG, CYREG_B0_UDB15_F0_F1
+.set Receive_Timer_TimerUDB_sT16_timerdp_u1__F0_REG, CYREG_B0_UDB15_F0
+.set Receive_Timer_TimerUDB_sT16_timerdp_u1__F1_REG, CYREG_B0_UDB15_F1
+.set Receive_Timer_TimerUDB_sT16_timerdp_u1__MSK_DP_AUX_CTL_REG, CYREG_B0_UDB15_MSK_ACTL
+.set Receive_Timer_TimerUDB_sT16_timerdp_u1__PER_DP_AUX_CTL_REG, CYREG_B0_UDB15_MSK_ACTL
+
 /* TimerISR */
 .set TimerISR__INTC_CLR_EN_REG, CYREG_NVIC_CLRENA0
 .set TimerISR__INTC_CLR_PD_REG, CYREG_NVIC_CLRPEND0
-.set TimerISR__INTC_MASK, 0x04
-.set TimerISR__INTC_NUMBER, 2
+.set TimerISR__INTC_MASK, 0x08
+.set TimerISR__INTC_NUMBER, 3
 .set TimerISR__INTC_PRIOR_NUM, 7
-.set TimerISR__INTC_PRIOR_REG, CYREG_NVIC_PRI_2
+.set TimerISR__INTC_PRIOR_REG, CYREG_NVIC_PRI_3
 .set TimerISR__INTC_SET_EN_REG, CYREG_NVIC_SETENA0
 .set TimerISR__INTC_SET_PD_REG, CYREG_NVIC_SETPEND0
 
@@ -486,30 +526,30 @@
 /* USBUART_1_ep_1 */
 .set USBUART_1_ep_1__INTC_CLR_EN_REG, CYREG_NVIC_CLRENA0
 .set USBUART_1_ep_1__INTC_CLR_PD_REG, CYREG_NVIC_CLRPEND0
-.set USBUART_1_ep_1__INTC_MASK, 0x08
-.set USBUART_1_ep_1__INTC_NUMBER, 3
+.set USBUART_1_ep_1__INTC_MASK, 0x10
+.set USBUART_1_ep_1__INTC_NUMBER, 4
 .set USBUART_1_ep_1__INTC_PRIOR_NUM, 7
-.set USBUART_1_ep_1__INTC_PRIOR_REG, CYREG_NVIC_PRI_3
+.set USBUART_1_ep_1__INTC_PRIOR_REG, CYREG_NVIC_PRI_4
 .set USBUART_1_ep_1__INTC_SET_EN_REG, CYREG_NVIC_SETENA0
 .set USBUART_1_ep_1__INTC_SET_PD_REG, CYREG_NVIC_SETPEND0
 
 /* USBUART_1_ep_2 */
 .set USBUART_1_ep_2__INTC_CLR_EN_REG, CYREG_NVIC_CLRENA0
 .set USBUART_1_ep_2__INTC_CLR_PD_REG, CYREG_NVIC_CLRPEND0
-.set USBUART_1_ep_2__INTC_MASK, 0x10
-.set USBUART_1_ep_2__INTC_NUMBER, 4
+.set USBUART_1_ep_2__INTC_MASK, 0x20
+.set USBUART_1_ep_2__INTC_NUMBER, 5
 .set USBUART_1_ep_2__INTC_PRIOR_NUM, 7
-.set USBUART_1_ep_2__INTC_PRIOR_REG, CYREG_NVIC_PRI_4
+.set USBUART_1_ep_2__INTC_PRIOR_REG, CYREG_NVIC_PRI_5
 .set USBUART_1_ep_2__INTC_SET_EN_REG, CYREG_NVIC_SETENA0
 .set USBUART_1_ep_2__INTC_SET_PD_REG, CYREG_NVIC_SETPEND0
 
 /* USBUART_1_ep_3 */
 .set USBUART_1_ep_3__INTC_CLR_EN_REG, CYREG_NVIC_CLRENA0
 .set USBUART_1_ep_3__INTC_CLR_PD_REG, CYREG_NVIC_CLRPEND0
-.set USBUART_1_ep_3__INTC_MASK, 0x20
-.set USBUART_1_ep_3__INTC_NUMBER, 5
+.set USBUART_1_ep_3__INTC_MASK, 0x40
+.set USBUART_1_ep_3__INTC_NUMBER, 6
 .set USBUART_1_ep_3__INTC_PRIOR_NUM, 7
-.set USBUART_1_ep_3__INTC_PRIOR_REG, CYREG_NVIC_PRI_5
+.set USBUART_1_ep_3__INTC_PRIOR_REG, CYREG_NVIC_PRI_6
 .set USBUART_1_ep_3__INTC_SET_EN_REG, CYREG_NVIC_SETENA0
 .set USBUART_1_ep_3__INTC_SET_PD_REG, CYREG_NVIC_SETPEND0
 
@@ -669,6 +709,16 @@
 .set Edge_detect_IRQ__INTC_SET_EN_REG, CYREG_NVIC_SETENA0
 .set Edge_detect_IRQ__INTC_SET_PD_REG, CYREG_NVIC_SETPEND0
 
+/* ReceiveTimerIRQ */
+.set ReceiveTimerIRQ__INTC_CLR_EN_REG, CYREG_NVIC_CLRENA0
+.set ReceiveTimerIRQ__INTC_CLR_PD_REG, CYREG_NVIC_CLRPEND0
+.set ReceiveTimerIRQ__INTC_MASK, 0x04
+.set ReceiveTimerIRQ__INTC_NUMBER, 2
+.set ReceiveTimerIRQ__INTC_PRIOR_NUM, 7
+.set ReceiveTimerIRQ__INTC_PRIOR_REG, CYREG_NVIC_PRI_2
+.set ReceiveTimerIRQ__INTC_SET_EN_REG, CYREG_NVIC_SETENA0
+.set ReceiveTimerIRQ__INTC_SET_PD_REG, CYREG_NVIC_SETPEND0
+
 /* Idle_Collision_IRQ */
 .set Idle_Collision_IRQ__INTC_CLR_EN_REG, CYREG_NVIC_CLRENA0
 .set Idle_Collision_IRQ__INTC_CLR_PD_REG, CYREG_NVIC_CLRPEND0
@@ -680,22 +730,22 @@
 .set Idle_Collision_IRQ__INTC_SET_PD_REG, CYREG_NVIC_SETPEND0
 
 /* Idle_Collision_Timer_TimerHW */
-.set Idle_Collision_Timer_TimerHW__CAP0, CYREG_TMR1_CAP0
-.set Idle_Collision_Timer_TimerHW__CAP1, CYREG_TMR1_CAP1
-.set Idle_Collision_Timer_TimerHW__CFG0, CYREG_TMR1_CFG0
-.set Idle_Collision_Timer_TimerHW__CFG1, CYREG_TMR1_CFG1
-.set Idle_Collision_Timer_TimerHW__CFG2, CYREG_TMR1_CFG2
-.set Idle_Collision_Timer_TimerHW__CNT_CMP0, CYREG_TMR1_CNT_CMP0
-.set Idle_Collision_Timer_TimerHW__CNT_CMP1, CYREG_TMR1_CNT_CMP1
-.set Idle_Collision_Timer_TimerHW__PER0, CYREG_TMR1_PER0
-.set Idle_Collision_Timer_TimerHW__PER1, CYREG_TMR1_PER1
+.set Idle_Collision_Timer_TimerHW__CAP0, CYREG_TMR0_CAP0
+.set Idle_Collision_Timer_TimerHW__CAP1, CYREG_TMR0_CAP1
+.set Idle_Collision_Timer_TimerHW__CFG0, CYREG_TMR0_CFG0
+.set Idle_Collision_Timer_TimerHW__CFG1, CYREG_TMR0_CFG1
+.set Idle_Collision_Timer_TimerHW__CFG2, CYREG_TMR0_CFG2
+.set Idle_Collision_Timer_TimerHW__CNT_CMP0, CYREG_TMR0_CNT_CMP0
+.set Idle_Collision_Timer_TimerHW__CNT_CMP1, CYREG_TMR0_CNT_CMP1
+.set Idle_Collision_Timer_TimerHW__PER0, CYREG_TMR0_PER0
+.set Idle_Collision_Timer_TimerHW__PER1, CYREG_TMR0_PER1
 .set Idle_Collision_Timer_TimerHW__PM_ACT_CFG, CYREG_PM_ACT_CFG3
-.set Idle_Collision_Timer_TimerHW__PM_ACT_MSK, 0x02
+.set Idle_Collision_Timer_TimerHW__PM_ACT_MSK, 0x01
 .set Idle_Collision_Timer_TimerHW__PM_STBY_CFG, CYREG_PM_STBY_CFG3
-.set Idle_Collision_Timer_TimerHW__PM_STBY_MSK, 0x02
-.set Idle_Collision_Timer_TimerHW__RT0, CYREG_TMR1_RT0
-.set Idle_Collision_Timer_TimerHW__RT1, CYREG_TMR1_RT1
-.set Idle_Collision_Timer_TimerHW__SR0, CYREG_TMR1_SR0
+.set Idle_Collision_Timer_TimerHW__PM_STBY_MSK, 0x01
+.set Idle_Collision_Timer_TimerHW__RT0, CYREG_TMR0_RT0
+.set Idle_Collision_Timer_TimerHW__RT1, CYREG_TMR0_RT1
+.set Idle_Collision_Timer_TimerHW__SR0, CYREG_TMR0_SR0
 
 /* Miscellaneous */
 .set BCLK__BUS_CLK__HZ, 64000000
@@ -805,7 +855,7 @@
 .set CYDEV_ECC_ENABLE, 0
 .set CYDEV_HEAP_SIZE, 0x80
 .set CYDEV_INSTRUCT_CACHE_ENABLED, 0
-.set CYDEV_INTR_RISING, 0x00000007
+.set CYDEV_INTR_RISING, 0x0000000F
 .set CYDEV_IS_EXPORTING_CODE, 0
 .set CYDEV_IS_IMPORTING_CODE, 0
 .set CYDEV_PROJ_TYPE, 0

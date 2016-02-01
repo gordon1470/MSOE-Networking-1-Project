@@ -3,6 +3,9 @@ This file performs a transmit. No collision is detected.
 *******************************************************************************/
 #define INDEX_OF_MSB 6
 #define HIGH 1
+#define EIGHT_BITS 8
+#define START_BIT 2
+#define ASCII_CHAR_MASK 0x7F
 
 #include <device.h>
 #include <stdbool.h>
@@ -17,13 +20,17 @@ void stringToDiffMan(char*, uint8);
 void asciiToDiffMan(char);
 void transmitData();
 void setNetworkStateOnLEDs();
+void diffManToASCII(char*);
+void printChar(char *);
 
 int diffManEncodedData[800];
+int diffManReceivedData[800];
+int receivedDataIndex = 0, receivedDataCount = 0;
 int halfBitIndex = 0, currentDataPos=0, lengthOfData;
 bool timerExpired, dataTransmissionComplete;
 enum state {busy, idle, collision} networkState; 
 
-CY_ISR(Idle_Collision_ISR){
+CY_ISR(Idle_Collision_ISR){ 
     networkState = idle; 
     if(Receive_Read() == HIGH){
         networkState = idle;  
@@ -34,7 +41,12 @@ CY_ISR(Idle_Collision_ISR){
 }
 
 CY_ISR(Edge_detect_ISR){
+     //Note: onedge detect, will trigger receive timer to start (see TopDesign)
     networkState = busy;
+    
+    diffManReceivedData[receivedDataCount] = Receive_Read();
+    receivedDataCount++; 
+    
     Idle_Collision_Timer_Start();
     Receive_ClearInterrupt();
 }
@@ -43,6 +55,12 @@ CY_ISR(TimerHandler){
     Timer_STATUS;   //clear the timer interrupt
     Timer_Stop();
     timerExpired = true;
+}
+
+CY_ISR(ReceiveTimerISR){
+    Receive_Timer_STATUS;   //clear interrupt
+    diffManReceivedData[receivedDataCount] = Receive_Read();
+    receivedDataCount++;
 }
 
 int main()
@@ -82,11 +100,35 @@ int main()
     //start tranmission timer
     TimerISR_StartEx(TimerHandler);
 
+    ReceiveTimerIRQ_StartEx(ReceiveTimerISR);
     
     /* Main Loop: */
     for(;;)
     {
         setNetworkStateOnLEDs();
+        //TODO add lcd start
+        /*Receive*/
+        //Precondidtion: must finished receiving data so channel state machine at idle and wait for a char
+        if(networkState == idle && receivedDataCount >= EIGHT_BITS + START_BIT){
+            
+            //Verify that have received start bit (01)
+            if(diffManReceivedData[0] == 0 && diffManReceivedData[1] == 1){
+                receivedDataIndex = 2; //skip start bit (two half bits)
+                while(receivedDataIndex < receivedDataCount){
+                    //wait for 8 bits
+                    char receivedChar;     
+                    char *charPtr = &receivedChar;
+                    diffManToASCII(charPtr);
+                    printChar(charPtr);
+                }
+                receivedDataCount = receivedDataIndex = 0; 
+            }
+            else{
+                //Receive data did not start with the start bit
+            }
+        }
+        /*End Receive*/
+        
         if(USBUART_1_IsConfigurationChanged() != 0u) /* Host could send double SET_INTERFACE request */
         {
             if(USBUART_1_GetConfiguration() != 0u)   /* Init IN endpoints when device configured */
@@ -326,6 +368,53 @@ int getRandomNumber()
     */
     n =rand() % (MAX_N - MIN_N + 1) + MIN_N;
     return n;
+}
+
+/*
+Helper method.
+Convert differental manchester line encoded byte to ascii char
+
+charPtr = pointer to char 
+*/
+void diffManToASCII(char *charPtr)
+{
+    int i;
+    for(i = 0; i < EIGHT_BITS; i++){
+        uint8 previousHalfBit = diffManReceivedData[receivedDataIndex-1];
+        //send starting 1 bit (encoded)
+        if(diffManReceivedData[receivedDataIndex] == 1){
+            //current half bit is 1
+            if(previousHalfBit == 1)
+            {
+                *charPtr |= (1 << (7 - i));      
+            }
+            else
+            {
+                *charPtr |= (0 << (7 - i));    
+            }
+        }
+        else{
+            //current half bit is 0
+            if(previousHalfBit == 1)
+            {
+                *charPtr |= (0 << (7 - i));    
+            }
+            else
+            {
+                *charPtr |= (1 << (7 - i));    
+            }
+        } 
+        receivedDataIndex += 2;
+    }//end for loop
+   
+}
+
+//Formats char and prints to LCD
+void printChar(char *charPtr){
+    ///Remove leading 1 bit of char
+    *charPtr &= ASCII_CHAR_MASK;
+    
+    LCD_PutChar(*charPtr);
 }
 
 /* [] END OF FILE */

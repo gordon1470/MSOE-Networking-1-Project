@@ -170,15 +170,15 @@
 #define LED4__SLW CYREG_PRT6_SLW
 
 /* Clock */
-#define Clock__CFG0 CYREG_CLKDIST_DCFG0_CFG0
-#define Clock__CFG1 CYREG_CLKDIST_DCFG0_CFG1
-#define Clock__CFG2 CYREG_CLKDIST_DCFG0_CFG2
+#define Clock__CFG0 CYREG_CLKDIST_DCFG1_CFG0
+#define Clock__CFG1 CYREG_CLKDIST_DCFG1_CFG1
+#define Clock__CFG2 CYREG_CLKDIST_DCFG1_CFG2
 #define Clock__CFG2_SRC_SEL_MASK 0x07u
-#define Clock__INDEX 0x00u
+#define Clock__INDEX 0x01u
 #define Clock__PM_ACT_CFG CYREG_PM_ACT_CFG2
-#define Clock__PM_ACT_MSK 0x01u
+#define Clock__PM_ACT_MSK 0x02u
 #define Clock__PM_STBY_CFG CYREG_PM_STBY_CFG2
-#define Clock__PM_STBY_MSK 0x01u
+#define Clock__PM_STBY_MSK 0x02u
 
 /* Clock_1 */
 #define Clock_1__CFG0 CYREG_CLKDIST_DCFG2_CFG0
@@ -192,15 +192,15 @@
 #define Clock_1__PM_STBY_MSK 0x04u
 
 /* Clock_2 */
-#define Clock_2__CFG0 CYREG_CLKDIST_DCFG1_CFG0
-#define Clock_2__CFG1 CYREG_CLKDIST_DCFG1_CFG1
-#define Clock_2__CFG2 CYREG_CLKDIST_DCFG1_CFG2
+#define Clock_2__CFG0 CYREG_CLKDIST_DCFG0_CFG0
+#define Clock_2__CFG1 CYREG_CLKDIST_DCFG0_CFG1
+#define Clock_2__CFG2 CYREG_CLKDIST_DCFG0_CFG2
 #define Clock_2__CFG2_SRC_SEL_MASK 0x07u
-#define Clock_2__INDEX 0x01u
+#define Clock_2__INDEX 0x00u
 #define Clock_2__PM_ACT_CFG CYREG_PM_ACT_CFG2
-#define Clock_2__PM_ACT_MSK 0x02u
+#define Clock_2__PM_ACT_MSK 0x01u
 #define Clock_2__PM_STBY_CFG CYREG_PM_STBY_CFG2
-#define Clock_2__PM_STBY_MSK 0x02u
+#define Clock_2__PM_STBY_MSK 0x01u
 
 /* Timer_TimerUDB */
 #define Timer_TimerUDB_rstSts_stsreg__0__MASK 0x01u
@@ -309,24 +309,6 @@
 #define TX_pin__SIO_REG_HIFREQ CYREG_PRT12_SIO_REG_HIFREQ
 #define TX_pin__SLW CYREG_PRT12_SLW
 
-/* Counter_CounterHW */
-#define Counter_CounterHW__CAP0 CYREG_TMR0_CAP0
-#define Counter_CounterHW__CAP1 CYREG_TMR0_CAP1
-#define Counter_CounterHW__CFG0 CYREG_TMR0_CFG0
-#define Counter_CounterHW__CFG1 CYREG_TMR0_CFG1
-#define Counter_CounterHW__CFG2 CYREG_TMR0_CFG2
-#define Counter_CounterHW__CNT_CMP0 CYREG_TMR0_CNT_CMP0
-#define Counter_CounterHW__CNT_CMP1 CYREG_TMR0_CNT_CMP1
-#define Counter_CounterHW__PER0 CYREG_TMR0_PER0
-#define Counter_CounterHW__PER1 CYREG_TMR0_PER1
-#define Counter_CounterHW__PM_ACT_CFG CYREG_PM_ACT_CFG3
-#define Counter_CounterHW__PM_ACT_MSK 0x01u
-#define Counter_CounterHW__PM_STBY_CFG CYREG_PM_STBY_CFG3
-#define Counter_CounterHW__PM_STBY_MSK 0x01u
-#define Counter_CounterHW__RT0 CYREG_TMR0_RT0
-#define Counter_CounterHW__RT1 CYREG_TMR0_RT1
-#define Counter_CounterHW__SR0 CYREG_TMR0_SR0
-
 /* Receive */
 #define Receive__0__INTTYPE CYREG_PICU3_INTTYPE0
 #define Receive__0__MASK 0x01u
@@ -363,13 +345,71 @@
 #define Receive__SLW CYREG_PRT3_SLW
 #define Receive__SNAP CYREG_PICU3_SNAP
 
+/* Receive_Timer_TimerUDB */
+#define Receive_Timer_TimerUDB_rstSts_stsreg__0__MASK 0x01u
+#define Receive_Timer_TimerUDB_rstSts_stsreg__0__POS 0
+#define Receive_Timer_TimerUDB_rstSts_stsreg__2__MASK 0x04u
+#define Receive_Timer_TimerUDB_rstSts_stsreg__2__POS 2
+#define Receive_Timer_TimerUDB_rstSts_stsreg__3__MASK 0x08u
+#define Receive_Timer_TimerUDB_rstSts_stsreg__3__POS 3
+#define Receive_Timer_TimerUDB_rstSts_stsreg__MASK 0x0Du
+#define Receive_Timer_TimerUDB_rstSts_stsreg__MASK_REG CYREG_B0_UDB15_MSK
+#define Receive_Timer_TimerUDB_rstSts_stsreg__MASK_ST_AUX_CTL_REG CYREG_B0_UDB15_MSK_ACTL
+#define Receive_Timer_TimerUDB_rstSts_stsreg__PER_ST_AUX_CTL_REG CYREG_B0_UDB15_MSK_ACTL
+#define Receive_Timer_TimerUDB_rstSts_stsreg__STATUS_AUX_CTL_REG CYREG_B0_UDB15_ACTL
+#define Receive_Timer_TimerUDB_rstSts_stsreg__STATUS_CNT_REG CYREG_B0_UDB15_ST_CTL
+#define Receive_Timer_TimerUDB_rstSts_stsreg__STATUS_CONTROL_REG CYREG_B0_UDB15_ST_CTL
+#define Receive_Timer_TimerUDB_rstSts_stsreg__STATUS_REG CYREG_B0_UDB15_ST
+#define Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__4__MASK 0x10u
+#define Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__4__POS 4
+#define Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__7__MASK 0x80u
+#define Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__7__POS 7
+#define Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__CONTROL_AUX_CTL_REG CYREG_B0_UDB15_ACTL
+#define Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__CONTROL_REG CYREG_B0_UDB15_CTL
+#define Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__CONTROL_ST_REG CYREG_B0_UDB15_ST_CTL
+#define Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__COUNT_REG CYREG_B0_UDB15_CTL
+#define Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__COUNT_ST_REG CYREG_B0_UDB15_ST_CTL
+#define Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__MASK 0x90u
+#define Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__MASK_CTL_AUX_CTL_REG CYREG_B0_UDB15_MSK_ACTL
+#define Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__PER_CTL_AUX_CTL_REG CYREG_B0_UDB15_MSK_ACTL
+#define Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__PERIOD_REG CYREG_B0_UDB15_MSK
+#define Receive_Timer_TimerUDB_sT16_timerdp_u0__16BIT_A0_REG CYREG_B0_UDB14_15_A0
+#define Receive_Timer_TimerUDB_sT16_timerdp_u0__16BIT_A1_REG CYREG_B0_UDB14_15_A1
+#define Receive_Timer_TimerUDB_sT16_timerdp_u0__16BIT_D0_REG CYREG_B0_UDB14_15_D0
+#define Receive_Timer_TimerUDB_sT16_timerdp_u0__16BIT_D1_REG CYREG_B0_UDB14_15_D1
+#define Receive_Timer_TimerUDB_sT16_timerdp_u0__16BIT_DP_AUX_CTL_REG CYREG_B0_UDB14_15_ACTL
+#define Receive_Timer_TimerUDB_sT16_timerdp_u0__16BIT_F0_REG CYREG_B0_UDB14_15_F0
+#define Receive_Timer_TimerUDB_sT16_timerdp_u0__16BIT_F1_REG CYREG_B0_UDB14_15_F1
+#define Receive_Timer_TimerUDB_sT16_timerdp_u0__A0_A1_REG CYREG_B0_UDB14_A0_A1
+#define Receive_Timer_TimerUDB_sT16_timerdp_u0__A0_REG CYREG_B0_UDB14_A0
+#define Receive_Timer_TimerUDB_sT16_timerdp_u0__A1_REG CYREG_B0_UDB14_A1
+#define Receive_Timer_TimerUDB_sT16_timerdp_u0__D0_D1_REG CYREG_B0_UDB14_D0_D1
+#define Receive_Timer_TimerUDB_sT16_timerdp_u0__D0_REG CYREG_B0_UDB14_D0
+#define Receive_Timer_TimerUDB_sT16_timerdp_u0__D1_REG CYREG_B0_UDB14_D1
+#define Receive_Timer_TimerUDB_sT16_timerdp_u0__DP_AUX_CTL_REG CYREG_B0_UDB14_ACTL
+#define Receive_Timer_TimerUDB_sT16_timerdp_u0__F0_F1_REG CYREG_B0_UDB14_F0_F1
+#define Receive_Timer_TimerUDB_sT16_timerdp_u0__F0_REG CYREG_B0_UDB14_F0
+#define Receive_Timer_TimerUDB_sT16_timerdp_u0__F1_REG CYREG_B0_UDB14_F1
+#define Receive_Timer_TimerUDB_sT16_timerdp_u1__A0_A1_REG CYREG_B0_UDB15_A0_A1
+#define Receive_Timer_TimerUDB_sT16_timerdp_u1__A0_REG CYREG_B0_UDB15_A0
+#define Receive_Timer_TimerUDB_sT16_timerdp_u1__A1_REG CYREG_B0_UDB15_A1
+#define Receive_Timer_TimerUDB_sT16_timerdp_u1__D0_D1_REG CYREG_B0_UDB15_D0_D1
+#define Receive_Timer_TimerUDB_sT16_timerdp_u1__D0_REG CYREG_B0_UDB15_D0
+#define Receive_Timer_TimerUDB_sT16_timerdp_u1__D1_REG CYREG_B0_UDB15_D1
+#define Receive_Timer_TimerUDB_sT16_timerdp_u1__DP_AUX_CTL_REG CYREG_B0_UDB15_ACTL
+#define Receive_Timer_TimerUDB_sT16_timerdp_u1__F0_F1_REG CYREG_B0_UDB15_F0_F1
+#define Receive_Timer_TimerUDB_sT16_timerdp_u1__F0_REG CYREG_B0_UDB15_F0
+#define Receive_Timer_TimerUDB_sT16_timerdp_u1__F1_REG CYREG_B0_UDB15_F1
+#define Receive_Timer_TimerUDB_sT16_timerdp_u1__MSK_DP_AUX_CTL_REG CYREG_B0_UDB15_MSK_ACTL
+#define Receive_Timer_TimerUDB_sT16_timerdp_u1__PER_DP_AUX_CTL_REG CYREG_B0_UDB15_MSK_ACTL
+
 /* TimerISR */
 #define TimerISR__INTC_CLR_EN_REG CYREG_NVIC_CLRENA0
 #define TimerISR__INTC_CLR_PD_REG CYREG_NVIC_CLRPEND0
-#define TimerISR__INTC_MASK 0x04u
-#define TimerISR__INTC_NUMBER 2u
+#define TimerISR__INTC_MASK 0x08u
+#define TimerISR__INTC_NUMBER 3u
 #define TimerISR__INTC_PRIOR_NUM 7u
-#define TimerISR__INTC_PRIOR_REG CYREG_NVIC_PRI_2
+#define TimerISR__INTC_PRIOR_REG CYREG_NVIC_PRI_3
 #define TimerISR__INTC_SET_EN_REG CYREG_NVIC_SETENA0
 #define TimerISR__INTC_SET_PD_REG CYREG_NVIC_SETPEND0
 
@@ -486,30 +526,30 @@
 /* USBUART_1_ep_1 */
 #define USBUART_1_ep_1__INTC_CLR_EN_REG CYREG_NVIC_CLRENA0
 #define USBUART_1_ep_1__INTC_CLR_PD_REG CYREG_NVIC_CLRPEND0
-#define USBUART_1_ep_1__INTC_MASK 0x08u
-#define USBUART_1_ep_1__INTC_NUMBER 3u
+#define USBUART_1_ep_1__INTC_MASK 0x10u
+#define USBUART_1_ep_1__INTC_NUMBER 4u
 #define USBUART_1_ep_1__INTC_PRIOR_NUM 7u
-#define USBUART_1_ep_1__INTC_PRIOR_REG CYREG_NVIC_PRI_3
+#define USBUART_1_ep_1__INTC_PRIOR_REG CYREG_NVIC_PRI_4
 #define USBUART_1_ep_1__INTC_SET_EN_REG CYREG_NVIC_SETENA0
 #define USBUART_1_ep_1__INTC_SET_PD_REG CYREG_NVIC_SETPEND0
 
 /* USBUART_1_ep_2 */
 #define USBUART_1_ep_2__INTC_CLR_EN_REG CYREG_NVIC_CLRENA0
 #define USBUART_1_ep_2__INTC_CLR_PD_REG CYREG_NVIC_CLRPEND0
-#define USBUART_1_ep_2__INTC_MASK 0x10u
-#define USBUART_1_ep_2__INTC_NUMBER 4u
+#define USBUART_1_ep_2__INTC_MASK 0x20u
+#define USBUART_1_ep_2__INTC_NUMBER 5u
 #define USBUART_1_ep_2__INTC_PRIOR_NUM 7u
-#define USBUART_1_ep_2__INTC_PRIOR_REG CYREG_NVIC_PRI_4
+#define USBUART_1_ep_2__INTC_PRIOR_REG CYREG_NVIC_PRI_5
 #define USBUART_1_ep_2__INTC_SET_EN_REG CYREG_NVIC_SETENA0
 #define USBUART_1_ep_2__INTC_SET_PD_REG CYREG_NVIC_SETPEND0
 
 /* USBUART_1_ep_3 */
 #define USBUART_1_ep_3__INTC_CLR_EN_REG CYREG_NVIC_CLRENA0
 #define USBUART_1_ep_3__INTC_CLR_PD_REG CYREG_NVIC_CLRPEND0
-#define USBUART_1_ep_3__INTC_MASK 0x20u
-#define USBUART_1_ep_3__INTC_NUMBER 5u
+#define USBUART_1_ep_3__INTC_MASK 0x40u
+#define USBUART_1_ep_3__INTC_NUMBER 6u
 #define USBUART_1_ep_3__INTC_PRIOR_NUM 7u
-#define USBUART_1_ep_3__INTC_PRIOR_REG CYREG_NVIC_PRI_5
+#define USBUART_1_ep_3__INTC_PRIOR_REG CYREG_NVIC_PRI_6
 #define USBUART_1_ep_3__INTC_SET_EN_REG CYREG_NVIC_SETENA0
 #define USBUART_1_ep_3__INTC_SET_PD_REG CYREG_NVIC_SETPEND0
 
@@ -669,6 +709,16 @@
 #define Edge_detect_IRQ__INTC_SET_EN_REG CYREG_NVIC_SETENA0
 #define Edge_detect_IRQ__INTC_SET_PD_REG CYREG_NVIC_SETPEND0
 
+/* ReceiveTimerIRQ */
+#define ReceiveTimerIRQ__INTC_CLR_EN_REG CYREG_NVIC_CLRENA0
+#define ReceiveTimerIRQ__INTC_CLR_PD_REG CYREG_NVIC_CLRPEND0
+#define ReceiveTimerIRQ__INTC_MASK 0x04u
+#define ReceiveTimerIRQ__INTC_NUMBER 2u
+#define ReceiveTimerIRQ__INTC_PRIOR_NUM 7u
+#define ReceiveTimerIRQ__INTC_PRIOR_REG CYREG_NVIC_PRI_2
+#define ReceiveTimerIRQ__INTC_SET_EN_REG CYREG_NVIC_SETENA0
+#define ReceiveTimerIRQ__INTC_SET_PD_REG CYREG_NVIC_SETPEND0
+
 /* Idle_Collision_IRQ */
 #define Idle_Collision_IRQ__INTC_CLR_EN_REG CYREG_NVIC_CLRENA0
 #define Idle_Collision_IRQ__INTC_CLR_PD_REG CYREG_NVIC_CLRPEND0
@@ -680,22 +730,22 @@
 #define Idle_Collision_IRQ__INTC_SET_PD_REG CYREG_NVIC_SETPEND0
 
 /* Idle_Collision_Timer_TimerHW */
-#define Idle_Collision_Timer_TimerHW__CAP0 CYREG_TMR1_CAP0
-#define Idle_Collision_Timer_TimerHW__CAP1 CYREG_TMR1_CAP1
-#define Idle_Collision_Timer_TimerHW__CFG0 CYREG_TMR1_CFG0
-#define Idle_Collision_Timer_TimerHW__CFG1 CYREG_TMR1_CFG1
-#define Idle_Collision_Timer_TimerHW__CFG2 CYREG_TMR1_CFG2
-#define Idle_Collision_Timer_TimerHW__CNT_CMP0 CYREG_TMR1_CNT_CMP0
-#define Idle_Collision_Timer_TimerHW__CNT_CMP1 CYREG_TMR1_CNT_CMP1
-#define Idle_Collision_Timer_TimerHW__PER0 CYREG_TMR1_PER0
-#define Idle_Collision_Timer_TimerHW__PER1 CYREG_TMR1_PER1
+#define Idle_Collision_Timer_TimerHW__CAP0 CYREG_TMR0_CAP0
+#define Idle_Collision_Timer_TimerHW__CAP1 CYREG_TMR0_CAP1
+#define Idle_Collision_Timer_TimerHW__CFG0 CYREG_TMR0_CFG0
+#define Idle_Collision_Timer_TimerHW__CFG1 CYREG_TMR0_CFG1
+#define Idle_Collision_Timer_TimerHW__CFG2 CYREG_TMR0_CFG2
+#define Idle_Collision_Timer_TimerHW__CNT_CMP0 CYREG_TMR0_CNT_CMP0
+#define Idle_Collision_Timer_TimerHW__CNT_CMP1 CYREG_TMR0_CNT_CMP1
+#define Idle_Collision_Timer_TimerHW__PER0 CYREG_TMR0_PER0
+#define Idle_Collision_Timer_TimerHW__PER1 CYREG_TMR0_PER1
 #define Idle_Collision_Timer_TimerHW__PM_ACT_CFG CYREG_PM_ACT_CFG3
-#define Idle_Collision_Timer_TimerHW__PM_ACT_MSK 0x02u
+#define Idle_Collision_Timer_TimerHW__PM_ACT_MSK 0x01u
 #define Idle_Collision_Timer_TimerHW__PM_STBY_CFG CYREG_PM_STBY_CFG3
-#define Idle_Collision_Timer_TimerHW__PM_STBY_MSK 0x02u
-#define Idle_Collision_Timer_TimerHW__RT0 CYREG_TMR1_RT0
-#define Idle_Collision_Timer_TimerHW__RT1 CYREG_TMR1_RT1
-#define Idle_Collision_Timer_TimerHW__SR0 CYREG_TMR1_SR0
+#define Idle_Collision_Timer_TimerHW__PM_STBY_MSK 0x01u
+#define Idle_Collision_Timer_TimerHW__RT0 CYREG_TMR0_RT0
+#define Idle_Collision_Timer_TimerHW__RT1 CYREG_TMR0_RT1
+#define Idle_Collision_Timer_TimerHW__SR0 CYREG_TMR0_SR0
 
 /* Miscellaneous */
 #define BCLK__BUS_CLK__HZ 64000000U
@@ -807,7 +857,7 @@
 #define CYDEV_ECC_ENABLE 0
 #define CYDEV_HEAP_SIZE 0x80
 #define CYDEV_INSTRUCT_CACHE_ENABLED 0
-#define CYDEV_INTR_RISING 0x00000007u
+#define CYDEV_INTR_RISING 0x0000000Fu
 #define CYDEV_IS_EXPORTING_CODE 0
 #define CYDEV_IS_IMPORTING_CODE 0
 #define CYDEV_PROJ_TYPE 0

@@ -1,6 +1,6 @@
 // ======================================================================
 // USB_UART01.v generated from TopDesign.cysch
-// 01/30/2016 at 14:19
+// 02/01/2016 at 11:20
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -713,85 +713,74 @@ module Timer_v2_70_3 (
 
 endmodule
 
-// Counter_v3_0(CaptureMode=0, CaptureModeSoftware=0, ClockMode=3, CompareMode=4, CompareModeSoftware=0, CompareStatusEdgeSense=true, CompareValue=1, CONTROL3=1, ControlRegRemoved=0, CyGetRegReplacementString=CY_GET_REG8, CySetRegReplacementString=CY_SET_REG8, EnableMode=0, FF16=false, FF8=true, FixedFunction=true, FixedFunctionUsed=1, InitCounterValue=128, InterruptOnCapture=false, InterruptOnCompare=false, InterruptOnOverUnderFlow=false, InterruptOnTC=false, Period=128, RegDefReplacementString=reg8, RegSizeReplacementString=uint8, ReloadOnCapture=false, ReloadOnCompare=false, ReloadOnOverUnder=true, ReloadOnReset=true, Resolution=8, RunMode=0, UDB16=false, UDB24=false, UDB32=false, UDB8=false, UDBControlReg=false, UseInterrupt=true, VerilogSectionReplacementString=sC8, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=Counter_v3_0, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Counter, CY_INSTANCE_SHORT_NAME=Counter, CY_MAJOR_VERSION=3, CY_MINOR_VERSION=0, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  3.3 CP1, INSTANCE_NAME=Counter, )
-module Counter_v3_0_4 (
+// Timer_v2_70(CaptureAlternatingFall=false, CaptureAlternatingRise=false, CaptureCount=2, CaptureCounterEnabled=false, CaptureInputEnabled=false, CaptureMode=0, CONTROL3=0, ControlRegRemoved=0, CtlModeReplacementString=SyncCtl, CyGetRegReplacementString=CY_GET_REG16, CySetRegReplacementString=CY_SET_REG16, DeviceFamily=PSoC5, EnableMode=0, FF16=false, FF8=false, FixedFunction=false, FixedFunctionUsed=0, HWCaptureCounterEnabled=false, InterruptOnCapture=false, InterruptOnFIFOFull=false, InterruptOnTC=true, IntOnCapture=0, IntOnFIFOFull=0, IntOnTC=1, NumberOfCaptures=1, param45=1, Period=15807, RegDefReplacementString=reg16, RegSizeReplacementString=uint16, Resolution=16, RstStatusReplacementString=rstSts, RunMode=0, SiliconRevision=0, SoftwareCaptureModeEnabled=false, SoftwareTriggerModeEnabled=false, TriggerInputEnabled=true, TriggerMode=3, UDB16=true, UDB24=false, UDB32=false, UDB8=false, UDBControlReg=true, UsesHWEnable=0, VerilogSectionReplacementString=sT16, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=Timer_v2_70, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Receive_Timer, CY_INSTANCE_SHORT_NAME=Receive_Timer, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=70, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  3.3 CP1, INSTANCE_NAME=Receive_Timer, )
+module Timer_v2_70_4 (
     clock,
-    comp,
-    tc,
     reset,
     interrupt,
     enable,
     capture,
-    upCnt,
-    downCnt,
-    up_ndown,
-    count);
+    trigger,
+    capture_out,
+    tc);
     input       clock;
-    output      comp;
-    output      tc;
     input       reset;
     output      interrupt;
     input       enable;
     input       capture;
-    input       upCnt;
-    input       downCnt;
-    input       up_ndown;
-    input       count;
+    input       trigger;
+    output      capture_out;
+    output      tc;
 
-    parameter CaptureMode = 0;
-    parameter ClockMode = 3;
-    parameter CompareMode = 4;
-    parameter CompareStatusEdgeSense = 1;
-    parameter EnableMode = 0;
-    parameter ReloadOnCapture = 0;
-    parameter ReloadOnCompare = 0;
-    parameter ReloadOnOverUnder = 1;
-    parameter ReloadOnReset = 1;
-    parameter Resolution = 8;
-    parameter RunMode = 0;
-    parameter UseInterrupt = 1;
+    parameter CaptureCount = 2;
+    parameter CaptureCounterEnabled = 0;
+    parameter DeviceFamily = "PSoC5";
+    parameter InterruptOnCapture = 0;
+    parameter InterruptOnTC = 1;
+    parameter Resolution = 16;
+    parameter SiliconRevision = "0";
 
-          wire  Net_47;
+          wire  Net_261;
+          wire  Net_260;
+          wire  Net_266;
           wire  Net_102;
-          wire  Net_95;
-          wire  Net_82;
-          wire  Net_91;
-          wire  Net_89;
-          wire  Net_49;
-          wire  Net_48;
-          wire  Net_42;
-          wire  Net_43;
-
-    cy_psoc3_timer_v1_0 CounterHW (
-        .timer_reset(reset),
-        .capture(capture),
-        .enable(Net_91),
-        .kill(Net_82),
-        .clock(clock),
-        .tc(Net_48),
-        .compare(Net_47),
-        .interrupt(Net_42));
-
-	// int_vm (cy_virtualmux_v1_0)
-	assign interrupt = Net_42;
-
-	// TC_vm (cy_virtualmux_v1_0)
-	assign tc = Net_48;
+          wire  Net_55;
+          wire  Net_57;
+          wire  Net_53;
+          wire  Net_51;
 
     ZeroTerminal ZeroTerminal_1 (
-        .z(Net_82));
+        .z(Net_260));
 
-	// VirtualMux_1 (cy_virtualmux_v1_0)
-	assign Net_89 = Net_95;
+	// VirtualMux_2 (cy_virtualmux_v1_0)
+	assign interrupt = Net_55;
 
-    ZeroTerminal ZeroTerminal_2 (
-        .z(Net_95));
+	// VirtualMux_3 (cy_virtualmux_v1_0)
+	assign tc = Net_53;
 
-	// vmEnableMode (cy_virtualmux_v1_0)
-	assign Net_91 = enable;
+    B_Timer_v2_70 TimerUDB (
+        .reset(reset),
+        .interrupt(Net_55),
+        .enable(enable),
+        .trigger(trigger),
+        .capture_in(capture),
+        .capture_out(capture_out),
+        .tc(Net_53),
+        .clock(clock));
+    defparam TimerUDB.Capture_Count = 2;
+    defparam TimerUDB.CaptureCounterEnabled = 0;
+    defparam TimerUDB.CaptureMode = 0;
+    defparam TimerUDB.EnableMode = 0;
+    defparam TimerUDB.InterruptOnCapture = 0;
+    defparam TimerUDB.Resolution = 16;
+    defparam TimerUDB.RunMode = 0;
+    defparam TimerUDB.TriggerMode = 3;
 
     OneTerminal OneTerminal_1 (
         .o(Net_102));
+
+	// VirtualMux_1 (cy_virtualmux_v1_0)
+	assign Net_266 = Net_102;
 
 
 
@@ -800,17 +789,12 @@ endmodule
 // top
 module top ;
 
-          wire  Net_164;
-          wire  Net_194;
-          wire  Net_193;
-          wire  Net_192;
-          wire  Net_191;
-          wire  Net_190;
-          wire  Net_189;
-          wire  Net_188;
-          wire  Net_187;
-          wire  Net_186;
-          wire  Net_185;
+          wire  Net_212;
+          wire  Net_209;
+          wire  Net_208;
+          wire  Net_207;
+          wire  Net_205;
+          wire  Net_203;
           wire  Net_151;
           wire  Net_148;
           wire  Net_147;
@@ -824,12 +808,11 @@ module top ;
           wire  Net_93;
           wire  Net_92;
           wire  Net_81;
-          wire  Net_97;
-          wire  Net_10;
           wire  Net_62;
           wire  Net_61;
-          wire  Net_155;
-          wire  Net_144;
+          wire  Net_204;
+          wire  Net_202;
+          wire  Net_201;
           wire  Net_100;
           wire  Net_149;
           wire  Net_122;
@@ -915,6 +898,9 @@ module top ;
 
 	assign tmpOE__TX_pin_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
+    ZeroTerminal ZeroTerminal_2 (
+        .z(Net_202));
+
     ZeroTerminal ZeroTerminal_1 (
         .z(Net_12));
 
@@ -955,7 +941,7 @@ module top ;
 
 
     Timer_v2_70_3 Idle_Collision_Timer (
-        .reset(Net_144),
+        .reset(Net_201),
         .interrupt(Net_143),
         .enable(1'b1),
         .trigger(1'b1),
@@ -1033,7 +1019,7 @@ module top ;
 		  .fb({tmpFB_0__Receive_net[0:0]}),
 		  .io({tmpIO_0__Receive_net[0:0]}),
 		  .siovref(tmpSIOVREF__Receive_net),
-		  .interrupt({Net_144}),
+		  .interrupt({Net_201}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -1047,7 +1033,7 @@ module top ;
 	cy_isr_v1_0
 		#(.int_type(2'b00))
 		Edge_detect_IRQ
-		 (.int_signal(Net_144));
+		 (.int_signal(Net_201));
 
 
 
@@ -1288,41 +1274,40 @@ module top ;
 
 	assign tmpOE__LED2_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-    Counter_v3_0_4 Counter (
-        .reset(1'b0),
-        .tc(Net_186),
-        .comp(Net_187),
-        .clock(Net_155),
-        .interrupt(Net_188),
-        .enable(1'b0),
+
+	cy_isr_v1_0
+		#(.int_type(2'b10))
+		ReceiveTimerIRQ
+		 (.int_signal(Net_203));
+
+
+    Timer_v2_70_4 Receive_Timer (
+        .reset(Net_202),
+        .interrupt(Net_203),
+        .enable(1'b1),
+        .trigger(Net_201),
         .capture(1'b0),
-        .upCnt(1'b0),
-        .downCnt(1'b0),
-        .up_ndown(1'b1),
-        .count(1'b0));
-    defparam Counter.CaptureMode = 0;
-    defparam Counter.ClockMode = 3;
-    defparam Counter.CompareMode = 4;
-    defparam Counter.CompareStatusEdgeSense = 1;
-    defparam Counter.EnableMode = 0;
-    defparam Counter.ReloadOnCapture = 0;
-    defparam Counter.ReloadOnCompare = 0;
-    defparam Counter.ReloadOnOverUnder = 1;
-    defparam Counter.ReloadOnReset = 1;
-    defparam Counter.Resolution = 8;
-    defparam Counter.RunMode = 0;
-    defparam Counter.UseInterrupt = 1;
+        .capture_out(Net_208),
+        .tc(Net_209),
+        .clock(Net_204));
+    defparam Receive_Timer.CaptureCount = 2;
+    defparam Receive_Timer.CaptureCounterEnabled = 0;
+    defparam Receive_Timer.DeviceFamily = "PSoC5";
+    defparam Receive_Timer.InterruptOnCapture = 0;
+    defparam Receive_Timer.InterruptOnTC = 1;
+    defparam Receive_Timer.Resolution = 16;
+    defparam Receive_Timer.SiliconRevision = "0";
 
 
 	cy_clock_v1_0
-		#(.id("7c33c615-d8e3-4fb6-9477-e486f4df647e"),
+		#(.id("e4891eb2-ed4f-4e0f-9774-1500336a1209"),
 		  .source_clock_id(""),
 		  .divisor(0),
-		  .period("83333333.3333333"),
+		  .period("10000000"),
 		  .is_direct(0),
 		  .is_digital(1))
 		Clock_2
-		 (.clock_out(Net_155));
+		 (.clock_out(Net_204));
 
 
 
