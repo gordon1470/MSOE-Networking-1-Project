@@ -1,5 +1,5 @@
 # USB_UART01
-# 2016-02-01 17:20:44Z
+# 2016-02-03 03:28:52Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -23,4 +23,5 @@ set_io "Receive(0)" iocell 3 0
 set_io "LED4(0)" iocell 6 3
 set_io "LED3(0)" iocell 6 2
 set_io "LED2(0)" iocell 0 7
+set_io "LED1(0)" iocell 0 0
 set_location "\USBUART_1:USB\" usbcell -1 -1 0

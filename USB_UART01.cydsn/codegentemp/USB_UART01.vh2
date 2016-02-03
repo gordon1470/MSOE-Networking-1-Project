@@ -2,7 +2,7 @@
 --	Conversion of USB_UART01.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Feb 01 11:20:43 2016
+--	Tue Feb 02 21:28:51 2016
 --
 
 USE cypress.cypress.all;
@@ -93,7 +93,6 @@ SIGNAL tmpFB_0__TX_pin_net_0 : bit;
 SIGNAL tmpIO_0__TX_pin_net_0 : bit;
 TERMINAL tmpSIOVREF__TX_pin_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__TX_pin_net_0 : bit;
-SIGNAL Net_202 : bit;
 SIGNAL Net_12 : bit;
 SIGNAL \Timer:Net_260\ : bit;
 SIGNAL Net_81 : bit;
@@ -344,21 +343,18 @@ SIGNAL \Receive_Timer:TimerUDB:capture_last\ : bit;
 SIGNAL \Receive_Timer:TimerUDB:capt_fifo_load\ : bit;
 SIGNAL \Receive_Timer:TimerUDB:timer_enable\ : bit;
 SIGNAL \Receive_Timer:TimerUDB:run_mode\ : bit;
-SIGNAL \Receive_Timer:TimerUDB:hwEnable\ : bit;
+SIGNAL \Receive_Timer:TimerUDB:hwEnable_reg\ : bit;
 SIGNAL \Receive_Timer:TimerUDB:status_tc\ : bit;
 SIGNAL \Receive_Timer:TimerUDB:trigger_enable\ : bit;
 SIGNAL \Receive_Timer:TimerUDB:per_zero\ : bit;
 SIGNAL \Receive_Timer:TimerUDB:tc_i\ : bit;
 SIGNAL \Receive_Timer:TimerUDB:tc_reg_i\ : bit;
-SIGNAL \Receive_Timer:TimerUDB:hwEnable_reg\ : bit;
+SIGNAL \Receive_Timer:TimerUDB:hwEnable\ : bit;
 SIGNAL \Receive_Timer:TimerUDB:capture_out_reg_i\ : bit;
 SIGNAL Net_208 : bit;
 SIGNAL \Receive_Timer:TimerUDB:capt_fifo_load_int\ : bit;
 SIGNAL \Receive_Timer:TimerUDB:runmode_enable\ : bit;
-SIGNAL \Receive_Timer:TimerUDB:trig_last\ : bit;
-SIGNAL \Receive_Timer:TimerUDB:trig_rise_detected\ : bit;
-SIGNAL \Receive_Timer:TimerUDB:trig_fall_detected\ : bit;
-SIGNAL \Receive_Timer:TimerUDB:trigger_polarized\ : bit;
+SIGNAL \Receive_Timer:TimerUDB:trig_disable\ : bit;
 SIGNAL \Receive_Timer:TimerUDB:trig_reg\ : bit;
 SIGNAL \Receive_Timer:TimerUDB:status_6\ : bit;
 SIGNAL \Receive_Timer:TimerUDB:status_5\ : bit;
@@ -510,17 +506,21 @@ SIGNAL \Receive_Timer:TimerUDB:sT16:timerdp:f1_blk_stat_reg_1\ : bit;
 ATTRIBUTE port_state_att of \Receive_Timer:TimerUDB:sT16:timerdp:f1_blk_stat_reg_1\:SIGNAL IS 2;
 SIGNAL \Receive_Timer:Net_102\ : bit;
 SIGNAL \Receive_Timer:Net_266\ : bit;
+SIGNAL tmpOE__LED1_net_0 : bit;
+SIGNAL tmpFB_0__LED1_net_0 : bit;
+SIGNAL tmpIO_0__LED1_net_0 : bit;
+TERMINAL tmpSIOVREF__LED1_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__LED1_net_0 : bit;
 SIGNAL \Timer:TimerUDB:capture_last\\D\ : bit;
 SIGNAL \Timer:TimerUDB:tc_reg_i\\D\ : bit;
 SIGNAL \Timer:TimerUDB:hwEnable_reg\\D\ : bit;
 SIGNAL \Timer:TimerUDB:capture_out_reg_i\\D\ : bit;
 SIGNAL \Receive_Timer:TimerUDB:capture_last\\D\ : bit;
-SIGNAL \Receive_Timer:TimerUDB:tc_reg_i\\D\ : bit;
 SIGNAL \Receive_Timer:TimerUDB:hwEnable_reg\\D\ : bit;
+SIGNAL \Receive_Timer:TimerUDB:tc_reg_i\\D\ : bit;
 SIGNAL \Receive_Timer:TimerUDB:capture_out_reg_i\\D\ : bit;
-SIGNAL \Receive_Timer:TimerUDB:trig_last\\D\ : bit;
-SIGNAL \Receive_Timer:TimerUDB:trig_rise_detected\\D\ : bit;
-SIGNAL \Receive_Timer:TimerUDB:trig_fall_detected\\D\ : bit;
+SIGNAL \Receive_Timer:TimerUDB:runmode_enable\\D\ : bit;
+SIGNAL \Receive_Timer:TimerUDB:trig_disable\\D\ : bit;
 BEGIN
 
 zero <=  ('0') ;
@@ -529,17 +529,14 @@ one <=  ('1') ;
 
 \Timer:TimerUDB:status_tc\ <= ((\Timer:TimerUDB:control_7\ and \Timer:TimerUDB:per_zero\));
 
-\Receive_Timer:TimerUDB:status_tc\ <= ((\Receive_Timer:TimerUDB:control_7\ and \Receive_Timer:TimerUDB:control_4\ and \Receive_Timer:TimerUDB:per_zero\ and \Receive_Timer:TimerUDB:trig_fall_detected\)
-	OR (\Receive_Timer:TimerUDB:control_7\ and \Receive_Timer:TimerUDB:control_4\ and \Receive_Timer:TimerUDB:per_zero\ and \Receive_Timer:TimerUDB:trig_rise_detected\));
+\Receive_Timer:TimerUDB:status_tc\ <= ((\Receive_Timer:TimerUDB:run_mode\ and \Receive_Timer:TimerUDB:per_zero\));
 
-\Receive_Timer:TimerUDB:trig_rise_detected\\D\ <= ((not \Receive_Timer:TimerUDB:trig_last\ and Net_201 and \Receive_Timer:TimerUDB:control_7\ and \Receive_Timer:TimerUDB:control_4\)
-	OR (\Receive_Timer:TimerUDB:control_7\ and \Receive_Timer:TimerUDB:control_4\ and \Receive_Timer:TimerUDB:trig_rise_detected\));
+\Receive_Timer:TimerUDB:runmode_enable\\D\ <= ((not Net_201 and not \Receive_Timer:TimerUDB:per_zero\ and not \Receive_Timer:TimerUDB:trig_disable\ and \Receive_Timer:TimerUDB:control_7\)
+	OR (not Net_201 and not \Receive_Timer:TimerUDB:run_mode\ and not \Receive_Timer:TimerUDB:trig_disable\ and \Receive_Timer:TimerUDB:control_7\)
+	OR (not Net_201 and not \Receive_Timer:TimerUDB:timer_enable\ and not \Receive_Timer:TimerUDB:trig_disable\ and \Receive_Timer:TimerUDB:control_7\));
 
-\Receive_Timer:TimerUDB:trig_fall_detected\\D\ <= ((not Net_201 and \Receive_Timer:TimerUDB:control_7\ and \Receive_Timer:TimerUDB:control_4\ and \Receive_Timer:TimerUDB:trig_last\)
-	OR (\Receive_Timer:TimerUDB:control_7\ and \Receive_Timer:TimerUDB:control_4\ and \Receive_Timer:TimerUDB:trig_fall_detected\));
-
-\Receive_Timer:TimerUDB:trig_reg\ <= ((\Receive_Timer:TimerUDB:control_7\ and \Receive_Timer:TimerUDB:control_4\ and \Receive_Timer:TimerUDB:trig_fall_detected\)
-	OR (\Receive_Timer:TimerUDB:control_7\ and \Receive_Timer:TimerUDB:control_4\ and \Receive_Timer:TimerUDB:trig_rise_detected\));
+\Receive_Timer:TimerUDB:trig_disable\\D\ <= ((not Net_201 and \Receive_Timer:TimerUDB:timer_enable\ and \Receive_Timer:TimerUDB:run_mode\ and \Receive_Timer:TimerUDB:per_zero\)
+	OR (not Net_201 and \Receive_Timer:TimerUDB:trig_disable\));
 
 \USBUART_1:ep_0\:cy_isr_v1_0
 	GENERIC MAP(int_type=>"10")
@@ -1425,7 +1422,7 @@ ReceiveTimerIRQ:cy_isr_v1_0
 	GENERIC MAP(cy_force_order=>'1',
 		cy_md_select=>"0000011",
 		cy_int_mask=>"1111111")
-	PORT MAP(reset=>zero,
+	PORT MAP(reset=>Net_201,
 		clock=>\Receive_Timer:TimerUDB:ClockOutFromEnBlock\,
 		status=>(zero, zero, zero, \Receive_Timer:TimerUDB:status_3\,
 			\Receive_Timer:TimerUDB:status_2\, zero, \Receive_Timer:TimerUDB:status_tc\),
@@ -1454,7 +1451,7 @@ ReceiveTimerIRQ:cy_isr_v1_0
 		f1_blk_sync=>'1')
 	PORT MAP(reset=>zero,
 		clk=>\Receive_Timer:TimerUDB:ClockOutFromEnBlock\,
-		cs_addr=>(zero, \Receive_Timer:TimerUDB:trig_reg\, \Receive_Timer:TimerUDB:per_zero\),
+		cs_addr=>(Net_201, \Receive_Timer:TimerUDB:timer_enable\, \Receive_Timer:TimerUDB:per_zero\),
 		route_si=>zero,
 		route_ci=>zero,
 		f0_load=>zero,
@@ -1540,7 +1537,7 @@ ReceiveTimerIRQ:cy_isr_v1_0
 		f1_blk_sync=>'1')
 	PORT MAP(reset=>zero,
 		clk=>\Receive_Timer:TimerUDB:ClockOutFromEnBlock\,
-		cs_addr=>(zero, \Receive_Timer:TimerUDB:trig_reg\, \Receive_Timer:TimerUDB:per_zero\),
+		cs_addr=>(Net_201, \Receive_Timer:TimerUDB:timer_enable\, \Receive_Timer:TimerUDB:per_zero\),
 		route_si=>zero,
 		route_ci=>zero,
 		f0_load=>zero,
@@ -1612,6 +1609,76 @@ Clock_2:cy_clock_v1_0
 		is_digital=>'1')
 	PORT MAP(clock_out=>Net_204,
 		dig_domain_out=>open);
+LED1:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"3d4513d2-c07c-4be9-90c1-f2520e04b203",
+		drive_mode=>"110",
+		ibuf_enabled=>"1",
+		init_dr_st=>"0",
+		input_sync=>"1",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"O",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"10",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(one),
+		y=>(zero),
+		fb=>(tmpFB_0__LED1_net_0),
+		analog=>(open),
+		io=>(tmpIO_0__LED1_net_0),
+		siovref=>(tmpSIOVREF__LED1_net_0),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>one,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>one,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__LED1_net_0);
 \Timer:TimerUDB:capture_last\:cy_dff
 	PORT MAP(d=>zero,
 		clk=>\Timer:TimerUDB:ClockOutFromEnBlock\,
@@ -1632,29 +1699,25 @@ Clock_2:cy_clock_v1_0
 	PORT MAP(d=>zero,
 		clk=>\Receive_Timer:TimerUDB:ClockOutFromEnBlock\,
 		q=>\Receive_Timer:TimerUDB:capture_last\);
+\Receive_Timer:TimerUDB:hwEnable_reg\:cy_dff
+	PORT MAP(d=>\Receive_Timer:TimerUDB:control_7\,
+		clk=>\Receive_Timer:TimerUDB:ClockOutFromEnBlock\,
+		q=>\Receive_Timer:TimerUDB:run_mode\);
 \Receive_Timer:TimerUDB:tc_reg_i\:cy_dff
 	PORT MAP(d=>\Receive_Timer:TimerUDB:status_tc\,
 		clk=>\Receive_Timer:TimerUDB:ClockOutFromEnBlock\,
 		q=>\Receive_Timer:TimerUDB:tc_reg_i\);
-\Receive_Timer:TimerUDB:hwEnable_reg\:cy_dff
-	PORT MAP(d=>\Receive_Timer:TimerUDB:control_7\,
-		clk=>\Receive_Timer:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Receive_Timer:TimerUDB:hwEnable_reg\);
 \Receive_Timer:TimerUDB:capture_out_reg_i\:cy_dff
 	PORT MAP(d=>zero,
 		clk=>\Receive_Timer:TimerUDB:ClockOutFromEnBlock\,
 		q=>\Receive_Timer:TimerUDB:capture_out_reg_i\);
-\Receive_Timer:TimerUDB:trig_last\:cy_dff
-	PORT MAP(d=>Net_201,
+\Receive_Timer:TimerUDB:runmode_enable\:cy_dff
+	PORT MAP(d=>\Receive_Timer:TimerUDB:runmode_enable\\D\,
 		clk=>\Receive_Timer:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Receive_Timer:TimerUDB:trig_last\);
-\Receive_Timer:TimerUDB:trig_rise_detected\:cy_dff
-	PORT MAP(d=>\Receive_Timer:TimerUDB:trig_rise_detected\\D\,
+		q=>\Receive_Timer:TimerUDB:timer_enable\);
+\Receive_Timer:TimerUDB:trig_disable\:cy_dff
+	PORT MAP(d=>\Receive_Timer:TimerUDB:trig_disable\\D\,
 		clk=>\Receive_Timer:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Receive_Timer:TimerUDB:trig_rise_detected\);
-\Receive_Timer:TimerUDB:trig_fall_detected\:cy_dff
-	PORT MAP(d=>\Receive_Timer:TimerUDB:trig_fall_detected\\D\,
-		clk=>\Receive_Timer:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Receive_Timer:TimerUDB:trig_fall_detected\);
+		q=>\Receive_Timer:TimerUDB:trig_disable\);
 
 END R_T_L;

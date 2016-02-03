@@ -80,6 +80,9 @@
   <file name="D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\codegentemp\Receive_Timer_PM.c" value="ARM_C_FILE;Receive_Timer" />
   <file name="D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\codegentemp\Clock_2.c" value="ARM_C_FILE;Clock_2" />
   <file name="D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\codegentemp\Clock_2.h" value="NONE;Clock_2" />
+  <file name="D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\codegentemp\LED1_aliases.h" value="NONE;LED1" />
+  <file name="D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\codegentemp\LED1.c" value="ARM_C_FILE;LED1" />
+  <file name="D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\codegentemp\LED1.h" value="NONE;LED1" />
   <file name="D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\codegentemp\USBUART_1_Dm_aliases.h" value="NONE;USBUART_1_Dm" />
   <file name="D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\codegentemp\USBUART_1_Dm.c" value="ARM_C_FILE;USBUART_1_Dm" />
   <file name="D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\codegentemp\USBUART_1_Dm.h" value="NONE;USBUART_1_Dm" />

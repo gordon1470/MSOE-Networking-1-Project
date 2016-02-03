@@ -46,6 +46,8 @@
 #include "ReceiveTimerIRQ.h"
 #include "Receive_Timer.h"
 #include "Clock_2.h"
+#include "LED1_aliases.h"
+#include "LED1.h"
 #include "USBUART_1_Dm_aliases.h"
 #include "USBUART_1_Dm.h"
 #include "USBUART_1_Dp_aliases.h"

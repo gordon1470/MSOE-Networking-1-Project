@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.327ms
+Loading plugins phase: Elapsed time ==> 0s.250ms
 Initializing data phase: Elapsed time ==> 0s.000ms
 <CYPRESSTAG name="CyDsfit arguments...">
 cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\USB_UART01.cyprj -d CY8C5868AXI-LP035 -s D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 2s.246ms
+Elaboration phase: Elapsed time ==> 2s.002ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.078ms
+HDL generation phase: Elapsed time ==> 0s.060ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -41,7 +41,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\MyDocs\Docu
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Mon Feb 01 11:20:42 2016
+Tue Feb 02 21:28:51 2016
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 USB_UART01.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Mon Feb 01 11:20:42 2016
+Tue Feb 02 21:28:51 2016
 
 Flattening file 'D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
 Flattening file 'D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v'
@@ -90,7 +90,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\MyDocs\Docu
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Mon Feb 01 11:20:42 2016
+Tue Feb 02 21:28:51 2016
 
 Linking 'D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -122,7 +122,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\MyDocs\Docu
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Mon Feb 01 11:20:42 2016
+Tue Feb 02 21:28:51 2016
 
 Linking 'D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -183,7 +183,10 @@ Detecting unused logic.
 	\Receive_Timer:Net_260\
 	Net_209
 	\Receive_Timer:Net_53\
+	\Receive_Timer:TimerUDB:ctrl_ten\
 	\Receive_Timer:TimerUDB:ctrl_cmode_0\
+	\Receive_Timer:TimerUDB:ctrl_tmode_1\
+	\Receive_Timer:TimerUDB:ctrl_tmode_0\
 	\Receive_Timer:TimerUDB:ctrl_ic_1\
 	\Receive_Timer:TimerUDB:ctrl_ic_0\
 	Net_208
@@ -193,7 +196,7 @@ Detecting unused logic.
 	\Receive_Timer:Net_266\
 
 
-Deleted 42 User equations/components.
+Deleted 45 User equations/components.
 Deleted 0 Synthesized equations/components.
 
 ------------------------------------------------------
@@ -209,7 +212,6 @@ Aliasing \LCD:tmpOE__LCDPort_net_2\ to \USBUART_1:tmpOE__Dm_net_0\
 Aliasing \LCD:tmpOE__LCDPort_net_1\ to \USBUART_1:tmpOE__Dm_net_0\
 Aliasing \LCD:tmpOE__LCDPort_net_0\ to \USBUART_1:tmpOE__Dm_net_0\
 Aliasing tmpOE__TX_pin_net_0 to \USBUART_1:tmpOE__Dm_net_0\
-Aliasing Net_202 to zero
 Aliasing Net_12 to zero
 Aliasing \Timer:TimerUDB:ctrl_cmode_1\ to zero
 Aliasing \Timer:TimerUDB:trigger_enable\ to \USBUART_1:tmpOE__Dm_net_0\
@@ -224,17 +226,16 @@ Aliasing tmpOE__LED4_net_0 to \USBUART_1:tmpOE__Dm_net_0\
 Aliasing tmpOE__LED3_net_0 to \USBUART_1:tmpOE__Dm_net_0\
 Aliasing tmpOE__LED2_net_0 to \USBUART_1:tmpOE__Dm_net_0\
 Aliasing \Receive_Timer:TimerUDB:ctrl_cmode_1\ to zero
-Aliasing \Receive_Timer:TimerUDB:ctrl_tmode_1\ to \USBUART_1:tmpOE__Dm_net_0\
-Aliasing \Receive_Timer:TimerUDB:ctrl_tmode_0\ to \USBUART_1:tmpOE__Dm_net_0\
+Aliasing \Receive_Timer:TimerUDB:trigger_enable\ to \USBUART_1:tmpOE__Dm_net_0\
 Aliasing \Receive_Timer:TimerUDB:status_6\ to zero
 Aliasing \Receive_Timer:TimerUDB:status_5\ to zero
 Aliasing \Receive_Timer:TimerUDB:status_4\ to zero
 Aliasing \Receive_Timer:TimerUDB:status_0\ to \Receive_Timer:TimerUDB:tc_i\
+Aliasing tmpOE__LED1_net_0 to \USBUART_1:tmpOE__Dm_net_0\
 Aliasing \Timer:TimerUDB:capture_last\\D\ to zero
 Aliasing \Timer:TimerUDB:hwEnable_reg\\D\ to \Timer:TimerUDB:run_mode\
 Aliasing \Timer:TimerUDB:capture_out_reg_i\\D\ to \Timer:TimerUDB:capt_fifo_load_int\
 Aliasing \Receive_Timer:TimerUDB:capture_last\\D\ to zero
-Aliasing \Receive_Timer:TimerUDB:hwEnable_reg\\D\ to \Receive_Timer:TimerUDB:run_mode\
 Aliasing \Receive_Timer:TimerUDB:capture_out_reg_i\\D\ to \Receive_Timer:TimerUDB:capt_fifo_load_int\
 Removing Rhs of wire one[37] = \USBUART_1:tmpOE__Dm_net_0\[31]
 Removing Lhs of wire \USBUART_1:tmpOE__Dp_net_0\[40] = one[37]
@@ -246,68 +247,65 @@ Removing Lhs of wire \LCD:tmpOE__LCDPort_net_2\[71] = one[37]
 Removing Lhs of wire \LCD:tmpOE__LCDPort_net_1\[72] = one[37]
 Removing Lhs of wire \LCD:tmpOE__LCDPort_net_0\[73] = one[37]
 Removing Lhs of wire tmpOE__TX_pin_net_0[91] = one[37]
-Removing Lhs of wire Net_202[96] = zero[32]
-Removing Lhs of wire Net_12[97] = zero[32]
-Removing Rhs of wire Net_81[99] = \Timer:Net_55\[100]
-Removing Lhs of wire \Timer:TimerUDB:ctrl_enable\[117] = \Timer:TimerUDB:control_7\[109]
-Removing Lhs of wire \Timer:TimerUDB:ctrl_cmode_1\[119] = zero[32]
-Removing Rhs of wire \Timer:TimerUDB:timer_enable\[128] = \Timer:TimerUDB:runmode_enable\[140]
-Removing Rhs of wire \Timer:TimerUDB:run_mode\[129] = \Timer:TimerUDB:hwEnable\[130]
-Removing Lhs of wire \Timer:TimerUDB:run_mode\[129] = \Timer:TimerUDB:control_7\[109]
-Removing Lhs of wire \Timer:TimerUDB:trigger_enable\[132] = one[37]
-Removing Lhs of wire \Timer:TimerUDB:tc_i\[134] = \Timer:TimerUDB:status_tc\[131]
-Removing Lhs of wire \Timer:TimerUDB:capt_fifo_load_int\[139] = \Timer:TimerUDB:capt_fifo_load\[127]
-Removing Lhs of wire \Timer:TimerUDB:status_6\[142] = zero[32]
-Removing Lhs of wire \Timer:TimerUDB:status_5\[143] = zero[32]
-Removing Lhs of wire \Timer:TimerUDB:status_4\[144] = zero[32]
-Removing Lhs of wire \Timer:TimerUDB:status_0\[145] = \Timer:TimerUDB:status_tc\[131]
-Removing Lhs of wire \Timer:TimerUDB:status_1\[146] = \Timer:TimerUDB:capt_fifo_load\[127]
-Removing Rhs of wire \Timer:TimerUDB:status_2\[147] = \Timer:TimerUDB:fifo_full\[148]
-Removing Rhs of wire \Timer:TimerUDB:status_3\[149] = \Timer:TimerUDB:fifo_nempty\[150]
-Removing Lhs of wire \Timer:TimerUDB:cs_addr_2\[152] = zero[32]
-Removing Lhs of wire \Timer:TimerUDB:cs_addr_1\[153] = \Timer:TimerUDB:trig_reg\[141]
-Removing Lhs of wire \Timer:TimerUDB:cs_addr_0\[154] = \Timer:TimerUDB:per_zero\[133]
-Removing Lhs of wire \Idle_Collision_Timer:Net_260\[241] = zero[32]
-Removing Lhs of wire \Idle_Collision_Timer:Net_266\[242] = one[37]
-Removing Rhs of wire Net_100[248] = \Idle_Collision_Timer:Net_51\[244]
-Removing Lhs of wire \Idle_Collision_Timer:Net_102\[249] = one[37]
-Removing Lhs of wire tmpOE__Receive_net_0[251] = one[37]
-Removing Lhs of wire tmpOE__LED4_net_0[259] = one[37]
-Removing Lhs of wire tmpOE__LED3_net_0[265] = one[37]
-Removing Lhs of wire tmpOE__LED2_net_0[271] = one[37]
-Removing Rhs of wire Net_203[277] = \Receive_Timer:Net_55\[279]
-Removing Lhs of wire \Receive_Timer:TimerUDB:ctrl_enable\[296] = \Receive_Timer:TimerUDB:control_7\[288]
-Removing Lhs of wire \Receive_Timer:TimerUDB:ctrl_ten\[297] = \Receive_Timer:TimerUDB:control_4\[291]
-Removing Lhs of wire \Receive_Timer:TimerUDB:ctrl_cmode_1\[298] = zero[32]
-Removing Lhs of wire \Receive_Timer:TimerUDB:ctrl_tmode_1\[300] = one[37]
-Removing Lhs of wire \Receive_Timer:TimerUDB:ctrl_tmode_0\[301] = one[37]
-Removing Rhs of wire \Receive_Timer:TimerUDB:timer_enable\[307] = \Receive_Timer:TimerUDB:runmode_enable\[319]
-Removing Rhs of wire \Receive_Timer:TimerUDB:run_mode\[308] = \Receive_Timer:TimerUDB:hwEnable\[309]
-Removing Lhs of wire \Receive_Timer:TimerUDB:run_mode\[308] = \Receive_Timer:TimerUDB:control_7\[288]
-Removing Lhs of wire \Receive_Timer:TimerUDB:tc_i\[313] = \Receive_Timer:TimerUDB:status_tc\[310]
-Removing Lhs of wire \Receive_Timer:TimerUDB:capt_fifo_load_int\[318] = \Receive_Timer:TimerUDB:capt_fifo_load\[306]
-Removing Lhs of wire \Receive_Timer:TimerUDB:status_6\[325] = zero[32]
-Removing Lhs of wire \Receive_Timer:TimerUDB:status_5\[326] = zero[32]
-Removing Lhs of wire \Receive_Timer:TimerUDB:status_4\[327] = zero[32]
-Removing Lhs of wire \Receive_Timer:TimerUDB:status_0\[328] = \Receive_Timer:TimerUDB:status_tc\[310]
-Removing Lhs of wire \Receive_Timer:TimerUDB:status_1\[329] = \Receive_Timer:TimerUDB:capt_fifo_load\[306]
-Removing Rhs of wire \Receive_Timer:TimerUDB:status_2\[330] = \Receive_Timer:TimerUDB:fifo_full\[331]
-Removing Rhs of wire \Receive_Timer:TimerUDB:status_3\[332] = \Receive_Timer:TimerUDB:fifo_nempty\[333]
-Removing Lhs of wire \Receive_Timer:TimerUDB:cs_addr_2\[335] = zero[32]
-Removing Lhs of wire \Receive_Timer:TimerUDB:cs_addr_1\[336] = \Receive_Timer:TimerUDB:trig_reg\[324]
-Removing Lhs of wire \Receive_Timer:TimerUDB:cs_addr_0\[337] = \Receive_Timer:TimerUDB:per_zero\[312]
-Removing Lhs of wire \Timer:TimerUDB:capture_last\\D\[421] = zero[32]
-Removing Lhs of wire \Timer:TimerUDB:tc_reg_i\\D\[422] = \Timer:TimerUDB:status_tc\[131]
-Removing Lhs of wire \Timer:TimerUDB:hwEnable_reg\\D\[423] = \Timer:TimerUDB:control_7\[109]
-Removing Lhs of wire \Timer:TimerUDB:capture_out_reg_i\\D\[424] = \Timer:TimerUDB:capt_fifo_load\[127]
-Removing Lhs of wire \Receive_Timer:TimerUDB:capture_last\\D\[425] = zero[32]
-Removing Lhs of wire \Receive_Timer:TimerUDB:tc_reg_i\\D\[426] = \Receive_Timer:TimerUDB:status_tc\[310]
-Removing Lhs of wire \Receive_Timer:TimerUDB:hwEnable_reg\\D\[427] = \Receive_Timer:TimerUDB:control_7\[288]
-Removing Lhs of wire \Receive_Timer:TimerUDB:capture_out_reg_i\\D\[428] = \Receive_Timer:TimerUDB:capt_fifo_load\[306]
-Removing Lhs of wire \Receive_Timer:TimerUDB:trig_last\\D\[429] = Net_201[243]
+Removing Lhs of wire Net_12[96] = zero[32]
+Removing Rhs of wire Net_81[98] = \Timer:Net_55\[99]
+Removing Lhs of wire \Timer:TimerUDB:ctrl_enable\[116] = \Timer:TimerUDB:control_7\[108]
+Removing Lhs of wire \Timer:TimerUDB:ctrl_cmode_1\[118] = zero[32]
+Removing Rhs of wire \Timer:TimerUDB:timer_enable\[127] = \Timer:TimerUDB:runmode_enable\[139]
+Removing Rhs of wire \Timer:TimerUDB:run_mode\[128] = \Timer:TimerUDB:hwEnable\[129]
+Removing Lhs of wire \Timer:TimerUDB:run_mode\[128] = \Timer:TimerUDB:control_7\[108]
+Removing Lhs of wire \Timer:TimerUDB:trigger_enable\[131] = one[37]
+Removing Lhs of wire \Timer:TimerUDB:tc_i\[133] = \Timer:TimerUDB:status_tc\[130]
+Removing Lhs of wire \Timer:TimerUDB:capt_fifo_load_int\[138] = \Timer:TimerUDB:capt_fifo_load\[126]
+Removing Lhs of wire \Timer:TimerUDB:status_6\[141] = zero[32]
+Removing Lhs of wire \Timer:TimerUDB:status_5\[142] = zero[32]
+Removing Lhs of wire \Timer:TimerUDB:status_4\[143] = zero[32]
+Removing Lhs of wire \Timer:TimerUDB:status_0\[144] = \Timer:TimerUDB:status_tc\[130]
+Removing Lhs of wire \Timer:TimerUDB:status_1\[145] = \Timer:TimerUDB:capt_fifo_load\[126]
+Removing Rhs of wire \Timer:TimerUDB:status_2\[146] = \Timer:TimerUDB:fifo_full\[147]
+Removing Rhs of wire \Timer:TimerUDB:status_3\[148] = \Timer:TimerUDB:fifo_nempty\[149]
+Removing Lhs of wire \Timer:TimerUDB:cs_addr_2\[151] = zero[32]
+Removing Lhs of wire \Timer:TimerUDB:cs_addr_1\[152] = \Timer:TimerUDB:trig_reg\[140]
+Removing Lhs of wire \Timer:TimerUDB:cs_addr_0\[153] = \Timer:TimerUDB:per_zero\[132]
+Removing Lhs of wire \Idle_Collision_Timer:Net_260\[240] = zero[32]
+Removing Lhs of wire \Idle_Collision_Timer:Net_266\[241] = one[37]
+Removing Rhs of wire Net_100[247] = \Idle_Collision_Timer:Net_51\[243]
+Removing Lhs of wire \Idle_Collision_Timer:Net_102\[248] = one[37]
+Removing Lhs of wire tmpOE__Receive_net_0[250] = one[37]
+Removing Lhs of wire tmpOE__LED4_net_0[258] = one[37]
+Removing Lhs of wire tmpOE__LED3_net_0[264] = one[37]
+Removing Lhs of wire tmpOE__LED2_net_0[270] = one[37]
+Removing Rhs of wire Net_203[276] = \Receive_Timer:Net_55\[278]
+Removing Lhs of wire \Receive_Timer:TimerUDB:ctrl_enable\[295] = \Receive_Timer:TimerUDB:control_7\[287]
+Removing Lhs of wire \Receive_Timer:TimerUDB:ctrl_cmode_1\[297] = zero[32]
+Removing Rhs of wire \Receive_Timer:TimerUDB:timer_enable\[306] = \Receive_Timer:TimerUDB:runmode_enable\[318]
+Removing Rhs of wire \Receive_Timer:TimerUDB:run_mode\[307] = \Receive_Timer:TimerUDB:hwEnable_reg\[308]
+Removing Lhs of wire \Receive_Timer:TimerUDB:trigger_enable\[310] = one[37]
+Removing Lhs of wire \Receive_Timer:TimerUDB:tc_i\[312] = \Receive_Timer:TimerUDB:status_tc\[309]
+Removing Lhs of wire \Receive_Timer:TimerUDB:hwEnable\[314] = \Receive_Timer:TimerUDB:control_7\[287]
+Removing Lhs of wire \Receive_Timer:TimerUDB:capt_fifo_load_int\[317] = \Receive_Timer:TimerUDB:capt_fifo_load\[305]
+Removing Lhs of wire \Receive_Timer:TimerUDB:status_6\[321] = zero[32]
+Removing Lhs of wire \Receive_Timer:TimerUDB:status_5\[322] = zero[32]
+Removing Lhs of wire \Receive_Timer:TimerUDB:status_4\[323] = zero[32]
+Removing Lhs of wire \Receive_Timer:TimerUDB:status_0\[324] = \Receive_Timer:TimerUDB:status_tc\[309]
+Removing Lhs of wire \Receive_Timer:TimerUDB:status_1\[325] = \Receive_Timer:TimerUDB:capt_fifo_load\[305]
+Removing Rhs of wire \Receive_Timer:TimerUDB:status_2\[326] = \Receive_Timer:TimerUDB:fifo_full\[327]
+Removing Rhs of wire \Receive_Timer:TimerUDB:status_3\[328] = \Receive_Timer:TimerUDB:fifo_nempty\[329]
+Removing Lhs of wire \Receive_Timer:TimerUDB:cs_addr_2\[331] = Net_201[242]
+Removing Lhs of wire \Receive_Timer:TimerUDB:cs_addr_1\[332] = \Receive_Timer:TimerUDB:trig_reg\[320]
+Removing Lhs of wire \Receive_Timer:TimerUDB:cs_addr_0\[333] = \Receive_Timer:TimerUDB:per_zero\[311]
+Removing Lhs of wire tmpOE__LED1_net_0[418] = one[37]
+Removing Lhs of wire \Timer:TimerUDB:capture_last\\D\[423] = zero[32]
+Removing Lhs of wire \Timer:TimerUDB:tc_reg_i\\D\[424] = \Timer:TimerUDB:status_tc\[130]
+Removing Lhs of wire \Timer:TimerUDB:hwEnable_reg\\D\[425] = \Timer:TimerUDB:control_7\[108]
+Removing Lhs of wire \Timer:TimerUDB:capture_out_reg_i\\D\[426] = \Timer:TimerUDB:capt_fifo_load\[126]
+Removing Lhs of wire \Receive_Timer:TimerUDB:capture_last\\D\[427] = zero[32]
+Removing Lhs of wire \Receive_Timer:TimerUDB:hwEnable_reg\\D\[428] = \Receive_Timer:TimerUDB:control_7\[287]
+Removing Lhs of wire \Receive_Timer:TimerUDB:tc_reg_i\\D\[429] = \Receive_Timer:TimerUDB:status_tc\[309]
+Removing Lhs of wire \Receive_Timer:TimerUDB:capture_out_reg_i\\D\[430] = \Receive_Timer:TimerUDB:capt_fifo_load\[305]
 
 ------------------------------------------------------
-Aliased 0 equations, 69 wires.
+Aliased 0 equations, 66 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -331,32 +329,17 @@ Note:  Expanding virtual equation for '\Timer:TimerUDB:timer_enable\' (cost = 0)
 Note:  Expanding virtual equation for '\Receive_Timer:TimerUDB:fifo_load_polarized\' (cost = 0):
 \Receive_Timer:TimerUDB:fifo_load_polarized\ <=  ('0') ;
 
-Note:  Expanding virtual equation for '\Receive_Timer:TimerUDB:trigger_polarized\' (cost = 2):
-\Receive_Timer:TimerUDB:trigger_polarized\ <= (\Receive_Timer:TimerUDB:trig_fall_detected\
-	OR \Receive_Timer:TimerUDB:trig_rise_detected\);
+Note:  Expanding virtual equation for '\Receive_Timer:TimerUDB:status_tc\' (cost = 3):
+\Receive_Timer:TimerUDB:status_tc\ <= ((\Receive_Timer:TimerUDB:run_mode\ and \Receive_Timer:TimerUDB:per_zero\));
 
 
 Substituting virtuals - pass 2:
-
-Note:  Expanding virtual equation for '\Receive_Timer:TimerUDB:trigger_enable\' (cost = 6):
-\Receive_Timer:TimerUDB:trigger_enable\ <= ((\Receive_Timer:TimerUDB:control_4\ and \Receive_Timer:TimerUDB:trig_fall_detected\)
-	OR (\Receive_Timer:TimerUDB:control_4\ and \Receive_Timer:TimerUDB:trig_rise_detected\));
-
-
-Substituting virtuals - pass 3:
-
-Note:  Expanding virtual equation for '\Receive_Timer:TimerUDB:timer_enable\' (cost = 4):
-\Receive_Timer:TimerUDB:timer_enable\ <= ((\Receive_Timer:TimerUDB:control_7\ and \Receive_Timer:TimerUDB:control_4\ and \Receive_Timer:TimerUDB:trig_fall_detected\)
-	OR (\Receive_Timer:TimerUDB:control_7\ and \Receive_Timer:TimerUDB:control_4\ and \Receive_Timer:TimerUDB:trig_rise_detected\));
-
-
-Substituting virtuals - pass 4:
 
 
 ----------------------------------------------------------
 Circuit simplification results:
 
-	Expanded 8 signals.
+	Expanded 6 signals.
 	Turned 0 signals into soft nodes.
 	Maximum default expansion cost was set at 3.
 ----------------------------------------------------------
@@ -366,12 +349,13 @@ Alias Detection
 ------------------------------------------------------
 Aliasing \Timer:TimerUDB:capt_fifo_load\ to zero
 Aliasing \Receive_Timer:TimerUDB:capt_fifo_load\ to zero
-Removing Lhs of wire \Timer:TimerUDB:capt_fifo_load\[127] = zero[32]
-Removing Lhs of wire \Timer:TimerUDB:trig_reg\[141] = \Timer:TimerUDB:control_7\[109]
-Removing Lhs of wire \Receive_Timer:TimerUDB:capt_fifo_load\[306] = zero[32]
+Removing Lhs of wire \Timer:TimerUDB:capt_fifo_load\[126] = zero[32]
+Removing Lhs of wire \Timer:TimerUDB:trig_reg\[140] = \Timer:TimerUDB:control_7\[108]
+Removing Lhs of wire \Receive_Timer:TimerUDB:capt_fifo_load\[305] = zero[32]
+Removing Lhs of wire \Receive_Timer:TimerUDB:trig_reg\[320] = \Receive_Timer:TimerUDB:timer_enable\[306]
 
 ------------------------------------------------------
-Aliased 0 equations, 3 wires.
+Aliased 0 equations, 4 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -401,14 +385,14 @@ CYPRESS_DIR    : D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp
 Warp Program   : D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
 Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\USB_UART01.cyprj -dcpsoc3 USB_UART01.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 0s.972ms
+Warp synthesis phase: Elapsed time ==> 0s.860ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V3.3.0.410, Family: PSoC3, Started at: Monday, 01 February 2016 11:20:43
+cyp3fit: V3.3.0.410, Family: PSoC3, Started at: Tuesday, 02 February 2016 21:28:51
 Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\USB_UART01.cyprj -d CY8C5868AXI-LP035 USB_UART01.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.031ms
+Design parsing phase: Elapsed time ==> 0s.010ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -1005,6 +989,45 @@ Design Equations
         Properties:
         {
         }
+
+    Pin : Name = LED1(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilitites: DIGITAL
+            Initial Value: 0
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => LED1(0)__PA ,
+            pad => LED1(0)_PAD );
+        Properties:
+        {
+        }
     </CYPRESSTAG>
     <CYPRESSTAG name="Macrocell listing" icon="FILE_RPT_EQUATION">
 
@@ -1023,36 +1046,15 @@ Design Equations
         Output = \Timer:TimerUDB:status_tc\ (fanout=1)
 
     MacroCell: Name=\Receive_Timer:TimerUDB:status_tc\, Mode=(Combinatorial)
-        Total # of inputs        : 5
-        Total # of product terms : 2
+        Total # of inputs        : 2
+        Total # of product terms : 1
             Clock Enable: True
-        Main Equation            : 2 pterms
+        Main Equation            : 1 pterm
         (
-              \Receive_Timer:TimerUDB:control_7\ * 
-              \Receive_Timer:TimerUDB:control_4\ * 
-              \Receive_Timer:TimerUDB:per_zero\ * 
-              \Receive_Timer:TimerUDB:trig_rise_detected\
-            + \Receive_Timer:TimerUDB:control_7\ * 
-              \Receive_Timer:TimerUDB:control_4\ * 
-              \Receive_Timer:TimerUDB:per_zero\ * 
-              \Receive_Timer:TimerUDB:trig_fall_detected\
+              \Receive_Timer:TimerUDB:run_mode\ * 
+              \Receive_Timer:TimerUDB:per_zero\
         );
         Output = \Receive_Timer:TimerUDB:status_tc\ (fanout=1)
-
-    MacroCell: Name=\Receive_Timer:TimerUDB:trig_reg\, Mode=(Combinatorial)
-        Total # of inputs        : 4
-        Total # of product terms : 2
-            Clock Enable: True
-        Main Equation            : 2 pterms
-        (
-              \Receive_Timer:TimerUDB:control_7\ * 
-              \Receive_Timer:TimerUDB:control_4\ * 
-              \Receive_Timer:TimerUDB:trig_rise_detected\
-            + \Receive_Timer:TimerUDB:control_7\ * 
-              \Receive_Timer:TimerUDB:control_4\ * 
-              \Receive_Timer:TimerUDB:trig_fall_detected\
-        );
-        Output = \Receive_Timer:TimerUDB:trig_reg\ (fanout=2)
 
     MacroCell: Name=__ONE__, Mode=(Combinatorial)
         Total # of inputs        : 0
@@ -1064,7 +1066,7 @@ Design Equations
         );
         Output = __ONE__ (fanout=1)
 
-    MacroCell: Name=\Receive_Timer:TimerUDB:trig_last\, Mode=(D-Register)
+    MacroCell: Name=\Receive_Timer:TimerUDB:run_mode\, Mode=(D-Register)
         Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
@@ -1072,43 +1074,44 @@ Design Equations
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              Net_201
+              \Receive_Timer:TimerUDB:control_7\
         );
-        Output = \Receive_Timer:TimerUDB:trig_last\ (fanout=2)
+        Output = \Receive_Timer:TimerUDB:run_mode\ (fanout=3)
 
-    MacroCell: Name=\Receive_Timer:TimerUDB:trig_rise_detected\, Mode=(D-Register)
-        Total # of inputs        : 5
-        Total # of product terms : 2
+    MacroCell: Name=\Receive_Timer:TimerUDB:timer_enable\, Mode=(D-Register)
+        Total # of inputs        : 6
+        Total # of product terms : 3
         List of special equations: 
             Clock  = (Net_204) => Global
             Clock Enable: True
-        Main Equation            : 2 pterms
-        (
-              Net_201 * \Receive_Timer:TimerUDB:control_7\ * 
-              \Receive_Timer:TimerUDB:control_4\ * 
-              !\Receive_Timer:TimerUDB:trig_last\
-            + \Receive_Timer:TimerUDB:control_7\ * 
-              \Receive_Timer:TimerUDB:control_4\ * 
-              \Receive_Timer:TimerUDB:trig_rise_detected\
-        );
-        Output = \Receive_Timer:TimerUDB:trig_rise_detected\ (fanout=3)
-
-    MacroCell: Name=\Receive_Timer:TimerUDB:trig_fall_detected\, Mode=(D-Register)
-        Total # of inputs        : 5
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (Net_204) => Global
-            Clock Enable: True
-        Main Equation            : 2 pterms
+        Main Equation            : 3 pterms
         (
               !Net_201 * \Receive_Timer:TimerUDB:control_7\ * 
-              \Receive_Timer:TimerUDB:control_4\ * 
-              \Receive_Timer:TimerUDB:trig_last\
-            + \Receive_Timer:TimerUDB:control_7\ * 
-              \Receive_Timer:TimerUDB:control_4\ * 
-              \Receive_Timer:TimerUDB:trig_fall_detected\
+              !\Receive_Timer:TimerUDB:timer_enable\ * 
+              !\Receive_Timer:TimerUDB:trig_disable\
+            + !Net_201 * \Receive_Timer:TimerUDB:control_7\ * 
+              !\Receive_Timer:TimerUDB:run_mode\ * 
+              !\Receive_Timer:TimerUDB:trig_disable\
+            + !Net_201 * \Receive_Timer:TimerUDB:control_7\ * 
+              !\Receive_Timer:TimerUDB:per_zero\ * 
+              !\Receive_Timer:TimerUDB:trig_disable\
         );
-        Output = \Receive_Timer:TimerUDB:trig_fall_detected\ (fanout=3)
+        Output = \Receive_Timer:TimerUDB:timer_enable\ (fanout=4)
+
+    MacroCell: Name=\Receive_Timer:TimerUDB:trig_disable\, Mode=(D-Register)
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_204) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !Net_201 * \Receive_Timer:TimerUDB:timer_enable\ * 
+              \Receive_Timer:TimerUDB:run_mode\ * 
+              \Receive_Timer:TimerUDB:per_zero\
+            + !Net_201 * \Receive_Timer:TimerUDB:trig_disable\
+        );
+        Output = \Receive_Timer:TimerUDB:trig_disable\ (fanout=2)
     </CYPRESSTAG>
     <CYPRESSTAG name="Datapath listing">
 
@@ -1190,7 +1193,8 @@ Design Equations
     datapathcell: Name =\Receive_Timer:TimerUDB:sT16:timerdp:u0\
         PORT MAP (
             clock => Net_204 ,
-            cs_addr_1 => \Receive_Timer:TimerUDB:trig_reg\ ,
+            cs_addr_2 => Net_201 ,
+            cs_addr_1 => \Receive_Timer:TimerUDB:timer_enable\ ,
             cs_addr_0 => \Receive_Timer:TimerUDB:per_zero\ ,
             chain_out => \Receive_Timer:TimerUDB:sT16:timerdp:carry\ );
         Properties:
@@ -1224,7 +1228,8 @@ Design Equations
     datapathcell: Name =\Receive_Timer:TimerUDB:sT16:timerdp:u1\
         PORT MAP (
             clock => Net_204 ,
-            cs_addr_1 => \Receive_Timer:TimerUDB:trig_reg\ ,
+            cs_addr_2 => Net_201 ,
+            cs_addr_1 => \Receive_Timer:TimerUDB:timer_enable\ ,
             cs_addr_0 => \Receive_Timer:TimerUDB:per_zero\ ,
             z0_comb => \Receive_Timer:TimerUDB:per_zero\ ,
             f0_bus_stat_comb => \Receive_Timer:TimerUDB:status_3\ ,
@@ -1284,6 +1289,7 @@ Design Equations
 
     statusicell: Name =\Receive_Timer:TimerUDB:rstSts:stsreg\
         PORT MAP (
+            reset => Net_201 ,
             clock => Net_204 ,
             status_3 => \Receive_Timer:TimerUDB:status_3\ ,
             status_2 => \Receive_Timer:TimerUDB:status_2\ ,
@@ -1478,7 +1484,7 @@ Analog Clocks                 :    0 :    4 :    4 :  0.00 %
 CapSense Buffers              :    0 :    2 :    2 :  0.00 %
 Digital Filter Block          :    0 :    1 :    1 :  0.00 %
 Interrupts                    :   13 :   19 :   32 : 40.63 %
-IO                            :   18 :   54 :   72 : 25.00 %
+IO                            :   19 :   53 :   72 : 26.39 %
 Segment LCD                   :    0 :    1 :    1 :  0.00 %
 CAN 2.0b                      :    0 :    1 :    1 :  0.00 %
 I2C                           :    0 :    1 :    1 :  0.00 %
@@ -1486,9 +1492,9 @@ USB                           :    1 :    0 :    1 : 100.00 %
 DMA Channels                  :    0 :   24 :   24 :  0.00 %
 Timer                         :    1 :    3 :    4 : 25.00 %
 UDB                           :      :      :      :        
-  Macrocells                  :    7 :  185 :  192 :  3.65 %
+  Macrocells                  :    6 :  186 :  192 :  3.13 %
   Unique P-terms              :    8 :  376 :  384 :  2.08 %
-  Total P-terms               :   10 :      :      :        
+  Total P-terms               :    8 :      :      :        
   Datapath Cells              :    4 :   20 :   24 : 16.67 %
   Status Cells                :    2 :   22 :   24 :  8.33 %
     StatusI Registers         :    2 :      :      :        
@@ -1503,11 +1509,12 @@ Analog (SC/CT) Blocks         :    0 :    4 :    4 :  0.00 %
 DAC                           :      :      :      :        
   VIDAC                       :    0 :    4 :    4 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.078ms
-Tech mapping phase: Elapsed time ==> 0s.156ms
+Technology Mapping: Elapsed time ==> 0s.060ms
+Tech mapping phase: Elapsed time ==> 0s.140ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 Initial Analog Placement Results:
+IO_0@[IOP=(0)][IoId=(0)] : LED1(0) (fixed)
 IO_7@[IOP=(0)][IoId=(7)] : LED2(0) (fixed)
 IO_2@[IOP=(6)][IoId=(2)] : LED3(0) (fixed)
 IO_3@[IOP=(6)][IoId=(3)] : LED4(0) (fixed)
@@ -1523,7 +1530,7 @@ IO_6@[IOP=(2)][IoId=(6)] : \LCD:LCDPort(6)\ (fixed)
 IO_7@[IOP=(15)][IoId=(7)] : \USBUART_1:Dm(0)\ (fixed)
 IO_6@[IOP=(15)][IoId=(6)] : \USBUART_1:Dp(0)\ (fixed)
 USB[0]@[FFB(USB,0)] : \USBUART_1:USB\
-Analog Placement phase: Elapsed time ==> 0s.046ms
+Analog Placement phase: Elapsed time ==> 0s.030ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 Analog Routing phase: Elapsed time ==> 0s.000ms
@@ -1541,11 +1548,11 @@ Dump of CyP35AnalogRoutingResultsDB
 IsVddaHalfUsedForComp = False
 IsVddaHalfUsedForSar0 = False
 IsVddaHalfUsedForSar1 = False
-Analog Code Generation phase: Elapsed time ==> 0s.499ms
+Analog Code Generation phase: Elapsed time ==> 0s.410ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
-I2076: Total run-time: 0.8 sec.
+I2076: Total run-time: 0.7 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -1556,15 +1563,15 @@ PLD Packing Summary
 ------------------------------------------------------------
             Resource Type : Used : Free :  Max :  % Used
     ====================================================
-                     PLDs :    4 :   44 :   48 :   8.33%
+                     PLDs :    3 :   45 :   48 :   6.25%
 
 <CYPRESSTAG name="PLD Statistics">
 
         PLD Resource Type :     Average/LAB
     =======================================
-                   Inputs :            2.50
-                   Pterms :            2.00
-               Macrocells :            1.75
+                   Inputs :            2.67
+                   Pterms :            2.67
+               Macrocells :            2.00
 </CYPRESSTAG>
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
@@ -1576,13 +1583,13 @@ PLD Packing: Elapsed time ==> 0s.000ms
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.046ms
+Partitioning: Elapsed time ==> 0s.040ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Simulated Annealing">
 Annealing: Elapsed time ==> 0s.000ms
 <CYPRESSTAG name="Simulated Annealing Results">
 The seed used for moves was 114161200.
-Inital cost was 240, final cost is 240 (0.00% improvement).</CYPRESSTAG>
+Inital cost was 244, final cost is 244 (0.00% improvement).</CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -1592,7 +1599,7 @@ Final Placement Summary
 
        Resource Type :      Count : Avg Inputs : Avg Outputs
     ========================================================
-                 UDB :          5 :       1.80 :       1.40
+                 UDB :          5 :       1.60 :       1.20
 <CYPRESSTAG name="Final Placement Details">
 <CYPRESSTAG name="Component Details">
 
@@ -1662,7 +1669,8 @@ UDB [UDB=(0,5)] contents:
 datapathcell: Name =\Receive_Timer:TimerUDB:sT16:timerdp:u0\
     PORT MAP (
         clock => Net_204 ,
-        cs_addr_1 => \Receive_Timer:TimerUDB:trig_reg\ ,
+        cs_addr_2 => Net_201 ,
+        cs_addr_1 => \Receive_Timer:TimerUDB:timer_enable\ ,
         cs_addr_0 => \Receive_Timer:TimerUDB:per_zero\ ,
         chain_out => \Receive_Timer:TimerUDB:sT16:timerdp:carry\ );
     Properties:
@@ -1794,47 +1802,32 @@ controlcell: Name =\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\
 
 UDB [UDB=(1,4)] is empty.
 UDB [UDB=(1,5)] contents:
-LAB@[UDB=(1,5)][LB=0] #macrocells=4, #inputs=7, #pterms=6
+LAB@[UDB=(1,5)][LB=0] #macrocells=4, #inputs=6, #pterms=7
 {
-    [McSlotId=0]:     MacroCell: Name=\Receive_Timer:TimerUDB:trig_reg\, Mode=(Combinatorial) @ [UDB=(1,5)][LB=0][MC=0]
-        Total # of inputs        : 4
-        Total # of product terms : 2
-            Clock Enable: True
-        Main Equation            : 2 pterms
-        (
-              \Receive_Timer:TimerUDB:control_7\ * 
-              \Receive_Timer:TimerUDB:control_4\ * 
-              \Receive_Timer:TimerUDB:trig_rise_detected\
-            + \Receive_Timer:TimerUDB:control_7\ * 
-              \Receive_Timer:TimerUDB:control_4\ * 
-              \Receive_Timer:TimerUDB:trig_fall_detected\
-        );
-        Output = \Receive_Timer:TimerUDB:trig_reg\ (fanout=2)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\Receive_Timer:TimerUDB:trig_fall_detected\, Mode=(D-Register) @ [UDB=(1,5)][LB=0][MC=1]
-        Total # of inputs        : 5
-        Total # of product terms : 2
+    [McSlotId=0]:     MacroCell: Name=\Receive_Timer:TimerUDB:timer_enable\, Mode=(D-Register) @ [UDB=(1,5)][LB=0][MC=0]
+        Total # of inputs        : 6
+        Total # of product terms : 3
         List of special equations: 
             Clock  = (Net_204) => Global
             Clock Enable: True
-        Main Equation            : 2 pterms
+        Main Equation            : 3 pterms
         (
               !Net_201 * \Receive_Timer:TimerUDB:control_7\ * 
-              \Receive_Timer:TimerUDB:control_4\ * 
-              \Receive_Timer:TimerUDB:trig_last\
-            + \Receive_Timer:TimerUDB:control_7\ * 
-              \Receive_Timer:TimerUDB:control_4\ * 
-              \Receive_Timer:TimerUDB:trig_fall_detected\
+              !\Receive_Timer:TimerUDB:timer_enable\ * 
+              !\Receive_Timer:TimerUDB:trig_disable\
+            + !Net_201 * \Receive_Timer:TimerUDB:control_7\ * 
+              !\Receive_Timer:TimerUDB:run_mode\ * 
+              !\Receive_Timer:TimerUDB:trig_disable\
+            + !Net_201 * \Receive_Timer:TimerUDB:control_7\ * 
+              !\Receive_Timer:TimerUDB:per_zero\ * 
+              !\Receive_Timer:TimerUDB:trig_disable\
         );
-        Output = \Receive_Timer:TimerUDB:trig_fall_detected\ (fanout=3)
+        Output = \Receive_Timer:TimerUDB:timer_enable\ (fanout=4)
         Properties               : 
         {
         }
 
-    [McSlotId=2]:     MacroCell: Name=\Receive_Timer:TimerUDB:trig_rise_detected\, Mode=(D-Register) @ [UDB=(1,5)][LB=0][MC=2]
+    [McSlotId=1]:     MacroCell: Name=\Receive_Timer:TimerUDB:trig_disable\, Mode=(D-Register) @ [UDB=(1,5)][LB=0][MC=1]
         Total # of inputs        : 5
         Total # of product terms : 2
         List of special equations: 
@@ -1842,42 +1835,17 @@ LAB@[UDB=(1,5)][LB=0] #macrocells=4, #inputs=7, #pterms=6
             Clock Enable: True
         Main Equation            : 2 pterms
         (
-              Net_201 * \Receive_Timer:TimerUDB:control_7\ * 
-              \Receive_Timer:TimerUDB:control_4\ * 
-              !\Receive_Timer:TimerUDB:trig_last\
-            + \Receive_Timer:TimerUDB:control_7\ * 
-              \Receive_Timer:TimerUDB:control_4\ * 
-              \Receive_Timer:TimerUDB:trig_rise_detected\
+              !Net_201 * \Receive_Timer:TimerUDB:timer_enable\ * 
+              \Receive_Timer:TimerUDB:run_mode\ * 
+              \Receive_Timer:TimerUDB:per_zero\
+            + !Net_201 * \Receive_Timer:TimerUDB:trig_disable\
         );
-        Output = \Receive_Timer:TimerUDB:trig_rise_detected\ (fanout=3)
+        Output = \Receive_Timer:TimerUDB:trig_disable\ (fanout=2)
         Properties               : 
         {
         }
 
-    [McSlotId=3]:     MacroCell: Name=\Receive_Timer:TimerUDB:status_tc\, Mode=(Combinatorial) @ [UDB=(1,5)][LB=0][MC=3]
-        Total # of inputs        : 5
-        Total # of product terms : 2
-            Clock Enable: True
-        Main Equation            : 2 pterms
-        (
-              \Receive_Timer:TimerUDB:control_7\ * 
-              \Receive_Timer:TimerUDB:control_4\ * 
-              \Receive_Timer:TimerUDB:per_zero\ * 
-              \Receive_Timer:TimerUDB:trig_rise_detected\
-            + \Receive_Timer:TimerUDB:control_7\ * 
-              \Receive_Timer:TimerUDB:control_4\ * 
-              \Receive_Timer:TimerUDB:per_zero\ * 
-              \Receive_Timer:TimerUDB:trig_fall_detected\
-        );
-        Output = \Receive_Timer:TimerUDB:status_tc\ (fanout=1)
-        Properties               : 
-        {
-        }
-}
-
-LAB@[UDB=(1,5)][LB=1] #macrocells=1, #inputs=1, #pterms=1
-{
-    [McSlotId=0]:     MacroCell: Name=\Receive_Timer:TimerUDB:trig_last\, Mode=(D-Register) @ [UDB=(1,5)][LB=1][MC=0]
+    [McSlotId=2]:     MacroCell: Name=\Receive_Timer:TimerUDB:run_mode\, Mode=(D-Register) @ [UDB=(1,5)][LB=0][MC=2]
         Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
@@ -1885,22 +1853,33 @@ LAB@[UDB=(1,5)][LB=1] #macrocells=1, #inputs=1, #pterms=1
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              Net_201
+              \Receive_Timer:TimerUDB:control_7\
         );
-        Output = \Receive_Timer:TimerUDB:trig_last\ (fanout=2)
+        Output = \Receive_Timer:TimerUDB:run_mode\ (fanout=3)
         Properties               : 
         {
         }
 
-    [McSlotId=1]: (empty)
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\Receive_Timer:TimerUDB:status_tc\, Mode=(Combinatorial) @ [UDB=(1,5)][LB=0][MC=3]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \Receive_Timer:TimerUDB:run_mode\ * 
+              \Receive_Timer:TimerUDB:per_zero\
+        );
+        Output = \Receive_Timer:TimerUDB:status_tc\ (fanout=1)
+        Properties               : 
+        {
+        }
 }
 
 datapathcell: Name =\Receive_Timer:TimerUDB:sT16:timerdp:u1\
     PORT MAP (
         clock => Net_204 ,
-        cs_addr_1 => \Receive_Timer:TimerUDB:trig_reg\ ,
+        cs_addr_2 => Net_201 ,
+        cs_addr_1 => \Receive_Timer:TimerUDB:timer_enable\ ,
         cs_addr_0 => \Receive_Timer:TimerUDB:per_zero\ ,
         z0_comb => \Receive_Timer:TimerUDB:per_zero\ ,
         f0_bus_stat_comb => \Receive_Timer:TimerUDB:status_3\ ,
@@ -1936,6 +1915,7 @@ datapathcell: Name =\Receive_Timer:TimerUDB:sT16:timerdp:u1\
 
 statusicell: Name =\Receive_Timer:TimerUDB:rstSts:stsreg\
     PORT MAP (
+        reset => Net_201 ,
         clock => Net_204 ,
         status_3 => \Receive_Timer:TimerUDB:status_3\ ,
         status_2 => \Receive_Timer:TimerUDB:status_2\ ,
@@ -2091,6 +2071,46 @@ Intr container @ [IntrContainer=(0)]:
         }
 Drq container @ [DrqContainer=(0)]: empty
 Port 0 contains the following IO cells:
+[IoId=0]: 
+Pin : Name = LED1(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => LED1(0)__PA ,
+        pad => LED1(0)_PAD );
+    Properties:
+    {
+    }
+
 [IoId=7]: 
 Pin : Name = LED2(0)
     Attributes:
@@ -2894,7 +2914,8 @@ Port Configuration report
      |     |       | Interrupt |                  |                   | 
 Port | Pin | Fixed |      Type |       Drive Mode |              Name | Connections
 -----+-----+-------+-----------+------------------+-------------------+-----------------------------
-   0 |   7 |     * |      NONE |         CMOS_OUT |           LED2(0) | 
+   0 |   0 |     * |      NONE |         CMOS_OUT |           LED1(0) | 
+     |   7 |     * |      NONE |         CMOS_OUT |           LED2(0) | 
 -----+-----+-------+-----------+------------------+-------------------+-----------------------------
    2 |   0 |     * |      NONE |         CMOS_OUT |  \LCD:LCDPort(0)\ | 
      |   1 |     * |      NONE |         CMOS_OUT |  \LCD:LCDPort(1)\ | 
@@ -2917,34 +2938,34 @@ Port | Pin | Fixed |      Type |       Drive Mode |              Name | Connecti
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.015ms
-Digital Placement phase: Elapsed time ==> 1s.185ms
+Digital component placer commit/Report: Elapsed time ==> 0s.000ms
+Digital Placement phase: Elapsed time ==> 1s.011ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 Routing successful.
-Digital Routing phase: Elapsed time ==> 1s.918ms
+Digital Routing phase: Elapsed time ==> 1s.466ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream and API generation">
-Bitstream and API generation phase: Elapsed time ==> 0s.265ms
+Bitstream and API generation phase: Elapsed time ==> 0s.240ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream verification">
-Bitstream verification phase: Elapsed time ==> 0s.046ms
+Bitstream verification phase: Elapsed time ==> 0s.040ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Warning: sta.M0019: USB_UART01_timing.html: Warning-1366: Setup time violation found in a path from clock ( Clock_2 ) to clock ( Clock_2 ). (File=D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\USB_UART01_timing.html)
 Warning: sta.M0019: USB_UART01_timing.html: Warning-1366: Setup time violation found in a path from clock ( Clock ) to clock ( Clock ). (File=D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\USB_UART01_timing.html)
 Timing report is in USB_UART01_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.343ms
+Static timing analysis phase: Elapsed time ==> 0s.310ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.234ms
+Design database save phase: Elapsed time ==> 0s.202ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 4s.742ms
+cydsfit: Elapsed time ==> 3s.879ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 4s.804ms
-API generation phase: Elapsed time ==> 1s.918ms
-Dependency generation phase: Elapsed time ==> 0s.031ms
+Fitter phase: Elapsed time ==> 3s.919ms
+API generation phase: Elapsed time ==> 1s.570ms
+Dependency generation phase: Elapsed time ==> 0s.030ms
 Cleanup phase: Elapsed time ==> 0s.000ms

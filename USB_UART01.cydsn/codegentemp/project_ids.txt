@@ -1,6 +1,6 @@
-D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\USB_UART01.cyprj|64542b25-543c-4917-84df-007ba3449ae9
-D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|8dc4d1fd-bf69-422f-9b1f-889658459c35
-D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|04600d27-962c-4b6a-bc6a-4a6a24d9d7a6
-D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|391dba47-a9f7-4958-b8bd-887ecabc4e44
-D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|b2bb0922-2440-4988-871a-08214280b6b5
-D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|29725557-1ec6-453f-93a3-bc34bc8a1cb0
+D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\USB_UART01.cyprj|af345bf5-3685-4252-8a86-d34a4096b811
+D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|b6262895-1d17-41a9-9f23-c83a655c9b1b
+D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|f94fdb40-d526-41b7-b8e0-1d83b55ef73c
+D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|38bf17e2-dbc9-4afd-aa89-8e10870da387
+D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|a42f6cb6-dee9-4bb2-97e1-e9b69d7f05b8
+D:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|54d15acd-1d54-47f9-bac5-d116ca9a6f1c

@@ -42,9 +42,9 @@ extern uint8 Receive_Timer_initVar;
 #define Receive_Timer_SoftwareCaptureMode        0u
 #define Receive_Timer_SoftwareTriggerMode        0u
 #define Receive_Timer_UsingHWEnable              0u
-#define Receive_Timer_EnableTriggerMode          1u
+#define Receive_Timer_EnableTriggerMode          0u
 #define Receive_Timer_InterruptOnCaptureCount    0u
-#define Receive_Timer_RunModeUsed                0u
+#define Receive_Timer_RunModeUsed                1u
 #define Receive_Timer_ControlRegRemoved          0u
 
 #if defined(Receive_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__CONTROL_REG)
@@ -168,9 +168,9 @@ void Receive_Timer_Wakeup(void)        ;
 *    Initialial Parameter Constants
 ***************************************/
 
-#define Receive_Timer_INIT_PERIOD             15807u
+#define Receive_Timer_INIT_PERIOD             23743u
 #define Receive_Timer_INIT_CAPTURE_MODE       ((uint8)((uint8)0u << Receive_Timer_CTRL_CAP_MODE_SHIFT))
-#define Receive_Timer_INIT_TRIGGER_MODE       ((uint8)((uint8)3u << Receive_Timer_CTRL_TRIG_MODE_SHIFT))
+#define Receive_Timer_INIT_TRIGGER_MODE       ((uint8)((uint8)0u << Receive_Timer_CTRL_TRIG_MODE_SHIFT))
 #if (Receive_Timer_UsingFixedFunction)
     #define Receive_Timer_INIT_INTERRUPT_MODE (((uint8)((uint8)1u << Receive_Timer_STATUS_TC_INT_MASK_SHIFT)) | \
                                                   ((uint8)((uint8)0 << Receive_Timer_STATUS_CAPTURE_INT_MASK_SHIFT)))

@@ -23,12 +23,15 @@ void setNetworkStateOnLEDs();
 void diffManToASCII(char*);
 void printChar(char *);
 
-int diffManEncodedData[800];
-int diffManReceivedData[800];
-int receivedDataIndex = 0, receivedDataCount = 0;
+int diffManEncodedData[800]; //TODO examine array size
+uint8 diffManReceivedData[100];//TODO examine array size
+int receivedDataIndex, receivedDataCount;
 int halfBitIndex = 0, currentDataPos=0, lengthOfData;
-bool timerExpired, dataTransmissionComplete;
-enum state {busy, idle, collision} networkState; 
+bool timerExpired, dataTransmissionComplete, powerOnEdge;
+enum state {idle, busy, collision} networkState; 
+
+
+int timerInterruptCount =0;//TODO remove
 
 CY_ISR(Idle_Collision_ISR){ 
     networkState = idle; 
@@ -42,25 +45,34 @@ CY_ISR(Idle_Collision_ISR){
 
 CY_ISR(Edge_detect_ISR){
      //Note: onedge detect, will trigger receive timer to start (see TopDesign)
-    networkState = busy;
-    
-    diffManReceivedData[receivedDataCount] = Receive_Read();
-    receivedDataCount++; 
-    
     Idle_Collision_Timer_Start();
+    
+    //Ignore power on egde 
+    if(!powerOnEdge){
+        Receive_Timer_Start(); 
+        diffManReceivedData[receivedDataCount] = Receive_Read();
+        receivedDataCount++;    
+    }
+    else{
+        powerOnEdge = false;
+    }
+    networkState = busy;
     Receive_ClearInterrupt();
 }
 
 CY_ISR(TimerHandler){
-    Timer_STATUS;   //clear the timer interrupt
     Timer_Stop();
     timerExpired = true;
+    Timer_STATUS;   //clear the timer interrupt
 }
 
+//TODO changing from reading to just repeting last data
 CY_ISR(ReceiveTimerISR){
-    Receive_Timer_STATUS;   //clear interrupt
-    diffManReceivedData[receivedDataCount] = Receive_Read();
+    diffManReceivedData[receivedDataCount] = diffManReceivedData[receivedDataCount-1];
+    //or  diffManReceivedData[receivedDataCount] = Receive_Read();
     receivedDataCount++;
+    //timerInterruptCount++;//TODO remove
+    Receive_Timer_STATUS;   //clear interrupt
 }
 
 int main()
@@ -71,6 +83,9 @@ int main()
     uint8 stringPosition = 0;
     timerExpired = false;
     dataTransmissionComplete = false;
+    powerOnEdge = true; //When the system powers up, it creates a rising edge. 
+    //We want to ignore this edge on the rising edge.
+    
     /*
     Get value from system clock and
     place in seconds variable.
@@ -82,12 +97,15 @@ int main()
     integer for seed for random number generator
     */
     srand((unsigned int) seconds);
-    
+            
+    TX_pin_Write(1);  //set TX line to high to start
     
     /* Enable Global Interrupts */
-    CyGlobalIntEnable;                        
+    CyGlobalIntEnable;  
     
-    TX_pin_Write(1);  //set TX line to high to start
+    Receive_ClearInterrupt();//TODO clearing first edge
+    
+    LCD_Start();
     
     //enable collision detection
     Idle_Collision_IRQ_StartEx(Idle_Collision_ISR);
@@ -100,32 +118,46 @@ int main()
     //start tranmission timer
     TimerISR_StartEx(TimerHandler);
 
-    ReceiveTimerIRQ_StartEx(ReceiveTimerISR);
+    ReceiveTimerIRQ_StartEx(ReceiveTimerISR); 
+    
+    receivedDataCount = 0;
+    receivedDataIndex = 0; 
+    timerInterruptCount = 0;
+   
     
     /* Main Loop: */
     for(;;)
     {
         setNetworkStateOnLEDs();
-        //TODO add lcd start
+        
         /*Receive*/
         //Precondidtion: must finished receiving data so channel state machine at idle and wait for a char
-        if(networkState == idle && receivedDataCount >= EIGHT_BITS + START_BIT){
-            
-            //Verify that have received start bit (01)
+        if(networkState == idle && receivedDataCount >= 34){//TODO remove hardcode #
+            //Verify that have received start bit (01). Note: ignore first edge from turning system on
             if(diffManReceivedData[0] == 0 && diffManReceivedData[1] == 1){
+                
+                
                 receivedDataIndex = 2; //skip start bit (two half bits)
                 while(receivedDataIndex < receivedDataCount){
-                    //wait for 8 bits
+                    //wait for 8 bits TODO bad comment
                     char receivedChar;     
                     char *charPtr = &receivedChar;
+                    
                     diffManToASCII(charPtr);
                     printChar(charPtr);
                 }
-                receivedDataCount = receivedDataIndex = 0; 
+                receivedDataCount = 0;
+                receivedDataIndex = 0; 
             }
             else{
                 //Receive data did not start with the start bit
+                receivedDataCount = 0;
+                receivedDataIndex = 0; 
             }
+        }
+        else
+        {
+            //TODO prob remove this else
         }
         /*End Receive*/
         
@@ -306,8 +338,8 @@ void transmitData(){
                
                 //Back-off a random time between 0 and 0.8 seconds
                 CyDelay(value);
-                LCD_Position(0,0);
-                LCD_PrintNumber(value);
+                //LCD_Position(0,0);      
+               /// LCD_PrintNumber(value); TODO remove
                 break;
             }
         }

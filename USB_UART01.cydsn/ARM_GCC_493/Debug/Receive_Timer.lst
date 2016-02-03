@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
   23:.\Generated_Source\PSoC5/Receive_Timer.c **** 
   24:.\Generated_Source\PSoC5/Receive_Timer.c **** #include "Receive_Timer.h"
   25:.\Generated_Source\PSoC5/Receive_Timer.c **** 
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 2
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 2
 
 
   26:.\Generated_Source\PSoC5/Receive_Timer.c **** uint8 Receive_Timer_initVar = 0u;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
   68:.\Generated_Source\PSoC5/Receive_Timer.c **** 
   69:.\Generated_Source\PSoC5/Receive_Timer.c ****         #if (Receive_Timer_RunModeUsed == 2)
   70:.\Generated_Source\PSoC5/Receive_Timer.c ****             #if (CY_PSOC5A)
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 3
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 3
 
 
   71:.\Generated_Source\PSoC5/Receive_Timer.c ****                 /* Set last 2 bits of control2 register if one shot(halt on
@@ -170,15 +170,15 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  117:.\Generated_Source\PSoC5/Receive_Timer.c ****     /* Set Initial values from Configuration */
  118:.\Generated_Source\PSoC5/Receive_Timer.c ****     Receive_Timer_WritePeriod(Receive_Timer_INIT_PERIOD);
   45              		.loc 1 118 0
-  46 0006 43F6BF50 		movw	r0, #15807
+  46 0006 45F6BF40 		movw	r0, #23743
   47 000a FFF7FEFF 		bl	Receive_Timer_WritePeriod
  119:.\Generated_Source\PSoC5/Receive_Timer.c ****     Receive_Timer_WriteCounter(Receive_Timer_INIT_PERIOD);
   48              		.loc 1 119 0
-  49 000e 43F6BF50 		movw	r0, #15807
+  49 000e 45F6BF40 		movw	r0, #23743
   50 0012 FFF7FEFF 		bl	Receive_Timer_WriteCounter
  120:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  121:.\Generated_Source\PSoC5/Receive_Timer.c ****     #if (Receive_Timer_UsingHWCaptureCounter)/* Capture counter is enabled */
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 4
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 4
 
 
  122:.\Generated_Source\PSoC5/Receive_Timer.c ****         Receive_Timer_CAPTURE_COUNT_CTRL |= Receive_Timer_CNTR_ENABLE;
@@ -210,8 +210,8 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  144:.\Generated_Source\PSoC5/Receive_Timer.c ****         /* Use the interrupt output of the status register for IRQ output */
  145:.\Generated_Source\PSoC5/Receive_Timer.c ****         Receive_Timer_STATUS_AUX_CTRL |= Receive_Timer_STATUS_ACTL_INT_EN_MASK;
   55              		.loc 1 145 0
-  56 001e 0B4A     		ldr	r2, .L2
-  57 0020 0A4B     		ldr	r3, .L2
+  56 001e 0A4A     		ldr	r2, .L2
+  57 0020 094B     		ldr	r3, .L2
   58 0022 1B78     		ldrb	r3, [r3]
   59 0024 DBB2     		uxtb	r3, r3
   60 0026 43F01003 		orr	r3, r3, #16
@@ -227,8 +227,6 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  149:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  150:.\Generated_Source\PSoC5/Receive_Timer.c ****         #if (Receive_Timer_EnableTriggerMode)
  151:.\Generated_Source\PSoC5/Receive_Timer.c ****             Receive_Timer_EnableTrigger();
-  67              		.loc 1 151 0
-  68 0036 FFF7FEFF 		bl	Receive_Timer_EnableTrigger
  152:.\Generated_Source\PSoC5/Receive_Timer.c ****         #endif /* Set Trigger enable bit for UDB implementation in the control register*/
  153:.\Generated_Source\PSoC5/Receive_Timer.c **** 		
  154:.\Generated_Source\PSoC5/Receive_Timer.c **** 		
@@ -237,40 +235,40 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  157:.\Generated_Source\PSoC5/Receive_Timer.c ****         #endif /* Set interrupt count in UDB implementation if interrupt count feature is checked.*
  158:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  159:.\Generated_Source\PSoC5/Receive_Timer.c ****         Receive_Timer_ClearFIFO();
-  69              		.loc 1 159 0
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 5
-
-
-  70 003a FFF7FEFF 		bl	Receive_Timer_ClearFIFO
+  67              		.loc 1 159 0
+  68 0036 FFF7FEFF 		bl	Receive_Timer_ClearFIFO
  160:.\Generated_Source\PSoC5/Receive_Timer.c ****     #endif /* Configure additional features of UDB implementation */
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 5
+
+
  161:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  162:.\Generated_Source\PSoC5/Receive_Timer.c ****     Receive_Timer_SetInterruptMode(Receive_Timer_INIT_INTERRUPT_MODE);
-  71              		.loc 1 162 0
-  72 003e 0120     		movs	r0, #1
-  73 0040 FFF7FEFF 		bl	Receive_Timer_SetInterruptMode
+  69              		.loc 1 162 0
+  70 003a 0120     		movs	r0, #1
+  71 003c FFF7FEFF 		bl	Receive_Timer_SetInterruptMode
  163:.\Generated_Source\PSoC5/Receive_Timer.c **** }
-  74              		.loc 1 163 0
-  75 0044 0837     		adds	r7, r7, #8
-  76              		.cfi_def_cfa_offset 8
-  77 0046 BD46     		mov	sp, r7
-  78              		.cfi_def_cfa_register 13
-  79              		@ sp needed
-  80 0048 80BD     		pop	{r7, pc}
-  81              	.L3:
-  82 004a 00BF     		.align	2
-  83              	.L2:
-  84 004c 9F640040 		.word	1073767583
-  85              		.cfi_endproc
-  86              	.LFE0:
-  87              		.size	Receive_Timer_Init, .-Receive_Timer_Init
-  88              		.section	.text.Receive_Timer_Enable,"ax",%progbits
-  89              		.align	2
-  90              		.global	Receive_Timer_Enable
-  91              		.thumb
-  92              		.thumb_func
-  93              		.type	Receive_Timer_Enable, %function
-  94              	Receive_Timer_Enable:
-  95              	.LFB1:
+  72              		.loc 1 163 0
+  73 0040 0837     		adds	r7, r7, #8
+  74              		.cfi_def_cfa_offset 8
+  75 0042 BD46     		mov	sp, r7
+  76              		.cfi_def_cfa_register 13
+  77              		@ sp needed
+  78 0044 80BD     		pop	{r7, pc}
+  79              	.L3:
+  80 0046 00BF     		.align	2
+  81              	.L2:
+  82 0048 9F640040 		.word	1073767583
+  83              		.cfi_endproc
+  84              	.LFE0:
+  85              		.size	Receive_Timer_Init, .-Receive_Timer_Init
+  86              		.section	.text.Receive_Timer_Enable,"ax",%progbits
+  87              		.align	2
+  88              		.global	Receive_Timer_Enable
+  89              		.thumb
+  90              		.thumb_func
+  91              		.type	Receive_Timer_Enable, %function
+  92              	Receive_Timer_Enable:
+  93              	.LFB1:
  164:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  165:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  166:.\Generated_Source\PSoC5/Receive_Timer.c **** /*******************************************************************************
@@ -289,20 +287,20 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  179:.\Generated_Source\PSoC5/Receive_Timer.c **** *******************************************************************************/
  180:.\Generated_Source\PSoC5/Receive_Timer.c **** void Receive_Timer_Enable(void) 
  181:.\Generated_Source\PSoC5/Receive_Timer.c **** {
-  96              		.loc 1 181 0
-  97              		.cfi_startproc
-  98              		@ args = 0, pretend = 0, frame = 0
-  99              		@ frame_needed = 1, uses_anonymous_args = 0
- 100              		@ link register save eliminated.
- 101 0000 80B4     		push	{r7}
- 102              		.cfi_def_cfa_offset 4
- 103              		.cfi_offset 7, -4
- 104 0002 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 6
-
-
- 105              		.cfi_def_cfa_register 7
+  94              		.loc 1 181 0
+  95              		.cfi_startproc
+  96              		@ args = 0, pretend = 0, frame = 0
+  97              		@ frame_needed = 1, uses_anonymous_args = 0
+  98              		@ link register save eliminated.
+  99 0000 80B4     		push	{r7}
+ 100              		.cfi_def_cfa_offset 4
+ 101              		.cfi_offset 7, -4
+ 102 0002 00AF     		add	r7, sp, #0
+ 103              		.cfi_def_cfa_register 7
  182:.\Generated_Source\PSoC5/Receive_Timer.c ****     /* Globally Enable the Fixed Function Block chosen */
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 6
+
+
  183:.\Generated_Source\PSoC5/Receive_Timer.c ****     #if (Receive_Timer_UsingFixedFunction)
  184:.\Generated_Source\PSoC5/Receive_Timer.c ****         Receive_Timer_GLOBAL_ENABLE |= Receive_Timer_BLOCK_EN_MASK;
  185:.\Generated_Source\PSoC5/Receive_Timer.c ****         Receive_Timer_GLOBAL_STBY_ENABLE |= Receive_Timer_BLOCK_STBY_EN_MASK;
@@ -311,39 +309,39 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  188:.\Generated_Source\PSoC5/Receive_Timer.c ****     /* Remove assignment if control register is removed */
  189:.\Generated_Source\PSoC5/Receive_Timer.c ****     #if (!Receive_Timer_UDB_CONTROL_REG_REMOVED || Receive_Timer_UsingFixedFunction)
  190:.\Generated_Source\PSoC5/Receive_Timer.c ****         Receive_Timer_CONTROL |= Receive_Timer_CTRL_ENABLE;
- 106              		.loc 1 190 0
- 107 0004 054A     		ldr	r2, .L5
- 108 0006 054B     		ldr	r3, .L5
- 109 0008 1B78     		ldrb	r3, [r3]
- 110 000a DBB2     		uxtb	r3, r3
- 111 000c 63F07F03 		orn	r3, r3, #127
- 112 0010 DBB2     		uxtb	r3, r3
- 113 0012 1370     		strb	r3, [r2]
+ 104              		.loc 1 190 0
+ 105 0004 054A     		ldr	r2, .L5
+ 106 0006 054B     		ldr	r3, .L5
+ 107 0008 1B78     		ldrb	r3, [r3]
+ 108 000a DBB2     		uxtb	r3, r3
+ 109 000c 63F07F03 		orn	r3, r3, #127
+ 110 0010 DBB2     		uxtb	r3, r3
+ 111 0012 1370     		strb	r3, [r2]
  191:.\Generated_Source\PSoC5/Receive_Timer.c ****     #endif /* Remove assignment if control register is removed */
  192:.\Generated_Source\PSoC5/Receive_Timer.c **** }
- 114              		.loc 1 192 0
- 115 0014 BD46     		mov	sp, r7
- 116              		.cfi_def_cfa_register 13
- 117              		@ sp needed
- 118 0016 5DF8047B 		ldr	r7, [sp], #4
- 119              		.cfi_restore 7
- 120              		.cfi_def_cfa_offset 0
- 121 001a 7047     		bx	lr
- 122              	.L6:
- 123              		.align	2
- 124              	.L5:
- 125 001c 7F640040 		.word	1073767551
- 126              		.cfi_endproc
- 127              	.LFE1:
- 128              		.size	Receive_Timer_Enable, .-Receive_Timer_Enable
- 129              		.section	.text.Receive_Timer_Start,"ax",%progbits
- 130              		.align	2
- 131              		.global	Receive_Timer_Start
- 132              		.thumb
- 133              		.thumb_func
- 134              		.type	Receive_Timer_Start, %function
- 135              	Receive_Timer_Start:
- 136              	.LFB2:
+ 112              		.loc 1 192 0
+ 113 0014 BD46     		mov	sp, r7
+ 114              		.cfi_def_cfa_register 13
+ 115              		@ sp needed
+ 116 0016 5DF8047B 		ldr	r7, [sp], #4
+ 117              		.cfi_restore 7
+ 118              		.cfi_def_cfa_offset 0
+ 119 001a 7047     		bx	lr
+ 120              	.L6:
+ 121              		.align	2
+ 122              	.L5:
+ 123 001c 7F640040 		.word	1073767551
+ 124              		.cfi_endproc
+ 125              	.LFE1:
+ 126              		.size	Receive_Timer_Enable, .-Receive_Timer_Enable
+ 127              		.section	.text.Receive_Timer_Start,"ax",%progbits
+ 128              		.align	2
+ 129              		.global	Receive_Timer_Start
+ 130              		.thumb
+ 131              		.thumb_func
+ 132              		.type	Receive_Timer_Start, %function
+ 133              	Receive_Timer_Start:
+ 134              	.LFB2:
  193:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  194:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  195:.\Generated_Source\PSoC5/Receive_Timer.c **** /*******************************************************************************
@@ -358,11 +356,11 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  204:.\Generated_Source\PSoC5/Receive_Timer.c **** * Parameters:
  205:.\Generated_Source\PSoC5/Receive_Timer.c **** *  void
  206:.\Generated_Source\PSoC5/Receive_Timer.c **** *
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 7
-
-
  207:.\Generated_Source\PSoC5/Receive_Timer.c **** * Return:
  208:.\Generated_Source\PSoC5/Receive_Timer.c **** *  void
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 7
+
+
  209:.\Generated_Source\PSoC5/Receive_Timer.c **** *
  210:.\Generated_Source\PSoC5/Receive_Timer.c **** * Global variables:
  211:.\Generated_Source\PSoC5/Receive_Timer.c **** *  Receive_Timer_initVar: Is modified when this function is called for the
@@ -371,60 +369,60 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  214:.\Generated_Source\PSoC5/Receive_Timer.c **** *******************************************************************************/
  215:.\Generated_Source\PSoC5/Receive_Timer.c **** void Receive_Timer_Start(void) 
  216:.\Generated_Source\PSoC5/Receive_Timer.c **** {
- 137              		.loc 1 216 0
- 138              		.cfi_startproc
- 139              		@ args = 0, pretend = 0, frame = 0
- 140              		@ frame_needed = 1, uses_anonymous_args = 0
- 141 0000 80B5     		push	{r7, lr}
- 142              		.cfi_def_cfa_offset 8
- 143              		.cfi_offset 7, -8
- 144              		.cfi_offset 14, -4
- 145 0002 00AF     		add	r7, sp, #0
- 146              		.cfi_def_cfa_register 7
+ 135              		.loc 1 216 0
+ 136              		.cfi_startproc
+ 137              		@ args = 0, pretend = 0, frame = 0
+ 138              		@ frame_needed = 1, uses_anonymous_args = 0
+ 139 0000 80B5     		push	{r7, lr}
+ 140              		.cfi_def_cfa_offset 8
+ 141              		.cfi_offset 7, -8
+ 142              		.cfi_offset 14, -4
+ 143 0002 00AF     		add	r7, sp, #0
+ 144              		.cfi_def_cfa_register 7
  217:.\Generated_Source\PSoC5/Receive_Timer.c ****     if(Receive_Timer_initVar == 0u)
- 147              		.loc 1 217 0
- 148 0004 054B     		ldr	r3, .L9
- 149 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 150 0008 002B     		cmp	r3, #0
- 151 000a 04D1     		bne	.L8
+ 145              		.loc 1 217 0
+ 146 0004 054B     		ldr	r3, .L9
+ 147 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 148 0008 002B     		cmp	r3, #0
+ 149 000a 04D1     		bne	.L8
  218:.\Generated_Source\PSoC5/Receive_Timer.c ****     {
  219:.\Generated_Source\PSoC5/Receive_Timer.c ****         Receive_Timer_Init();
- 152              		.loc 1 219 0
- 153 000c FFF7FEFF 		bl	Receive_Timer_Init
+ 150              		.loc 1 219 0
+ 151 000c FFF7FEFF 		bl	Receive_Timer_Init
  220:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  221:.\Generated_Source\PSoC5/Receive_Timer.c ****         Receive_Timer_initVar = 1u;   /* Clear this bit for Initialization */
- 154              		.loc 1 221 0
- 155 0010 024B     		ldr	r3, .L9
- 156 0012 0122     		movs	r2, #1
- 157 0014 1A70     		strb	r2, [r3]
- 158              	.L8:
+ 152              		.loc 1 221 0
+ 153 0010 024B     		ldr	r3, .L9
+ 154 0012 0122     		movs	r2, #1
+ 155 0014 1A70     		strb	r2, [r3]
+ 156              	.L8:
  222:.\Generated_Source\PSoC5/Receive_Timer.c ****     }
  223:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  224:.\Generated_Source\PSoC5/Receive_Timer.c ****     /* Enable the Timer */
  225:.\Generated_Source\PSoC5/Receive_Timer.c ****     Receive_Timer_Enable();
- 159              		.loc 1 225 0
- 160 0016 FFF7FEFF 		bl	Receive_Timer_Enable
+ 157              		.loc 1 225 0
+ 158 0016 FFF7FEFF 		bl	Receive_Timer_Enable
  226:.\Generated_Source\PSoC5/Receive_Timer.c **** }
- 161              		.loc 1 226 0
- 162 001a 80BD     		pop	{r7, pc}
- 163              	.L10:
- 164              		.align	2
- 165              	.L9:
- 166 001c 00000000 		.word	Receive_Timer_initVar
- 167              		.cfi_endproc
- 168              	.LFE2:
- 169              		.size	Receive_Timer_Start, .-Receive_Timer_Start
- 170              		.section	.text.Receive_Timer_Stop,"ax",%progbits
- 171              		.align	2
- 172              		.global	Receive_Timer_Stop
- 173              		.thumb
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 8
+ 159              		.loc 1 226 0
+ 160 001a 80BD     		pop	{r7, pc}
+ 161              	.L10:
+ 162              		.align	2
+ 163              	.L9:
+ 164 001c 00000000 		.word	Receive_Timer_initVar
+ 165              		.cfi_endproc
+ 166              	.LFE2:
+ 167              		.size	Receive_Timer_Start, .-Receive_Timer_Start
+ 168              		.section	.text.Receive_Timer_Stop,"ax",%progbits
+ 169              		.align	2
+ 170              		.global	Receive_Timer_Stop
+ 171              		.thumb
+ 172              		.thumb_func
+ 173              		.type	Receive_Timer_Stop, %function
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 8
 
 
- 174              		.thumb_func
- 175              		.type	Receive_Timer_Stop, %function
- 176              	Receive_Timer_Stop:
- 177              	.LFB3:
+ 174              	Receive_Timer_Stop:
+ 175              	.LFB3:
  227:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  228:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  229:.\Generated_Source\PSoC5/Receive_Timer.c **** /*******************************************************************************
@@ -447,27 +445,27 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  246:.\Generated_Source\PSoC5/Receive_Timer.c **** *******************************************************************************/
  247:.\Generated_Source\PSoC5/Receive_Timer.c **** void Receive_Timer_Stop(void) 
  248:.\Generated_Source\PSoC5/Receive_Timer.c **** {
- 178              		.loc 1 248 0
- 179              		.cfi_startproc
- 180              		@ args = 0, pretend = 0, frame = 0
- 181              		@ frame_needed = 1, uses_anonymous_args = 0
- 182              		@ link register save eliminated.
- 183 0000 80B4     		push	{r7}
- 184              		.cfi_def_cfa_offset 4
- 185              		.cfi_offset 7, -4
- 186 0002 00AF     		add	r7, sp, #0
- 187              		.cfi_def_cfa_register 7
+ 176              		.loc 1 248 0
+ 177              		.cfi_startproc
+ 178              		@ args = 0, pretend = 0, frame = 0
+ 179              		@ frame_needed = 1, uses_anonymous_args = 0
+ 180              		@ link register save eliminated.
+ 181 0000 80B4     		push	{r7}
+ 182              		.cfi_def_cfa_offset 4
+ 183              		.cfi_offset 7, -4
+ 184 0002 00AF     		add	r7, sp, #0
+ 185              		.cfi_def_cfa_register 7
  249:.\Generated_Source\PSoC5/Receive_Timer.c ****     /* Disable Timer */
  250:.\Generated_Source\PSoC5/Receive_Timer.c ****     #if(!Receive_Timer_UDB_CONTROL_REG_REMOVED || Receive_Timer_UsingFixedFunction)
  251:.\Generated_Source\PSoC5/Receive_Timer.c ****         Receive_Timer_CONTROL &= ((uint8)(~Receive_Timer_CTRL_ENABLE));
- 188              		.loc 1 251 0
- 189 0004 054A     		ldr	r2, .L12
- 190 0006 054B     		ldr	r3, .L12
- 191 0008 1B78     		ldrb	r3, [r3]
- 192 000a DBB2     		uxtb	r3, r3
- 193 000c 03F07F03 		and	r3, r3, #127
- 194 0010 DBB2     		uxtb	r3, r3
- 195 0012 1370     		strb	r3, [r2]
+ 186              		.loc 1 251 0
+ 187 0004 054A     		ldr	r2, .L12
+ 188 0006 054B     		ldr	r3, .L12
+ 189 0008 1B78     		ldrb	r3, [r3]
+ 190 000a DBB2     		uxtb	r3, r3
+ 191 000c 03F07F03 		and	r3, r3, #127
+ 192 0010 DBB2     		uxtb	r3, r3
+ 193 0012 1370     		strb	r3, [r2]
  252:.\Generated_Source\PSoC5/Receive_Timer.c ****     #endif /* Remove assignment if control register is removed */
  253:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  254:.\Generated_Source\PSoC5/Receive_Timer.c ****     /* Globally disable the Fixed Function Block chosen */
@@ -476,32 +474,32 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  257:.\Generated_Source\PSoC5/Receive_Timer.c ****         Receive_Timer_GLOBAL_STBY_ENABLE &= ((uint8)(~Receive_Timer_BLOCK_STBY_EN_MASK));
  258:.\Generated_Source\PSoC5/Receive_Timer.c ****     #endif /* Disable global enable for the Timer Fixed function block to stop the Timer*/
  259:.\Generated_Source\PSoC5/Receive_Timer.c **** }
- 196              		.loc 1 259 0
- 197 0014 BD46     		mov	sp, r7
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 9
+ 194              		.loc 1 259 0
+ 195 0014 BD46     		mov	sp, r7
+ 196              		.cfi_def_cfa_register 13
+ 197              		@ sp needed
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 9
 
 
- 198              		.cfi_def_cfa_register 13
- 199              		@ sp needed
- 200 0016 5DF8047B 		ldr	r7, [sp], #4
- 201              		.cfi_restore 7
- 202              		.cfi_def_cfa_offset 0
- 203 001a 7047     		bx	lr
- 204              	.L13:
- 205              		.align	2
- 206              	.L12:
- 207 001c 7F640040 		.word	1073767551
- 208              		.cfi_endproc
- 209              	.LFE3:
- 210              		.size	Receive_Timer_Stop, .-Receive_Timer_Stop
- 211              		.section	.text.Receive_Timer_SetInterruptMode,"ax",%progbits
- 212              		.align	2
- 213              		.global	Receive_Timer_SetInterruptMode
- 214              		.thumb
- 215              		.thumb_func
- 216              		.type	Receive_Timer_SetInterruptMode, %function
- 217              	Receive_Timer_SetInterruptMode:
- 218              	.LFB4:
+ 198 0016 5DF8047B 		ldr	r7, [sp], #4
+ 199              		.cfi_restore 7
+ 200              		.cfi_def_cfa_offset 0
+ 201 001a 7047     		bx	lr
+ 202              	.L13:
+ 203              		.align	2
+ 204              	.L12:
+ 205 001c 7F640040 		.word	1073767551
+ 206              		.cfi_endproc
+ 207              	.LFE3:
+ 208              		.size	Receive_Timer_Stop, .-Receive_Timer_Stop
+ 209              		.section	.text.Receive_Timer_SetInterruptMode,"ax",%progbits
+ 210              		.align	2
+ 211              		.global	Receive_Timer_SetInterruptMode
+ 212              		.thumb
+ 213              		.thumb_func
+ 214              		.type	Receive_Timer_SetInterruptMode, %function
+ 215              	Receive_Timer_SetInterruptMode:
+ 216              	.LFB4:
  260:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  261:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  262:.\Generated_Source\PSoC5/Receive_Timer.c **** /*******************************************************************************
@@ -523,54 +521,54 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  278:.\Generated_Source\PSoC5/Receive_Timer.c **** *******************************************************************************/
  279:.\Generated_Source\PSoC5/Receive_Timer.c **** void Receive_Timer_SetInterruptMode(uint8 interruptMode) 
  280:.\Generated_Source\PSoC5/Receive_Timer.c **** {
- 219              		.loc 1 280 0
- 220              		.cfi_startproc
- 221              		@ args = 0, pretend = 0, frame = 8
- 222              		@ frame_needed = 1, uses_anonymous_args = 0
- 223              		@ link register save eliminated.
- 224 0000 80B4     		push	{r7}
- 225              		.cfi_def_cfa_offset 4
- 226              		.cfi_offset 7, -4
- 227 0002 83B0     		sub	sp, sp, #12
- 228              		.cfi_def_cfa_offset 16
- 229 0004 00AF     		add	r7, sp, #0
- 230              		.cfi_def_cfa_register 7
- 231 0006 0346     		mov	r3, r0
- 232 0008 FB71     		strb	r3, [r7, #7]
+ 217              		.loc 1 280 0
+ 218              		.cfi_startproc
+ 219              		@ args = 0, pretend = 0, frame = 8
+ 220              		@ frame_needed = 1, uses_anonymous_args = 0
+ 221              		@ link register save eliminated.
+ 222 0000 80B4     		push	{r7}
+ 223              		.cfi_def_cfa_offset 4
+ 224              		.cfi_offset 7, -4
+ 225 0002 83B0     		sub	sp, sp, #12
+ 226              		.cfi_def_cfa_offset 16
+ 227 0004 00AF     		add	r7, sp, #0
+ 228              		.cfi_def_cfa_register 7
+ 229 0006 0346     		mov	r3, r0
+ 230 0008 FB71     		strb	r3, [r7, #7]
  281:.\Generated_Source\PSoC5/Receive_Timer.c ****     Receive_Timer_STATUS_MASK = interruptMode;
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 10
+ 231              		.loc 1 281 0
+ 232 000a 044A     		ldr	r2, .L15
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 10
 
 
- 233              		.loc 1 281 0
- 234 000a 044A     		ldr	r2, .L15
- 235 000c FB79     		ldrb	r3, [r7, #7]
- 236 000e 1370     		strb	r3, [r2]
+ 233 000c FB79     		ldrb	r3, [r7, #7]
+ 234 000e 1370     		strb	r3, [r2]
  282:.\Generated_Source\PSoC5/Receive_Timer.c **** }
- 237              		.loc 1 282 0
- 238 0010 0C37     		adds	r7, r7, #12
- 239              		.cfi_def_cfa_offset 4
- 240 0012 BD46     		mov	sp, r7
- 241              		.cfi_def_cfa_register 13
- 242              		@ sp needed
- 243 0014 5DF8047B 		ldr	r7, [sp], #4
- 244              		.cfi_restore 7
- 245              		.cfi_def_cfa_offset 0
- 246 0018 7047     		bx	lr
- 247              	.L16:
- 248 001a 00BF     		.align	2
- 249              	.L15:
- 250 001c 8F640040 		.word	1073767567
- 251              		.cfi_endproc
- 252              	.LFE4:
- 253              		.size	Receive_Timer_SetInterruptMode, .-Receive_Timer_SetInterruptMode
- 254              		.section	.text.Receive_Timer_SoftwareCapture,"ax",%progbits
- 255              		.align	2
- 256              		.global	Receive_Timer_SoftwareCapture
- 257              		.thumb
- 258              		.thumb_func
- 259              		.type	Receive_Timer_SoftwareCapture, %function
- 260              	Receive_Timer_SoftwareCapture:
- 261              	.LFB5:
+ 235              		.loc 1 282 0
+ 236 0010 0C37     		adds	r7, r7, #12
+ 237              		.cfi_def_cfa_offset 4
+ 238 0012 BD46     		mov	sp, r7
+ 239              		.cfi_def_cfa_register 13
+ 240              		@ sp needed
+ 241 0014 5DF8047B 		ldr	r7, [sp], #4
+ 242              		.cfi_restore 7
+ 243              		.cfi_def_cfa_offset 0
+ 244 0018 7047     		bx	lr
+ 245              	.L16:
+ 246 001a 00BF     		.align	2
+ 247              	.L15:
+ 248 001c 8F640040 		.word	1073767567
+ 249              		.cfi_endproc
+ 250              	.LFE4:
+ 251              		.size	Receive_Timer_SetInterruptMode, .-Receive_Timer_SetInterruptMode
+ 252              		.section	.text.Receive_Timer_SoftwareCapture,"ax",%progbits
+ 253              		.align	2
+ 254              		.global	Receive_Timer_SoftwareCapture
+ 255              		.thumb
+ 256              		.thumb_func
+ 257              		.type	Receive_Timer_SoftwareCapture, %function
+ 258              	Receive_Timer_SoftwareCapture:
+ 259              	.LFB5:
  283:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  284:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  285:.\Generated_Source\PSoC5/Receive_Timer.c **** /*******************************************************************************
@@ -592,53 +590,53 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  301:.\Generated_Source\PSoC5/Receive_Timer.c **** *******************************************************************************/
  302:.\Generated_Source\PSoC5/Receive_Timer.c **** void Receive_Timer_SoftwareCapture(void) 
  303:.\Generated_Source\PSoC5/Receive_Timer.c **** {
- 262              		.loc 1 303 0
- 263              		.cfi_startproc
- 264              		@ args = 0, pretend = 0, frame = 0
- 265              		@ frame_needed = 1, uses_anonymous_args = 0
- 266              		@ link register save eliminated.
- 267 0000 80B4     		push	{r7}
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 11
+ 260              		.loc 1 303 0
+ 261              		.cfi_startproc
+ 262              		@ args = 0, pretend = 0, frame = 0
+ 263              		@ frame_needed = 1, uses_anonymous_args = 0
+ 264              		@ link register save eliminated.
+ 265 0000 80B4     		push	{r7}
+ 266              		.cfi_def_cfa_offset 4
+ 267              		.cfi_offset 7, -4
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 11
 
 
- 268              		.cfi_def_cfa_offset 4
- 269              		.cfi_offset 7, -4
- 270 0002 00AF     		add	r7, sp, #0
- 271              		.cfi_def_cfa_register 7
+ 268 0002 00AF     		add	r7, sp, #0
+ 269              		.cfi_def_cfa_register 7
  304:.\Generated_Source\PSoC5/Receive_Timer.c ****     /* Generate a software capture by reading the counter register */
  305:.\Generated_Source\PSoC5/Receive_Timer.c ****     #if(Receive_Timer_UsingFixedFunction)
  306:.\Generated_Source\PSoC5/Receive_Timer.c ****         (void)CY_GET_REG16(Receive_Timer_COUNTER_LSB_PTR);
  307:.\Generated_Source\PSoC5/Receive_Timer.c ****     #else
  308:.\Generated_Source\PSoC5/Receive_Timer.c ****         (void)CY_GET_REG8(Receive_Timer_COUNTER_LSB_PTR_8BIT);
- 272              		.loc 1 308 0
- 273 0004 024B     		ldr	r3, .L18
- 274 0006 1B78     		ldrb	r3, [r3]
+ 270              		.loc 1 308 0
+ 271 0004 024B     		ldr	r3, .L18
+ 272 0006 1B78     		ldrb	r3, [r3]
  309:.\Generated_Source\PSoC5/Receive_Timer.c ****     #endif/* (Receive_Timer_UsingFixedFunction) */
  310:.\Generated_Source\PSoC5/Receive_Timer.c ****     /* Capture Data is now in the FIFO */
  311:.\Generated_Source\PSoC5/Receive_Timer.c **** }
- 275              		.loc 1 311 0
- 276 0008 BD46     		mov	sp, r7
- 277              		.cfi_def_cfa_register 13
- 278              		@ sp needed
- 279 000a 5DF8047B 		ldr	r7, [sp], #4
- 280              		.cfi_restore 7
- 281              		.cfi_def_cfa_offset 0
- 282 000e 7047     		bx	lr
- 283              	.L19:
- 284              		.align	2
- 285              	.L18:
- 286 0010 0E640040 		.word	1073767438
- 287              		.cfi_endproc
- 288              	.LFE5:
- 289              		.size	Receive_Timer_SoftwareCapture, .-Receive_Timer_SoftwareCapture
- 290              		.section	.text.Receive_Timer_ReadStatusRegister,"ax",%progbits
- 291              		.align	2
- 292              		.global	Receive_Timer_ReadStatusRegister
- 293              		.thumb
- 294              		.thumb_func
- 295              		.type	Receive_Timer_ReadStatusRegister, %function
- 296              	Receive_Timer_ReadStatusRegister:
- 297              	.LFB6:
+ 273              		.loc 1 311 0
+ 274 0008 BD46     		mov	sp, r7
+ 275              		.cfi_def_cfa_register 13
+ 276              		@ sp needed
+ 277 000a 5DF8047B 		ldr	r7, [sp], #4
+ 278              		.cfi_restore 7
+ 279              		.cfi_def_cfa_offset 0
+ 280 000e 7047     		bx	lr
+ 281              	.L19:
+ 282              		.align	2
+ 283              	.L18:
+ 284 0010 0E640040 		.word	1073767438
+ 285              		.cfi_endproc
+ 286              	.LFE5:
+ 287              		.size	Receive_Timer_SoftwareCapture, .-Receive_Timer_SoftwareCapture
+ 288              		.section	.text.Receive_Timer_ReadStatusRegister,"ax",%progbits
+ 289              		.align	2
+ 290              		.global	Receive_Timer_ReadStatusRegister
+ 291              		.thumb
+ 292              		.thumb_func
+ 293              		.type	Receive_Timer_ReadStatusRegister, %function
+ 294              	Receive_Timer_ReadStatusRegister:
+ 295              	.LFB6:
  312:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  313:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  314:.\Generated_Source\PSoC5/Receive_Timer.c **** /*******************************************************************************
@@ -658,53 +656,53 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  328:.\Generated_Source\PSoC5/Receive_Timer.c **** *
  329:.\Generated_Source\PSoC5/Receive_Timer.c **** * Side Effects:
  330:.\Generated_Source\PSoC5/Receive_Timer.c **** *  Status register bits may be clear on read.
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 12
-
-
  331:.\Generated_Source\PSoC5/Receive_Timer.c **** *
  332:.\Generated_Source\PSoC5/Receive_Timer.c **** *******************************************************************************/
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 12
+
+
  333:.\Generated_Source\PSoC5/Receive_Timer.c **** uint8   Receive_Timer_ReadStatusRegister(void) 
  334:.\Generated_Source\PSoC5/Receive_Timer.c **** {
- 298              		.loc 1 334 0
- 299              		.cfi_startproc
- 300              		@ args = 0, pretend = 0, frame = 0
- 301              		@ frame_needed = 1, uses_anonymous_args = 0
- 302              		@ link register save eliminated.
- 303 0000 80B4     		push	{r7}
- 304              		.cfi_def_cfa_offset 4
- 305              		.cfi_offset 7, -4
- 306 0002 00AF     		add	r7, sp, #0
- 307              		.cfi_def_cfa_register 7
+ 296              		.loc 1 334 0
+ 297              		.cfi_startproc
+ 298              		@ args = 0, pretend = 0, frame = 0
+ 299              		@ frame_needed = 1, uses_anonymous_args = 0
+ 300              		@ link register save eliminated.
+ 301 0000 80B4     		push	{r7}
+ 302              		.cfi_def_cfa_offset 4
+ 303              		.cfi_offset 7, -4
+ 304 0002 00AF     		add	r7, sp, #0
+ 305              		.cfi_def_cfa_register 7
  335:.\Generated_Source\PSoC5/Receive_Timer.c ****     return (Receive_Timer_STATUS);
- 308              		.loc 1 335 0
- 309 0004 034B     		ldr	r3, .L22
- 310 0006 1B78     		ldrb	r3, [r3]
- 311 0008 DBB2     		uxtb	r3, r3
+ 306              		.loc 1 335 0
+ 307 0004 034B     		ldr	r3, .L22
+ 308 0006 1B78     		ldrb	r3, [r3]
+ 309 0008 DBB2     		uxtb	r3, r3
  336:.\Generated_Source\PSoC5/Receive_Timer.c **** }
- 312              		.loc 1 336 0
- 313 000a 1846     		mov	r0, r3
- 314 000c BD46     		mov	sp, r7
- 315              		.cfi_def_cfa_register 13
- 316              		@ sp needed
- 317 000e 5DF8047B 		ldr	r7, [sp], #4
- 318              		.cfi_restore 7
- 319              		.cfi_def_cfa_offset 0
- 320 0012 7047     		bx	lr
- 321              	.L23:
- 322              		.align	2
- 323              	.L22:
- 324 0014 6F640040 		.word	1073767535
- 325              		.cfi_endproc
- 326              	.LFE6:
- 327              		.size	Receive_Timer_ReadStatusRegister, .-Receive_Timer_ReadStatusRegister
- 328              		.section	.text.Receive_Timer_ReadControlRegister,"ax",%progbits
- 329              		.align	2
- 330              		.global	Receive_Timer_ReadControlRegister
- 331              		.thumb
- 332              		.thumb_func
- 333              		.type	Receive_Timer_ReadControlRegister, %function
- 334              	Receive_Timer_ReadControlRegister:
- 335              	.LFB7:
+ 310              		.loc 1 336 0
+ 311 000a 1846     		mov	r0, r3
+ 312 000c BD46     		mov	sp, r7
+ 313              		.cfi_def_cfa_register 13
+ 314              		@ sp needed
+ 315 000e 5DF8047B 		ldr	r7, [sp], #4
+ 316              		.cfi_restore 7
+ 317              		.cfi_def_cfa_offset 0
+ 318 0012 7047     		bx	lr
+ 319              	.L23:
+ 320              		.align	2
+ 321              	.L22:
+ 322 0014 6F640040 		.word	1073767535
+ 323              		.cfi_endproc
+ 324              	.LFE6:
+ 325              		.size	Receive_Timer_ReadStatusRegister, .-Receive_Timer_ReadStatusRegister
+ 326              		.section	.text.Receive_Timer_ReadControlRegister,"ax",%progbits
+ 327              		.align	2
+ 328              		.global	Receive_Timer_ReadControlRegister
+ 329              		.thumb
+ 330              		.thumb_func
+ 331              		.type	Receive_Timer_ReadControlRegister, %function
+ 332              	Receive_Timer_ReadControlRegister:
+ 333              	.LFB7:
  337:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  338:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  339:.\Generated_Source\PSoC5/Receive_Timer.c **** #if (!Receive_Timer_UDB_CONTROL_REG_REMOVED) /* Remove API if control register is unused */
@@ -718,71 +716,71 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  347:.\Generated_Source\PSoC5/Receive_Timer.c **** *  Reads the control register and returns it's value.
  348:.\Generated_Source\PSoC5/Receive_Timer.c **** *
  349:.\Generated_Source\PSoC5/Receive_Timer.c **** * Parameters:
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 13
-
-
  350:.\Generated_Source\PSoC5/Receive_Timer.c **** *  void
  351:.\Generated_Source\PSoC5/Receive_Timer.c **** *
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 13
+
+
  352:.\Generated_Source\PSoC5/Receive_Timer.c **** * Return:
  353:.\Generated_Source\PSoC5/Receive_Timer.c **** *  The contents of the control register
  354:.\Generated_Source\PSoC5/Receive_Timer.c **** *
  355:.\Generated_Source\PSoC5/Receive_Timer.c **** *******************************************************************************/
  356:.\Generated_Source\PSoC5/Receive_Timer.c **** uint8 Receive_Timer_ReadControlRegister(void) 
  357:.\Generated_Source\PSoC5/Receive_Timer.c **** {
- 336              		.loc 1 357 0
- 337              		.cfi_startproc
- 338              		@ args = 0, pretend = 0, frame = 0
- 339              		@ frame_needed = 1, uses_anonymous_args = 0
- 340              		@ link register save eliminated.
- 341 0000 80B4     		push	{r7}
- 342              		.cfi_def_cfa_offset 4
- 343              		.cfi_offset 7, -4
- 344 0002 00AF     		add	r7, sp, #0
- 345              		.cfi_def_cfa_register 7
+ 334              		.loc 1 357 0
+ 335              		.cfi_startproc
+ 336              		@ args = 0, pretend = 0, frame = 0
+ 337              		@ frame_needed = 1, uses_anonymous_args = 0
+ 338              		@ link register save eliminated.
+ 339 0000 80B4     		push	{r7}
+ 340              		.cfi_def_cfa_offset 4
+ 341              		.cfi_offset 7, -4
+ 342 0002 00AF     		add	r7, sp, #0
+ 343              		.cfi_def_cfa_register 7
  358:.\Generated_Source\PSoC5/Receive_Timer.c ****     #if (!Receive_Timer_UDB_CONTROL_REG_REMOVED) 
  359:.\Generated_Source\PSoC5/Receive_Timer.c ****         return ((uint8)Receive_Timer_CONTROL);
- 346              		.loc 1 359 0
- 347 0004 034B     		ldr	r3, .L26
- 348 0006 1B78     		ldrb	r3, [r3]
- 349 0008 DBB2     		uxtb	r3, r3
+ 344              		.loc 1 359 0
+ 345 0004 034B     		ldr	r3, .L26
+ 346 0006 1B78     		ldrb	r3, [r3]
+ 347 0008 DBB2     		uxtb	r3, r3
  360:.\Generated_Source\PSoC5/Receive_Timer.c ****     #else
  361:.\Generated_Source\PSoC5/Receive_Timer.c ****         return (0);
  362:.\Generated_Source\PSoC5/Receive_Timer.c ****     #endif /* (!Receive_Timer_UDB_CONTROL_REG_REMOVED) */
  363:.\Generated_Source\PSoC5/Receive_Timer.c **** }
- 350              		.loc 1 363 0
- 351 000a 1846     		mov	r0, r3
- 352 000c BD46     		mov	sp, r7
- 353              		.cfi_def_cfa_register 13
- 354              		@ sp needed
- 355 000e 5DF8047B 		ldr	r7, [sp], #4
- 356              		.cfi_restore 7
- 357              		.cfi_def_cfa_offset 0
- 358 0012 7047     		bx	lr
- 359              	.L27:
- 360              		.align	2
- 361              	.L26:
- 362 0014 7F640040 		.word	1073767551
- 363              		.cfi_endproc
- 364              	.LFE7:
- 365              		.size	Receive_Timer_ReadControlRegister, .-Receive_Timer_ReadControlRegister
- 366              		.section	.text.Receive_Timer_WriteControlRegister,"ax",%progbits
- 367              		.align	2
- 368              		.global	Receive_Timer_WriteControlRegister
- 369              		.thumb
- 370              		.thumb_func
- 371              		.type	Receive_Timer_WriteControlRegister, %function
- 372              	Receive_Timer_WriteControlRegister:
- 373              	.LFB8:
+ 348              		.loc 1 363 0
+ 349 000a 1846     		mov	r0, r3
+ 350 000c BD46     		mov	sp, r7
+ 351              		.cfi_def_cfa_register 13
+ 352              		@ sp needed
+ 353 000e 5DF8047B 		ldr	r7, [sp], #4
+ 354              		.cfi_restore 7
+ 355              		.cfi_def_cfa_offset 0
+ 356 0012 7047     		bx	lr
+ 357              	.L27:
+ 358              		.align	2
+ 359              	.L26:
+ 360 0014 7F640040 		.word	1073767551
+ 361              		.cfi_endproc
+ 362              	.LFE7:
+ 363              		.size	Receive_Timer_ReadControlRegister, .-Receive_Timer_ReadControlRegister
+ 364              		.section	.text.Receive_Timer_WriteControlRegister,"ax",%progbits
+ 365              		.align	2
+ 366              		.global	Receive_Timer_WriteControlRegister
+ 367              		.thumb
+ 368              		.thumb_func
+ 369              		.type	Receive_Timer_WriteControlRegister, %function
+ 370              	Receive_Timer_WriteControlRegister:
+ 371              	.LFB8:
  364:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  365:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  366:.\Generated_Source\PSoC5/Receive_Timer.c **** /*******************************************************************************
  367:.\Generated_Source\PSoC5/Receive_Timer.c **** * Function Name: Receive_Timer_WriteControlRegister
  368:.\Generated_Source\PSoC5/Receive_Timer.c **** ********************************************************************************
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 14
-
-
  369:.\Generated_Source\PSoC5/Receive_Timer.c **** *
  370:.\Generated_Source\PSoC5/Receive_Timer.c **** * Summary:
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 14
+
+
  371:.\Generated_Source\PSoC5/Receive_Timer.c **** *  Sets the bit-field of the control register.
  372:.\Generated_Source\PSoC5/Receive_Timer.c **** *
  373:.\Generated_Source\PSoC5/Receive_Timer.c **** * Parameters:
@@ -793,58 +791,58 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  378:.\Generated_Source\PSoC5/Receive_Timer.c **** *******************************************************************************/
  379:.\Generated_Source\PSoC5/Receive_Timer.c **** void Receive_Timer_WriteControlRegister(uint8 control) 
  380:.\Generated_Source\PSoC5/Receive_Timer.c **** {
- 374              		.loc 1 380 0
- 375              		.cfi_startproc
- 376              		@ args = 0, pretend = 0, frame = 8
- 377              		@ frame_needed = 1, uses_anonymous_args = 0
- 378              		@ link register save eliminated.
- 379 0000 80B4     		push	{r7}
- 380              		.cfi_def_cfa_offset 4
- 381              		.cfi_offset 7, -4
- 382 0002 83B0     		sub	sp, sp, #12
- 383              		.cfi_def_cfa_offset 16
- 384 0004 00AF     		add	r7, sp, #0
- 385              		.cfi_def_cfa_register 7
- 386 0006 0346     		mov	r3, r0
- 387 0008 FB71     		strb	r3, [r7, #7]
+ 372              		.loc 1 380 0
+ 373              		.cfi_startproc
+ 374              		@ args = 0, pretend = 0, frame = 8
+ 375              		@ frame_needed = 1, uses_anonymous_args = 0
+ 376              		@ link register save eliminated.
+ 377 0000 80B4     		push	{r7}
+ 378              		.cfi_def_cfa_offset 4
+ 379              		.cfi_offset 7, -4
+ 380 0002 83B0     		sub	sp, sp, #12
+ 381              		.cfi_def_cfa_offset 16
+ 382 0004 00AF     		add	r7, sp, #0
+ 383              		.cfi_def_cfa_register 7
+ 384 0006 0346     		mov	r3, r0
+ 385 0008 FB71     		strb	r3, [r7, #7]
  381:.\Generated_Source\PSoC5/Receive_Timer.c ****     #if (!Receive_Timer_UDB_CONTROL_REG_REMOVED) 
  382:.\Generated_Source\PSoC5/Receive_Timer.c ****         Receive_Timer_CONTROL = control;
- 388              		.loc 1 382 0
- 389 000a 044A     		ldr	r2, .L29
- 390 000c FB79     		ldrb	r3, [r7, #7]
- 391 000e 1370     		strb	r3, [r2]
+ 386              		.loc 1 382 0
+ 387 000a 044A     		ldr	r2, .L29
+ 388 000c FB79     		ldrb	r3, [r7, #7]
+ 389 000e 1370     		strb	r3, [r2]
  383:.\Generated_Source\PSoC5/Receive_Timer.c ****     #else
  384:.\Generated_Source\PSoC5/Receive_Timer.c ****         control = 0u;
  385:.\Generated_Source\PSoC5/Receive_Timer.c ****     #endif /* (!Receive_Timer_UDB_CONTROL_REG_REMOVED) */
  386:.\Generated_Source\PSoC5/Receive_Timer.c **** }
- 392              		.loc 1 386 0
- 393 0010 0C37     		adds	r7, r7, #12
- 394              		.cfi_def_cfa_offset 4
- 395 0012 BD46     		mov	sp, r7
- 396              		.cfi_def_cfa_register 13
- 397              		@ sp needed
- 398 0014 5DF8047B 		ldr	r7, [sp], #4
- 399              		.cfi_restore 7
- 400              		.cfi_def_cfa_offset 0
- 401 0018 7047     		bx	lr
- 402              	.L30:
- 403 001a 00BF     		.align	2
- 404              	.L29:
- 405 001c 7F640040 		.word	1073767551
- 406              		.cfi_endproc
- 407              	.LFE8:
- 408              		.size	Receive_Timer_WriteControlRegister, .-Receive_Timer_WriteControlRegister
- 409              		.section	.text.Receive_Timer_ReadPeriod,"ax",%progbits
- 410              		.align	2
- 411              		.global	Receive_Timer_ReadPeriod
- 412              		.thumb
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 15
+ 390              		.loc 1 386 0
+ 391 0010 0C37     		adds	r7, r7, #12
+ 392              		.cfi_def_cfa_offset 4
+ 393 0012 BD46     		mov	sp, r7
+ 394              		.cfi_def_cfa_register 13
+ 395              		@ sp needed
+ 396 0014 5DF8047B 		ldr	r7, [sp], #4
+ 397              		.cfi_restore 7
+ 398              		.cfi_def_cfa_offset 0
+ 399 0018 7047     		bx	lr
+ 400              	.L30:
+ 401 001a 00BF     		.align	2
+ 402              	.L29:
+ 403 001c 7F640040 		.word	1073767551
+ 404              		.cfi_endproc
+ 405              	.LFE8:
+ 406              		.size	Receive_Timer_WriteControlRegister, .-Receive_Timer_WriteControlRegister
+ 407              		.section	.text.Receive_Timer_ReadPeriod,"ax",%progbits
+ 408              		.align	2
+ 409              		.global	Receive_Timer_ReadPeriod
+ 410              		.thumb
+ 411              		.thumb_func
+ 412              		.type	Receive_Timer_ReadPeriod, %function
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 15
 
 
- 413              		.thumb_func
- 414              		.type	Receive_Timer_ReadPeriod, %function
- 415              	Receive_Timer_ReadPeriod:
- 416              	.LFB9:
+ 413              	Receive_Timer_ReadPeriod:
+ 414              	.LFB9:
  387:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  388:.\Generated_Source\PSoC5/Receive_Timer.c **** #endif /* Remove API if control register is unused */
  389:.\Generated_Source\PSoC5/Receive_Timer.c **** 
@@ -865,53 +863,53 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  404:.\Generated_Source\PSoC5/Receive_Timer.c **** *******************************************************************************/
  405:.\Generated_Source\PSoC5/Receive_Timer.c **** uint16 Receive_Timer_ReadPeriod(void) 
  406:.\Generated_Source\PSoC5/Receive_Timer.c **** {
- 417              		.loc 1 406 0
- 418              		.cfi_startproc
- 419              		@ args = 0, pretend = 0, frame = 0
- 420              		@ frame_needed = 1, uses_anonymous_args = 0
- 421              		@ link register save eliminated.
- 422 0000 80B4     		push	{r7}
- 423              		.cfi_def_cfa_offset 4
- 424              		.cfi_offset 7, -4
- 425 0002 00AF     		add	r7, sp, #0
- 426              		.cfi_def_cfa_register 7
+ 415              		.loc 1 406 0
+ 416              		.cfi_startproc
+ 417              		@ args = 0, pretend = 0, frame = 0
+ 418              		@ frame_needed = 1, uses_anonymous_args = 0
+ 419              		@ link register save eliminated.
+ 420 0000 80B4     		push	{r7}
+ 421              		.cfi_def_cfa_offset 4
+ 422              		.cfi_offset 7, -4
+ 423 0002 00AF     		add	r7, sp, #0
+ 424              		.cfi_def_cfa_register 7
  407:.\Generated_Source\PSoC5/Receive_Timer.c ****    #if(Receive_Timer_UsingFixedFunction)
  408:.\Generated_Source\PSoC5/Receive_Timer.c ****        return ((uint16)CY_GET_REG16(Receive_Timer_PERIOD_LSB_PTR));
  409:.\Generated_Source\PSoC5/Receive_Timer.c ****    #else
  410:.\Generated_Source\PSoC5/Receive_Timer.c ****        return (CY_GET_REG16(Receive_Timer_PERIOD_LSB_PTR));
- 427              		.loc 1 410 0
- 428 0004 034B     		ldr	r3, .L33
- 429 0006 1B88     		ldrh	r3, [r3]	@ movhi
- 430 0008 9BB2     		uxth	r3, r3
+ 425              		.loc 1 410 0
+ 426 0004 034B     		ldr	r3, .L33
+ 427 0006 1B88     		ldrh	r3, [r3]	@ movhi
+ 428 0008 9BB2     		uxth	r3, r3
  411:.\Generated_Source\PSoC5/Receive_Timer.c ****    #endif /* (Receive_Timer_UsingFixedFunction) */
  412:.\Generated_Source\PSoC5/Receive_Timer.c **** }
- 431              		.loc 1 412 0
- 432 000a 1846     		mov	r0, r3
- 433 000c BD46     		mov	sp, r7
- 434              		.cfi_def_cfa_register 13
- 435              		@ sp needed
- 436 000e 5DF8047B 		ldr	r7, [sp], #4
- 437              		.cfi_restore 7
- 438              		.cfi_def_cfa_offset 0
- 439 0012 7047     		bx	lr
- 440              	.L34:
- 441              		.align	2
- 442              	.L33:
- 443 0014 5C680040 		.word	1073768540
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 16
+ 429              		.loc 1 412 0
+ 430 000a 1846     		mov	r0, r3
+ 431 000c BD46     		mov	sp, r7
+ 432              		.cfi_def_cfa_register 13
+ 433              		@ sp needed
+ 434 000e 5DF8047B 		ldr	r7, [sp], #4
+ 435              		.cfi_restore 7
+ 436              		.cfi_def_cfa_offset 0
+ 437 0012 7047     		bx	lr
+ 438              	.L34:
+ 439              		.align	2
+ 440              	.L33:
+ 441 0014 5C680040 		.word	1073768540
+ 442              		.cfi_endproc
+ 443              	.LFE9:
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 16
 
 
- 444              		.cfi_endproc
- 445              	.LFE9:
- 446              		.size	Receive_Timer_ReadPeriod, .-Receive_Timer_ReadPeriod
- 447              		.section	.text.Receive_Timer_WritePeriod,"ax",%progbits
- 448              		.align	2
- 449              		.global	Receive_Timer_WritePeriod
- 450              		.thumb
- 451              		.thumb_func
- 452              		.type	Receive_Timer_WritePeriod, %function
- 453              	Receive_Timer_WritePeriod:
- 454              	.LFB10:
+ 444              		.size	Receive_Timer_ReadPeriod, .-Receive_Timer_ReadPeriod
+ 445              		.section	.text.Receive_Timer_WritePeriod,"ax",%progbits
+ 446              		.align	2
+ 447              		.global	Receive_Timer_WritePeriod
+ 448              		.thumb
+ 449              		.thumb_func
+ 450              		.type	Receive_Timer_WritePeriod, %function
+ 451              	Receive_Timer_WritePeriod:
+ 452              	.LFB10:
  413:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  414:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  415:.\Generated_Source\PSoC5/Receive_Timer.c **** /*******************************************************************************
@@ -932,59 +930,59 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  430:.\Generated_Source\PSoC5/Receive_Timer.c **** *******************************************************************************/
  431:.\Generated_Source\PSoC5/Receive_Timer.c **** void Receive_Timer_WritePeriod(uint16 period) 
  432:.\Generated_Source\PSoC5/Receive_Timer.c **** {
- 455              		.loc 1 432 0
- 456              		.cfi_startproc
- 457              		@ args = 0, pretend = 0, frame = 8
- 458              		@ frame_needed = 1, uses_anonymous_args = 0
- 459              		@ link register save eliminated.
- 460 0000 80B4     		push	{r7}
- 461              		.cfi_def_cfa_offset 4
- 462              		.cfi_offset 7, -4
- 463 0002 83B0     		sub	sp, sp, #12
- 464              		.cfi_def_cfa_offset 16
- 465 0004 00AF     		add	r7, sp, #0
- 466              		.cfi_def_cfa_register 7
- 467 0006 0346     		mov	r3, r0
- 468 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 453              		.loc 1 432 0
+ 454              		.cfi_startproc
+ 455              		@ args = 0, pretend = 0, frame = 8
+ 456              		@ frame_needed = 1, uses_anonymous_args = 0
+ 457              		@ link register save eliminated.
+ 458 0000 80B4     		push	{r7}
+ 459              		.cfi_def_cfa_offset 4
+ 460              		.cfi_offset 7, -4
+ 461 0002 83B0     		sub	sp, sp, #12
+ 462              		.cfi_def_cfa_offset 16
+ 463 0004 00AF     		add	r7, sp, #0
+ 464              		.cfi_def_cfa_register 7
+ 465 0006 0346     		mov	r3, r0
+ 466 0008 FB80     		strh	r3, [r7, #6]	@ movhi
  433:.\Generated_Source\PSoC5/Receive_Timer.c ****     #if(Receive_Timer_UsingFixedFunction)
  434:.\Generated_Source\PSoC5/Receive_Timer.c ****         uint16 period_temp = (uint16)period;
  435:.\Generated_Source\PSoC5/Receive_Timer.c ****         CY_SET_REG16(Receive_Timer_PERIOD_LSB_PTR, period_temp);
  436:.\Generated_Source\PSoC5/Receive_Timer.c ****     #else
  437:.\Generated_Source\PSoC5/Receive_Timer.c ****         CY_SET_REG16(Receive_Timer_PERIOD_LSB_PTR, period);
- 469              		.loc 1 437 0
- 470 000a 044A     		ldr	r2, .L36
- 471 000c FB88     		ldrh	r3, [r7, #6]	@ movhi
- 472 000e 1380     		strh	r3, [r2]	@ movhi
+ 467              		.loc 1 437 0
+ 468 000a 044A     		ldr	r2, .L36
+ 469 000c FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 470 000e 1380     		strh	r3, [r2]	@ movhi
  438:.\Generated_Source\PSoC5/Receive_Timer.c ****     #endif /*Write Period value with appropriate resolution suffix depending on UDB or fixed functi
  439:.\Generated_Source\PSoC5/Receive_Timer.c **** }
- 473              		.loc 1 439 0
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 17
+ 471              		.loc 1 439 0
+ 472 0010 0C37     		adds	r7, r7, #12
+ 473              		.cfi_def_cfa_offset 4
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 17
 
 
- 474 0010 0C37     		adds	r7, r7, #12
- 475              		.cfi_def_cfa_offset 4
- 476 0012 BD46     		mov	sp, r7
- 477              		.cfi_def_cfa_register 13
- 478              		@ sp needed
- 479 0014 5DF8047B 		ldr	r7, [sp], #4
- 480              		.cfi_restore 7
- 481              		.cfi_def_cfa_offset 0
- 482 0018 7047     		bx	lr
- 483              	.L37:
- 484 001a 00BF     		.align	2
- 485              	.L36:
- 486 001c 5C680040 		.word	1073768540
- 487              		.cfi_endproc
- 488              	.LFE10:
- 489              		.size	Receive_Timer_WritePeriod, .-Receive_Timer_WritePeriod
- 490              		.section	.text.Receive_Timer_ReadCapture,"ax",%progbits
- 491              		.align	2
- 492              		.global	Receive_Timer_ReadCapture
- 493              		.thumb
- 494              		.thumb_func
- 495              		.type	Receive_Timer_ReadCapture, %function
- 496              	Receive_Timer_ReadCapture:
- 497              	.LFB11:
+ 474 0012 BD46     		mov	sp, r7
+ 475              		.cfi_def_cfa_register 13
+ 476              		@ sp needed
+ 477 0014 5DF8047B 		ldr	r7, [sp], #4
+ 478              		.cfi_restore 7
+ 479              		.cfi_def_cfa_offset 0
+ 480 0018 7047     		bx	lr
+ 481              	.L37:
+ 482 001a 00BF     		.align	2
+ 483              	.L36:
+ 484 001c 5C680040 		.word	1073768540
+ 485              		.cfi_endproc
+ 486              	.LFE10:
+ 487              		.size	Receive_Timer_WritePeriod, .-Receive_Timer_WritePeriod
+ 488              		.section	.text.Receive_Timer_ReadCapture,"ax",%progbits
+ 489              		.align	2
+ 490              		.global	Receive_Timer_ReadCapture
+ 491              		.thumb
+ 492              		.thumb_func
+ 493              		.type	Receive_Timer_ReadCapture, %function
+ 494              	Receive_Timer_ReadCapture:
+ 495              	.LFB11:
  440:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  441:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  442:.\Generated_Source\PSoC5/Receive_Timer.c **** /*******************************************************************************
@@ -1003,53 +1001,53 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  455:.\Generated_Source\PSoC5/Receive_Timer.c **** *******************************************************************************/
  456:.\Generated_Source\PSoC5/Receive_Timer.c **** uint16 Receive_Timer_ReadCapture(void) 
  457:.\Generated_Source\PSoC5/Receive_Timer.c **** {
- 498              		.loc 1 457 0
- 499              		.cfi_startproc
- 500              		@ args = 0, pretend = 0, frame = 0
- 501              		@ frame_needed = 1, uses_anonymous_args = 0
- 502              		@ link register save eliminated.
- 503 0000 80B4     		push	{r7}
- 504              		.cfi_def_cfa_offset 4
- 505              		.cfi_offset 7, -4
- 506 0002 00AF     		add	r7, sp, #0
- 507              		.cfi_def_cfa_register 7
+ 496              		.loc 1 457 0
+ 497              		.cfi_startproc
+ 498              		@ args = 0, pretend = 0, frame = 0
+ 499              		@ frame_needed = 1, uses_anonymous_args = 0
+ 500              		@ link register save eliminated.
+ 501 0000 80B4     		push	{r7}
+ 502              		.cfi_def_cfa_offset 4
+ 503              		.cfi_offset 7, -4
+ 504 0002 00AF     		add	r7, sp, #0
+ 505              		.cfi_def_cfa_register 7
  458:.\Generated_Source\PSoC5/Receive_Timer.c ****    #if(Receive_Timer_UsingFixedFunction)
  459:.\Generated_Source\PSoC5/Receive_Timer.c ****        return ((uint16)CY_GET_REG16(Receive_Timer_CAPTURE_LSB_PTR));
  460:.\Generated_Source\PSoC5/Receive_Timer.c ****    #else
  461:.\Generated_Source\PSoC5/Receive_Timer.c ****        return (CY_GET_REG16(Receive_Timer_CAPTURE_LSB_PTR));
- 508              		.loc 1 461 0
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 18
+ 506              		.loc 1 461 0
+ 507 0004 034B     		ldr	r3, .L40
+ 508 0006 1B88     		ldrh	r3, [r3]	@ movhi
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 18
 
 
- 509 0004 034B     		ldr	r3, .L40
- 510 0006 1B88     		ldrh	r3, [r3]	@ movhi
- 511 0008 9BB2     		uxth	r3, r3
+ 509 0008 9BB2     		uxth	r3, r3
  462:.\Generated_Source\PSoC5/Receive_Timer.c ****    #endif /* (Receive_Timer_UsingFixedFunction) */
  463:.\Generated_Source\PSoC5/Receive_Timer.c **** }
- 512              		.loc 1 463 0
- 513 000a 1846     		mov	r0, r3
- 514 000c BD46     		mov	sp, r7
- 515              		.cfi_def_cfa_register 13
- 516              		@ sp needed
- 517 000e 5DF8047B 		ldr	r7, [sp], #4
- 518              		.cfi_restore 7
- 519              		.cfi_def_cfa_offset 0
- 520 0012 7047     		bx	lr
- 521              	.L41:
- 522              		.align	2
- 523              	.L40:
- 524 0014 9C680040 		.word	1073768604
- 525              		.cfi_endproc
- 526              	.LFE11:
- 527              		.size	Receive_Timer_ReadCapture, .-Receive_Timer_ReadCapture
- 528              		.section	.text.Receive_Timer_WriteCounter,"ax",%progbits
- 529              		.align	2
- 530              		.global	Receive_Timer_WriteCounter
- 531              		.thumb
- 532              		.thumb_func
- 533              		.type	Receive_Timer_WriteCounter, %function
- 534              	Receive_Timer_WriteCounter:
- 535              	.LFB12:
+ 510              		.loc 1 463 0
+ 511 000a 1846     		mov	r0, r3
+ 512 000c BD46     		mov	sp, r7
+ 513              		.cfi_def_cfa_register 13
+ 514              		@ sp needed
+ 515 000e 5DF8047B 		ldr	r7, [sp], #4
+ 516              		.cfi_restore 7
+ 517              		.cfi_def_cfa_offset 0
+ 518 0012 7047     		bx	lr
+ 519              	.L41:
+ 520              		.align	2
+ 521              	.L40:
+ 522 0014 9C680040 		.word	1073768604
+ 523              		.cfi_endproc
+ 524              	.LFE11:
+ 525              		.size	Receive_Timer_ReadCapture, .-Receive_Timer_ReadCapture
+ 526              		.section	.text.Receive_Timer_WriteCounter,"ax",%progbits
+ 527              		.align	2
+ 528              		.global	Receive_Timer_WriteCounter
+ 529              		.thumb
+ 530              		.thumb_func
+ 531              		.type	Receive_Timer_WriteCounter, %function
+ 532              	Receive_Timer_WriteCounter:
+ 533              	.LFB12:
  464:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  465:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  466:.\Generated_Source\PSoC5/Receive_Timer.c **** /*******************************************************************************
@@ -1068,23 +1066,23 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  479:.\Generated_Source\PSoC5/Receive_Timer.c **** *******************************************************************************/
  480:.\Generated_Source\PSoC5/Receive_Timer.c **** void Receive_Timer_WriteCounter(uint16 counter) 
  481:.\Generated_Source\PSoC5/Receive_Timer.c **** {
- 536              		.loc 1 481 0
- 537              		.cfi_startproc
- 538              		@ args = 0, pretend = 0, frame = 8
- 539              		@ frame_needed = 1, uses_anonymous_args = 0
- 540              		@ link register save eliminated.
- 541 0000 80B4     		push	{r7}
- 542              		.cfi_def_cfa_offset 4
- 543              		.cfi_offset 7, -4
- 544 0002 83B0     		sub	sp, sp, #12
- 545              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 19
+ 534              		.loc 1 481 0
+ 535              		.cfi_startproc
+ 536              		@ args = 0, pretend = 0, frame = 8
+ 537              		@ frame_needed = 1, uses_anonymous_args = 0
+ 538              		@ link register save eliminated.
+ 539 0000 80B4     		push	{r7}
+ 540              		.cfi_def_cfa_offset 4
+ 541              		.cfi_offset 7, -4
+ 542 0002 83B0     		sub	sp, sp, #12
+ 543              		.cfi_def_cfa_offset 16
+ 544 0004 00AF     		add	r7, sp, #0
+ 545              		.cfi_def_cfa_register 7
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 19
 
 
- 546 0004 00AF     		add	r7, sp, #0
- 547              		.cfi_def_cfa_register 7
- 548 0006 0346     		mov	r3, r0
- 549 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 546 0006 0346     		mov	r3, r0
+ 547 0008 FB80     		strh	r3, [r7, #6]	@ movhi
  482:.\Generated_Source\PSoC5/Receive_Timer.c ****    #if(Receive_Timer_UsingFixedFunction)
  483:.\Generated_Source\PSoC5/Receive_Timer.c ****         /* This functionality is removed until a FixedFunction HW update to
  484:.\Generated_Source\PSoC5/Receive_Timer.c ****          * allow this register to be written
@@ -1093,37 +1091,37 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  487:.\Generated_Source\PSoC5/Receive_Timer.c ****         
  488:.\Generated_Source\PSoC5/Receive_Timer.c ****     #else
  489:.\Generated_Source\PSoC5/Receive_Timer.c ****         CY_SET_REG16(Receive_Timer_COUNTER_LSB_PTR, counter);
- 550              		.loc 1 489 0
- 551 000a 044A     		ldr	r2, .L43
- 552 000c FB88     		ldrh	r3, [r7, #6]	@ movhi
- 553 000e 1380     		strh	r3, [r2]	@ movhi
+ 548              		.loc 1 489 0
+ 549 000a 044A     		ldr	r2, .L43
+ 550 000c FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 551 000e 1380     		strh	r3, [r2]	@ movhi
  490:.\Generated_Source\PSoC5/Receive_Timer.c ****     #endif /* Set Write Counter only for the UDB implementation (Write Counter not available in fix
  491:.\Generated_Source\PSoC5/Receive_Timer.c **** }
- 554              		.loc 1 491 0
- 555 0010 0C37     		adds	r7, r7, #12
- 556              		.cfi_def_cfa_offset 4
- 557 0012 BD46     		mov	sp, r7
- 558              		.cfi_def_cfa_register 13
- 559              		@ sp needed
- 560 0014 5DF8047B 		ldr	r7, [sp], #4
- 561              		.cfi_restore 7
- 562              		.cfi_def_cfa_offset 0
- 563 0018 7047     		bx	lr
- 564              	.L44:
- 565 001a 00BF     		.align	2
- 566              	.L43:
- 567 001c 1C680040 		.word	1073768476
- 568              		.cfi_endproc
- 569              	.LFE12:
- 570              		.size	Receive_Timer_WriteCounter, .-Receive_Timer_WriteCounter
- 571              		.section	.text.Receive_Timer_ReadCounter,"ax",%progbits
- 572              		.align	2
- 573              		.global	Receive_Timer_ReadCounter
- 574              		.thumb
- 575              		.thumb_func
- 576              		.type	Receive_Timer_ReadCounter, %function
- 577              	Receive_Timer_ReadCounter:
- 578              	.LFB13:
+ 552              		.loc 1 491 0
+ 553 0010 0C37     		adds	r7, r7, #12
+ 554              		.cfi_def_cfa_offset 4
+ 555 0012 BD46     		mov	sp, r7
+ 556              		.cfi_def_cfa_register 13
+ 557              		@ sp needed
+ 558 0014 5DF8047B 		ldr	r7, [sp], #4
+ 559              		.cfi_restore 7
+ 560              		.cfi_def_cfa_offset 0
+ 561 0018 7047     		bx	lr
+ 562              	.L44:
+ 563 001a 00BF     		.align	2
+ 564              	.L43:
+ 565 001c 1C680040 		.word	1073768476
+ 566              		.cfi_endproc
+ 567              	.LFE12:
+ 568              		.size	Receive_Timer_WriteCounter, .-Receive_Timer_WriteCounter
+ 569              		.section	.text.Receive_Timer_ReadCounter,"ax",%progbits
+ 570              		.align	2
+ 571              		.global	Receive_Timer_ReadCounter
+ 572              		.thumb
+ 573              		.thumb_func
+ 574              		.type	Receive_Timer_ReadCounter, %function
+ 575              	Receive_Timer_ReadCounter:
+ 576              	.LFB13:
  492:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  493:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  494:.\Generated_Source\PSoC5/Receive_Timer.c **** /*******************************************************************************
@@ -1138,23 +1136,23 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  503:.\Generated_Source\PSoC5/Receive_Timer.c **** *
  504:.\Generated_Source\PSoC5/Receive_Timer.c **** * Return:
  505:.\Generated_Source\PSoC5/Receive_Timer.c **** *  Present compare value.
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 20
-
-
  506:.\Generated_Source\PSoC5/Receive_Timer.c **** *
  507:.\Generated_Source\PSoC5/Receive_Timer.c **** *******************************************************************************/
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 20
+
+
  508:.\Generated_Source\PSoC5/Receive_Timer.c **** uint16 Receive_Timer_ReadCounter(void) 
  509:.\Generated_Source\PSoC5/Receive_Timer.c **** {
- 579              		.loc 1 509 0
- 580              		.cfi_startproc
- 581              		@ args = 0, pretend = 0, frame = 0
- 582              		@ frame_needed = 1, uses_anonymous_args = 0
- 583              		@ link register save eliminated.
- 584 0000 80B4     		push	{r7}
- 585              		.cfi_def_cfa_offset 4
- 586              		.cfi_offset 7, -4
- 587 0002 00AF     		add	r7, sp, #0
- 588              		.cfi_def_cfa_register 7
+ 577              		.loc 1 509 0
+ 578              		.cfi_startproc
+ 579              		@ args = 0, pretend = 0, frame = 0
+ 580              		@ frame_needed = 1, uses_anonymous_args = 0
+ 581              		@ link register save eliminated.
+ 582 0000 80B4     		push	{r7}
+ 583              		.cfi_def_cfa_offset 4
+ 584              		.cfi_offset 7, -4
+ 585 0002 00AF     		add	r7, sp, #0
+ 586              		.cfi_def_cfa_register 7
  510:.\Generated_Source\PSoC5/Receive_Timer.c ****     /* Force capture by reading Accumulator */
  511:.\Generated_Source\PSoC5/Receive_Timer.c ****     /* Must first do a software capture to be able to read the counter */
  512:.\Generated_Source\PSoC5/Receive_Timer.c ****     /* It is up to the user code to make sure there isn't already captured data in the FIFO */
@@ -1162,9 +1160,9 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  514:.\Generated_Source\PSoC5/Receive_Timer.c ****         (void)CY_GET_REG16(Receive_Timer_COUNTER_LSB_PTR);
  515:.\Generated_Source\PSoC5/Receive_Timer.c ****     #else
  516:.\Generated_Source\PSoC5/Receive_Timer.c ****         (void)CY_GET_REG8(Receive_Timer_COUNTER_LSB_PTR_8BIT);
- 589              		.loc 1 516 0
- 590 0004 044B     		ldr	r3, .L47
- 591 0006 1B78     		ldrb	r3, [r3]
+ 587              		.loc 1 516 0
+ 588 0004 044B     		ldr	r3, .L47
+ 589 0006 1B78     		ldrb	r3, [r3]
  517:.\Generated_Source\PSoC5/Receive_Timer.c ****     #endif/* (Receive_Timer_UsingFixedFunction) */
  518:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  519:.\Generated_Source\PSoC5/Receive_Timer.c ****     /* Read the data from the FIFO (or capture register for Fixed Function)*/
@@ -1172,40 +1170,40 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  521:.\Generated_Source\PSoC5/Receive_Timer.c ****         return ((uint16)CY_GET_REG16(Receive_Timer_CAPTURE_LSB_PTR));
  522:.\Generated_Source\PSoC5/Receive_Timer.c ****     #else
  523:.\Generated_Source\PSoC5/Receive_Timer.c ****         return (CY_GET_REG16(Receive_Timer_CAPTURE_LSB_PTR));
- 592              		.loc 1 523 0
- 593 0008 044B     		ldr	r3, .L47+4
- 594 000a 1B88     		ldrh	r3, [r3]	@ movhi
- 595 000c 9BB2     		uxth	r3, r3
+ 590              		.loc 1 523 0
+ 591 0008 044B     		ldr	r3, .L47+4
+ 592 000a 1B88     		ldrh	r3, [r3]	@ movhi
+ 593 000c 9BB2     		uxth	r3, r3
  524:.\Generated_Source\PSoC5/Receive_Timer.c ****     #endif /* (Receive_Timer_UsingFixedFunction) */
  525:.\Generated_Source\PSoC5/Receive_Timer.c **** }
- 596              		.loc 1 525 0
- 597 000e 1846     		mov	r0, r3
- 598 0010 BD46     		mov	sp, r7
- 599              		.cfi_def_cfa_register 13
- 600              		@ sp needed
- 601 0012 5DF8047B 		ldr	r7, [sp], #4
- 602              		.cfi_restore 7
- 603              		.cfi_def_cfa_offset 0
- 604 0016 7047     		bx	lr
- 605              	.L48:
- 606              		.align	2
- 607              	.L47:
- 608 0018 0E640040 		.word	1073767438
- 609 001c 9C680040 		.word	1073768604
- 610              		.cfi_endproc
- 611              	.LFE13:
- 612              		.size	Receive_Timer_ReadCounter, .-Receive_Timer_ReadCounter
- 613              		.section	.text.Receive_Timer_EnableTrigger,"ax",%progbits
- 614              		.align	2
- 615              		.global	Receive_Timer_EnableTrigger
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 21
+ 594              		.loc 1 525 0
+ 595 000e 1846     		mov	r0, r3
+ 596 0010 BD46     		mov	sp, r7
+ 597              		.cfi_def_cfa_register 13
+ 598              		@ sp needed
+ 599 0012 5DF8047B 		ldr	r7, [sp], #4
+ 600              		.cfi_restore 7
+ 601              		.cfi_def_cfa_offset 0
+ 602 0016 7047     		bx	lr
+ 603              	.L48:
+ 604              		.align	2
+ 605              	.L47:
+ 606 0018 0E640040 		.word	1073767438
+ 607 001c 9C680040 		.word	1073768604
+ 608              		.cfi_endproc
+ 609              	.LFE13:
+ 610              		.size	Receive_Timer_ReadCounter, .-Receive_Timer_ReadCounter
+ 611              		.section	.text.Receive_Timer_ClearFIFO,"ax",%progbits
+ 612              		.align	2
+ 613              		.global	Receive_Timer_ClearFIFO
+ 614              		.thumb
+ 615              		.thumb_func
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 21
 
 
- 616              		.thumb
- 617              		.thumb_func
- 618              		.type	Receive_Timer_EnableTrigger, %function
- 619              	Receive_Timer_EnableTrigger:
- 620              	.LFB14:
+ 616              		.type	Receive_Timer_ClearFIFO, %function
+ 617              	Receive_Timer_ClearFIFO:
+ 618              	.LFB14:
  526:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  527:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  528:.\Generated_Source\PSoC5/Receive_Timer.c **** #if(!Receive_Timer_UsingFixedFunction) /* UDB Specific Functions */
@@ -1258,11 +1256,11 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  575:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  576:.\Generated_Source\PSoC5/Receive_Timer.c ****         /* Write The New Setting */
  577:.\Generated_Source\PSoC5/Receive_Timer.c ****         Receive_Timer_CONTROL |= captureMode;
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 22
-
-
  578:.\Generated_Source\PSoC5/Receive_Timer.c ****     #endif /* (!Receive_Timer_UDB_CONTROL_REG_REMOVED) */
  579:.\Generated_Source\PSoC5/Receive_Timer.c **** }
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 22
+
+
  580:.\Generated_Source\PSoC5/Receive_Timer.c **** #endif /* Remove API if Capture Mode is not Software Controlled */
  581:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  582:.\Generated_Source\PSoC5/Receive_Timer.c **** 
@@ -1318,59 +1316,18 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  632:.\Generated_Source\PSoC5/Receive_Timer.c **** *  void
  633:.\Generated_Source\PSoC5/Receive_Timer.c **** *
  634:.\Generated_Source\PSoC5/Receive_Timer.c **** * Return:
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 23
-
-
  635:.\Generated_Source\PSoC5/Receive_Timer.c **** *  void
  636:.\Generated_Source\PSoC5/Receive_Timer.c **** *
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 23
+
+
  637:.\Generated_Source\PSoC5/Receive_Timer.c **** *******************************************************************************/
  638:.\Generated_Source\PSoC5/Receive_Timer.c **** void Receive_Timer_EnableTrigger(void) 
  639:.\Generated_Source\PSoC5/Receive_Timer.c **** {
- 621              		.loc 1 639 0
- 622              		.cfi_startproc
- 623              		@ args = 0, pretend = 0, frame = 0
- 624              		@ frame_needed = 1, uses_anonymous_args = 0
- 625              		@ link register save eliminated.
- 626 0000 80B4     		push	{r7}
- 627              		.cfi_def_cfa_offset 4
- 628              		.cfi_offset 7, -4
- 629 0002 00AF     		add	r7, sp, #0
- 630              		.cfi_def_cfa_register 7
  640:.\Generated_Source\PSoC5/Receive_Timer.c ****     #if (!Receive_Timer_UDB_CONTROL_REG_REMOVED)   /* Remove assignment if control register is remo
  641:.\Generated_Source\PSoC5/Receive_Timer.c ****         Receive_Timer_CONTROL |= Receive_Timer_CTRL_TRIG_EN;
- 631              		.loc 1 641 0
- 632 0004 054A     		ldr	r2, .L50
- 633 0006 054B     		ldr	r3, .L50
- 634 0008 1B78     		ldrb	r3, [r3]
- 635 000a DBB2     		uxtb	r3, r3
- 636 000c 43F01003 		orr	r3, r3, #16
- 637 0010 DBB2     		uxtb	r3, r3
- 638 0012 1370     		strb	r3, [r2]
  642:.\Generated_Source\PSoC5/Receive_Timer.c ****     #endif /* Remove code section if control register is not used */
  643:.\Generated_Source\PSoC5/Receive_Timer.c **** }
- 639              		.loc 1 643 0
- 640 0014 BD46     		mov	sp, r7
- 641              		.cfi_def_cfa_register 13
- 642              		@ sp needed
- 643 0016 5DF8047B 		ldr	r7, [sp], #4
- 644              		.cfi_restore 7
- 645              		.cfi_def_cfa_offset 0
- 646 001a 7047     		bx	lr
- 647              	.L51:
- 648              		.align	2
- 649              	.L50:
- 650 001c 7F640040 		.word	1073767551
- 651              		.cfi_endproc
- 652              	.LFE14:
- 653              		.size	Receive_Timer_EnableTrigger, .-Receive_Timer_EnableTrigger
- 654              		.section	.text.Receive_Timer_DisableTrigger,"ax",%progbits
- 655              		.align	2
- 656              		.global	Receive_Timer_DisableTrigger
- 657              		.thumb
- 658              		.thumb_func
- 659              		.type	Receive_Timer_DisableTrigger, %function
- 660              	Receive_Timer_DisableTrigger:
- 661              	.LFB15:
  644:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  645:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  646:.\Generated_Source\PSoC5/Receive_Timer.c **** /*******************************************************************************
@@ -1378,9 +1335,6 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  648:.\Generated_Source\PSoC5/Receive_Timer.c **** ********************************************************************************
  649:.\Generated_Source\PSoC5/Receive_Timer.c **** *
  650:.\Generated_Source\PSoC5/Receive_Timer.c **** * Summary:
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 24
-
-
  651:.\Generated_Source\PSoC5/Receive_Timer.c **** *  Clears the control bit enabling Hardware Trigger mode
  652:.\Generated_Source\PSoC5/Receive_Timer.c **** *
  653:.\Generated_Source\PSoC5/Receive_Timer.c **** * Parameters:
@@ -1392,55 +1346,11 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  659:.\Generated_Source\PSoC5/Receive_Timer.c **** *******************************************************************************/
  660:.\Generated_Source\PSoC5/Receive_Timer.c **** void Receive_Timer_DisableTrigger(void) 
  661:.\Generated_Source\PSoC5/Receive_Timer.c **** {
- 662              		.loc 1 661 0
- 663              		.cfi_startproc
- 664              		@ args = 0, pretend = 0, frame = 0
- 665              		@ frame_needed = 1, uses_anonymous_args = 0
- 666              		@ link register save eliminated.
- 667 0000 80B4     		push	{r7}
- 668              		.cfi_def_cfa_offset 4
- 669              		.cfi_offset 7, -4
- 670 0002 00AF     		add	r7, sp, #0
- 671              		.cfi_def_cfa_register 7
  662:.\Generated_Source\PSoC5/Receive_Timer.c ****     #if (!Receive_Timer_UDB_CONTROL_REG_REMOVED )   /* Remove assignment if control register is rem
  663:.\Generated_Source\PSoC5/Receive_Timer.c ****         Receive_Timer_CONTROL &= ((uint8)(~Receive_Timer_CTRL_TRIG_EN));
- 672              		.loc 1 663 0
- 673 0004 054A     		ldr	r2, .L53
- 674 0006 054B     		ldr	r3, .L53
- 675 0008 1B78     		ldrb	r3, [r3]
- 676 000a DBB2     		uxtb	r3, r3
- 677 000c 23F01003 		bic	r3, r3, #16
- 678 0010 DBB2     		uxtb	r3, r3
- 679 0012 1370     		strb	r3, [r2]
  664:.\Generated_Source\PSoC5/Receive_Timer.c ****     #endif /* Remove code section if control register is not used */
  665:.\Generated_Source\PSoC5/Receive_Timer.c **** }
- 680              		.loc 1 665 0
- 681 0014 BD46     		mov	sp, r7
- 682              		.cfi_def_cfa_register 13
- 683              		@ sp needed
- 684 0016 5DF8047B 		ldr	r7, [sp], #4
- 685              		.cfi_restore 7
- 686              		.cfi_def_cfa_offset 0
- 687 001a 7047     		bx	lr
- 688              	.L54:
- 689              		.align	2
- 690              	.L53:
- 691 001c 7F640040 		.word	1073767551
- 692              		.cfi_endproc
- 693              	.LFE15:
- 694              		.size	Receive_Timer_DisableTrigger, .-Receive_Timer_DisableTrigger
- 695              		.section	.text.Receive_Timer_ClearFIFO,"ax",%progbits
- 696              		.align	2
- 697              		.global	Receive_Timer_ClearFIFO
- 698              		.thumb
- 699              		.thumb_func
- 700              		.type	Receive_Timer_ClearFIFO, %function
- 701              	Receive_Timer_ClearFIFO:
- 702              	.LFB16:
  666:.\Generated_Source\PSoC5/Receive_Timer.c **** #endif /* Remove API is Trigger Mode is set to None */
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 25
-
-
  667:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  668:.\Generated_Source\PSoC5/Receive_Timer.c **** #if(Receive_Timer_InterruptOnCaptureCount)
  669:.\Generated_Source\PSoC5/Receive_Timer.c **** 
@@ -1468,6 +1378,9 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  691:.\Generated_Source\PSoC5/Receive_Timer.c ****     interruptCount &= Receive_Timer_CTRL_INTCNT_MASK;
  692:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  693:.\Generated_Source\PSoC5/Receive_Timer.c ****     #if (!Receive_Timer_UDB_CONTROL_REG_REMOVED)
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 24
+
+
  694:.\Generated_Source\PSoC5/Receive_Timer.c ****         /* Clear the Current Setting */
  695:.\Generated_Source\PSoC5/Receive_Timer.c ****         Receive_Timer_CONTROL &= ((uint8)(~Receive_Timer_CTRL_INTCNT_MASK));
  696:.\Generated_Source\PSoC5/Receive_Timer.c ****         /* Write The New Setting */
@@ -1498,9 +1411,6 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  721:.\Generated_Source\PSoC5/Receive_Timer.c **** *******************************************************************************/
  722:.\Generated_Source\PSoC5/Receive_Timer.c **** void Receive_Timer_SetCaptureCount(uint8 captureCount) 
  723:.\Generated_Source\PSoC5/Receive_Timer.c **** {
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 26
-
-
  724:.\Generated_Source\PSoC5/Receive_Timer.c ****     Receive_Timer_CAP_COUNT = captureCount;
  725:.\Generated_Source\PSoC5/Receive_Timer.c **** }
  726:.\Generated_Source\PSoC5/Receive_Timer.c **** 
@@ -1528,6 +1438,9 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  748:.\Generated_Source\PSoC5/Receive_Timer.c **** 
  749:.\Generated_Source\PSoC5/Receive_Timer.c **** /*******************************************************************************
  750:.\Generated_Source\PSoC5/Receive_Timer.c **** * Function Name: Receive_Timer_ClearFIFO
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 25
+
+
  751:.\Generated_Source\PSoC5/Receive_Timer.c **** ********************************************************************************
  752:.\Generated_Source\PSoC5/Receive_Timer.c **** *
  753:.\Generated_Source\PSoC5/Receive_Timer.c **** * Summary:
@@ -1542,994 +1455,955 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 1
  762:.\Generated_Source\PSoC5/Receive_Timer.c **** *******************************************************************************/
  763:.\Generated_Source\PSoC5/Receive_Timer.c **** void Receive_Timer_ClearFIFO(void) 
  764:.\Generated_Source\PSoC5/Receive_Timer.c **** {
- 703              		.loc 1 764 0
- 704              		.cfi_startproc
- 705              		@ args = 0, pretend = 0, frame = 0
- 706              		@ frame_needed = 1, uses_anonymous_args = 0
- 707 0000 80B5     		push	{r7, lr}
- 708              		.cfi_def_cfa_offset 8
- 709              		.cfi_offset 7, -8
- 710              		.cfi_offset 14, -4
- 711 0002 00AF     		add	r7, sp, #0
- 712              		.cfi_def_cfa_register 7
+ 619              		.loc 1 764 0
+ 620              		.cfi_startproc
+ 621              		@ args = 0, pretend = 0, frame = 0
+ 622              		@ frame_needed = 1, uses_anonymous_args = 0
+ 623 0000 80B5     		push	{r7, lr}
+ 624              		.cfi_def_cfa_offset 8
+ 625              		.cfi_offset 7, -8
+ 626              		.cfi_offset 14, -4
+ 627 0002 00AF     		add	r7, sp, #0
+ 628              		.cfi_def_cfa_register 7
  765:.\Generated_Source\PSoC5/Receive_Timer.c ****     while(0u != (Receive_Timer_ReadStatusRegister() & Receive_Timer_STATUS_FIFONEMP))
- 713              		.loc 1 765 0
- 714 0004 01E0     		b	.L56
- 715              	.L57:
+ 629              		.loc 1 765 0
+ 630 0004 01E0     		b	.L50
+ 631              	.L51:
  766:.\Generated_Source\PSoC5/Receive_Timer.c ****     {
  767:.\Generated_Source\PSoC5/Receive_Timer.c ****         (void)Receive_Timer_ReadCapture();
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 27
-
-
- 716              		.loc 1 767 0
- 717 0006 FFF7FEFF 		bl	Receive_Timer_ReadCapture
- 718              	.L56:
+ 632              		.loc 1 767 0
+ 633 0006 FFF7FEFF 		bl	Receive_Timer_ReadCapture
+ 634              	.L50:
  765:.\Generated_Source\PSoC5/Receive_Timer.c ****     while(0u != (Receive_Timer_ReadStatusRegister() & Receive_Timer_STATUS_FIFONEMP))
- 719              		.loc 1 765 0
- 720 000a FFF7FEFF 		bl	Receive_Timer_ReadStatusRegister
- 721 000e 0346     		mov	r3, r0
- 722 0010 03F00803 		and	r3, r3, #8
- 723 0014 002B     		cmp	r3, #0
- 724 0016 F6D1     		bne	.L57
+ 635              		.loc 1 765 0
+ 636 000a FFF7FEFF 		bl	Receive_Timer_ReadStatusRegister
+ 637 000e 0346     		mov	r3, r0
+ 638 0010 03F00803 		and	r3, r3, #8
+ 639 0014 002B     		cmp	r3, #0
+ 640 0016 F6D1     		bne	.L51
  768:.\Generated_Source\PSoC5/Receive_Timer.c ****     }
  769:.\Generated_Source\PSoC5/Receive_Timer.c **** }
- 725              		.loc 1 769 0
- 726 0018 80BD     		pop	{r7, pc}
- 727              		.cfi_endproc
- 728              	.LFE16:
- 729              		.size	Receive_Timer_ClearFIFO, .-Receive_Timer_ClearFIFO
- 730 001a 00BF     		.text
- 731              	.Letext0:
- 732              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
- 733              		.section	.debug_info,"",%progbits
- 734              	.Ldebug_info0:
- 735 0000 72020000 		.4byte	0x272
- 736 0004 0400     		.2byte	0x4
- 737 0006 00000000 		.4byte	.Ldebug_abbrev0
- 738 000a 04       		.byte	0x4
- 739 000b 01       		.uleb128 0x1
- 740 000c 6B010000 		.4byte	.LASF38
- 741 0010 01       		.byte	0x1
- 742 0011 EB020000 		.4byte	.LASF39
- 743 0015 CA000000 		.4byte	.LASF40
- 744 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 745 001d 00000000 		.4byte	0
- 746 0021 00000000 		.4byte	.Ldebug_line0
- 747 0025 02       		.uleb128 0x2
- 748 0026 01       		.byte	0x1
- 749 0027 06       		.byte	0x6
- 750 0028 72030000 		.4byte	.LASF0
- 751 002c 02       		.uleb128 0x2
- 752 002d 01       		.byte	0x1
- 753 002e 08       		.byte	0x8
- 754 002f BC000000 		.4byte	.LASF1
- 755 0033 02       		.uleb128 0x2
- 756 0034 02       		.byte	0x2
- 757 0035 05       		.byte	0x5
- 758 0036 E1020000 		.4byte	.LASF2
- 759 003a 02       		.uleb128 0x2
- 760 003b 02       		.byte	0x2
- 761 003c 07       		.byte	0x7
- 762 003d 65000000 		.4byte	.LASF3
- 763 0041 02       		.uleb128 0x2
- 764 0042 04       		.byte	0x4
- 765 0043 05       		.byte	0x5
- 766 0044 45030000 		.4byte	.LASF4
- 767 0048 02       		.uleb128 0x2
- 768 0049 04       		.byte	0x4
- 769 004a 07       		.byte	0x7
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 28
+ 641              		.loc 1 769 0
+ 642 0018 80BD     		pop	{r7, pc}
+ 643              		.cfi_endproc
+ 644              	.LFE14:
+ 645              		.size	Receive_Timer_ClearFIFO, .-Receive_Timer_ClearFIFO
+ 646 001a 00BF     		.text
+ 647              	.Letext0:
+ 648              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 649              		.section	.debug_info,"",%progbits
+ 650              	.Ldebug_info0:
+ 651 0000 4E020000 		.4byte	0x24e
+ 652 0004 0400     		.2byte	0x4
+ 653 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 654 000a 04       		.byte	0x4
+ 655 000b 01       		.uleb128 0x1
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 26
 
 
- 770 004b 1C010000 		.4byte	.LASF5
- 771 004f 02       		.uleb128 0x2
- 772 0050 08       		.byte	0x8
- 773 0051 05       		.byte	0x5
- 774 0052 AD020000 		.4byte	.LASF6
- 775 0056 02       		.uleb128 0x2
- 776 0057 08       		.byte	0x8
- 777 0058 07       		.byte	0x7
- 778 0059 88020000 		.4byte	.LASF7
- 779 005d 03       		.uleb128 0x3
- 780 005e 04       		.byte	0x4
- 781 005f 05       		.byte	0x5
- 782 0060 696E7400 		.ascii	"int\000"
- 783 0064 02       		.uleb128 0x2
- 784 0065 04       		.byte	0x4
- 785 0066 07       		.byte	0x7
- 786 0067 42020000 		.4byte	.LASF8
- 787 006b 04       		.uleb128 0x4
- 788 006c 2E010000 		.4byte	.LASF9
- 789 0070 02       		.byte	0x2
- 790 0071 C2       		.byte	0xc2
- 791 0072 2C000000 		.4byte	0x2c
- 792 0076 04       		.uleb128 0x4
- 793 0077 00020000 		.4byte	.LASF10
- 794 007b 02       		.byte	0x2
- 795 007c C3       		.byte	0xc3
- 796 007d 3A000000 		.4byte	0x3a
- 797 0081 02       		.uleb128 0x2
- 798 0082 04       		.byte	0x4
- 799 0083 04       		.byte	0x4
- 800 0084 AE000000 		.4byte	.LASF11
- 801 0088 02       		.uleb128 0x2
- 802 0089 08       		.byte	0x8
- 803 008a 04       		.byte	0x4
- 804 008b F9010000 		.4byte	.LASF12
- 805 008f 02       		.uleb128 0x2
- 806 0090 01       		.byte	0x1
- 807 0091 08       		.byte	0x8
- 808 0092 4E030000 		.4byte	.LASF13
- 809 0096 05       		.uleb128 0x5
- 810 0097 9F020000 		.4byte	.LASF14
- 811 009b 02       		.byte	0x2
- 812 009c 6C01     		.2byte	0x16c
- 813 009e A2000000 		.4byte	0xa2
- 814 00a2 06       		.uleb128 0x6
- 815 00a3 6B000000 		.4byte	0x6b
- 816 00a7 05       		.uleb128 0x5
- 817 00a8 00000000 		.4byte	.LASF15
- 818 00ac 02       		.byte	0x2
- 819 00ad 6D01     		.2byte	0x16d
- 820 00af B3000000 		.4byte	0xb3
- 821 00b3 06       		.uleb128 0x6
- 822 00b4 76000000 		.4byte	0x76
- 823 00b8 02       		.uleb128 0x2
- 824 00b9 04       		.byte	0x4
- 825 00ba 07       		.byte	0x7
- 826 00bb A4020000 		.4byte	.LASF16
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 29
+ 656 000c 6B010000 		.4byte	.LASF36
+ 657 0010 01       		.byte	0x1
+ 658 0011 B2020000 		.4byte	.LASF37
+ 659 0015 CA000000 		.4byte	.LASF38
+ 660 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 661 001d 00000000 		.4byte	0
+ 662 0021 00000000 		.4byte	.Ldebug_line0
+ 663 0025 02       		.uleb128 0x2
+ 664 0026 01       		.byte	0x1
+ 665 0027 06       		.byte	0x6
+ 666 0028 39030000 		.4byte	.LASF0
+ 667 002c 02       		.uleb128 0x2
+ 668 002d 01       		.byte	0x1
+ 669 002e 08       		.byte	0x8
+ 670 002f BC000000 		.4byte	.LASF1
+ 671 0033 02       		.uleb128 0x2
+ 672 0034 02       		.byte	0x2
+ 673 0035 05       		.byte	0x5
+ 674 0036 A8020000 		.4byte	.LASF2
+ 675 003a 02       		.uleb128 0x2
+ 676 003b 02       		.byte	0x2
+ 677 003c 07       		.byte	0x7
+ 678 003d 65000000 		.4byte	.LASF3
+ 679 0041 02       		.uleb128 0x2
+ 680 0042 04       		.byte	0x4
+ 681 0043 05       		.byte	0x5
+ 682 0044 0C030000 		.4byte	.LASF4
+ 683 0048 02       		.uleb128 0x2
+ 684 0049 04       		.byte	0x4
+ 685 004a 07       		.byte	0x7
+ 686 004b 1C010000 		.4byte	.LASF5
+ 687 004f 02       		.uleb128 0x2
+ 688 0050 08       		.byte	0x8
+ 689 0051 05       		.byte	0x5
+ 690 0052 74020000 		.4byte	.LASF6
+ 691 0056 02       		.uleb128 0x2
+ 692 0057 08       		.byte	0x8
+ 693 0058 07       		.byte	0x7
+ 694 0059 4F020000 		.4byte	.LASF7
+ 695 005d 03       		.uleb128 0x3
+ 696 005e 04       		.byte	0x4
+ 697 005f 05       		.byte	0x5
+ 698 0060 696E7400 		.ascii	"int\000"
+ 699 0064 02       		.uleb128 0x2
+ 700 0065 04       		.byte	0x4
+ 701 0066 07       		.byte	0x7
+ 702 0067 42020000 		.4byte	.LASF8
+ 703 006b 04       		.uleb128 0x4
+ 704 006c 2E010000 		.4byte	.LASF9
+ 705 0070 02       		.byte	0x2
+ 706 0071 C2       		.byte	0xc2
+ 707 0072 2C000000 		.4byte	0x2c
+ 708 0076 04       		.uleb128 0x4
+ 709 0077 00020000 		.4byte	.LASF10
+ 710 007b 02       		.byte	0x2
+ 711 007c C3       		.byte	0xc3
+ 712 007d 3A000000 		.4byte	0x3a
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 27
 
 
- 827 00bf 07       		.uleb128 0x7
- 828 00c0 14030000 		.4byte	.LASF20
- 829 00c4 01       		.byte	0x1
- 830 00c5 2B       		.byte	0x2b
- 831 00c6 00000000 		.4byte	.LFB0
- 832 00ca 50000000 		.4byte	.LFE0-.LFB0
- 833 00ce 01       		.uleb128 0x1
- 834 00cf 9C       		.byte	0x9c
- 835 00d0 E3000000 		.4byte	0xe3
- 836 00d4 08       		.uleb128 0x8
- 837 00d5 27000000 		.4byte	.LASF41
- 838 00d9 01       		.byte	0x1
- 839 00da 2F       		.byte	0x2f
- 840 00db 6B000000 		.4byte	0x6b
- 841 00df 02       		.uleb128 0x2
- 842 00e0 91       		.byte	0x91
- 843 00e1 77       		.sleb128 -9
- 844 00e2 00       		.byte	0
- 845 00e3 09       		.uleb128 0x9
- 846 00e4 3C010000 		.4byte	.LASF17
- 847 00e8 01       		.byte	0x1
- 848 00e9 B4       		.byte	0xb4
- 849 00ea 00000000 		.4byte	.LFB1
- 850 00ee 20000000 		.4byte	.LFE1-.LFB1
- 851 00f2 01       		.uleb128 0x1
- 852 00f3 9C       		.byte	0x9c
- 853 00f4 0A       		.uleb128 0xa
- 854 00f5 AE030000 		.4byte	.LASF18
- 855 00f9 01       		.byte	0x1
- 856 00fa D7       		.byte	0xd7
- 857 00fb 00000000 		.4byte	.LFB2
- 858 00ff 20000000 		.4byte	.LFE2-.LFB2
- 859 0103 01       		.uleb128 0x1
- 860 0104 9C       		.byte	0x9c
- 861 0105 09       		.uleb128 0x9
- 862 0106 78000000 		.4byte	.LASF19
- 863 010a 01       		.byte	0x1
- 864 010b F7       		.byte	0xf7
- 865 010c 00000000 		.4byte	.LFB3
- 866 0110 20000000 		.4byte	.LFE3-.LFB3
- 867 0114 01       		.uleb128 0x1
- 868 0115 9C       		.byte	0x9c
- 869 0116 0B       		.uleb128 0xb
- 870 0117 53030000 		.4byte	.LASF21
- 871 011b 01       		.byte	0x1
- 872 011c 1701     		.2byte	0x117
- 873 011e 00000000 		.4byte	.LFB4
- 874 0122 20000000 		.4byte	.LFE4-.LFB4
- 875 0126 01       		.uleb128 0x1
- 876 0127 9C       		.byte	0x9c
- 877 0128 3C010000 		.4byte	0x13c
- 878 012c 0C       		.uleb128 0xc
- 879 012d BB020000 		.4byte	.LASF26
- 880 0131 01       		.byte	0x1
- 881 0132 1701     		.2byte	0x117
- 882 0134 6B000000 		.4byte	0x6b
- 883 0138 02       		.uleb128 0x2
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 30
+ 713 0081 02       		.uleb128 0x2
+ 714 0082 04       		.byte	0x4
+ 715 0083 04       		.byte	0x4
+ 716 0084 AE000000 		.4byte	.LASF11
+ 717 0088 02       		.uleb128 0x2
+ 718 0089 08       		.byte	0x8
+ 719 008a 04       		.byte	0x4
+ 720 008b F9010000 		.4byte	.LASF12
+ 721 008f 02       		.uleb128 0x2
+ 722 0090 01       		.byte	0x1
+ 723 0091 08       		.byte	0x8
+ 724 0092 15030000 		.4byte	.LASF13
+ 725 0096 05       		.uleb128 0x5
+ 726 0097 66020000 		.4byte	.LASF14
+ 727 009b 02       		.byte	0x2
+ 728 009c 6C01     		.2byte	0x16c
+ 729 009e A2000000 		.4byte	0xa2
+ 730 00a2 06       		.uleb128 0x6
+ 731 00a3 6B000000 		.4byte	0x6b
+ 732 00a7 05       		.uleb128 0x5
+ 733 00a8 00000000 		.4byte	.LASF15
+ 734 00ac 02       		.byte	0x2
+ 735 00ad 6D01     		.2byte	0x16d
+ 736 00af B3000000 		.4byte	0xb3
+ 737 00b3 06       		.uleb128 0x6
+ 738 00b4 76000000 		.4byte	0x76
+ 739 00b8 02       		.uleb128 0x2
+ 740 00b9 04       		.byte	0x4
+ 741 00ba 07       		.byte	0x7
+ 742 00bb 6B020000 		.4byte	.LASF16
+ 743 00bf 07       		.uleb128 0x7
+ 744 00c0 DB020000 		.4byte	.LASF20
+ 745 00c4 01       		.byte	0x1
+ 746 00c5 2B       		.byte	0x2b
+ 747 00c6 00000000 		.4byte	.LFB0
+ 748 00ca 4C000000 		.4byte	.LFE0-.LFB0
+ 749 00ce 01       		.uleb128 0x1
+ 750 00cf 9C       		.byte	0x9c
+ 751 00d0 E3000000 		.4byte	0xe3
+ 752 00d4 08       		.uleb128 0x8
+ 753 00d5 27000000 		.4byte	.LASF39
+ 754 00d9 01       		.byte	0x1
+ 755 00da 2F       		.byte	0x2f
+ 756 00db 6B000000 		.4byte	0x6b
+ 757 00df 02       		.uleb128 0x2
+ 758 00e0 91       		.byte	0x91
+ 759 00e1 77       		.sleb128 -9
+ 760 00e2 00       		.byte	0
+ 761 00e3 09       		.uleb128 0x9
+ 762 00e4 3C010000 		.4byte	.LASF17
+ 763 00e8 01       		.byte	0x1
+ 764 00e9 B4       		.byte	0xb4
+ 765 00ea 00000000 		.4byte	.LFB1
+ 766 00ee 20000000 		.4byte	.LFE1-.LFB1
+ 767 00f2 01       		.uleb128 0x1
+ 768 00f3 9C       		.byte	0x9c
+ 769 00f4 0A       		.uleb128 0xa
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 28
 
 
- 884 0139 91       		.byte	0x91
- 885 013a 77       		.sleb128 -9
- 886 013b 00       		.byte	0
- 887 013c 0D       		.uleb128 0xd
- 888 013d 27030000 		.4byte	.LASF22
- 889 0141 01       		.byte	0x1
- 890 0142 2E01     		.2byte	0x12e
- 891 0144 00000000 		.4byte	.LFB5
- 892 0148 14000000 		.4byte	.LFE5-.LFB5
- 893 014c 01       		.uleb128 0x1
- 894 014d 9C       		.byte	0x9c
- 895 014e 0E       		.uleb128 0xe
- 896 014f 06000000 		.4byte	.LASF23
- 897 0153 01       		.byte	0x1
- 898 0154 4D01     		.2byte	0x14d
- 899 0156 6B000000 		.4byte	0x6b
- 900 015a 00000000 		.4byte	.LFB6
- 901 015e 18000000 		.4byte	.LFE6-.LFB6
- 902 0162 01       		.uleb128 0x1
- 903 0163 9C       		.byte	0x9c
- 904 0164 0E       		.uleb128 0xe
- 905 0165 07020000 		.4byte	.LASF24
- 906 0169 01       		.byte	0x1
- 907 016a 6401     		.2byte	0x164
- 908 016c 6B000000 		.4byte	0x6b
- 909 0170 00000000 		.4byte	.LFB7
- 910 0174 18000000 		.4byte	.LFE7-.LFB7
- 911 0178 01       		.uleb128 0x1
- 912 0179 9C       		.byte	0x9c
- 913 017a 0B       		.uleb128 0xb
- 914 017b 8B000000 		.4byte	.LASF25
- 915 017f 01       		.byte	0x1
- 916 0180 7B01     		.2byte	0x17b
- 917 0182 00000000 		.4byte	.LFB8
- 918 0186 20000000 		.4byte	.LFE8-.LFB8
- 919 018a 01       		.uleb128 0x1
- 920 018b 9C       		.byte	0x9c
- 921 018c A0010000 		.4byte	0x1a0
- 922 0190 0C       		.uleb128 0xc
- 923 0191 34010000 		.4byte	.LASF27
- 924 0195 01       		.byte	0x1
- 925 0196 7B01     		.2byte	0x17b
- 926 0198 6B000000 		.4byte	0x6b
- 927 019c 02       		.uleb128 0x2
- 928 019d 91       		.byte	0x91
- 929 019e 77       		.sleb128 -9
- 930 019f 00       		.byte	0
- 931 01a0 0E       		.uleb128 0xe
- 932 01a1 29020000 		.4byte	.LASF28
- 933 01a5 01       		.byte	0x1
- 934 01a6 9501     		.2byte	0x195
- 935 01a8 76000000 		.4byte	0x76
- 936 01ac 00000000 		.4byte	.LFB9
- 937 01b0 18000000 		.4byte	.LFE9-.LFB9
- 938 01b4 01       		.uleb128 0x1
- 939 01b5 9C       		.byte	0x9c
- 940 01b6 0B       		.uleb128 0xb
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 31
+ 770 00f5 75030000 		.4byte	.LASF18
+ 771 00f9 01       		.byte	0x1
+ 772 00fa D7       		.byte	0xd7
+ 773 00fb 00000000 		.4byte	.LFB2
+ 774 00ff 20000000 		.4byte	.LFE2-.LFB2
+ 775 0103 01       		.uleb128 0x1
+ 776 0104 9C       		.byte	0x9c
+ 777 0105 09       		.uleb128 0x9
+ 778 0106 78000000 		.4byte	.LASF19
+ 779 010a 01       		.byte	0x1
+ 780 010b F7       		.byte	0xf7
+ 781 010c 00000000 		.4byte	.LFB3
+ 782 0110 20000000 		.4byte	.LFE3-.LFB3
+ 783 0114 01       		.uleb128 0x1
+ 784 0115 9C       		.byte	0x9c
+ 785 0116 0B       		.uleb128 0xb
+ 786 0117 1A030000 		.4byte	.LASF21
+ 787 011b 01       		.byte	0x1
+ 788 011c 1701     		.2byte	0x117
+ 789 011e 00000000 		.4byte	.LFB4
+ 790 0122 20000000 		.4byte	.LFE4-.LFB4
+ 791 0126 01       		.uleb128 0x1
+ 792 0127 9C       		.byte	0x9c
+ 793 0128 3C010000 		.4byte	0x13c
+ 794 012c 0C       		.uleb128 0xc
+ 795 012d 82020000 		.4byte	.LASF26
+ 796 0131 01       		.byte	0x1
+ 797 0132 1701     		.2byte	0x117
+ 798 0134 6B000000 		.4byte	0x6b
+ 799 0138 02       		.uleb128 0x2
+ 800 0139 91       		.byte	0x91
+ 801 013a 77       		.sleb128 -9
+ 802 013b 00       		.byte	0
+ 803 013c 0D       		.uleb128 0xd
+ 804 013d EE020000 		.4byte	.LASF22
+ 805 0141 01       		.byte	0x1
+ 806 0142 2E01     		.2byte	0x12e
+ 807 0144 00000000 		.4byte	.LFB5
+ 808 0148 14000000 		.4byte	.LFE5-.LFB5
+ 809 014c 01       		.uleb128 0x1
+ 810 014d 9C       		.byte	0x9c
+ 811 014e 0E       		.uleb128 0xe
+ 812 014f 06000000 		.4byte	.LASF23
+ 813 0153 01       		.byte	0x1
+ 814 0154 4D01     		.2byte	0x14d
+ 815 0156 6B000000 		.4byte	0x6b
+ 816 015a 00000000 		.4byte	.LFB6
+ 817 015e 18000000 		.4byte	.LFE6-.LFB6
+ 818 0162 01       		.uleb128 0x1
+ 819 0163 9C       		.byte	0x9c
+ 820 0164 0E       		.uleb128 0xe
+ 821 0165 07020000 		.4byte	.LASF24
+ 822 0169 01       		.byte	0x1
+ 823 016a 6401     		.2byte	0x164
+ 824 016c 6B000000 		.4byte	0x6b
+ 825 0170 00000000 		.4byte	.LFB7
+ 826 0174 18000000 		.4byte	.LFE7-.LFB7
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 29
 
 
- 941 01b7 51010000 		.4byte	.LASF29
- 942 01bb 01       		.byte	0x1
- 943 01bc AF01     		.2byte	0x1af
- 944 01be 00000000 		.4byte	.LFB10
- 945 01c2 20000000 		.4byte	.LFE10-.LFB10
- 946 01c6 01       		.uleb128 0x1
- 947 01c7 9C       		.byte	0x9c
- 948 01c8 DC010000 		.4byte	0x1dc
- 949 01cc 0C       		.uleb128 0xc
- 950 01cd 5E000000 		.4byte	.LASF30
- 951 01d1 01       		.byte	0x1
- 952 01d2 AF01     		.2byte	0x1af
- 953 01d4 76000000 		.4byte	0x76
- 954 01d8 02       		.uleb128 0x2
- 955 01d9 91       		.byte	0x91
- 956 01da 76       		.sleb128 -10
- 957 01db 00       		.byte	0
- 958 01dc 0E       		.uleb128 0xe
- 959 01dd 94030000 		.4byte	.LASF31
- 960 01e1 01       		.byte	0x1
- 961 01e2 C801     		.2byte	0x1c8
- 962 01e4 76000000 		.4byte	0x76
- 963 01e8 00000000 		.4byte	.LFB11
- 964 01ec 18000000 		.4byte	.LFE11-.LFB11
- 965 01f0 01       		.uleb128 0x1
- 966 01f1 9C       		.byte	0x9c
- 967 01f2 0B       		.uleb128 0xb
- 968 01f3 01010000 		.4byte	.LASF32
- 969 01f7 01       		.byte	0x1
- 970 01f8 E001     		.2byte	0x1e0
- 971 01fa 00000000 		.4byte	.LFB12
- 972 01fe 20000000 		.4byte	.LFE12-.LFB12
- 973 0202 01       		.uleb128 0x1
- 974 0203 9C       		.byte	0x9c
- 975 0204 18020000 		.4byte	0x218
- 976 0208 0C       		.uleb128 0xc
- 977 0209 B4000000 		.4byte	.LASF33
- 978 020d 01       		.byte	0x1
- 979 020e E001     		.2byte	0x1e0
- 980 0210 76000000 		.4byte	0x76
- 981 0214 02       		.uleb128 0x2
- 982 0215 91       		.byte	0x91
- 983 0216 76       		.sleb128 -10
- 984 0217 00       		.byte	0
- 985 0218 0E       		.uleb128 0xe
- 986 0219 44000000 		.4byte	.LASF34
- 987 021d 01       		.byte	0x1
- 988 021e FC01     		.2byte	0x1fc
- 989 0220 76000000 		.4byte	0x76
- 990 0224 00000000 		.4byte	.LFB13
- 991 0228 20000000 		.4byte	.LFE13-.LFB13
- 992 022c 01       		.uleb128 0x1
- 993 022d 9C       		.byte	0x9c
- 994 022e 0D       		.uleb128 0xd
- 995 022f 4F020000 		.4byte	.LASF35
- 996 0233 01       		.byte	0x1
- 997 0234 7E02     		.2byte	0x27e
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 32
+ 827 0178 01       		.uleb128 0x1
+ 828 0179 9C       		.byte	0x9c
+ 829 017a 0B       		.uleb128 0xb
+ 830 017b 8B000000 		.4byte	.LASF25
+ 831 017f 01       		.byte	0x1
+ 832 0180 7B01     		.2byte	0x17b
+ 833 0182 00000000 		.4byte	.LFB8
+ 834 0186 20000000 		.4byte	.LFE8-.LFB8
+ 835 018a 01       		.uleb128 0x1
+ 836 018b 9C       		.byte	0x9c
+ 837 018c A0010000 		.4byte	0x1a0
+ 838 0190 0C       		.uleb128 0xc
+ 839 0191 34010000 		.4byte	.LASF27
+ 840 0195 01       		.byte	0x1
+ 841 0196 7B01     		.2byte	0x17b
+ 842 0198 6B000000 		.4byte	0x6b
+ 843 019c 02       		.uleb128 0x2
+ 844 019d 91       		.byte	0x91
+ 845 019e 77       		.sleb128 -9
+ 846 019f 00       		.byte	0
+ 847 01a0 0E       		.uleb128 0xe
+ 848 01a1 29020000 		.4byte	.LASF28
+ 849 01a5 01       		.byte	0x1
+ 850 01a6 9501     		.2byte	0x195
+ 851 01a8 76000000 		.4byte	0x76
+ 852 01ac 00000000 		.4byte	.LFB9
+ 853 01b0 18000000 		.4byte	.LFE9-.LFB9
+ 854 01b4 01       		.uleb128 0x1
+ 855 01b5 9C       		.byte	0x9c
+ 856 01b6 0B       		.uleb128 0xb
+ 857 01b7 51010000 		.4byte	.LASF29
+ 858 01bb 01       		.byte	0x1
+ 859 01bc AF01     		.2byte	0x1af
+ 860 01be 00000000 		.4byte	.LFB10
+ 861 01c2 20000000 		.4byte	.LFE10-.LFB10
+ 862 01c6 01       		.uleb128 0x1
+ 863 01c7 9C       		.byte	0x9c
+ 864 01c8 DC010000 		.4byte	0x1dc
+ 865 01cc 0C       		.uleb128 0xc
+ 866 01cd 5E000000 		.4byte	.LASF30
+ 867 01d1 01       		.byte	0x1
+ 868 01d2 AF01     		.2byte	0x1af
+ 869 01d4 76000000 		.4byte	0x76
+ 870 01d8 02       		.uleb128 0x2
+ 871 01d9 91       		.byte	0x91
+ 872 01da 76       		.sleb128 -10
+ 873 01db 00       		.byte	0
+ 874 01dc 0E       		.uleb128 0xe
+ 875 01dd 5B030000 		.4byte	.LASF31
+ 876 01e1 01       		.byte	0x1
+ 877 01e2 C801     		.2byte	0x1c8
+ 878 01e4 76000000 		.4byte	0x76
+ 879 01e8 00000000 		.4byte	.LFB11
+ 880 01ec 18000000 		.4byte	.LFE11-.LFB11
+ 881 01f0 01       		.uleb128 0x1
+ 882 01f1 9C       		.byte	0x9c
+ 883 01f2 0B       		.uleb128 0xb
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 30
 
 
- 998 0236 00000000 		.4byte	.LFB14
- 999 023a 20000000 		.4byte	.LFE14-.LFB14
- 1000 023e 01       		.uleb128 0x1
- 1001 023f 9C       		.byte	0x9c
- 1002 0240 0D       		.uleb128 0xd
- 1003 0241 6B020000 		.4byte	.LASF36
- 1004 0245 01       		.byte	0x1
- 1005 0246 9402     		.2byte	0x294
- 1006 0248 00000000 		.4byte	.LFB15
- 1007 024c 20000000 		.4byte	.LFE15-.LFB15
- 1008 0250 01       		.uleb128 0x1
- 1009 0251 9C       		.byte	0x9c
- 1010 0252 0F       		.uleb128 0xf
- 1011 0253 C9020000 		.4byte	.LASF37
- 1012 0257 01       		.byte	0x1
- 1013 0258 FB02     		.2byte	0x2fb
- 1014 025a 00000000 		.4byte	.LFB16
- 1015 025e 1A000000 		.4byte	.LFE16-.LFB16
- 1016 0262 01       		.uleb128 0x1
- 1017 0263 9C       		.byte	0x9c
- 1018 0264 10       		.uleb128 0x10
- 1019 0265 7E030000 		.4byte	.LASF42
- 1020 0269 01       		.byte	0x1
- 1021 026a 1A       		.byte	0x1a
- 1022 026b 6B000000 		.4byte	0x6b
- 1023 026f 05       		.uleb128 0x5
- 1024 0270 03       		.byte	0x3
- 1025 0271 00000000 		.4byte	Receive_Timer_initVar
- 1026 0275 00       		.byte	0
- 1027              		.section	.debug_abbrev,"",%progbits
- 1028              	.Ldebug_abbrev0:
- 1029 0000 01       		.uleb128 0x1
- 1030 0001 11       		.uleb128 0x11
- 1031 0002 01       		.byte	0x1
- 1032 0003 25       		.uleb128 0x25
- 1033 0004 0E       		.uleb128 0xe
- 1034 0005 13       		.uleb128 0x13
- 1035 0006 0B       		.uleb128 0xb
- 1036 0007 03       		.uleb128 0x3
- 1037 0008 0E       		.uleb128 0xe
- 1038 0009 1B       		.uleb128 0x1b
- 1039 000a 0E       		.uleb128 0xe
- 1040 000b 55       		.uleb128 0x55
- 1041 000c 17       		.uleb128 0x17
- 1042 000d 11       		.uleb128 0x11
- 1043 000e 01       		.uleb128 0x1
- 1044 000f 10       		.uleb128 0x10
- 1045 0010 17       		.uleb128 0x17
- 1046 0011 00       		.byte	0
- 1047 0012 00       		.byte	0
- 1048 0013 02       		.uleb128 0x2
- 1049 0014 24       		.uleb128 0x24
- 1050 0015 00       		.byte	0
- 1051 0016 0B       		.uleb128 0xb
- 1052 0017 0B       		.uleb128 0xb
- 1053 0018 3E       		.uleb128 0x3e
- 1054 0019 0B       		.uleb128 0xb
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 33
+ 884 01f3 01010000 		.4byte	.LASF32
+ 885 01f7 01       		.byte	0x1
+ 886 01f8 E001     		.2byte	0x1e0
+ 887 01fa 00000000 		.4byte	.LFB12
+ 888 01fe 20000000 		.4byte	.LFE12-.LFB12
+ 889 0202 01       		.uleb128 0x1
+ 890 0203 9C       		.byte	0x9c
+ 891 0204 18020000 		.4byte	0x218
+ 892 0208 0C       		.uleb128 0xc
+ 893 0209 B4000000 		.4byte	.LASF33
+ 894 020d 01       		.byte	0x1
+ 895 020e E001     		.2byte	0x1e0
+ 896 0210 76000000 		.4byte	0x76
+ 897 0214 02       		.uleb128 0x2
+ 898 0215 91       		.byte	0x91
+ 899 0216 76       		.sleb128 -10
+ 900 0217 00       		.byte	0
+ 901 0218 0E       		.uleb128 0xe
+ 902 0219 44000000 		.4byte	.LASF34
+ 903 021d 01       		.byte	0x1
+ 904 021e FC01     		.2byte	0x1fc
+ 905 0220 76000000 		.4byte	0x76
+ 906 0224 00000000 		.4byte	.LFB13
+ 907 0228 20000000 		.4byte	.LFE13-.LFB13
+ 908 022c 01       		.uleb128 0x1
+ 909 022d 9C       		.byte	0x9c
+ 910 022e 0F       		.uleb128 0xf
+ 911 022f 90020000 		.4byte	.LASF35
+ 912 0233 01       		.byte	0x1
+ 913 0234 FB02     		.2byte	0x2fb
+ 914 0236 00000000 		.4byte	.LFB14
+ 915 023a 1A000000 		.4byte	.LFE14-.LFB14
+ 916 023e 01       		.uleb128 0x1
+ 917 023f 9C       		.byte	0x9c
+ 918 0240 10       		.uleb128 0x10
+ 919 0241 45030000 		.4byte	.LASF40
+ 920 0245 01       		.byte	0x1
+ 921 0246 1A       		.byte	0x1a
+ 922 0247 6B000000 		.4byte	0x6b
+ 923 024b 05       		.uleb128 0x5
+ 924 024c 03       		.byte	0x3
+ 925 024d 00000000 		.4byte	Receive_Timer_initVar
+ 926 0251 00       		.byte	0
+ 927              		.section	.debug_abbrev,"",%progbits
+ 928              	.Ldebug_abbrev0:
+ 929 0000 01       		.uleb128 0x1
+ 930 0001 11       		.uleb128 0x11
+ 931 0002 01       		.byte	0x1
+ 932 0003 25       		.uleb128 0x25
+ 933 0004 0E       		.uleb128 0xe
+ 934 0005 13       		.uleb128 0x13
+ 935 0006 0B       		.uleb128 0xb
+ 936 0007 03       		.uleb128 0x3
+ 937 0008 0E       		.uleb128 0xe
+ 938 0009 1B       		.uleb128 0x1b
+ 939 000a 0E       		.uleb128 0xe
+ 940 000b 55       		.uleb128 0x55
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 31
 
 
- 1055 001a 03       		.uleb128 0x3
- 1056 001b 0E       		.uleb128 0xe
- 1057 001c 00       		.byte	0
- 1058 001d 00       		.byte	0
- 1059 001e 03       		.uleb128 0x3
- 1060 001f 24       		.uleb128 0x24
- 1061 0020 00       		.byte	0
- 1062 0021 0B       		.uleb128 0xb
- 1063 0022 0B       		.uleb128 0xb
- 1064 0023 3E       		.uleb128 0x3e
- 1065 0024 0B       		.uleb128 0xb
- 1066 0025 03       		.uleb128 0x3
- 1067 0026 08       		.uleb128 0x8
- 1068 0027 00       		.byte	0
- 1069 0028 00       		.byte	0
- 1070 0029 04       		.uleb128 0x4
- 1071 002a 16       		.uleb128 0x16
- 1072 002b 00       		.byte	0
- 1073 002c 03       		.uleb128 0x3
- 1074 002d 0E       		.uleb128 0xe
- 1075 002e 3A       		.uleb128 0x3a
- 1076 002f 0B       		.uleb128 0xb
- 1077 0030 3B       		.uleb128 0x3b
- 1078 0031 0B       		.uleb128 0xb
- 1079 0032 49       		.uleb128 0x49
- 1080 0033 13       		.uleb128 0x13
- 1081 0034 00       		.byte	0
- 1082 0035 00       		.byte	0
- 1083 0036 05       		.uleb128 0x5
- 1084 0037 16       		.uleb128 0x16
- 1085 0038 00       		.byte	0
- 1086 0039 03       		.uleb128 0x3
- 1087 003a 0E       		.uleb128 0xe
- 1088 003b 3A       		.uleb128 0x3a
- 1089 003c 0B       		.uleb128 0xb
- 1090 003d 3B       		.uleb128 0x3b
- 1091 003e 05       		.uleb128 0x5
- 1092 003f 49       		.uleb128 0x49
- 1093 0040 13       		.uleb128 0x13
- 1094 0041 00       		.byte	0
- 1095 0042 00       		.byte	0
- 1096 0043 06       		.uleb128 0x6
- 1097 0044 35       		.uleb128 0x35
- 1098 0045 00       		.byte	0
- 1099 0046 49       		.uleb128 0x49
- 1100 0047 13       		.uleb128 0x13
- 1101 0048 00       		.byte	0
- 1102 0049 00       		.byte	0
- 1103 004a 07       		.uleb128 0x7
- 1104 004b 2E       		.uleb128 0x2e
- 1105 004c 01       		.byte	0x1
- 1106 004d 3F       		.uleb128 0x3f
- 1107 004e 19       		.uleb128 0x19
- 1108 004f 03       		.uleb128 0x3
- 1109 0050 0E       		.uleb128 0xe
- 1110 0051 3A       		.uleb128 0x3a
- 1111 0052 0B       		.uleb128 0xb
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 34
+ 941 000c 17       		.uleb128 0x17
+ 942 000d 11       		.uleb128 0x11
+ 943 000e 01       		.uleb128 0x1
+ 944 000f 10       		.uleb128 0x10
+ 945 0010 17       		.uleb128 0x17
+ 946 0011 00       		.byte	0
+ 947 0012 00       		.byte	0
+ 948 0013 02       		.uleb128 0x2
+ 949 0014 24       		.uleb128 0x24
+ 950 0015 00       		.byte	0
+ 951 0016 0B       		.uleb128 0xb
+ 952 0017 0B       		.uleb128 0xb
+ 953 0018 3E       		.uleb128 0x3e
+ 954 0019 0B       		.uleb128 0xb
+ 955 001a 03       		.uleb128 0x3
+ 956 001b 0E       		.uleb128 0xe
+ 957 001c 00       		.byte	0
+ 958 001d 00       		.byte	0
+ 959 001e 03       		.uleb128 0x3
+ 960 001f 24       		.uleb128 0x24
+ 961 0020 00       		.byte	0
+ 962 0021 0B       		.uleb128 0xb
+ 963 0022 0B       		.uleb128 0xb
+ 964 0023 3E       		.uleb128 0x3e
+ 965 0024 0B       		.uleb128 0xb
+ 966 0025 03       		.uleb128 0x3
+ 967 0026 08       		.uleb128 0x8
+ 968 0027 00       		.byte	0
+ 969 0028 00       		.byte	0
+ 970 0029 04       		.uleb128 0x4
+ 971 002a 16       		.uleb128 0x16
+ 972 002b 00       		.byte	0
+ 973 002c 03       		.uleb128 0x3
+ 974 002d 0E       		.uleb128 0xe
+ 975 002e 3A       		.uleb128 0x3a
+ 976 002f 0B       		.uleb128 0xb
+ 977 0030 3B       		.uleb128 0x3b
+ 978 0031 0B       		.uleb128 0xb
+ 979 0032 49       		.uleb128 0x49
+ 980 0033 13       		.uleb128 0x13
+ 981 0034 00       		.byte	0
+ 982 0035 00       		.byte	0
+ 983 0036 05       		.uleb128 0x5
+ 984 0037 16       		.uleb128 0x16
+ 985 0038 00       		.byte	0
+ 986 0039 03       		.uleb128 0x3
+ 987 003a 0E       		.uleb128 0xe
+ 988 003b 3A       		.uleb128 0x3a
+ 989 003c 0B       		.uleb128 0xb
+ 990 003d 3B       		.uleb128 0x3b
+ 991 003e 05       		.uleb128 0x5
+ 992 003f 49       		.uleb128 0x49
+ 993 0040 13       		.uleb128 0x13
+ 994 0041 00       		.byte	0
+ 995 0042 00       		.byte	0
+ 996 0043 06       		.uleb128 0x6
+ 997 0044 35       		.uleb128 0x35
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 32
 
 
- 1112 0053 3B       		.uleb128 0x3b
- 1113 0054 0B       		.uleb128 0xb
- 1114 0055 27       		.uleb128 0x27
- 1115 0056 19       		.uleb128 0x19
- 1116 0057 11       		.uleb128 0x11
- 1117 0058 01       		.uleb128 0x1
- 1118 0059 12       		.uleb128 0x12
- 1119 005a 06       		.uleb128 0x6
- 1120 005b 40       		.uleb128 0x40
- 1121 005c 18       		.uleb128 0x18
- 1122 005d 9642     		.uleb128 0x2116
- 1123 005f 19       		.uleb128 0x19
- 1124 0060 01       		.uleb128 0x1
- 1125 0061 13       		.uleb128 0x13
- 1126 0062 00       		.byte	0
- 1127 0063 00       		.byte	0
- 1128 0064 08       		.uleb128 0x8
- 1129 0065 34       		.uleb128 0x34
- 1130 0066 00       		.byte	0
- 1131 0067 03       		.uleb128 0x3
- 1132 0068 0E       		.uleb128 0xe
- 1133 0069 3A       		.uleb128 0x3a
- 1134 006a 0B       		.uleb128 0xb
- 1135 006b 3B       		.uleb128 0x3b
- 1136 006c 0B       		.uleb128 0xb
- 1137 006d 49       		.uleb128 0x49
- 1138 006e 13       		.uleb128 0x13
- 1139 006f 02       		.uleb128 0x2
- 1140 0070 18       		.uleb128 0x18
- 1141 0071 00       		.byte	0
- 1142 0072 00       		.byte	0
- 1143 0073 09       		.uleb128 0x9
- 1144 0074 2E       		.uleb128 0x2e
- 1145 0075 00       		.byte	0
- 1146 0076 3F       		.uleb128 0x3f
- 1147 0077 19       		.uleb128 0x19
- 1148 0078 03       		.uleb128 0x3
- 1149 0079 0E       		.uleb128 0xe
- 1150 007a 3A       		.uleb128 0x3a
- 1151 007b 0B       		.uleb128 0xb
- 1152 007c 3B       		.uleb128 0x3b
- 1153 007d 0B       		.uleb128 0xb
- 1154 007e 27       		.uleb128 0x27
- 1155 007f 19       		.uleb128 0x19
- 1156 0080 11       		.uleb128 0x11
- 1157 0081 01       		.uleb128 0x1
- 1158 0082 12       		.uleb128 0x12
- 1159 0083 06       		.uleb128 0x6
- 1160 0084 40       		.uleb128 0x40
- 1161 0085 18       		.uleb128 0x18
- 1162 0086 9742     		.uleb128 0x2117
- 1163 0088 19       		.uleb128 0x19
- 1164 0089 00       		.byte	0
- 1165 008a 00       		.byte	0
- 1166 008b 0A       		.uleb128 0xa
- 1167 008c 2E       		.uleb128 0x2e
- 1168 008d 00       		.byte	0
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 35
+ 998 0045 00       		.byte	0
+ 999 0046 49       		.uleb128 0x49
+ 1000 0047 13       		.uleb128 0x13
+ 1001 0048 00       		.byte	0
+ 1002 0049 00       		.byte	0
+ 1003 004a 07       		.uleb128 0x7
+ 1004 004b 2E       		.uleb128 0x2e
+ 1005 004c 01       		.byte	0x1
+ 1006 004d 3F       		.uleb128 0x3f
+ 1007 004e 19       		.uleb128 0x19
+ 1008 004f 03       		.uleb128 0x3
+ 1009 0050 0E       		.uleb128 0xe
+ 1010 0051 3A       		.uleb128 0x3a
+ 1011 0052 0B       		.uleb128 0xb
+ 1012 0053 3B       		.uleb128 0x3b
+ 1013 0054 0B       		.uleb128 0xb
+ 1014 0055 27       		.uleb128 0x27
+ 1015 0056 19       		.uleb128 0x19
+ 1016 0057 11       		.uleb128 0x11
+ 1017 0058 01       		.uleb128 0x1
+ 1018 0059 12       		.uleb128 0x12
+ 1019 005a 06       		.uleb128 0x6
+ 1020 005b 40       		.uleb128 0x40
+ 1021 005c 18       		.uleb128 0x18
+ 1022 005d 9642     		.uleb128 0x2116
+ 1023 005f 19       		.uleb128 0x19
+ 1024 0060 01       		.uleb128 0x1
+ 1025 0061 13       		.uleb128 0x13
+ 1026 0062 00       		.byte	0
+ 1027 0063 00       		.byte	0
+ 1028 0064 08       		.uleb128 0x8
+ 1029 0065 34       		.uleb128 0x34
+ 1030 0066 00       		.byte	0
+ 1031 0067 03       		.uleb128 0x3
+ 1032 0068 0E       		.uleb128 0xe
+ 1033 0069 3A       		.uleb128 0x3a
+ 1034 006a 0B       		.uleb128 0xb
+ 1035 006b 3B       		.uleb128 0x3b
+ 1036 006c 0B       		.uleb128 0xb
+ 1037 006d 49       		.uleb128 0x49
+ 1038 006e 13       		.uleb128 0x13
+ 1039 006f 02       		.uleb128 0x2
+ 1040 0070 18       		.uleb128 0x18
+ 1041 0071 00       		.byte	0
+ 1042 0072 00       		.byte	0
+ 1043 0073 09       		.uleb128 0x9
+ 1044 0074 2E       		.uleb128 0x2e
+ 1045 0075 00       		.byte	0
+ 1046 0076 3F       		.uleb128 0x3f
+ 1047 0077 19       		.uleb128 0x19
+ 1048 0078 03       		.uleb128 0x3
+ 1049 0079 0E       		.uleb128 0xe
+ 1050 007a 3A       		.uleb128 0x3a
+ 1051 007b 0B       		.uleb128 0xb
+ 1052 007c 3B       		.uleb128 0x3b
+ 1053 007d 0B       		.uleb128 0xb
+ 1054 007e 27       		.uleb128 0x27
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 33
 
 
- 1169 008e 3F       		.uleb128 0x3f
- 1170 008f 19       		.uleb128 0x19
- 1171 0090 03       		.uleb128 0x3
- 1172 0091 0E       		.uleb128 0xe
- 1173 0092 3A       		.uleb128 0x3a
- 1174 0093 0B       		.uleb128 0xb
- 1175 0094 3B       		.uleb128 0x3b
- 1176 0095 0B       		.uleb128 0xb
- 1177 0096 27       		.uleb128 0x27
- 1178 0097 19       		.uleb128 0x19
- 1179 0098 11       		.uleb128 0x11
- 1180 0099 01       		.uleb128 0x1
- 1181 009a 12       		.uleb128 0x12
- 1182 009b 06       		.uleb128 0x6
- 1183 009c 40       		.uleb128 0x40
- 1184 009d 18       		.uleb128 0x18
- 1185 009e 9642     		.uleb128 0x2116
- 1186 00a0 19       		.uleb128 0x19
- 1187 00a1 00       		.byte	0
- 1188 00a2 00       		.byte	0
- 1189 00a3 0B       		.uleb128 0xb
- 1190 00a4 2E       		.uleb128 0x2e
- 1191 00a5 01       		.byte	0x1
- 1192 00a6 3F       		.uleb128 0x3f
- 1193 00a7 19       		.uleb128 0x19
- 1194 00a8 03       		.uleb128 0x3
- 1195 00a9 0E       		.uleb128 0xe
- 1196 00aa 3A       		.uleb128 0x3a
- 1197 00ab 0B       		.uleb128 0xb
- 1198 00ac 3B       		.uleb128 0x3b
- 1199 00ad 05       		.uleb128 0x5
- 1200 00ae 27       		.uleb128 0x27
- 1201 00af 19       		.uleb128 0x19
- 1202 00b0 11       		.uleb128 0x11
- 1203 00b1 01       		.uleb128 0x1
- 1204 00b2 12       		.uleb128 0x12
- 1205 00b3 06       		.uleb128 0x6
- 1206 00b4 40       		.uleb128 0x40
- 1207 00b5 18       		.uleb128 0x18
- 1208 00b6 9742     		.uleb128 0x2117
- 1209 00b8 19       		.uleb128 0x19
- 1210 00b9 01       		.uleb128 0x1
- 1211 00ba 13       		.uleb128 0x13
- 1212 00bb 00       		.byte	0
- 1213 00bc 00       		.byte	0
- 1214 00bd 0C       		.uleb128 0xc
- 1215 00be 05       		.uleb128 0x5
- 1216 00bf 00       		.byte	0
- 1217 00c0 03       		.uleb128 0x3
- 1218 00c1 0E       		.uleb128 0xe
- 1219 00c2 3A       		.uleb128 0x3a
- 1220 00c3 0B       		.uleb128 0xb
- 1221 00c4 3B       		.uleb128 0x3b
- 1222 00c5 05       		.uleb128 0x5
- 1223 00c6 49       		.uleb128 0x49
- 1224 00c7 13       		.uleb128 0x13
- 1225 00c8 02       		.uleb128 0x2
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 36
+ 1055 007f 19       		.uleb128 0x19
+ 1056 0080 11       		.uleb128 0x11
+ 1057 0081 01       		.uleb128 0x1
+ 1058 0082 12       		.uleb128 0x12
+ 1059 0083 06       		.uleb128 0x6
+ 1060 0084 40       		.uleb128 0x40
+ 1061 0085 18       		.uleb128 0x18
+ 1062 0086 9742     		.uleb128 0x2117
+ 1063 0088 19       		.uleb128 0x19
+ 1064 0089 00       		.byte	0
+ 1065 008a 00       		.byte	0
+ 1066 008b 0A       		.uleb128 0xa
+ 1067 008c 2E       		.uleb128 0x2e
+ 1068 008d 00       		.byte	0
+ 1069 008e 3F       		.uleb128 0x3f
+ 1070 008f 19       		.uleb128 0x19
+ 1071 0090 03       		.uleb128 0x3
+ 1072 0091 0E       		.uleb128 0xe
+ 1073 0092 3A       		.uleb128 0x3a
+ 1074 0093 0B       		.uleb128 0xb
+ 1075 0094 3B       		.uleb128 0x3b
+ 1076 0095 0B       		.uleb128 0xb
+ 1077 0096 27       		.uleb128 0x27
+ 1078 0097 19       		.uleb128 0x19
+ 1079 0098 11       		.uleb128 0x11
+ 1080 0099 01       		.uleb128 0x1
+ 1081 009a 12       		.uleb128 0x12
+ 1082 009b 06       		.uleb128 0x6
+ 1083 009c 40       		.uleb128 0x40
+ 1084 009d 18       		.uleb128 0x18
+ 1085 009e 9642     		.uleb128 0x2116
+ 1086 00a0 19       		.uleb128 0x19
+ 1087 00a1 00       		.byte	0
+ 1088 00a2 00       		.byte	0
+ 1089 00a3 0B       		.uleb128 0xb
+ 1090 00a4 2E       		.uleb128 0x2e
+ 1091 00a5 01       		.byte	0x1
+ 1092 00a6 3F       		.uleb128 0x3f
+ 1093 00a7 19       		.uleb128 0x19
+ 1094 00a8 03       		.uleb128 0x3
+ 1095 00a9 0E       		.uleb128 0xe
+ 1096 00aa 3A       		.uleb128 0x3a
+ 1097 00ab 0B       		.uleb128 0xb
+ 1098 00ac 3B       		.uleb128 0x3b
+ 1099 00ad 05       		.uleb128 0x5
+ 1100 00ae 27       		.uleb128 0x27
+ 1101 00af 19       		.uleb128 0x19
+ 1102 00b0 11       		.uleb128 0x11
+ 1103 00b1 01       		.uleb128 0x1
+ 1104 00b2 12       		.uleb128 0x12
+ 1105 00b3 06       		.uleb128 0x6
+ 1106 00b4 40       		.uleb128 0x40
+ 1107 00b5 18       		.uleb128 0x18
+ 1108 00b6 9742     		.uleb128 0x2117
+ 1109 00b8 19       		.uleb128 0x19
+ 1110 00b9 01       		.uleb128 0x1
+ 1111 00ba 13       		.uleb128 0x13
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 34
 
 
- 1226 00c9 18       		.uleb128 0x18
- 1227 00ca 00       		.byte	0
- 1228 00cb 00       		.byte	0
- 1229 00cc 0D       		.uleb128 0xd
- 1230 00cd 2E       		.uleb128 0x2e
- 1231 00ce 00       		.byte	0
- 1232 00cf 3F       		.uleb128 0x3f
- 1233 00d0 19       		.uleb128 0x19
- 1234 00d1 03       		.uleb128 0x3
- 1235 00d2 0E       		.uleb128 0xe
- 1236 00d3 3A       		.uleb128 0x3a
- 1237 00d4 0B       		.uleb128 0xb
- 1238 00d5 3B       		.uleb128 0x3b
- 1239 00d6 05       		.uleb128 0x5
- 1240 00d7 27       		.uleb128 0x27
- 1241 00d8 19       		.uleb128 0x19
- 1242 00d9 11       		.uleb128 0x11
- 1243 00da 01       		.uleb128 0x1
- 1244 00db 12       		.uleb128 0x12
- 1245 00dc 06       		.uleb128 0x6
- 1246 00dd 40       		.uleb128 0x40
- 1247 00de 18       		.uleb128 0x18
- 1248 00df 9742     		.uleb128 0x2117
- 1249 00e1 19       		.uleb128 0x19
- 1250 00e2 00       		.byte	0
- 1251 00e3 00       		.byte	0
- 1252 00e4 0E       		.uleb128 0xe
- 1253 00e5 2E       		.uleb128 0x2e
- 1254 00e6 00       		.byte	0
- 1255 00e7 3F       		.uleb128 0x3f
- 1256 00e8 19       		.uleb128 0x19
- 1257 00e9 03       		.uleb128 0x3
- 1258 00ea 0E       		.uleb128 0xe
- 1259 00eb 3A       		.uleb128 0x3a
- 1260 00ec 0B       		.uleb128 0xb
- 1261 00ed 3B       		.uleb128 0x3b
- 1262 00ee 05       		.uleb128 0x5
- 1263 00ef 27       		.uleb128 0x27
- 1264 00f0 19       		.uleb128 0x19
- 1265 00f1 49       		.uleb128 0x49
- 1266 00f2 13       		.uleb128 0x13
- 1267 00f3 11       		.uleb128 0x11
- 1268 00f4 01       		.uleb128 0x1
- 1269 00f5 12       		.uleb128 0x12
- 1270 00f6 06       		.uleb128 0x6
- 1271 00f7 40       		.uleb128 0x40
- 1272 00f8 18       		.uleb128 0x18
- 1273 00f9 9742     		.uleb128 0x2117
- 1274 00fb 19       		.uleb128 0x19
- 1275 00fc 00       		.byte	0
- 1276 00fd 00       		.byte	0
- 1277 00fe 0F       		.uleb128 0xf
- 1278 00ff 2E       		.uleb128 0x2e
- 1279 0100 00       		.byte	0
- 1280 0101 3F       		.uleb128 0x3f
- 1281 0102 19       		.uleb128 0x19
- 1282 0103 03       		.uleb128 0x3
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 37
+ 1112 00bb 00       		.byte	0
+ 1113 00bc 00       		.byte	0
+ 1114 00bd 0C       		.uleb128 0xc
+ 1115 00be 05       		.uleb128 0x5
+ 1116 00bf 00       		.byte	0
+ 1117 00c0 03       		.uleb128 0x3
+ 1118 00c1 0E       		.uleb128 0xe
+ 1119 00c2 3A       		.uleb128 0x3a
+ 1120 00c3 0B       		.uleb128 0xb
+ 1121 00c4 3B       		.uleb128 0x3b
+ 1122 00c5 05       		.uleb128 0x5
+ 1123 00c6 49       		.uleb128 0x49
+ 1124 00c7 13       		.uleb128 0x13
+ 1125 00c8 02       		.uleb128 0x2
+ 1126 00c9 18       		.uleb128 0x18
+ 1127 00ca 00       		.byte	0
+ 1128 00cb 00       		.byte	0
+ 1129 00cc 0D       		.uleb128 0xd
+ 1130 00cd 2E       		.uleb128 0x2e
+ 1131 00ce 00       		.byte	0
+ 1132 00cf 3F       		.uleb128 0x3f
+ 1133 00d0 19       		.uleb128 0x19
+ 1134 00d1 03       		.uleb128 0x3
+ 1135 00d2 0E       		.uleb128 0xe
+ 1136 00d3 3A       		.uleb128 0x3a
+ 1137 00d4 0B       		.uleb128 0xb
+ 1138 00d5 3B       		.uleb128 0x3b
+ 1139 00d6 05       		.uleb128 0x5
+ 1140 00d7 27       		.uleb128 0x27
+ 1141 00d8 19       		.uleb128 0x19
+ 1142 00d9 11       		.uleb128 0x11
+ 1143 00da 01       		.uleb128 0x1
+ 1144 00db 12       		.uleb128 0x12
+ 1145 00dc 06       		.uleb128 0x6
+ 1146 00dd 40       		.uleb128 0x40
+ 1147 00de 18       		.uleb128 0x18
+ 1148 00df 9742     		.uleb128 0x2117
+ 1149 00e1 19       		.uleb128 0x19
+ 1150 00e2 00       		.byte	0
+ 1151 00e3 00       		.byte	0
+ 1152 00e4 0E       		.uleb128 0xe
+ 1153 00e5 2E       		.uleb128 0x2e
+ 1154 00e6 00       		.byte	0
+ 1155 00e7 3F       		.uleb128 0x3f
+ 1156 00e8 19       		.uleb128 0x19
+ 1157 00e9 03       		.uleb128 0x3
+ 1158 00ea 0E       		.uleb128 0xe
+ 1159 00eb 3A       		.uleb128 0x3a
+ 1160 00ec 0B       		.uleb128 0xb
+ 1161 00ed 3B       		.uleb128 0x3b
+ 1162 00ee 05       		.uleb128 0x5
+ 1163 00ef 27       		.uleb128 0x27
+ 1164 00f0 19       		.uleb128 0x19
+ 1165 00f1 49       		.uleb128 0x49
+ 1166 00f2 13       		.uleb128 0x13
+ 1167 00f3 11       		.uleb128 0x11
+ 1168 00f4 01       		.uleb128 0x1
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 35
 
 
- 1283 0104 0E       		.uleb128 0xe
- 1284 0105 3A       		.uleb128 0x3a
- 1285 0106 0B       		.uleb128 0xb
- 1286 0107 3B       		.uleb128 0x3b
- 1287 0108 05       		.uleb128 0x5
- 1288 0109 27       		.uleb128 0x27
- 1289 010a 19       		.uleb128 0x19
- 1290 010b 11       		.uleb128 0x11
- 1291 010c 01       		.uleb128 0x1
- 1292 010d 12       		.uleb128 0x12
- 1293 010e 06       		.uleb128 0x6
- 1294 010f 40       		.uleb128 0x40
- 1295 0110 18       		.uleb128 0x18
- 1296 0111 9642     		.uleb128 0x2116
- 1297 0113 19       		.uleb128 0x19
- 1298 0114 00       		.byte	0
- 1299 0115 00       		.byte	0
- 1300 0116 10       		.uleb128 0x10
- 1301 0117 34       		.uleb128 0x34
- 1302 0118 00       		.byte	0
- 1303 0119 03       		.uleb128 0x3
- 1304 011a 0E       		.uleb128 0xe
- 1305 011b 3A       		.uleb128 0x3a
- 1306 011c 0B       		.uleb128 0xb
- 1307 011d 3B       		.uleb128 0x3b
- 1308 011e 0B       		.uleb128 0xb
- 1309 011f 49       		.uleb128 0x49
- 1310 0120 13       		.uleb128 0x13
- 1311 0121 3F       		.uleb128 0x3f
- 1312 0122 19       		.uleb128 0x19
- 1313 0123 02       		.uleb128 0x2
- 1314 0124 18       		.uleb128 0x18
- 1315 0125 00       		.byte	0
- 1316 0126 00       		.byte	0
- 1317 0127 00       		.byte	0
- 1318              		.section	.debug_aranges,"",%progbits
- 1319 0000 9C000000 		.4byte	0x9c
- 1320 0004 0200     		.2byte	0x2
- 1321 0006 00000000 		.4byte	.Ldebug_info0
- 1322 000a 04       		.byte	0x4
- 1323 000b 00       		.byte	0
- 1324 000c 0000     		.2byte	0
- 1325 000e 0000     		.2byte	0
- 1326 0010 00000000 		.4byte	.LFB0
- 1327 0014 50000000 		.4byte	.LFE0-.LFB0
- 1328 0018 00000000 		.4byte	.LFB1
- 1329 001c 20000000 		.4byte	.LFE1-.LFB1
- 1330 0020 00000000 		.4byte	.LFB2
- 1331 0024 20000000 		.4byte	.LFE2-.LFB2
- 1332 0028 00000000 		.4byte	.LFB3
- 1333 002c 20000000 		.4byte	.LFE3-.LFB3
- 1334 0030 00000000 		.4byte	.LFB4
- 1335 0034 20000000 		.4byte	.LFE4-.LFB4
- 1336 0038 00000000 		.4byte	.LFB5
- 1337 003c 14000000 		.4byte	.LFE5-.LFB5
- 1338 0040 00000000 		.4byte	.LFB6
- 1339 0044 18000000 		.4byte	.LFE6-.LFB6
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 38
+ 1169 00f5 12       		.uleb128 0x12
+ 1170 00f6 06       		.uleb128 0x6
+ 1171 00f7 40       		.uleb128 0x40
+ 1172 00f8 18       		.uleb128 0x18
+ 1173 00f9 9742     		.uleb128 0x2117
+ 1174 00fb 19       		.uleb128 0x19
+ 1175 00fc 00       		.byte	0
+ 1176 00fd 00       		.byte	0
+ 1177 00fe 0F       		.uleb128 0xf
+ 1178 00ff 2E       		.uleb128 0x2e
+ 1179 0100 00       		.byte	0
+ 1180 0101 3F       		.uleb128 0x3f
+ 1181 0102 19       		.uleb128 0x19
+ 1182 0103 03       		.uleb128 0x3
+ 1183 0104 0E       		.uleb128 0xe
+ 1184 0105 3A       		.uleb128 0x3a
+ 1185 0106 0B       		.uleb128 0xb
+ 1186 0107 3B       		.uleb128 0x3b
+ 1187 0108 05       		.uleb128 0x5
+ 1188 0109 27       		.uleb128 0x27
+ 1189 010a 19       		.uleb128 0x19
+ 1190 010b 11       		.uleb128 0x11
+ 1191 010c 01       		.uleb128 0x1
+ 1192 010d 12       		.uleb128 0x12
+ 1193 010e 06       		.uleb128 0x6
+ 1194 010f 40       		.uleb128 0x40
+ 1195 0110 18       		.uleb128 0x18
+ 1196 0111 9642     		.uleb128 0x2116
+ 1197 0113 19       		.uleb128 0x19
+ 1198 0114 00       		.byte	0
+ 1199 0115 00       		.byte	0
+ 1200 0116 10       		.uleb128 0x10
+ 1201 0117 34       		.uleb128 0x34
+ 1202 0118 00       		.byte	0
+ 1203 0119 03       		.uleb128 0x3
+ 1204 011a 0E       		.uleb128 0xe
+ 1205 011b 3A       		.uleb128 0x3a
+ 1206 011c 0B       		.uleb128 0xb
+ 1207 011d 3B       		.uleb128 0x3b
+ 1208 011e 0B       		.uleb128 0xb
+ 1209 011f 49       		.uleb128 0x49
+ 1210 0120 13       		.uleb128 0x13
+ 1211 0121 3F       		.uleb128 0x3f
+ 1212 0122 19       		.uleb128 0x19
+ 1213 0123 02       		.uleb128 0x2
+ 1214 0124 18       		.uleb128 0x18
+ 1215 0125 00       		.byte	0
+ 1216 0126 00       		.byte	0
+ 1217 0127 00       		.byte	0
+ 1218              		.section	.debug_aranges,"",%progbits
+ 1219 0000 8C000000 		.4byte	0x8c
+ 1220 0004 0200     		.2byte	0x2
+ 1221 0006 00000000 		.4byte	.Ldebug_info0
+ 1222 000a 04       		.byte	0x4
+ 1223 000b 00       		.byte	0
+ 1224 000c 0000     		.2byte	0
+ 1225 000e 0000     		.2byte	0
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 36
 
 
- 1340 0048 00000000 		.4byte	.LFB7
- 1341 004c 18000000 		.4byte	.LFE7-.LFB7
- 1342 0050 00000000 		.4byte	.LFB8
- 1343 0054 20000000 		.4byte	.LFE8-.LFB8
- 1344 0058 00000000 		.4byte	.LFB9
- 1345 005c 18000000 		.4byte	.LFE9-.LFB9
- 1346 0060 00000000 		.4byte	.LFB10
- 1347 0064 20000000 		.4byte	.LFE10-.LFB10
- 1348 0068 00000000 		.4byte	.LFB11
- 1349 006c 18000000 		.4byte	.LFE11-.LFB11
- 1350 0070 00000000 		.4byte	.LFB12
- 1351 0074 20000000 		.4byte	.LFE12-.LFB12
- 1352 0078 00000000 		.4byte	.LFB13
- 1353 007c 20000000 		.4byte	.LFE13-.LFB13
- 1354 0080 00000000 		.4byte	.LFB14
- 1355 0084 20000000 		.4byte	.LFE14-.LFB14
- 1356 0088 00000000 		.4byte	.LFB15
- 1357 008c 20000000 		.4byte	.LFE15-.LFB15
- 1358 0090 00000000 		.4byte	.LFB16
- 1359 0094 1A000000 		.4byte	.LFE16-.LFB16
- 1360 0098 00000000 		.4byte	0
- 1361 009c 00000000 		.4byte	0
- 1362              		.section	.debug_ranges,"",%progbits
- 1363              	.Ldebug_ranges0:
- 1364 0000 00000000 		.4byte	.LFB0
- 1365 0004 50000000 		.4byte	.LFE0
- 1366 0008 00000000 		.4byte	.LFB1
- 1367 000c 20000000 		.4byte	.LFE1
- 1368 0010 00000000 		.4byte	.LFB2
- 1369 0014 20000000 		.4byte	.LFE2
- 1370 0018 00000000 		.4byte	.LFB3
- 1371 001c 20000000 		.4byte	.LFE3
- 1372 0020 00000000 		.4byte	.LFB4
- 1373 0024 20000000 		.4byte	.LFE4
- 1374 0028 00000000 		.4byte	.LFB5
- 1375 002c 14000000 		.4byte	.LFE5
- 1376 0030 00000000 		.4byte	.LFB6
- 1377 0034 18000000 		.4byte	.LFE6
- 1378 0038 00000000 		.4byte	.LFB7
- 1379 003c 18000000 		.4byte	.LFE7
- 1380 0040 00000000 		.4byte	.LFB8
- 1381 0044 20000000 		.4byte	.LFE8
- 1382 0048 00000000 		.4byte	.LFB9
- 1383 004c 18000000 		.4byte	.LFE9
- 1384 0050 00000000 		.4byte	.LFB10
- 1385 0054 20000000 		.4byte	.LFE10
- 1386 0058 00000000 		.4byte	.LFB11
- 1387 005c 18000000 		.4byte	.LFE11
- 1388 0060 00000000 		.4byte	.LFB12
- 1389 0064 20000000 		.4byte	.LFE12
- 1390 0068 00000000 		.4byte	.LFB13
- 1391 006c 20000000 		.4byte	.LFE13
- 1392 0070 00000000 		.4byte	.LFB14
- 1393 0074 20000000 		.4byte	.LFE14
- 1394 0078 00000000 		.4byte	.LFB15
- 1395 007c 20000000 		.4byte	.LFE15
- 1396 0080 00000000 		.4byte	.LFB16
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 39
+ 1226 0010 00000000 		.4byte	.LFB0
+ 1227 0014 4C000000 		.4byte	.LFE0-.LFB0
+ 1228 0018 00000000 		.4byte	.LFB1
+ 1229 001c 20000000 		.4byte	.LFE1-.LFB1
+ 1230 0020 00000000 		.4byte	.LFB2
+ 1231 0024 20000000 		.4byte	.LFE2-.LFB2
+ 1232 0028 00000000 		.4byte	.LFB3
+ 1233 002c 20000000 		.4byte	.LFE3-.LFB3
+ 1234 0030 00000000 		.4byte	.LFB4
+ 1235 0034 20000000 		.4byte	.LFE4-.LFB4
+ 1236 0038 00000000 		.4byte	.LFB5
+ 1237 003c 14000000 		.4byte	.LFE5-.LFB5
+ 1238 0040 00000000 		.4byte	.LFB6
+ 1239 0044 18000000 		.4byte	.LFE6-.LFB6
+ 1240 0048 00000000 		.4byte	.LFB7
+ 1241 004c 18000000 		.4byte	.LFE7-.LFB7
+ 1242 0050 00000000 		.4byte	.LFB8
+ 1243 0054 20000000 		.4byte	.LFE8-.LFB8
+ 1244 0058 00000000 		.4byte	.LFB9
+ 1245 005c 18000000 		.4byte	.LFE9-.LFB9
+ 1246 0060 00000000 		.4byte	.LFB10
+ 1247 0064 20000000 		.4byte	.LFE10-.LFB10
+ 1248 0068 00000000 		.4byte	.LFB11
+ 1249 006c 18000000 		.4byte	.LFE11-.LFB11
+ 1250 0070 00000000 		.4byte	.LFB12
+ 1251 0074 20000000 		.4byte	.LFE12-.LFB12
+ 1252 0078 00000000 		.4byte	.LFB13
+ 1253 007c 20000000 		.4byte	.LFE13-.LFB13
+ 1254 0080 00000000 		.4byte	.LFB14
+ 1255 0084 1A000000 		.4byte	.LFE14-.LFB14
+ 1256 0088 00000000 		.4byte	0
+ 1257 008c 00000000 		.4byte	0
+ 1258              		.section	.debug_ranges,"",%progbits
+ 1259              	.Ldebug_ranges0:
+ 1260 0000 00000000 		.4byte	.LFB0
+ 1261 0004 4C000000 		.4byte	.LFE0
+ 1262 0008 00000000 		.4byte	.LFB1
+ 1263 000c 20000000 		.4byte	.LFE1
+ 1264 0010 00000000 		.4byte	.LFB2
+ 1265 0014 20000000 		.4byte	.LFE2
+ 1266 0018 00000000 		.4byte	.LFB3
+ 1267 001c 20000000 		.4byte	.LFE3
+ 1268 0020 00000000 		.4byte	.LFB4
+ 1269 0024 20000000 		.4byte	.LFE4
+ 1270 0028 00000000 		.4byte	.LFB5
+ 1271 002c 14000000 		.4byte	.LFE5
+ 1272 0030 00000000 		.4byte	.LFB6
+ 1273 0034 18000000 		.4byte	.LFE6
+ 1274 0038 00000000 		.4byte	.LFB7
+ 1275 003c 18000000 		.4byte	.LFE7
+ 1276 0040 00000000 		.4byte	.LFB8
+ 1277 0044 20000000 		.4byte	.LFE8
+ 1278 0048 00000000 		.4byte	.LFB9
+ 1279 004c 18000000 		.4byte	.LFE9
+ 1280 0050 00000000 		.4byte	.LFB10
+ 1281 0054 20000000 		.4byte	.LFE10
+ 1282 0058 00000000 		.4byte	.LFB11
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 37
 
 
- 1397 0084 1A000000 		.4byte	.LFE16
- 1398 0088 00000000 		.4byte	0
- 1399 008c 00000000 		.4byte	0
- 1400              		.section	.debug_line,"",%progbits
- 1401              	.Ldebug_line0:
- 1402 0000 97010000 		.section	.debug_str,"MS",%progbits,1
- 1402      02004C00 
- 1402      00000201 
- 1402      FB0E0D00 
- 1402      01010101 
- 1403              	.LASF15:
- 1404 0000 72656731 		.ascii	"reg16\000"
- 1404      3600
- 1405              	.LASF23:
- 1406 0006 52656365 		.ascii	"Receive_Timer_ReadStatusRegister\000"
- 1406      6976655F 
- 1406      54696D65 
- 1406      725F5265 
- 1406      61645374 
- 1407              	.LASF41:
- 1408 0027 52656365 		.ascii	"Receive_Timer_interruptState\000"
- 1408      6976655F 
- 1408      54696D65 
- 1408      725F696E 
- 1408      74657272 
- 1409              	.LASF34:
- 1410 0044 52656365 		.ascii	"Receive_Timer_ReadCounter\000"
- 1410      6976655F 
- 1410      54696D65 
- 1410      725F5265 
- 1410      6164436F 
- 1411              	.LASF30:
- 1412 005e 70657269 		.ascii	"period\000"
- 1412      6F6400
- 1413              	.LASF3:
- 1414 0065 73686F72 		.ascii	"short unsigned int\000"
- 1414      7420756E 
- 1414      7369676E 
- 1414      65642069 
- 1414      6E7400
- 1415              	.LASF19:
- 1416 0078 52656365 		.ascii	"Receive_Timer_Stop\000"
- 1416      6976655F 
- 1416      54696D65 
- 1416      725F5374 
- 1416      6F7000
- 1417              	.LASF25:
- 1418 008b 52656365 		.ascii	"Receive_Timer_WriteControlRegister\000"
- 1418      6976655F 
- 1418      54696D65 
- 1418      725F5772 
- 1418      69746543 
- 1419              	.LASF11:
- 1420 00ae 666C6F61 		.ascii	"float\000"
- 1420      7400
- 1421              	.LASF33:
- 1422 00b4 636F756E 		.ascii	"counter\000"
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 40
+ 1283 005c 18000000 		.4byte	.LFE11
+ 1284 0060 00000000 		.4byte	.LFB12
+ 1285 0064 20000000 		.4byte	.LFE12
+ 1286 0068 00000000 		.4byte	.LFB13
+ 1287 006c 20000000 		.4byte	.LFE13
+ 1288 0070 00000000 		.4byte	.LFB14
+ 1289 0074 1A000000 		.4byte	.LFE14
+ 1290 0078 00000000 		.4byte	0
+ 1291 007c 00000000 		.4byte	0
+ 1292              		.section	.debug_line,"",%progbits
+ 1293              	.Ldebug_line0:
+ 1294 0000 74010000 		.section	.debug_str,"MS",%progbits,1
+ 1294      02004C00 
+ 1294      00000201 
+ 1294      FB0E0D00 
+ 1294      01010101 
+ 1295              	.LASF15:
+ 1296 0000 72656731 		.ascii	"reg16\000"
+ 1296      3600
+ 1297              	.LASF23:
+ 1298 0006 52656365 		.ascii	"Receive_Timer_ReadStatusRegister\000"
+ 1298      6976655F 
+ 1298      54696D65 
+ 1298      725F5265 
+ 1298      61645374 
+ 1299              	.LASF39:
+ 1300 0027 52656365 		.ascii	"Receive_Timer_interruptState\000"
+ 1300      6976655F 
+ 1300      54696D65 
+ 1300      725F696E 
+ 1300      74657272 
+ 1301              	.LASF34:
+ 1302 0044 52656365 		.ascii	"Receive_Timer_ReadCounter\000"
+ 1302      6976655F 
+ 1302      54696D65 
+ 1302      725F5265 
+ 1302      6164436F 
+ 1303              	.LASF30:
+ 1304 005e 70657269 		.ascii	"period\000"
+ 1304      6F6400
+ 1305              	.LASF3:
+ 1306 0065 73686F72 		.ascii	"short unsigned int\000"
+ 1306      7420756E 
+ 1306      7369676E 
+ 1306      65642069 
+ 1306      6E7400
+ 1307              	.LASF19:
+ 1308 0078 52656365 		.ascii	"Receive_Timer_Stop\000"
+ 1308      6976655F 
+ 1308      54696D65 
+ 1308      725F5374 
+ 1308      6F7000
+ 1309              	.LASF25:
+ 1310 008b 52656365 		.ascii	"Receive_Timer_WriteControlRegister\000"
+ 1310      6976655F 
+ 1310      54696D65 
+ 1310      725F5772 
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 38
 
 
- 1422      74657200 
- 1423              	.LASF1:
- 1424 00bc 756E7369 		.ascii	"unsigned char\000"
- 1424      676E6564 
- 1424      20636861 
- 1424      7200
- 1425              	.LASF40:
- 1426 00ca 443A5C4D 		.ascii	"D:\\MyDocs\\Documents\\CE4950\\USB_UART01\\USB_UART"
- 1426      79446F63 
- 1426      735C446F 
- 1426      63756D65 
- 1426      6E74735C 
- 1427 00f8 30312E63 		.ascii	"01.cydsn\000"
- 1427      7964736E 
- 1427      00
- 1428              	.LASF32:
- 1429 0101 52656365 		.ascii	"Receive_Timer_WriteCounter\000"
- 1429      6976655F 
- 1429      54696D65 
- 1429      725F5772 
- 1429      69746543 
- 1430              	.LASF5:
- 1431 011c 6C6F6E67 		.ascii	"long unsigned int\000"
- 1431      20756E73 
- 1431      69676E65 
- 1431      6420696E 
- 1431      7400
- 1432              	.LASF9:
- 1433 012e 75696E74 		.ascii	"uint8\000"
- 1433      3800
- 1434              	.LASF27:
- 1435 0134 636F6E74 		.ascii	"control\000"
- 1435      726F6C00 
- 1436              	.LASF17:
- 1437 013c 52656365 		.ascii	"Receive_Timer_Enable\000"
- 1437      6976655F 
- 1437      54696D65 
- 1437      725F456E 
- 1437      61626C65 
- 1438              	.LASF29:
- 1439 0151 52656365 		.ascii	"Receive_Timer_WritePeriod\000"
- 1439      6976655F 
- 1439      54696D65 
- 1439      725F5772 
- 1439      69746550 
- 1440              	.LASF38:
- 1441 016b 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 1441      4320342E 
- 1441      392E3320 
- 1441      32303135 
- 1441      30333033 
- 1442 019e 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 1442      20726576 
- 1442      6973696F 
- 1442      6E203232 
- 1442      31323230 
- 1443 01d1 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 41
+ 1310      69746543 
+ 1311              	.LASF11:
+ 1312 00ae 666C6F61 		.ascii	"float\000"
+ 1312      7400
+ 1313              	.LASF33:
+ 1314 00b4 636F756E 		.ascii	"counter\000"
+ 1314      74657200 
+ 1315              	.LASF1:
+ 1316 00bc 756E7369 		.ascii	"unsigned char\000"
+ 1316      676E6564 
+ 1316      20636861 
+ 1316      7200
+ 1317              	.LASF38:
+ 1318 00ca 443A5C4D 		.ascii	"D:\\MyDocs\\Documents\\CE4950\\USB_UART01\\USB_UART"
+ 1318      79446F63 
+ 1318      735C446F 
+ 1318      63756D65 
+ 1318      6E74735C 
+ 1319 00f8 30312E63 		.ascii	"01.cydsn\000"
+ 1319      7964736E 
+ 1319      00
+ 1320              	.LASF32:
+ 1321 0101 52656365 		.ascii	"Receive_Timer_WriteCounter\000"
+ 1321      6976655F 
+ 1321      54696D65 
+ 1321      725F5772 
+ 1321      69746543 
+ 1322              	.LASF5:
+ 1323 011c 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1323      20756E73 
+ 1323      69676E65 
+ 1323      6420696E 
+ 1323      7400
+ 1324              	.LASF9:
+ 1325 012e 75696E74 		.ascii	"uint8\000"
+ 1325      3800
+ 1326              	.LASF27:
+ 1327 0134 636F6E74 		.ascii	"control\000"
+ 1327      726F6C00 
+ 1328              	.LASF17:
+ 1329 013c 52656365 		.ascii	"Receive_Timer_Enable\000"
+ 1329      6976655F 
+ 1329      54696D65 
+ 1329      725F456E 
+ 1329      61626C65 
+ 1330              	.LASF29:
+ 1331 0151 52656365 		.ascii	"Receive_Timer_WritePeriod\000"
+ 1331      6976655F 
+ 1331      54696D65 
+ 1331      725F5772 
+ 1331      69746550 
+ 1332              	.LASF36:
+ 1333 016b 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1333      4320342E 
+ 1333      392E3320 
+ 1333      32303135 
+ 1333      30333033 
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 39
 
 
- 1443      66756E63 
- 1443      74696F6E 
- 1443      2D736563 
- 1443      74696F6E 
- 1444              	.LASF12:
- 1445 01f9 646F7562 		.ascii	"double\000"
- 1445      6C6500
- 1446              	.LASF10:
- 1447 0200 75696E74 		.ascii	"uint16\000"
- 1447      313600
- 1448              	.LASF24:
- 1449 0207 52656365 		.ascii	"Receive_Timer_ReadControlRegister\000"
- 1449      6976655F 
- 1449      54696D65 
- 1449      725F5265 
- 1449      6164436F 
- 1450              	.LASF28:
- 1451 0229 52656365 		.ascii	"Receive_Timer_ReadPeriod\000"
- 1451      6976655F 
- 1451      54696D65 
- 1451      725F5265 
- 1451      61645065 
- 1452              	.LASF8:
- 1453 0242 756E7369 		.ascii	"unsigned int\000"
- 1453      676E6564 
- 1453      20696E74 
- 1453      00
- 1454              	.LASF35:
- 1455 024f 52656365 		.ascii	"Receive_Timer_EnableTrigger\000"
- 1455      6976655F 
- 1455      54696D65 
- 1455      725F456E 
- 1455      61626C65 
- 1456              	.LASF36:
- 1457 026b 52656365 		.ascii	"Receive_Timer_DisableTrigger\000"
- 1457      6976655F 
- 1457      54696D65 
- 1457      725F4469 
- 1457      7361626C 
- 1458              	.LASF7:
- 1459 0288 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1459      206C6F6E 
- 1459      6720756E 
- 1459      7369676E 
- 1459      65642069 
- 1460              	.LASF14:
- 1461 029f 72656738 		.ascii	"reg8\000"
- 1461      00
- 1462              	.LASF16:
- 1463 02a4 73697A65 		.ascii	"sizetype\000"
- 1463      74797065 
- 1463      00
- 1464              	.LASF6:
- 1465 02ad 6C6F6E67 		.ascii	"long long int\000"
- 1465      206C6F6E 
- 1465      6720696E 
- 1465      7400
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 42
+ 1334 019e 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1334      20726576 
+ 1334      6973696F 
+ 1334      6E203232 
+ 1334      31323230 
+ 1335 01d1 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1335      66756E63 
+ 1335      74696F6E 
+ 1335      2D736563 
+ 1335      74696F6E 
+ 1336              	.LASF12:
+ 1337 01f9 646F7562 		.ascii	"double\000"
+ 1337      6C6500
+ 1338              	.LASF10:
+ 1339 0200 75696E74 		.ascii	"uint16\000"
+ 1339      313600
+ 1340              	.LASF24:
+ 1341 0207 52656365 		.ascii	"Receive_Timer_ReadControlRegister\000"
+ 1341      6976655F 
+ 1341      54696D65 
+ 1341      725F5265 
+ 1341      6164436F 
+ 1342              	.LASF28:
+ 1343 0229 52656365 		.ascii	"Receive_Timer_ReadPeriod\000"
+ 1343      6976655F 
+ 1343      54696D65 
+ 1343      725F5265 
+ 1343      61645065 
+ 1344              	.LASF8:
+ 1345 0242 756E7369 		.ascii	"unsigned int\000"
+ 1345      676E6564 
+ 1345      20696E74 
+ 1345      00
+ 1346              	.LASF7:
+ 1347 024f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1347      206C6F6E 
+ 1347      6720756E 
+ 1347      7369676E 
+ 1347      65642069 
+ 1348              	.LASF14:
+ 1349 0266 72656738 		.ascii	"reg8\000"
+ 1349      00
+ 1350              	.LASF16:
+ 1351 026b 73697A65 		.ascii	"sizetype\000"
+ 1351      74797065 
+ 1351      00
+ 1352              	.LASF6:
+ 1353 0274 6C6F6E67 		.ascii	"long long int\000"
+ 1353      206C6F6E 
+ 1353      6720696E 
+ 1353      7400
+ 1354              	.LASF26:
+ 1355 0282 696E7465 		.ascii	"interruptMode\000"
+ 1355      72727570 
+ 1355      744D6F64 
+ 1355      6500
+ 1356              	.LASF35:
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 40
 
 
- 1466              	.LASF26:
- 1467 02bb 696E7465 		.ascii	"interruptMode\000"
- 1467      72727570 
- 1467      744D6F64 
- 1467      6500
- 1468              	.LASF37:
- 1469 02c9 52656365 		.ascii	"Receive_Timer_ClearFIFO\000"
- 1469      6976655F 
- 1469      54696D65 
- 1469      725F436C 
- 1469      65617246 
- 1470              	.LASF2:
- 1471 02e1 73686F72 		.ascii	"short int\000"
- 1471      7420696E 
- 1471      7400
- 1472              	.LASF39:
- 1473 02eb 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Receive_Timer.c\000"
- 1473      6E657261 
- 1473      7465645F 
- 1473      536F7572 
- 1473      63655C50 
- 1474              	.LASF20:
- 1475 0314 52656365 		.ascii	"Receive_Timer_Init\000"
- 1475      6976655F 
- 1475      54696D65 
- 1475      725F496E 
- 1475      697400
- 1476              	.LASF22:
- 1477 0327 52656365 		.ascii	"Receive_Timer_SoftwareCapture\000"
- 1477      6976655F 
- 1477      54696D65 
- 1477      725F536F 
- 1477      66747761 
- 1478              	.LASF4:
- 1479 0345 6C6F6E67 		.ascii	"long int\000"
- 1479      20696E74 
- 1479      00
- 1480              	.LASF13:
- 1481 034e 63686172 		.ascii	"char\000"
- 1481      00
- 1482              	.LASF21:
- 1483 0353 52656365 		.ascii	"Receive_Timer_SetInterruptMode\000"
- 1483      6976655F 
- 1483      54696D65 
- 1483      725F5365 
- 1483      74496E74 
- 1484              	.LASF0:
- 1485 0372 7369676E 		.ascii	"signed char\000"
- 1485      65642063 
- 1485      68617200 
- 1486              	.LASF42:
- 1487 037e 52656365 		.ascii	"Receive_Timer_initVar\000"
- 1487      6976655F 
- 1487      54696D65 
- 1487      725F696E 
- 1487      69745661 
- 1488              	.LASF31:
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccdelVk7.s 			page 43
+ 1357 0290 52656365 		.ascii	"Receive_Timer_ClearFIFO\000"
+ 1357      6976655F 
+ 1357      54696D65 
+ 1357      725F436C 
+ 1357      65617246 
+ 1358              	.LASF2:
+ 1359 02a8 73686F72 		.ascii	"short int\000"
+ 1359      7420696E 
+ 1359      7400
+ 1360              	.LASF37:
+ 1361 02b2 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Receive_Timer.c\000"
+ 1361      6E657261 
+ 1361      7465645F 
+ 1361      536F7572 
+ 1361      63655C50 
+ 1362              	.LASF20:
+ 1363 02db 52656365 		.ascii	"Receive_Timer_Init\000"
+ 1363      6976655F 
+ 1363      54696D65 
+ 1363      725F496E 
+ 1363      697400
+ 1364              	.LASF22:
+ 1365 02ee 52656365 		.ascii	"Receive_Timer_SoftwareCapture\000"
+ 1365      6976655F 
+ 1365      54696D65 
+ 1365      725F536F 
+ 1365      66747761 
+ 1366              	.LASF4:
+ 1367 030c 6C6F6E67 		.ascii	"long int\000"
+ 1367      20696E74 
+ 1367      00
+ 1368              	.LASF13:
+ 1369 0315 63686172 		.ascii	"char\000"
+ 1369      00
+ 1370              	.LASF21:
+ 1371 031a 52656365 		.ascii	"Receive_Timer_SetInterruptMode\000"
+ 1371      6976655F 
+ 1371      54696D65 
+ 1371      725F5365 
+ 1371      74496E74 
+ 1372              	.LASF0:
+ 1373 0339 7369676E 		.ascii	"signed char\000"
+ 1373      65642063 
+ 1373      68617200 
+ 1374              	.LASF40:
+ 1375 0345 52656365 		.ascii	"Receive_Timer_initVar\000"
+ 1375      6976655F 
+ 1375      54696D65 
+ 1375      725F696E 
+ 1375      69745661 
+ 1376              	.LASF31:
+ 1377 035b 52656365 		.ascii	"Receive_Timer_ReadCapture\000"
+ 1377      6976655F 
+ 1377      54696D65 
+ 1377      725F5265 
+ 1377      61644361 
+ 1378              	.LASF18:
+ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccKSvp6q.s 			page 41
 
 
- 1489 0394 52656365 		.ascii	"Receive_Timer_ReadCapture\000"
- 1489      6976655F 
- 1489      54696D65 
- 1489      725F5265 
- 1489      61644361 
- 1490              	.LASF18:
- 1491 03ae 52656365 		.ascii	"Receive_Timer_Start\000"
- 1491      6976655F 
- 1491      54696D65 
- 1491      725F5374 
- 1491      61727400 
- 1492              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 1379 0375 52656365 		.ascii	"Receive_Timer_Start\000"
+ 1379      6976655F 
+ 1379      54696D65 
+ 1379      725F5374 
+ 1379      61727400 
+ 1380              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

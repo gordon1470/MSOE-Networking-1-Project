@@ -1,5 +1,5 @@
 # USB_UART01
-# 2016-02-01 17:20:45Z
+# 2016-02-03 03:28:53Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -26,9 +26,9 @@ set_io "Receive(0)" iocell 3 0
 set_io "LED4(0)" iocell 6 3
 set_io "LED3(0)" iocell 6 2
 set_io "LED2(0)" iocell 0 7
+set_io "LED1(0)" iocell 0 0
 set_location "\Timer:TimerUDB:status_tc\" 1 3 0 0
 set_location "\Receive_Timer:TimerUDB:status_tc\" 1 5 0 3
-set_location "\Receive_Timer:TimerUDB:trig_reg\" 1 5 0 0
 set_location "\USBUART_1:ep_0\" interrupt -1 -1 24
 set_location "\USBUART_1:bus_reset\" interrupt -1 -1 23
 set_location "\USBUART_1:arb_int\" interrupt -1 -1 22
@@ -53,6 +53,6 @@ set_location "\Receive_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\" 1 5 6
 set_location "\Receive_Timer:TimerUDB:rstSts:stsreg\" 1 5 4
 set_location "\Receive_Timer:TimerUDB:sT16:timerdp:u0\" 0 5 2
 set_location "\Receive_Timer:TimerUDB:sT16:timerdp:u1\" 1 5 2
-set_location "\Receive_Timer:TimerUDB:trig_last\" 1 5 1 0
-set_location "\Receive_Timer:TimerUDB:trig_rise_detected\" 1 5 0 2
-set_location "\Receive_Timer:TimerUDB:trig_fall_detected\" 1 5 0 1
+set_location "\Receive_Timer:TimerUDB:run_mode\" 1 5 0 2
+set_location "\Receive_Timer:TimerUDB:timer_enable\" 1 5 0 0
+set_location "\Receive_Timer:TimerUDB:trig_disable\" 1 5 0 1
