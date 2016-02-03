@@ -32,7 +32,6 @@ enum state {idle, busy, collision} networkState;
 
 char receivedChar;//TODO remove the pointer
 
-
 int timerInterruptCount =0;//TODO remove
 
 CY_ISR(Idle_Collision_ISR){ 
@@ -143,14 +142,29 @@ int main()
                     //wait for 8 bits TODO bad comment
                     //char receivedChar;     TODO move to global variable
                     //char *charPtr = &receivedChar;
+                    
                     diffManToASCII();
                     printChar();
+                    receivedChar = 0;       //Reset the char
                 }
-                CyDelay(1000);//TODO remove for testing only
+               //TODO remove
+                /*LCD_Position(0,0);
+                int i;
+                for(i=0; i<16;i++){
+                    LCD_PrintNumber(diffManReceivedData[i]);
+                }
+                LCD_Position(1,0);
+                
+                for(i=16; i<32;i++){
+                    LCD_PrintNumber(diffManReceivedData[i]);
+                }*/
+                //end remove
+                
+                CyDelay(1000);//TODO remove for testing only    
                 LCD_ClearDisplay();//TODO remove
                 receivedDataCount = 0;  //Reset count
                 receivedDataIndex = 0;  //Reset index
-                receivedChar = 0;       //Reset the char
+                
             }
             else{
                 //Receive data did not start with the start bit
@@ -446,8 +460,7 @@ void diffManToASCII()
 //Formats char and prints to LCD
 void printChar(){
     ///Remove leading 1 bit of char
-    receivedChar &= ASCII_CHAR_MASK;
-    
+    receivedChar &= ASCII_CHAR_MASK; 
     LCD_PutChar(receivedChar); 
 }
 
