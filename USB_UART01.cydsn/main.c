@@ -144,11 +144,13 @@ int main()
                     //char receivedChar;     TODO move to global variable
                     //char *charPtr = &receivedChar;
                     diffManToASCII();
-                    
                     printChar();
                 }
-                receivedDataCount = 0;
-                receivedDataIndex = 0; 
+                CyDelay(1000);//TODO remove for testing only
+                LCD_ClearDisplay();//TODO remove
+                receivedDataCount = 0;  //Reset count
+                receivedDataIndex = 0;  //Reset index
+                receivedChar = 0;       //Reset the char
             }
             else{
                 //Receive data did not start with the start bit

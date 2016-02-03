@@ -1,3 +1,3 @@
 # Component constraints for D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\TopDesign\TopDesign.cysch
 # Project: D:\MyDocs\Documents\CE4950\USB_UART01\USB_UART01.cydsn\USB_UART01.cyprj
-# Date: Wed, 03 Feb 2016 03:28:51 GMT
+# Date: Wed, 03 Feb 2016 18:53:04 GMT

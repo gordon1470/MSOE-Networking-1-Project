@@ -1,6 +1,6 @@
 // ======================================================================
 // USB_UART01.v generated from TopDesign.cysch
-// 02/02/2016 at 21:28
+// 02/03/2016 at 12:53
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -795,6 +795,7 @@ module top ;
           wire  Net_207;
           wire  Net_230;
           wire  Net_205;
+          wire  Net_203;
           wire  Net_151;
           wire  Net_148;
           wire  Net_147;
@@ -811,7 +812,6 @@ module top ;
           wire  Net_62;
           wire  Net_61;
           wire  Net_204;
-          wire  Net_203;
           wire  Net_201;
           wire  Net_100;
           wire  Net_149;
