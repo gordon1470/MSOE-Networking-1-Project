@@ -20,8 +20,8 @@ void stringToDiffMan(char*, uint8);
 void asciiToDiffMan(char);
 void transmitData();
 void setNetworkStateOnLEDs();
-void diffManToASCII(char*);
-void printChar(char *);
+void diffManToASCII();
+void printChar();
 
 int diffManEncodedData[800]; //TODO examine array size
 uint8 diffManReceivedData[100];//TODO examine array size
@@ -29,6 +29,8 @@ int receivedDataIndex, receivedDataCount;
 int halfBitIndex = 0, currentDataPos=0, lengthOfData;
 bool timerExpired, dataTransmissionComplete, powerOnEdge;
 enum state {idle, busy, collision} networkState; 
+
+char receivedChar;//TODO remove the pointer
 
 
 int timerInterruptCount =0;//TODO remove
@@ -122,7 +124,7 @@ int main()
     
     receivedDataCount = 0;
     receivedDataIndex = 0; 
-    timerInterruptCount = 0;
+    timerInterruptCount = 0;//TODO remove
    
     
     /* Main Loop: */
@@ -133,18 +135,34 @@ int main()
         /*Receive*/
         //Precondidtion: must finished receiving data so channel state machine at idle and wait for a char
         if(networkState == idle && receivedDataCount >= 34){//TODO remove hardcode #
+            
+            int i; //TODO remove
+            /*for(i=0; i<16;i++){
+                LCD_PrintNumber(diffManReceivedData[i]);
+            }
+            LCD_Position(1,0);
+            for(i=16; i<34;i++){
+   
+                LCD_PrintNumber(diffManReceivedData[i]);
+            }*/
+            CyDelay(100);
+            LCD_ClearDisplay();
+            LCD_Position(0,0);
+           /* for(i=34; i<receivedDataCount; i++){
+                LCD_PrintNumber(diffManReceivedData[i]);
+            }*/
+                //end remove
+            
             //Verify that have received start bit (01). Note: ignore first edge from turning system on
             if(diffManReceivedData[0] == 0 && diffManReceivedData[1] == 1){
-                
-                
                 receivedDataIndex = 2; //skip start bit (two half bits)
-                while(receivedDataIndex < receivedDataCount){
+                while(receivedDataIndex < receivedDataCount-1){     //Note: receivedDataCount-1 b/c gets one extra bit from Receive_Timer expiring 
                     //wait for 8 bits TODO bad comment
-                    char receivedChar;     
-                    char *charPtr = &receivedChar;
+                    //char receivedChar;     TODO move to global variable
+                    //char *charPtr = &receivedChar;
+                    diffManToASCII();
                     
-                    diffManToASCII(charPtr);
-                    printChar(charPtr);
+                    printChar();
                 }
                 receivedDataCount = 0;
                 receivedDataIndex = 0; 
@@ -408,7 +426,7 @@ Convert differental manchester line encoded byte to ascii char
 
 charPtr = pointer to char 
 */
-void diffManToASCII(char *charPtr)
+void diffManToASCII()
 {
     int i;
     for(i = 0; i < EIGHT_BITS; i++){
@@ -418,35 +436,34 @@ void diffManToASCII(char *charPtr)
             //current half bit is 1
             if(previousHalfBit == 1)
             {
-                *charPtr |= (1 << (7 - i));      
+                receivedChar |= (1 << (7 - i));      
             }
             else
             {
-                *charPtr |= (0 << (7 - i));    
+                receivedChar |= (0 << (7 - i));    
             }
         }
         else{
             //current half bit is 0
             if(previousHalfBit == 1)
             {
-                *charPtr |= (0 << (7 - i));    
+                receivedChar |= (0 << (7 - i));    
             }
             else
             {
-                *charPtr |= (1 << (7 - i));    
+                receivedChar |= (1 << (7 - i));    
             }
         } 
         receivedDataIndex += 2;
     }//end for loop
-   
 }
 
 //Formats char and prints to LCD
-void printChar(char *charPtr){
+void printChar(){
     ///Remove leading 1 bit of char
-    *charPtr &= ASCII_CHAR_MASK;
+    receivedChar &= ASCII_CHAR_MASK;
     
-    LCD_PutChar(*charPtr);
+    LCD_PutChar(receivedChar); 
 }
 
 /* [] END OF FILE */

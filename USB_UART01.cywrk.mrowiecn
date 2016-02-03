@@ -166,36 +166,6 @@
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\project.h</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LCD\LCD.h</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LCD\LCD_PM.c</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LCD_LCDPort</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LCD_LCDPort\LCD_LCDPort.c</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LCD_LCDPort\LCD_LCDPort.h</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LCD_LCDPort\LCD_LCDPort_aliases.h</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED1</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED1\LED1.c</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED1\LED1.h</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED1\LED1_aliases.h</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED2</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED2\LED2.c</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED2\LED2.h</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED2\LED2_aliases.h</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED3</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED3\LED3.c</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED3\LED3.h</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED3\LED3_aliases.h</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED4</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED4\LED4.c</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED4\LED4.h</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\LED4\LED4_aliases.h</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\Receive</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\Receive\Receive.c</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\Receive\Receive.h</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\Receive\Receive_aliases.h</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\Receive_Timer</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\Receive_Timer\Receive_Timer.c</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\Receive_Timer\Receive_Timer.h</v>
-<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\Receive_Timer\Receive_Timer_PM.c</v>
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\ReceiveTimerIRQ</v>
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\ReceiveTimerIRQ\ReceiveTimerIRQ.c</v>
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\ReceiveTimerIRQ\ReceiveTimerIRQ.h</v>
@@ -211,6 +181,36 @@
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\TX_pin\TX_pin.h</v>
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\TX_pin\TX_pin_aliases.h</v>
 <v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1\USBUART_1.c</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1\USBUART_1.h</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1\USBUART_1_audio.c</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1\USBUART_1_audio.h</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1\USBUART_1_boot.c</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1\USBUART_1_cdc.c</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1\USBUART_1_cdc.h</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1\USBUART_1_cdc.inf</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1\USBUART_1_cls.c</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1\USBUART_1_descr.c</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1\USBUART_1_drv.c</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1\USBUART_1_episr.c</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1\USBUART_1_hid.c</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1\USBUART_1_hid.h</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1\USBUART_1_midi.c</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1\USBUART_1_midi.h</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1\USBUART_1_pm.c</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1\USBUART_1_pvt.h</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1\USBUART_1_std.c</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1\USBUART_1_vnd.c</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1_Dm</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1_Dm\USBUART_1_Dm.c</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1_Dm\USBUART_1_Dm.h</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1_Dm\USBUART_1_Dm_aliases.h</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1_Dp</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1_Dp\USBUART_1_Dp.c</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1_Dp\USBUART_1_Dp.h</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\USBUART_1_Dp\USBUART_1_Dp_aliases.h</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>USB_UART01\USB_UART01\Generated_Source\PSoC5\cycodeshareimport.scat</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -292,49 +292,6 @@
 <VisibleNodeIds>
 <v>USB_UART01</v>
 <v>USB_UART01\USB_UART01</v>
-<v>USB_UART01\USB_UART01\CortexM3</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_1.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_2.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Edge_detect_IRQ.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Idle_Collision_IRQ.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Idle_Collision_Timer.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Idle_Collision_Timer_PM.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_LCDPort.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_PM.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\LED1.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\LED2.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\LED3.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Receive.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Receive_Timer.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Receive_Timer_PM.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\ReceiveTimerIRQ.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer_PM.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\TimerISR.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\TX_pin.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_audio.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_boot.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_cdc.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_cls.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_descr.lst</v>
-<v>USB_UART01\USB_UART01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_Dm.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -389,22 +346,22 @@
 <CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
 <indicators>
 <CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
-<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="76" DocumentName=".\USB_UART01.cydsn\main.c" />
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="78" DocumentName=".\USB_UART01.cydsn\main.c" />
 </CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
 <CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
-<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="201" DocumentName=".\USB_UART01.cydsn\main.c" />
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="219" DocumentName=".\USB_UART01.cydsn\main.c" />
 </CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
 <CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
-<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="81" DocumentName=".\USB_UART01.cydsn\main.c" />
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="83" DocumentName=".\USB_UART01.cydsn\main.c" />
 </CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
 <CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
-<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="171" DocumentName=".\USB_UART01.cydsn\main.c" />
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="189" DocumentName=".\USB_UART01.cydsn\main.c" />
 </CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
 <CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
-<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="457" DocumentName=".\USB_UART01.cydsn\main.c" />
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="474" DocumentName=".\USB_UART01.cydsn\main.c" />
 </CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
 <CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
-<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="554" DocumentName=".\USB_UART01.cydsn\main.c" />
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="571" DocumentName=".\USB_UART01.cydsn\main.c" />
 </CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
 </indicators>
 </CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
