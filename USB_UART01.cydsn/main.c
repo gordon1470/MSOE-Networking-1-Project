@@ -136,23 +136,6 @@ int main()
         //Precondidtion: must finished receiving data so channel state machine at idle and wait for a char
         if(networkState == idle && receivedDataCount >= 34){//TODO remove hardcode #
             
-            int i; //TODO remove
-            /*for(i=0; i<16;i++){
-                LCD_PrintNumber(diffManReceivedData[i]);
-            }
-            LCD_Position(1,0);
-            for(i=16; i<34;i++){
-   
-                LCD_PrintNumber(diffManReceivedData[i]);
-            }*/
-            CyDelay(100);
-            LCD_ClearDisplay();
-            LCD_Position(0,0);
-           /* for(i=34; i<receivedDataCount; i++){
-                LCD_PrintNumber(diffManReceivedData[i]);
-            }*/
-                //end remove
-            
             //Verify that have received start bit (01). Note: ignore first edge from turning system on
             if(diffManReceivedData[0] == 0 && diffManReceivedData[1] == 1){
                 receivedDataIndex = 2; //skip start bit (two half bits)
