@@ -144,6 +144,13 @@ int main()
                     //char *charPtr = &receivedChar;
                     
                     diffManToASCII();
+					//program flow: check for header inside diffManToASCII
+					//set flag if header start 0x71 is detected (decimal 113 or ASCII 'q')
+					//after diffManToASCII completes, check for header flag
+					//if valid, enter "header check" method
+					//check first 8 bytes of ascii characters according to spec
+					//if valid, set valid flag
+					//otherwise discard contents
                     printChar();
                     receivedChar = 0;       //Reset the char
                 }
