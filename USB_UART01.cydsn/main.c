@@ -155,13 +155,6 @@ int main()
                     //char *charPtr = &receivedChar;
                     
                     diffManToASCII();
-					//program flow: check for header inside diffManToASCII
-					//set flag if header start 0x71 is detected (decimal 113 or ASCII 'q')
-					//after diffManToASCII completes, check for header flag
-					//if valid, enter "header check" method
-					//check first 8 bytes of ascii characters according to spec
-					//if valid, set valid flag
-					//otherwise discard contents
 					storeChar();
                     receivedChar = 0;       //Reset the char
                 }
@@ -227,7 +220,7 @@ int main()
                         break;
                     case 13://enter (carriage return)
                         initDiffManEncodedArray();
-						lineString[4] = stringPosition - 6;
+						lineString[4] = stringPosition - HEADER_POS;
                         stringToDiffMan(lineString, stringPosition);
                         while(USBUART_1_CDCIsReady() == 0u);
                         USBUART_1_PutCRLF();
@@ -276,11 +269,11 @@ void initDiffManEncodedArray(){
 Enter key has been pressed, change binary data into diff man data.
 Call from main. Requires main to access diffManEncodedData array
 */
-void stringToDiffMan(char lineString[], uint8 stringPosition){
+void stringToDiffMan(char *lineString, uint8 stringPosition){
 
     unsigned int i = 0;
     for(i = 0; i < stringPosition; i++){
-        asciiToDiffMan(lineString[i]);
+        asciiToDiffMan(*(lineString + i));//use to be lineString[i]
     }
 }
 
@@ -309,7 +302,7 @@ void asciiToDiffMan(char asciiChar)
     //convert asciil char to binary value (which will be 7 bits)
     unsigned int binaryValueOfChar[20];//index zero is LSB 
     int i;
-    for(i=0; asciiChar>0; i++)
+    for(i=0; asciiChar>0; i++)//TODO: need new solution to convert from char to array of binary
     { 
         binaryValueOfChar[i]=asciiChar%2; 
         asciiChar=asciiChar/2;

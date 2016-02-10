@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
   55              		.type	headerValid, %object
   56              		.size	headerValid, 1
   57              	headerValid:
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 2
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 2
 
 
   58 0010 00       		.space	1
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
   71              		.loc 1 41 0
   72              		.cfi_startproc
   73              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 3
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 3
 
 
   74              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  118              		.loc 1 51 0
  119              		.cfi_startproc
  120              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 4
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 4
 
 
  121              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  162              		.loc 1 64 0
  163 003c 054B     		ldr	r3, .L9+12
  164 003e 0122     		movs	r2, #1
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 5
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 5
 
 
  165 0040 1A70     		strb	r2, [r3]
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  211              	.L12:
  212 0014 00000000 		.word	timerExpired
  213 0018 6B640040 		.word	1073767531
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 6
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 6
 
 
  214              		.cfi_endproc
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  260              		.cfi_def_cfa_offset 0
  261 002a 7047     		bx	lr
  262              	.L16:
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 7
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 7
 
 
  263              		.align	2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
   92:.\main.c      ****     powerOnEdge = true; //When the system powers up, it creates a rising edge. 
  306              		.loc 1 92 0
  307 001e 8B4B     		ldr	r3, .L39+12
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 8
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 8
 
 
  308 0020 0122     		movs	r2, #1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  119:.\main.c      ****     Idle_Collision_Timer_Start();
  336              		.loc 1 119 0
  337 0050 FFF7FEFF 		bl	Idle_Collision_Timer_Start
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 9
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 9
 
 
  120:.\main.c      **** 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  374 008c 0023     		movs	r3, #0
  375 008e 7B73     		strb	r3, [r7, #13]
  138:.\main.c      **** 	lineString[6] = 0x75;
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 10
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 10
 
 
  376              		.loc 1 138 0
@@ -595,21 +595,14 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  157:.\main.c      ****                     diffManToASCII();
  409              		.loc 1 157 0
  410 00c0 FFF7FEFF 		bl	diffManToASCII
- 158:.\main.c      **** 					//program flow: check for header inside diffManToASCII
- 159:.\main.c      **** 					//set flag if header start 0x71 is detected (decimal 113 or ASCII 'q')
- 160:.\main.c      **** 					//after diffManToASCII completes, check for header flag
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 11
-
-
- 161:.\main.c      **** 					//if valid, enter "header check" method
- 162:.\main.c      **** 					//check first 8 bytes of ascii characters according to spec
- 163:.\main.c      **** 					//if valid, set valid flag
- 164:.\main.c      **** 					//otherwise discard contents
- 165:.\main.c      **** 					storeChar();
- 411              		.loc 1 165 0
+ 158:.\main.c      **** 					storeChar();
+ 411              		.loc 1 158 0
  412 00c4 FFF7FEFF 		bl	storeChar
- 166:.\main.c      ****                     receivedChar = 0;       //Reset the char
- 413              		.loc 1 166 0
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 11
+
+
+ 159:.\main.c      ****                     receivedChar = 0;       //Reset the char
+ 413              		.loc 1 159 0
  414 00c8 6A4B     		ldr	r3, .L39+52
  415 00ca 0022     		movs	r2, #0
  416 00cc 1A70     		strb	r2, [r3]
@@ -623,131 +616,131 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  423 00d6 1B68     		ldr	r3, [r3]
  424 00d8 9A42     		cmp	r2, r3
  425 00da F1DC     		bgt	.L21
- 167:.\main.c      ****                 }
- 168:.\main.c      **** 				if(headerCheck()){
- 426              		.loc 1 168 0
+ 160:.\main.c      ****                 }
+ 161:.\main.c      **** 				if(headerCheck()){
+ 426              		.loc 1 161 0
  427 00dc FFF7FEFF 		bl	headerCheck
  428 00e0 0346     		mov	r3, r0
  429 00e2 002B     		cmp	r3, #0
  430 00e4 01D0     		beq	.L22
- 169:.\main.c      ****                     printChar();
- 431              		.loc 1 169 0
+ 162:.\main.c      ****                     printChar();
+ 431              		.loc 1 162 0
  432 00e6 FFF7FEFF 		bl	printChar
  433              	.L22:
- 170:.\main.c      ****                 }
- 171:.\main.c      ****                //TODO remove
- 172:.\main.c      ****                 /*LCD_Position(0,0);
- 173:.\main.c      ****                 int i;
- 174:.\main.c      ****                 for(i=0; i<16;i++){
- 175:.\main.c      ****                     LCD_PrintNumber(diffManReceivedData[i]);
- 176:.\main.c      ****                 }
- 177:.\main.c      ****                 LCD_Position(1,0);
- 178:.\main.c      ****                 
- 179:.\main.c      ****                 for(i=16; i<32;i++){
- 180:.\main.c      ****                     LCD_PrintNumber(diffManReceivedData[i]);
- 181:.\main.c      ****                 }*/
- 182:.\main.c      ****                 //end remove
- 183:.\main.c      ****                 
- 184:.\main.c      ****                 CyDelay(1000);//TODO remove for testing only    
- 434              		.loc 1 184 0
+ 163:.\main.c      ****                 }
+ 164:.\main.c      ****                //TODO remove
+ 165:.\main.c      ****                 /*LCD_Position(0,0);
+ 166:.\main.c      ****                 int i;
+ 167:.\main.c      ****                 for(i=0; i<16;i++){
+ 168:.\main.c      ****                     LCD_PrintNumber(diffManReceivedData[i]);
+ 169:.\main.c      ****                 }
+ 170:.\main.c      ****                 LCD_Position(1,0);
+ 171:.\main.c      ****                 
+ 172:.\main.c      ****                 for(i=16; i<32;i++){
+ 173:.\main.c      ****                     LCD_PrintNumber(diffManReceivedData[i]);
+ 174:.\main.c      ****                 }*/
+ 175:.\main.c      ****                 //end remove
+ 176:.\main.c      ****                 
+ 177:.\main.c      ****                 CyDelay(1000);//TODO remove for testing only    
+ 434              		.loc 1 177 0
  435 00ea 4FF47A70 		mov	r0, #1000
  436 00ee FFF7FEFF 		bl	CyDelay
- 185:.\main.c      ****                 LCD_ClearDisplay();//TODO remove
- 437              		.loc 1 185 0
+ 178:.\main.c      ****                 LCD_ClearDisplay();//TODO remove
+ 437              		.loc 1 178 0
  438 00f2 0120     		movs	r0, #1
  439 00f4 FFF7FEFF 		bl	LCD_WriteControl
- 186:.\main.c      ****                 receivedDataCount = 0;  //Reset count
- 440              		.loc 1 186 0
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 12
-
-
+ 179:.\main.c      ****                 receivedDataCount = 0;  //Reset count
+ 440              		.loc 1 179 0
  441 00f8 594B     		ldr	r3, .L39+32
  442 00fa 0022     		movs	r2, #0
  443 00fc 1A60     		str	r2, [r3]
- 187:.\main.c      ****                 receivedDataIndex = 0;  //Reset index
- 444              		.loc 1 187 0
+ 180:.\main.c      ****                 receivedDataIndex = 0;  //Reset index
+ 444              		.loc 1 180 0
  445 00fe 594B     		ldr	r3, .L39+36
  446 0100 0022     		movs	r2, #0
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 12
+
+
  447 0102 1A60     		str	r2, [r3]
- 188:.\main.c      ****                 currentRXCharPosition = 0;
- 448              		.loc 1 188 0
+ 181:.\main.c      ****                 currentRXCharPosition = 0;
+ 448              		.loc 1 181 0
  449 0104 5C4B     		ldr	r3, .L39+56
  450 0106 0022     		movs	r2, #0
  451 0108 1A60     		str	r2, [r3]
  452 010a 08E0     		b	.L18
  453              	.L19:
- 189:.\main.c      ****             }
- 190:.\main.c      ****             else{
- 191:.\main.c      ****                 //Receive data did not start with the start bit
- 192:.\main.c      ****                 receivedDataCount = 0;
- 454              		.loc 1 192 0
+ 182:.\main.c      ****             }
+ 183:.\main.c      ****             else{
+ 184:.\main.c      ****                 //Receive data did not start with the start bit
+ 185:.\main.c      ****                 receivedDataCount = 0;
+ 454              		.loc 1 185 0
  455 010c 544B     		ldr	r3, .L39+32
  456 010e 0022     		movs	r2, #0
  457 0110 1A60     		str	r2, [r3]
- 193:.\main.c      ****                 receivedDataIndex = 0; 
- 458              		.loc 1 193 0
+ 186:.\main.c      ****                 receivedDataIndex = 0; 
+ 458              		.loc 1 186 0
  459 0112 544B     		ldr	r3, .L39+36
  460 0114 0022     		movs	r2, #0
  461 0116 1A60     		str	r2, [r3]
- 194:.\main.c      ****                 currentRXCharPosition = 0;
- 462              		.loc 1 194 0
+ 187:.\main.c      ****                 currentRXCharPosition = 0;
+ 462              		.loc 1 187 0
  463 0118 574B     		ldr	r3, .L39+56
  464 011a 0022     		movs	r2, #0
  465 011c 1A60     		str	r2, [r3]
  466              	.L18:
- 195:.\main.c      ****             }
- 196:.\main.c      ****         }
- 197:.\main.c      ****         else
- 198:.\main.c      ****         {
- 199:.\main.c      ****             //TODO prob remove this else
- 200:.\main.c      ****         }
- 201:.\main.c      ****         /*End Receive*/
- 202:.\main.c      ****         
- 203:.\main.c      ****         if(USBUART_1_IsConfigurationChanged() != 0u) /* Host could send double SET_INTERFACE reques
- 467              		.loc 1 203 0
+ 188:.\main.c      ****             }
+ 189:.\main.c      ****         }
+ 190:.\main.c      ****         else
+ 191:.\main.c      ****         {
+ 192:.\main.c      ****             //TODO prob remove this else
+ 193:.\main.c      ****         }
+ 194:.\main.c      ****         /*End Receive*/
+ 195:.\main.c      ****         
+ 196:.\main.c      ****         if(USBUART_1_IsConfigurationChanged() != 0u) /* Host could send double SET_INTERFACE reques
+ 467              		.loc 1 196 0
  468 011e FFF7FEFF 		bl	USBUART_1_IsConfigurationChanged
  469 0122 0346     		mov	r3, r0
  470 0124 002B     		cmp	r3, #0
  471 0126 06D0     		beq	.L24
- 204:.\main.c      ****         {
- 205:.\main.c      ****             if(USBUART_1_GetConfiguration() != 0u)   /* Init IN endpoints when device configured */
- 472              		.loc 1 205 0
+ 197:.\main.c      ****         {
+ 198:.\main.c      ****             if(USBUART_1_GetConfiguration() != 0u)   /* Init IN endpoints when device configured */
+ 472              		.loc 1 198 0
  473 0128 FFF7FEFF 		bl	USBUART_1_GetConfiguration
  474 012c 0346     		mov	r3, r0
  475 012e 002B     		cmp	r3, #0
  476 0130 01D0     		beq	.L24
- 206:.\main.c      ****             {
- 207:.\main.c      ****                 /* Enumeration is done, enable OUT endpoint for receive data from Host */
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 13
-
-
- 208:.\main.c      ****                 USBUART_1_CDC_Init();
- 477              		.loc 1 208 0
+ 199:.\main.c      ****             {
+ 200:.\main.c      ****                 /* Enumeration is done, enable OUT endpoint for receive data from Host */
+ 201:.\main.c      ****                 USBUART_1_CDC_Init();
+ 477              		.loc 1 201 0
  478 0132 FFF7FEFF 		bl	USBUART_1_CDC_Init
  479              	.L24:
- 209:.\main.c      ****             }
- 210:.\main.c      ****         }         
- 211:.\main.c      ****         if(USBUART_1_GetConfiguration() != 0u)    /* Service USB CDC when device configured */
- 480              		.loc 1 211 0
+ 202:.\main.c      ****             }
+ 203:.\main.c      ****         }         
+ 204:.\main.c      ****         if(USBUART_1_GetConfiguration() != 0u)    /* Service USB CDC when device configured */
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 13
+
+
+ 480              		.loc 1 204 0
  481 0136 FFF7FEFF 		bl	USBUART_1_GetConfiguration
  482 013a 0346     		mov	r3, r0
  483 013c 002B     		cmp	r3, #0
  484 013e 7ED0     		beq	.L25
- 212:.\main.c      ****         {
- 213:.\main.c      ****             if(USBUART_1_DataIsReady() != 0u)               /* Check for input data from PC */
- 485              		.loc 1 213 0
+ 205:.\main.c      ****         {
+ 206:.\main.c      ****             if(USBUART_1_DataIsReady() != 0u)               /* Check for input data from PC */
+ 485              		.loc 1 206 0
  486 0140 FFF7FEFF 		bl	USBUART_1_DataIsReady
  487 0144 0346     		mov	r3, r0
  488 0146 002B     		cmp	r3, #0
  489 0148 79D0     		beq	.L25
- 214:.\main.c      ****             {   
- 215:.\main.c      ****                 rx = USBUART_1_GetChar();
- 490              		.loc 1 215 0
+ 207:.\main.c      ****             {   
+ 208:.\main.c      ****                 rx = USBUART_1_GetChar();
+ 490              		.loc 1 208 0
  491 014a FFF7FEFF 		bl	USBUART_1_GetChar
  492 014e 0346     		mov	r3, r0
  493 0150 87F87630 		strb	r3, [r7, #118]
- 216:.\main.c      ****                 switch(rx){
- 494              		.loc 1 216 0
+ 209:.\main.c      ****                 switch(rx){
+ 494              		.loc 1 209 0
  495 0154 97F87630 		ldrb	r3, [r7, #118]	@ zero_extendqisi2
  496 0158 0D2B     		cmp	r3, #13
  497 015a 25D0     		beq	.L27
@@ -755,180 +748,180 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  499 015e 6DD0     		beq	.L38
  500 0160 082B     		cmp	r3, #8
  501 0162 51D1     		bne	.L37
- 217:.\main.c      ****                     case 8://backspace
- 218:.\main.c      ****                         if(stringPosition>0){
- 502              		.loc 1 218 0
+ 210:.\main.c      ****                     case 8://backspace
+ 211:.\main.c      ****                         if(stringPosition>0){
+ 502              		.loc 1 211 0
  503 0164 97F87730 		ldrb	r3, [r7, #119]	@ zero_extendqisi2
  504 0168 002B     		cmp	r3, #0
  505 016a 1CD0     		beq	.L30
- 219:.\main.c      ****                             stringPosition--;
- 506              		.loc 1 219 0
+ 212:.\main.c      ****                             stringPosition--;
+ 506              		.loc 1 212 0
  507 016c 97F87730 		ldrb	r3, [r7, #119]	@ zero_extendqisi2
  508 0170 013B     		subs	r3, r3, #1
  509 0172 87F87730 		strb	r3, [r7, #119]
- 220:.\main.c      ****                             lineString[stringPosition] = '\0';
- 510              		.loc 1 220 0
+ 213:.\main.c      ****                             lineString[stringPosition] = '\0';
+ 510              		.loc 1 213 0
  511 0176 97F87730 		ldrb	r3, [r7, #119]	@ zero_extendqisi2
  512 017a 07F17802 		add	r2, r7, #120
  513 017e 1344     		add	r3, r3, r2
  514 0180 0022     		movs	r2, #0
  515 0182 03F8702C 		strb	r2, [r3, #-112]
- 221:.\main.c      ****                             //backspace space backspace
- 222:.\main.c      ****                             while(USBUART_1_CDCIsReady() == 0u); 
- 516              		.loc 1 222 0
+ 214:.\main.c      ****                             //backspace space backspace
+ 215:.\main.c      ****                             while(USBUART_1_CDCIsReady() == 0u); 
+ 516              		.loc 1 215 0
  517 0186 00BF     		nop
  518              	.L31:
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 14
-
-
- 519              		.loc 1 222 0 is_stmt 0 discriminator 1
+ 519              		.loc 1 215 0 is_stmt 0 discriminator 1
  520 0188 FFF7FEFF 		bl	USBUART_1_CDCIsReady
  521 018c 0346     		mov	r3, r0
  522 018e 002B     		cmp	r3, #0
  523 0190 FAD0     		beq	.L31
- 223:.\main.c      ****                             USBUART_1_PutChar(8);
- 524              		.loc 1 223 0 is_stmt 1
+ 216:.\main.c      ****                             USBUART_1_PutChar(8);
+ 524              		.loc 1 216 0 is_stmt 1
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 14
+
+
  525 0192 0820     		movs	r0, #8
  526 0194 FFF7FEFF 		bl	USBUART_1_PutChar
- 224:.\main.c      ****                             USBUART_1_PutChar(32);
- 527              		.loc 1 224 0
+ 217:.\main.c      ****                             USBUART_1_PutChar(32);
+ 527              		.loc 1 217 0
  528 0198 2020     		movs	r0, #32
  529 019a FFF7FEFF 		bl	USBUART_1_PutChar
- 225:.\main.c      ****                             USBUART_1_PutChar(8);
- 530              		.loc 1 225 0
+ 218:.\main.c      ****                             USBUART_1_PutChar(8);
+ 530              		.loc 1 218 0
  531 019e 0820     		movs	r0, #8
  532 01a0 FFF7FEFF 		bl	USBUART_1_PutChar
- 226:.\main.c      ****                         }
- 227:.\main.c      ****                         break;
- 533              		.loc 1 227 0
+ 219:.\main.c      ****                         }
+ 220:.\main.c      ****                         break;
+ 533              		.loc 1 220 0
  534 01a4 4BE0     		b	.L25
  535              	.L30:
  536 01a6 4AE0     		b	.L25
  537              	.L27:
- 228:.\main.c      ****                     case 13://enter (carriage return)
- 229:.\main.c      ****                         initDiffManEncodedArray();
- 538              		.loc 1 229 0
+ 221:.\main.c      ****                     case 13://enter (carriage return)
+ 222:.\main.c      ****                         initDiffManEncodedArray();
+ 538              		.loc 1 222 0
  539 01a8 FFF7FEFF 		bl	initDiffManEncodedArray
- 230:.\main.c      **** 						lineString[4] = stringPosition - 6;
- 540              		.loc 1 230 0
+ 223:.\main.c      **** 						lineString[4] = stringPosition - HEADER_POS;
+ 540              		.loc 1 223 0
  541 01ac 97F87730 		ldrb	r3, [r7, #119]
- 542 01b0 063B     		subs	r3, r3, #6
+ 542 01b0 073B     		subs	r3, r3, #7
  543 01b2 DBB2     		uxtb	r3, r3
  544 01b4 3B73     		strb	r3, [r7, #12]
- 231:.\main.c      ****                         stringToDiffMan(lineString, stringPosition);
- 545              		.loc 1 231 0
+ 224:.\main.c      ****                         stringToDiffMan(lineString, stringPosition);
+ 545              		.loc 1 224 0
  546 01b6 07F10802 		add	r2, r7, #8
  547 01ba 97F87730 		ldrb	r3, [r7, #119]	@ zero_extendqisi2
  548 01be 1046     		mov	r0, r2
  549 01c0 1946     		mov	r1, r3
  550 01c2 FFF7FEFF 		bl	stringToDiffMan
- 232:.\main.c      ****                         while(USBUART_1_CDCIsReady() == 0u);
- 551              		.loc 1 232 0
+ 225:.\main.c      ****                         while(USBUART_1_CDCIsReady() == 0u);
+ 551              		.loc 1 225 0
  552 01c6 00BF     		nop
  553              	.L32:
- 554              		.loc 1 232 0 is_stmt 0 discriminator 1
+ 554              		.loc 1 225 0 is_stmt 0 discriminator 1
  555 01c8 FFF7FEFF 		bl	USBUART_1_CDCIsReady
  556 01cc 0346     		mov	r3, r0
  557 01ce 002B     		cmp	r3, #0
  558 01d0 FAD0     		beq	.L32
- 233:.\main.c      ****                         USBUART_1_PutCRLF();
- 559              		.loc 1 233 0 is_stmt 1
+ 226:.\main.c      ****                         USBUART_1_PutCRLF();
+ 559              		.loc 1 226 0 is_stmt 1
  560 01d2 FFF7FEFF 		bl	USBUART_1_PutCRLF
- 234:.\main.c      ****                         
- 235:.\main.c      ****                         //keep looping until data is transmitted
- 236:.\main.c      **** 						
- 237:.\main.c      ****                         while(!dataTransmissionComplete){//header is mostly encoded already, just n
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 15
-
-
- 561              		.loc 1 237 0
+ 227:.\main.c      ****                         
+ 228:.\main.c      ****                         //keep looping until data is transmitted
+ 229:.\main.c      **** 						
+ 230:.\main.c      ****                         while(!dataTransmissionComplete){//header is mostly encoded already, just n
+ 561              		.loc 1 230 0
  562 01d6 03E0     		b	.L33
  563              	.L34:
- 238:.\main.c      **** 							
- 239:.\main.c      ****                             transmitData();
- 564              		.loc 1 239 0
+ 231:.\main.c      **** 							
+ 232:.\main.c      ****                             transmitData();
+ 564              		.loc 1 232 0
  565 01d8 FFF7FEFF 		bl	transmitData
- 240:.\main.c      ****                             setNetworkStateOnLEDs();
- 566              		.loc 1 240 0
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 15
+
+
+ 233:.\main.c      ****                             setNetworkStateOnLEDs();
+ 566              		.loc 1 233 0
  567 01dc FFF7FEFF 		bl	setNetworkStateOnLEDs
  568              	.L33:
- 237:.\main.c      **** 							
- 569              		.loc 1 237 0
+ 230:.\main.c      **** 							
+ 569              		.loc 1 230 0
  570 01e0 184B     		ldr	r3, .L39+4
  571 01e2 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  572 01e4 83F00103 		eor	r3, r3, #1
  573 01e8 DBB2     		uxtb	r3, r3
  574 01ea 002B     		cmp	r3, #0
  575 01ec F4D1     		bne	.L34
- 241:.\main.c      ****                         }
- 242:.\main.c      ****                         dataTransmissionComplete = false;
- 576              		.loc 1 242 0
+ 234:.\main.c      ****                         }
+ 235:.\main.c      ****                         dataTransmissionComplete = false;
+ 576              		.loc 1 235 0
  577 01ee 154B     		ldr	r3, .L39+4
  578 01f0 0022     		movs	r2, #0
  579 01f2 1A70     		strb	r2, [r3]
- 243:.\main.c      ****                         TX_pin_Write(1);    //set line to logic-1 after transmission
- 580              		.loc 1 243 0
+ 236:.\main.c      ****                         TX_pin_Write(1);    //set line to logic-1 after transmission
+ 580              		.loc 1 236 0
  581 01f4 0120     		movs	r0, #1
  582 01f6 FFF7FEFF 		bl	TX_pin_Write
- 244:.\main.c      ****                         //reset index
- 245:.\main.c      ****                         halfBitIndex = 0;
- 583              		.loc 1 245 0
+ 237:.\main.c      ****                         //reset index
+ 238:.\main.c      ****                         halfBitIndex = 0;
+ 583              		.loc 1 238 0
  584 01fa 204B     		ldr	r3, .L39+60
  585 01fc 0022     		movs	r2, #0
  586 01fe 1A60     		str	r2, [r3]
- 246:.\main.c      ****                         stringPosition = HEADER_POS; 
- 587              		.loc 1 246 0
+ 239:.\main.c      ****                         stringPosition = HEADER_POS; 
+ 587              		.loc 1 239 0
  588 0200 0723     		movs	r3, #7
  589 0202 87F87730 		strb	r3, [r7, #119]
- 247:.\main.c      ****                         break;
- 590              		.loc 1 247 0
+ 240:.\main.c      ****                         break;
+ 590              		.loc 1 240 0
  591 0206 1AE0     		b	.L25
  592              	.L37:
- 248:.\main.c      ****                     case 27://escape
- 249:.\main.c      ****                         break;
- 250:.\main.c      ****                     default://everything else
- 251:.\main.c      ****                         lineString[stringPosition] = rx;
- 593              		.loc 1 251 0
+ 241:.\main.c      ****                     case 27://escape
+ 242:.\main.c      ****                         break;
+ 243:.\main.c      ****                     default://everything else
+ 244:.\main.c      ****                         lineString[stringPosition] = rx;
+ 593              		.loc 1 244 0
  594 0208 97F87730 		ldrb	r3, [r7, #119]	@ zero_extendqisi2
  595 020c 07F17802 		add	r2, r7, #120
  596 0210 1344     		add	r3, r3, r2
  597 0212 97F87620 		ldrb	r2, [r7, #118]
  598 0216 03F8702C 		strb	r2, [r3, #-112]
- 252:.\main.c      ****                         stringPosition++;
- 599              		.loc 1 252 0
+ 245:.\main.c      ****                         stringPosition++;
+ 599              		.loc 1 245 0
  600 021a 97F87730 		ldrb	r3, [r7, #119]	@ zero_extendqisi2
  601 021e 0133     		adds	r3, r3, #1
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 16
-
-
  602 0220 87F87730 		strb	r3, [r7, #119]
- 253:.\main.c      ****                         while(USBUART_1_CDCIsReady() == 0u); 
- 603              		.loc 1 253 0
+ 246:.\main.c      ****                         while(USBUART_1_CDCIsReady() == 0u); 
+ 603              		.loc 1 246 0
  604 0224 00BF     		nop
  605              	.L35:
- 606              		.loc 1 253 0 is_stmt 0 discriminator 1
+ 606              		.loc 1 246 0 is_stmt 0 discriminator 1
  607 0226 FFF7FEFF 		bl	USBUART_1_CDCIsReady
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 16
+
+
  608 022a 0346     		mov	r3, r0
  609 022c 002B     		cmp	r3, #0
  610 022e FAD0     		beq	.L35
- 254:.\main.c      ****                         USBUART_1_PutChar(rx);       /* Send data back to PC */
- 611              		.loc 1 254 0 is_stmt 1
+ 247:.\main.c      ****                         USBUART_1_PutChar(rx);       /* Send data back to PC */
+ 611              		.loc 1 247 0 is_stmt 1
  612 0230 97F87630 		ldrb	r3, [r7, #118]	@ zero_extendqisi2
  613 0234 1846     		mov	r0, r3
  614 0236 FFF7FEFF 		bl	USBUART_1_PutChar
- 255:.\main.c      ****                         break;
- 615              		.loc 1 255 0
+ 248:.\main.c      ****                         break;
+ 615              		.loc 1 248 0
  616 023a 00E0     		b	.L25
  617              	.L38:
- 249:.\main.c      ****                     default://everything else
- 618              		.loc 1 249 0
+ 242:.\main.c      ****                     default://everything else
+ 618              		.loc 1 242 0
  619 023c 00BF     		nop
  620              	.L25:
- 256:.\main.c      ****                 }
- 257:.\main.c      ****             }
- 258:.\main.c      ****         }
- 259:.\main.c      ****     }   
- 621              		.loc 1 259 0 discriminator 1
+ 249:.\main.c      ****                 }
+ 250:.\main.c      ****             }
+ 251:.\main.c      ****         }
+ 252:.\main.c      ****     }   
+ 621              		.loc 1 252 0 discriminator 1
  622 023e 29E7     		b	.L36
  623              	.L40:
  624              		.align	2
@@ -958,20 +951,20 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  648              		.thumb
  649              		.thumb_func
  650              		.type	initDiffManEncodedArray, %function
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 17
-
-
  651              	initDiffManEncodedArray:
  652              	.LFB68:
- 260:.\main.c      **** }
- 261:.\main.c      **** 
- 262:.\main.c      **** /*
- 263:.\main.c      **** init dif man encoded data array with a leading "starting bit". The starting bit is madeup of the 
- 264:.\main.c      **** half bits 01. 
- 265:.\main.c      **** Only call when starting to transfer a new string
- 266:.\main.c      **** */
- 267:.\main.c      **** void initDiffManEncodedArray(){
- 653              		.loc 1 267 0
+ 253:.\main.c      **** }
+ 254:.\main.c      **** 
+ 255:.\main.c      **** /*
+ 256:.\main.c      **** init dif man encoded data array with a leading "starting bit". The starting bit is madeup of the 
+ 257:.\main.c      **** half bits 01. 
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 17
+
+
+ 258:.\main.c      **** Only call when starting to transfer a new string
+ 259:.\main.c      **** */
+ 260:.\main.c      **** void initDiffManEncodedArray(){
+ 653              		.loc 1 260 0
  654              		.cfi_startproc
  655              		@ args = 0, pretend = 0, frame = 0
  656              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -981,46 +974,43 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  660              		.cfi_offset 7, -4
  661 0002 00AF     		add	r7, sp, #0
  662              		.cfi_def_cfa_register 7
- 268:.\main.c      ****     halfBitIndex = 0;
- 663              		.loc 1 268 0
+ 261:.\main.c      ****     halfBitIndex = 0;
+ 663              		.loc 1 261 0
  664 0004 0E4B     		ldr	r3, .L42
  665 0006 0022     		movs	r2, #0
  666 0008 1A60     		str	r2, [r3]
- 269:.\main.c      ****     diffManEncodedData[halfBitIndex] = 0;
- 667              		.loc 1 269 0
+ 262:.\main.c      ****     diffManEncodedData[halfBitIndex] = 0;
+ 667              		.loc 1 262 0
  668 000a 0D4B     		ldr	r3, .L42
  669 000c 1B68     		ldr	r3, [r3]
  670 000e 0D4A     		ldr	r2, .L42+4
  671 0010 0021     		movs	r1, #0
  672 0012 42F82310 		str	r1, [r2, r3, lsl #2]
- 270:.\main.c      ****     halfBitIndex++;
- 673              		.loc 1 270 0
+ 263:.\main.c      ****     halfBitIndex++;
+ 673              		.loc 1 263 0
  674 0016 0A4B     		ldr	r3, .L42
  675 0018 1B68     		ldr	r3, [r3]
  676 001a 0133     		adds	r3, r3, #1
  677 001c 084A     		ldr	r2, .L42
  678 001e 1360     		str	r3, [r2]
- 271:.\main.c      ****     diffManEncodedData[halfBitIndex] = 1;
- 679              		.loc 1 271 0
+ 264:.\main.c      ****     diffManEncodedData[halfBitIndex] = 1;
+ 679              		.loc 1 264 0
  680 0020 074B     		ldr	r3, .L42
  681 0022 1B68     		ldr	r3, [r3]
  682 0024 074A     		ldr	r2, .L42+4
  683 0026 0121     		movs	r1, #1
  684 0028 42F82310 		str	r1, [r2, r3, lsl #2]
- 272:.\main.c      ****     halfBitIndex++;
- 685              		.loc 1 272 0
+ 265:.\main.c      ****     halfBitIndex++;
+ 685              		.loc 1 265 0
  686 002c 044B     		ldr	r3, .L42
  687 002e 1B68     		ldr	r3, [r3]
  688 0030 0133     		adds	r3, r3, #1
  689 0032 034A     		ldr	r2, .L42
  690 0034 1360     		str	r3, [r2]
- 273:.\main.c      **** }
- 691              		.loc 1 273 0
+ 266:.\main.c      **** }
+ 691              		.loc 1 266 0
  692 0036 BD46     		mov	sp, r7
  693              		.cfi_def_cfa_register 13
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 18
-
-
  694              		@ sp needed
  695 0038 5DF8047B 		ldr	r7, [sp], #4
  696              		.cfi_restore 7
@@ -1028,6 +1018,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  698 003c 7047     		bx	lr
  699              	.L43:
  700 003e 00BF     		.align	2
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 18
+
+
  701              	.L42:
  702 0040 00000000 		.word	halfBitIndex
  703 0044 00000000 		.word	diffManEncodedData
@@ -1042,13 +1035,13 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  712              		.type	stringToDiffMan, %function
  713              	stringToDiffMan:
  714              	.LFB69:
- 274:.\main.c      **** 
- 275:.\main.c      **** /*
- 276:.\main.c      **** Enter key has been pressed, change binary data into diff man data.
- 277:.\main.c      **** Call from main. Requires main to access diffManEncodedData array
- 278:.\main.c      **** */
- 279:.\main.c      **** void stringToDiffMan(char lineString[], uint8 stringPosition){
- 715              		.loc 1 279 0
+ 267:.\main.c      **** 
+ 268:.\main.c      **** /*
+ 269:.\main.c      **** Enter key has been pressed, change binary data into diff man data.
+ 270:.\main.c      **** Call from main. Requires main to access diffManEncodedData array
+ 271:.\main.c      **** */
+ 272:.\main.c      **** void stringToDiffMan(char *lineString, uint8 stringPosition){
+ 715              		.loc 1 272 0
  716              		.cfi_startproc
  717              		@ args = 0, pretend = 0, frame = 16
  718              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -1063,43 +1056,43 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  727 0006 7860     		str	r0, [r7, #4]
  728 0008 0B46     		mov	r3, r1
  729 000a FB70     		strb	r3, [r7, #3]
- 280:.\main.c      **** 
- 281:.\main.c      ****     unsigned int i = 0;
- 730              		.loc 1 281 0
+ 273:.\main.c      **** 
+ 274:.\main.c      ****     unsigned int i = 0;
+ 730              		.loc 1 274 0
  731 000c 0023     		movs	r3, #0
  732 000e FB60     		str	r3, [r7, #12]
- 282:.\main.c      ****     for(i = 0; i < stringPosition; i++){
- 733              		.loc 1 282 0
+ 275:.\main.c      ****     for(i = 0; i < stringPosition; i++){
+ 733              		.loc 1 275 0
  734 0010 0023     		movs	r3, #0
  735 0012 FB60     		str	r3, [r7, #12]
  736 0014 09E0     		b	.L45
  737              	.L46:
- 283:.\main.c      ****         asciiToDiffMan(lineString[i]);
- 738              		.loc 1 283 0 discriminator 3
+ 276:.\main.c      ****         asciiToDiffMan(*(lineString + i));//use to be lineString[i]
+ 738              		.loc 1 276 0 discriminator 3
  739 0016 7A68     		ldr	r2, [r7, #4]
  740 0018 FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 19
-
-
  741 001a 1344     		add	r3, r3, r2
  742 001c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  743 001e 1846     		mov	r0, r3
  744 0020 FFF7FEFF 		bl	asciiToDiffMan
- 282:.\main.c      ****     for(i = 0; i < stringPosition; i++){
- 745              		.loc 1 282 0 discriminator 3
+ 275:.\main.c      ****     for(i = 0; i < stringPosition; i++){
+ 745              		.loc 1 275 0 discriminator 3
  746 0024 FB68     		ldr	r3, [r7, #12]
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 19
+
+
  747 0026 0133     		adds	r3, r3, #1
  748 0028 FB60     		str	r3, [r7, #12]
  749              	.L45:
- 282:.\main.c      ****     for(i = 0; i < stringPosition; i++){
- 750              		.loc 1 282 0 is_stmt 0 discriminator 1
+ 275:.\main.c      ****     for(i = 0; i < stringPosition; i++){
+ 750              		.loc 1 275 0 is_stmt 0 discriminator 1
  751 002a FA78     		ldrb	r2, [r7, #3]	@ zero_extendqisi2
  752 002c FB68     		ldr	r3, [r7, #12]
  753 002e 9A42     		cmp	r2, r3
  754 0030 F1D8     		bhi	.L46
- 284:.\main.c      ****     }
- 285:.\main.c      **** }
- 755              		.loc 1 285 0 is_stmt 1
+ 277:.\main.c      ****     }
+ 278:.\main.c      **** }
+ 755              		.loc 1 278 0 is_stmt 1
  756 0032 1037     		adds	r7, r7, #16
  757              		.cfi_def_cfa_offset 8
  758 0034 BD46     		mov	sp, r7
@@ -1117,14 +1110,14 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  770              		.type	asciiToDiffMan, %function
  771              	asciiToDiffMan:
  772              	.LFB70:
- 286:.\main.c      **** 
- 287:.\main.c      **** /*
- 288:.\main.c      **** Helper method. Do not call from main.
- 289:.\main.c      **** Converts a ascii char to a differental manchester line encoded version
- 290:.\main.c      **** */
- 291:.\main.c      **** void asciiToDiffMan(char asciiChar)
- 292:.\main.c      **** {
- 773              		.loc 1 292 0
+ 279:.\main.c      **** 
+ 280:.\main.c      **** /*
+ 281:.\main.c      **** Helper method. Do not call from main.
+ 282:.\main.c      **** Converts a ascii char to a differental manchester line encoded version
+ 283:.\main.c      **** */
+ 284:.\main.c      **** void asciiToDiffMan(char asciiChar)
+ 285:.\main.c      **** {
+ 773              		.loc 1 285 0
  774              		.cfi_startproc
  775              		@ args = 0, pretend = 0, frame = 104
  776              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -1138,46 +1131,46 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  784              		.cfi_def_cfa_register 7
  785 0006 0346     		mov	r3, r0
  786 0008 FB71     		strb	r3, [r7, #7]
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 20
-
-
- 293:.\main.c      ****     uint8 previousHalfBit = diffManEncodedData[halfBitIndex-1];
- 787              		.loc 1 293 0
+ 286:.\main.c      ****     uint8 previousHalfBit = diffManEncodedData[halfBitIndex-1];
+ 787              		.loc 1 286 0
  788 000a 6C4B     		ldr	r3, .L59
  789 000c 1B68     		ldr	r3, [r3]
  790 000e 013B     		subs	r3, r3, #1
  791 0010 6B4A     		ldr	r2, .L59+4
  792 0012 52F82330 		ldr	r3, [r2, r3, lsl #2]
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 20
+
+
  793 0016 87F86730 		strb	r3, [r7, #103]
- 294:.\main.c      ****     //send starting 1 bit (encoded)
- 295:.\main.c      ****     if(previousHalfBit == 1){
- 794              		.loc 1 295 0
+ 287:.\main.c      ****     //send starting 1 bit (encoded)
+ 288:.\main.c      ****     if(previousHalfBit == 1){
+ 794              		.loc 1 288 0
  795 001a 97F86730 		ldrb	r3, [r7, #103]	@ zero_extendqisi2
  796 001e 012B     		cmp	r3, #1
  797 0020 16D1     		bne	.L48
- 296:.\main.c      ****         diffManEncodedData[halfBitIndex] = 1;
- 798              		.loc 1 296 0
+ 289:.\main.c      ****         diffManEncodedData[halfBitIndex] = 1;
+ 798              		.loc 1 289 0
  799 0022 664B     		ldr	r3, .L59
  800 0024 1B68     		ldr	r3, [r3]
  801 0026 664A     		ldr	r2, .L59+4
  802 0028 0121     		movs	r1, #1
  803 002a 42F82310 		str	r1, [r2, r3, lsl #2]
- 297:.\main.c      ****         halfBitIndex++;
- 804              		.loc 1 297 0
+ 290:.\main.c      ****         halfBitIndex++;
+ 804              		.loc 1 290 0
  805 002e 634B     		ldr	r3, .L59
  806 0030 1B68     		ldr	r3, [r3]
  807 0032 0133     		adds	r3, r3, #1
  808 0034 614A     		ldr	r2, .L59
  809 0036 1360     		str	r3, [r2]
- 298:.\main.c      ****         diffManEncodedData[halfBitIndex] = 0;
- 810              		.loc 1 298 0
+ 291:.\main.c      ****         diffManEncodedData[halfBitIndex] = 0;
+ 810              		.loc 1 291 0
  811 0038 604B     		ldr	r3, .L59
  812 003a 1B68     		ldr	r3, [r3]
  813 003c 604A     		ldr	r2, .L59+4
  814 003e 0021     		movs	r1, #0
  815 0040 42F82310 		str	r1, [r2, r3, lsl #2]
- 299:.\main.c      ****         halfBitIndex++;
- 816              		.loc 1 299 0
+ 292:.\main.c      ****         halfBitIndex++;
+ 816              		.loc 1 292 0
  817 0044 5D4B     		ldr	r3, .L59
  818 0046 1B68     		ldr	r3, [r3]
  819 0048 0133     		adds	r3, r3, #1
@@ -1185,62 +1178,62 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  821 004c 1360     		str	r3, [r2]
  822 004e 15E0     		b	.L49
  823              	.L48:
- 300:.\main.c      ****     }else{
- 301:.\main.c      ****         diffManEncodedData[halfBitIndex] = 0;
- 824              		.loc 1 301 0
+ 293:.\main.c      ****     }else{
+ 294:.\main.c      ****         diffManEncodedData[halfBitIndex] = 0;
+ 824              		.loc 1 294 0
  825 0050 5A4B     		ldr	r3, .L59
  826 0052 1B68     		ldr	r3, [r3]
  827 0054 5A4A     		ldr	r2, .L59+4
  828 0056 0021     		movs	r1, #0
  829 0058 42F82310 		str	r1, [r2, r3, lsl #2]
- 302:.\main.c      ****         halfBitIndex++;
- 830              		.loc 1 302 0
+ 295:.\main.c      ****         halfBitIndex++;
+ 830              		.loc 1 295 0
  831 005c 574B     		ldr	r3, .L59
  832 005e 1B68     		ldr	r3, [r3]
  833 0060 0133     		adds	r3, r3, #1
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 21
-
-
  834 0062 564A     		ldr	r2, .L59
  835 0064 1360     		str	r3, [r2]
- 303:.\main.c      ****         diffManEncodedData[halfBitIndex] = 1;
- 836              		.loc 1 303 0
+ 296:.\main.c      ****         diffManEncodedData[halfBitIndex] = 1;
+ 836              		.loc 1 296 0
  837 0066 554B     		ldr	r3, .L59
  838 0068 1B68     		ldr	r3, [r3]
  839 006a 554A     		ldr	r2, .L59+4
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 21
+
+
  840 006c 0121     		movs	r1, #1
  841 006e 42F82310 		str	r1, [r2, r3, lsl #2]
- 304:.\main.c      ****         halfBitIndex++;
- 842              		.loc 1 304 0
+ 297:.\main.c      ****         halfBitIndex++;
+ 842              		.loc 1 297 0
  843 0072 524B     		ldr	r3, .L59
  844 0074 1B68     		ldr	r3, [r3]
  845 0076 0133     		adds	r3, r3, #1
  846 0078 504A     		ldr	r2, .L59
  847 007a 1360     		str	r3, [r2]
  848              	.L49:
- 305:.\main.c      ****     } 
- 306:.\main.c      ****     previousHalfBit = diffManEncodedData[halfBitIndex-1];
- 849              		.loc 1 306 0
+ 298:.\main.c      ****     } 
+ 299:.\main.c      ****     previousHalfBit = diffManEncodedData[halfBitIndex-1];
+ 849              		.loc 1 299 0
  850 007c 4F4B     		ldr	r3, .L59
  851 007e 1B68     		ldr	r3, [r3]
  852 0080 013B     		subs	r3, r3, #1
  853 0082 4F4A     		ldr	r2, .L59+4
  854 0084 52F82330 		ldr	r3, [r2, r3, lsl #2]
  855 0088 87F86730 		strb	r3, [r7, #103]
- 307:.\main.c      **** 
- 308:.\main.c      ****     
- 309:.\main.c      ****     //convert asciil char to binary value (which will be 7 bits)
- 310:.\main.c      ****     unsigned int binaryValueOfChar[20];//index zero is LSB 
- 311:.\main.c      ****     int i;
- 312:.\main.c      ****     for(i=0; asciiChar>0; i++)
- 856              		.loc 1 312 0
+ 300:.\main.c      **** 
+ 301:.\main.c      ****     
+ 302:.\main.c      ****     //convert asciil char to binary value (which will be 7 bits)
+ 303:.\main.c      ****     unsigned int binaryValueOfChar[20];//index zero is LSB 
+ 304:.\main.c      ****     int i;
+ 305:.\main.c      ****     for(i=0; asciiChar>0; i++)
+ 856              		.loc 1 305 0
  857 008c 0023     		movs	r3, #0
  858 008e 3B66     		str	r3, [r7, #96]
  859 0090 0FE0     		b	.L50
  860              	.L51:
- 313:.\main.c      ****     { 
- 314:.\main.c      ****         binaryValueOfChar[i]=asciiChar%2; 
- 861              		.loc 1 314 0 discriminator 3
+ 306:.\main.c      ****     { 
+ 307:.\main.c      ****         binaryValueOfChar[i]=asciiChar%2; 
+ 861              		.loc 1 307 0 discriminator 3
  862 0092 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  863 0094 03F00102 		and	r2, r3, #1
  864 0098 3B6E     		ldr	r3, [r7, #96]
@@ -1248,39 +1241,39 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  866 009c 07F16801 		add	r1, r7, #104
  867 00a0 0B44     		add	r3, r3, r1
  868 00a2 43F85C2C 		str	r2, [r3, #-92]
- 315:.\main.c      ****         asciiChar=asciiChar/2;
- 869              		.loc 1 315 0 discriminator 3
+ 308:.\main.c      ****         asciiChar=asciiChar/2;
+ 869              		.loc 1 308 0 discriminator 3
  870 00a6 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  871 00a8 5B08     		lsrs	r3, r3, #1
  872 00aa FB71     		strb	r3, [r7, #7]
- 312:.\main.c      ****     { 
- 873              		.loc 1 312 0 discriminator 3
+ 305:.\main.c      ****     { 
+ 873              		.loc 1 305 0 discriminator 3
  874 00ac 3B6E     		ldr	r3, [r7, #96]
  875 00ae 0133     		adds	r3, r3, #1
  876 00b0 3B66     		str	r3, [r7, #96]
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 22
-
-
  877              	.L50:
- 312:.\main.c      ****     { 
- 878              		.loc 1 312 0 is_stmt 0 discriminator 1
+ 305:.\main.c      ****     { 
+ 878              		.loc 1 305 0 is_stmt 0 discriminator 1
  879 00b2 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  880 00b4 002B     		cmp	r3, #0
  881 00b6 ECD1     		bne	.L51
- 316:.\main.c      ****     }
- 317:.\main.c      **** 
- 318:.\main.c      ****     //differential encode the 7 bits (from the binary version of the char)
- 319:.\main.c      ****     //must start at the end of the array so to encode the MSB first 
- 320:.\main.c      ****     int j;
- 321:.\main.c      ****     for(j=INDEX_OF_MSB;j>=0;j--) 
- 882              		.loc 1 321 0 is_stmt 1
+ 309:.\main.c      ****     }
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 22
+
+
+ 310:.\main.c      **** 
+ 311:.\main.c      ****     //differential encode the 7 bits (from the binary version of the char)
+ 312:.\main.c      ****     //must start at the end of the array so to encode the MSB first 
+ 313:.\main.c      ****     int j;
+ 314:.\main.c      ****     for(j=INDEX_OF_MSB;j>=0;j--) 
+ 882              		.loc 1 314 0 is_stmt 1
  883 00b8 0623     		movs	r3, #6
  884 00ba FB65     		str	r3, [r7, #92]
  885 00bc 76E0     		b	.L52
  886              	.L58:
- 322:.\main.c      ****     {
- 323:.\main.c      ****         if(binaryValueOfChar[j] == 1)
- 887              		.loc 1 323 0
+ 315:.\main.c      ****     {
+ 316:.\main.c      ****         if(binaryValueOfChar[j] == 1)
+ 887              		.loc 1 316 0
  888 00be FB6D     		ldr	r3, [r7, #92]
  889 00c0 9B00     		lsls	r3, r3, #2
  890 00c2 07F16802 		add	r2, r7, #104
@@ -1288,73 +1281,73 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  892 00c8 53F85C3C 		ldr	r3, [r3, #-92]
  893 00cc 012B     		cmp	r3, #1
  894 00ce 31D1     		bne	.L53
- 324:.\main.c      ****         {
- 325:.\main.c      ****             //bit == 1
- 326:.\main.c      ****             if(previousHalfBit == 1)
- 895              		.loc 1 326 0
+ 317:.\main.c      ****         {
+ 318:.\main.c      ****             //bit == 1
+ 319:.\main.c      ****             if(previousHalfBit == 1)
+ 895              		.loc 1 319 0
  896 00d0 97F86730 		ldrb	r3, [r7, #103]	@ zero_extendqisi2
  897 00d4 012B     		cmp	r3, #1
  898 00d6 16D1     		bne	.L54
- 327:.\main.c      ****             {
- 328:.\main.c      ****                 diffManEncodedData[halfBitIndex] = 1;
- 899              		.loc 1 328 0
+ 320:.\main.c      ****             {
+ 321:.\main.c      ****                 diffManEncodedData[halfBitIndex] = 1;
+ 899              		.loc 1 321 0
  900 00d8 384B     		ldr	r3, .L59
  901 00da 1B68     		ldr	r3, [r3]
  902 00dc 384A     		ldr	r2, .L59+4
  903 00de 0121     		movs	r1, #1
  904 00e0 42F82310 		str	r1, [r2, r3, lsl #2]
- 329:.\main.c      ****                 halfBitIndex++;
- 905              		.loc 1 329 0
+ 322:.\main.c      ****                 halfBitIndex++;
+ 905              		.loc 1 322 0
  906 00e4 354B     		ldr	r3, .L59
  907 00e6 1B68     		ldr	r3, [r3]
  908 00e8 0133     		adds	r3, r3, #1
  909 00ea 344A     		ldr	r2, .L59
  910 00ec 1360     		str	r3, [r2]
- 330:.\main.c      ****                 diffManEncodedData[halfBitIndex] = 0;
- 911              		.loc 1 330 0
+ 323:.\main.c      ****                 diffManEncodedData[halfBitIndex] = 0;
+ 911              		.loc 1 323 0
  912 00ee 334B     		ldr	r3, .L59
  913 00f0 1B68     		ldr	r3, [r3]
  914 00f2 334A     		ldr	r2, .L59+4
  915 00f4 0021     		movs	r1, #0
  916 00f6 42F82310 		str	r1, [r2, r3, lsl #2]
- 331:.\main.c      ****                 halfBitIndex++;    
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 23
-
-
- 917              		.loc 1 331 0
+ 324:.\main.c      ****                 halfBitIndex++;    
+ 917              		.loc 1 324 0
  918 00fa 304B     		ldr	r3, .L59
  919 00fc 1B68     		ldr	r3, [r3]
  920 00fe 0133     		adds	r3, r3, #1
  921 0100 2E4A     		ldr	r2, .L59
  922 0102 1360     		str	r3, [r2]
  923 0104 47E0     		b	.L56
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 23
+
+
  924              	.L54:
- 332:.\main.c      ****             }
- 333:.\main.c      ****             else
- 334:.\main.c      ****             {
- 335:.\main.c      ****                 diffManEncodedData[halfBitIndex] = 0;
- 925              		.loc 1 335 0
+ 325:.\main.c      ****             }
+ 326:.\main.c      ****             else
+ 327:.\main.c      ****             {
+ 328:.\main.c      ****                 diffManEncodedData[halfBitIndex] = 0;
+ 925              		.loc 1 328 0
  926 0106 2D4B     		ldr	r3, .L59
  927 0108 1B68     		ldr	r3, [r3]
  928 010a 2D4A     		ldr	r2, .L59+4
  929 010c 0021     		movs	r1, #0
  930 010e 42F82310 		str	r1, [r2, r3, lsl #2]
- 336:.\main.c      ****                 halfBitIndex++;
- 931              		.loc 1 336 0
+ 329:.\main.c      ****                 halfBitIndex++;
+ 931              		.loc 1 329 0
  932 0112 2A4B     		ldr	r3, .L59
  933 0114 1B68     		ldr	r3, [r3]
  934 0116 0133     		adds	r3, r3, #1
  935 0118 284A     		ldr	r2, .L59
  936 011a 1360     		str	r3, [r2]
- 337:.\main.c      ****                 diffManEncodedData[halfBitIndex] = 1;
- 937              		.loc 1 337 0
+ 330:.\main.c      ****                 diffManEncodedData[halfBitIndex] = 1;
+ 937              		.loc 1 330 0
  938 011c 274B     		ldr	r3, .L59
  939 011e 1B68     		ldr	r3, [r3]
  940 0120 274A     		ldr	r2, .L59+4
  941 0122 0121     		movs	r1, #1
  942 0124 42F82310 		str	r1, [r2, r3, lsl #2]
- 338:.\main.c      ****                 halfBitIndex++;
- 943              		.loc 1 338 0
+ 331:.\main.c      ****                 halfBitIndex++;
+ 943              		.loc 1 331 0
  944 0128 244B     		ldr	r3, .L59
  945 012a 1B68     		ldr	r3, [r3]
  946 012c 0133     		adds	r3, r3, #1
@@ -1362,44 +1355,44 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  948 0130 1360     		str	r3, [r2]
  949 0132 30E0     		b	.L56
  950              	.L53:
- 339:.\main.c      ****             }
- 340:.\main.c      ****             
- 341:.\main.c      ****         }
- 342:.\main.c      ****         else
- 343:.\main.c      ****         {
- 344:.\main.c      ****             //bit == 0
- 345:.\main.c      ****             if(previousHalfBit == 1)
- 951              		.loc 1 345 0
+ 332:.\main.c      ****             }
+ 333:.\main.c      ****             
+ 334:.\main.c      ****         }
+ 335:.\main.c      ****         else
+ 336:.\main.c      ****         {
+ 337:.\main.c      ****             //bit == 0
+ 338:.\main.c      ****             if(previousHalfBit == 1)
+ 951              		.loc 1 338 0
  952 0134 97F86730 		ldrb	r3, [r7, #103]	@ zero_extendqisi2
  953 0138 012B     		cmp	r3, #1
  954 013a 16D1     		bne	.L57
- 346:.\main.c      ****             {
- 347:.\main.c      ****                 diffManEncodedData[halfBitIndex] = 0;
- 955              		.loc 1 347 0
+ 339:.\main.c      ****             {
+ 340:.\main.c      ****                 diffManEncodedData[halfBitIndex] = 0;
+ 955              		.loc 1 340 0
  956 013c 1F4B     		ldr	r3, .L59
  957 013e 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 24
-
-
  958 0140 1F4A     		ldr	r2, .L59+4
  959 0142 0021     		movs	r1, #0
  960 0144 42F82310 		str	r1, [r2, r3, lsl #2]
- 348:.\main.c      ****                 halfBitIndex++;
- 961              		.loc 1 348 0
+ 341:.\main.c      ****                 halfBitIndex++;
+ 961              		.loc 1 341 0
  962 0148 1C4B     		ldr	r3, .L59
  963 014a 1B68     		ldr	r3, [r3]
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 24
+
+
  964 014c 0133     		adds	r3, r3, #1
  965 014e 1B4A     		ldr	r2, .L59
  966 0150 1360     		str	r3, [r2]
- 349:.\main.c      ****                 diffManEncodedData[halfBitIndex] = 1;
- 967              		.loc 1 349 0
+ 342:.\main.c      ****                 diffManEncodedData[halfBitIndex] = 1;
+ 967              		.loc 1 342 0
  968 0152 1A4B     		ldr	r3, .L59
  969 0154 1B68     		ldr	r3, [r3]
  970 0156 1A4A     		ldr	r2, .L59+4
  971 0158 0121     		movs	r1, #1
  972 015a 42F82310 		str	r1, [r2, r3, lsl #2]
- 350:.\main.c      ****                 halfBitIndex++;
- 973              		.loc 1 350 0
+ 343:.\main.c      ****                 halfBitIndex++;
+ 973              		.loc 1 343 0
  974 015e 174B     		ldr	r3, .L59
  975 0160 1B68     		ldr	r3, [r3]
  976 0162 0133     		adds	r3, r3, #1
@@ -1407,67 +1400,67 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  978 0166 1360     		str	r3, [r2]
  979 0168 15E0     		b	.L56
  980              	.L57:
- 351:.\main.c      ****             }
- 352:.\main.c      ****             else
- 353:.\main.c      ****             {
- 354:.\main.c      ****                 diffManEncodedData[halfBitIndex] = 1;
- 981              		.loc 1 354 0
+ 344:.\main.c      ****             }
+ 345:.\main.c      ****             else
+ 346:.\main.c      ****             {
+ 347:.\main.c      ****                 diffManEncodedData[halfBitIndex] = 1;
+ 981              		.loc 1 347 0
  982 016a 144B     		ldr	r3, .L59
  983 016c 1B68     		ldr	r3, [r3]
  984 016e 144A     		ldr	r2, .L59+4
  985 0170 0121     		movs	r1, #1
  986 0172 42F82310 		str	r1, [r2, r3, lsl #2]
- 355:.\main.c      ****                 halfBitIndex++;
- 987              		.loc 1 355 0
+ 348:.\main.c      ****                 halfBitIndex++;
+ 987              		.loc 1 348 0
  988 0176 114B     		ldr	r3, .L59
  989 0178 1B68     		ldr	r3, [r3]
  990 017a 0133     		adds	r3, r3, #1
  991 017c 0F4A     		ldr	r2, .L59
  992 017e 1360     		str	r3, [r2]
- 356:.\main.c      ****                 diffManEncodedData[halfBitIndex] = 0;
- 993              		.loc 1 356 0
+ 349:.\main.c      ****                 diffManEncodedData[halfBitIndex] = 0;
+ 993              		.loc 1 349 0
  994 0180 0E4B     		ldr	r3, .L59
  995 0182 1B68     		ldr	r3, [r3]
  996 0184 0E4A     		ldr	r2, .L59+4
  997 0186 0021     		movs	r1, #0
  998 0188 42F82310 		str	r1, [r2, r3, lsl #2]
- 357:.\main.c      ****                 halfBitIndex++;
- 999              		.loc 1 357 0
+ 350:.\main.c      ****                 halfBitIndex++;
+ 999              		.loc 1 350 0
  1000 018c 0B4B     		ldr	r3, .L59
  1001 018e 1B68     		ldr	r3, [r3]
  1002 0190 0133     		adds	r3, r3, #1
  1003 0192 0A4A     		ldr	r2, .L59
  1004 0194 1360     		str	r3, [r2]
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 25
-
-
  1005              	.L56:
- 358:.\main.c      ****             }
- 359:.\main.c      ****         }
- 360:.\main.c      ****         
- 361:.\main.c      ****         previousHalfBit = diffManEncodedData[halfBitIndex-1];
- 1006              		.loc 1 361 0 discriminator 2
+ 351:.\main.c      ****             }
+ 352:.\main.c      ****         }
+ 353:.\main.c      ****         
+ 354:.\main.c      ****         previousHalfBit = diffManEncodedData[halfBitIndex-1];
+ 1006              		.loc 1 354 0 discriminator 2
  1007 0196 094B     		ldr	r3, .L59
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 25
+
+
  1008 0198 1B68     		ldr	r3, [r3]
  1009 019a 013B     		subs	r3, r3, #1
  1010 019c 084A     		ldr	r2, .L59+4
  1011 019e 52F82330 		ldr	r3, [r2, r3, lsl #2]
  1012 01a2 87F86730 		strb	r3, [r7, #103]
- 321:.\main.c      ****     {
- 1013              		.loc 1 321 0 discriminator 2
+ 314:.\main.c      ****     {
+ 1013              		.loc 1 314 0 discriminator 2
  1014 01a6 FB6D     		ldr	r3, [r7, #92]
  1015 01a8 013B     		subs	r3, r3, #1
  1016 01aa FB65     		str	r3, [r7, #92]
  1017              	.L52:
- 321:.\main.c      ****     {
- 1018              		.loc 1 321 0 is_stmt 0 discriminator 1
+ 314:.\main.c      ****     {
+ 1018              		.loc 1 314 0 is_stmt 0 discriminator 1
  1019 01ac FB6D     		ldr	r3, [r7, #92]
  1020 01ae 002B     		cmp	r3, #0
  1021 01b0 85DA     		bge	.L58
- 362:.\main.c      ****     }//end for
- 363:.\main.c      ****    
- 364:.\main.c      **** }//end function
- 1022              		.loc 1 364 0 is_stmt 1
+ 355:.\main.c      ****     }//end for
+ 356:.\main.c      ****    
+ 357:.\main.c      **** }//end function
+ 1022              		.loc 1 357 0 is_stmt 1
  1023 01b2 6C37     		adds	r7, r7, #108
  1024              		.cfi_def_cfa_offset 4
  1025 01b4 BD46     		mov	sp, r7
@@ -1497,17 +1490,17 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1049              		.type	transmitData, %function
  1050              	transmitData:
  1051              	.LFB71:
- 365:.\main.c      **** 
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 26
+ 358:.\main.c      **** 
+ 359:.\main.c      **** /*
+ 360:.\main.c      **** Transmits the diff man encoded data. Must have converted string to diff man before calling this met
+ 361:.\main.c      **** Checks network state before transmitting.
+ 362:.\main.c      **** Note: halfBitIndex will be equal to the size of the diffManEncodedData array at this point.
+ 363:.\main.c      **** */
+ 364:.\main.c      **** void transmitData(){
+ 1052              		.loc 1 364 0
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 26
 
 
- 366:.\main.c      **** /*
- 367:.\main.c      **** Transmits the diff man encoded data. Must have converted string to diff man before calling this met
- 368:.\main.c      **** Checks network state before transmitting.
- 369:.\main.c      **** Note: halfBitIndex will be equal to the size of the diffManEncodedData array at this point.
- 370:.\main.c      **** */
- 371:.\main.c      **** void transmitData(){
- 1052              		.loc 1 371 0
  1053              		.cfi_startproc
  1054              		@ args = 0, pretend = 0, frame = 8
  1055              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -1519,34 +1512,34 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1061              		.cfi_def_cfa_offset 16
  1062 0004 00AF     		add	r7, sp, #0
  1063              		.cfi_def_cfa_register 7
- 372:.\main.c      ****     int i;
- 373:.\main.c      ****     for(i = 0; i < halfBitIndex; i++){
- 1064              		.loc 1 373 0
+ 365:.\main.c      ****     int i;
+ 366:.\main.c      ****     for(i = 0; i < halfBitIndex; i++){
+ 1064              		.loc 1 366 0
  1065 0006 0023     		movs	r3, #0
  1066 0008 7B60     		str	r3, [r7, #4]
  1067 000a 47E0     		b	.L62
  1068              	.L66:
- 374:.\main.c      ****         //check for idle, if network is idle, cotinue to transmit data. 
- 375:.\main.c      ****         //Else break out of transmition and wait random time
- 376:.\main.c      ****         if(networkState != idle){
- 1069              		.loc 1 376 0
+ 367:.\main.c      ****         //check for idle, if network is idle, cotinue to transmit data. 
+ 368:.\main.c      ****         //Else break out of transmition and wait random time
+ 369:.\main.c      ****         if(networkState != idle){
+ 1069              		.loc 1 369 0
  1070 000c 2B4B     		ldr	r3, .L68
  1071 000e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  1072 0010 002B     		cmp	r3, #0
  1073 0012 2BD0     		beq	.L63
- 377:.\main.c      ****             if(networkState == collision){
- 1074              		.loc 1 377 0
+ 370:.\main.c      ****             if(networkState == collision){
+ 1074              		.loc 1 370 0
  1075 0014 294B     		ldr	r3, .L68
  1076 0016 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  1077 0018 022B     		cmp	r3, #2
  1078 001a 27D1     		bne	.L63
  1079              	.LBB2:
- 378:.\main.c      ****                 TX_pin_Write(1);
- 1080              		.loc 1 378 0
+ 371:.\main.c      ****                 TX_pin_Write(1);
+ 1080              		.loc 1 371 0
  1081 001c 0120     		movs	r0, #1
  1082 001e FFF7FEFF 		bl	TX_pin_Write
- 379:.\main.c      ****                 int value = (getRandomNumber()/128.0)*800.0;
- 1083              		.loc 1 379 0
+ 372:.\main.c      ****                 int value = (getRandomNumber()/128.0)*800.0;
+ 1083              		.loc 1 372 0
  1084 0022 FFF7FEFF 		bl	getRandomNumber
  1085 0026 0346     		mov	r3, r0
  1086 0028 1846     		mov	r0, r3
@@ -1558,9 +1551,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1092 0036 4FF00002 		mov	r2, #0
  1093 003a 214B     		ldr	r3, .L68+4
  1094 003c FFF7FEFF 		bl	__aeabi_ddiv
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 27
-
-
  1095 0040 0246     		mov	r2, r0
  1096 0042 0B46     		mov	r3, r1
  1097 0044 1046     		mov	r0, r2
@@ -1568,6 +1558,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1099 0048 4FF00002 		mov	r2, #0
  1100 004c 1D4B     		ldr	r3, .L68+8
  1101 004e FFF7FEFF 		bl	__aeabi_dmul
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 27
+
+
  1102 0052 0246     		mov	r2, r0
  1103 0054 0B46     		mov	r3, r1
  1104 0056 1046     		mov	r0, r2
@@ -1575,83 +1568,83 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1106 005a FFF7FEFF 		bl	__aeabi_d2iz
  1107 005e 0346     		mov	r3, r0
  1108 0060 3B60     		str	r3, [r7]
- 380:.\main.c      ****                
- 381:.\main.c      ****                 //Back-off a random time between 0 and 0.8 seconds
- 382:.\main.c      ****                 CyDelay(value);
- 1109              		.loc 1 382 0
+ 373:.\main.c      ****                
+ 374:.\main.c      ****                 //Back-off a random time between 0 and 0.8 seconds
+ 375:.\main.c      ****                 CyDelay(value);
+ 1109              		.loc 1 375 0
  1110 0062 3B68     		ldr	r3, [r7]
  1111 0064 1846     		mov	r0, r3
  1112 0066 FFF7FEFF 		bl	CyDelay
- 383:.\main.c      ****                 break;
- 1113              		.loc 1 383 0
+ 376:.\main.c      ****                 break;
+ 1113              		.loc 1 376 0
  1114 006a 1CE0     		b	.L64
  1115              	.L63:
  1116              	.LBE2:
- 384:.\main.c      ****             }
- 385:.\main.c      ****         }
- 386:.\main.c      ****         TX_pin_Write(diffManEncodedData[i]);
- 1117              		.loc 1 386 0
+ 377:.\main.c      ****             }
+ 378:.\main.c      ****         }
+ 379:.\main.c      ****         TX_pin_Write(diffManEncodedData[i]);
+ 1117              		.loc 1 379 0
  1118 006c 164A     		ldr	r2, .L68+12
  1119 006e 7B68     		ldr	r3, [r7, #4]
  1120 0070 52F82330 		ldr	r3, [r2, r3, lsl #2]
  1121 0074 DBB2     		uxtb	r3, r3
  1122 0076 1846     		mov	r0, r3
  1123 0078 FFF7FEFF 		bl	TX_pin_Write
- 387:.\main.c      ****         Timer_Start();
- 1124              		.loc 1 387 0
+ 380:.\main.c      ****         Timer_Start();
+ 1124              		.loc 1 380 0
  1125 007c FFF7FEFF 		bl	Timer_Start
- 388:.\main.c      ****         while(!timerExpired); 
- 1126              		.loc 1 388 0
+ 381:.\main.c      ****         while(!timerExpired); 
+ 1126              		.loc 1 381 0
  1127 0080 00BF     		nop
  1128              	.L65:
- 1129              		.loc 1 388 0 is_stmt 0 discriminator 1
+ 1129              		.loc 1 381 0 is_stmt 0 discriminator 1
  1130 0082 124B     		ldr	r3, .L68+16
  1131 0084 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  1132 0086 83F00103 		eor	r3, r3, #1
  1133 008a DBB2     		uxtb	r3, r3
  1134 008c 002B     		cmp	r3, #0
  1135 008e F8D1     		bne	.L65
- 389:.\main.c      ****         timerExpired = false;
- 1136              		.loc 1 389 0 is_stmt 1 discriminator 2
+ 382:.\main.c      ****         timerExpired = false;
+ 1136              		.loc 1 382 0 is_stmt 1 discriminator 2
  1137 0090 0E4B     		ldr	r3, .L68+16
  1138 0092 0022     		movs	r2, #0
  1139 0094 1A70     		strb	r2, [r3]
- 373:.\main.c      ****         //check for idle, if network is idle, cotinue to transmit data. 
- 1140              		.loc 1 373 0 discriminator 2
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 28
-
-
+ 366:.\main.c      ****         //check for idle, if network is idle, cotinue to transmit data. 
+ 1140              		.loc 1 366 0 discriminator 2
  1141 0096 7B68     		ldr	r3, [r7, #4]
  1142 0098 0133     		adds	r3, r3, #1
  1143 009a 7B60     		str	r3, [r7, #4]
  1144              	.L62:
- 373:.\main.c      ****         //check for idle, if network is idle, cotinue to transmit data. 
- 1145              		.loc 1 373 0 is_stmt 0 discriminator 1
+ 366:.\main.c      ****         //check for idle, if network is idle, cotinue to transmit data. 
+ 1145              		.loc 1 366 0 is_stmt 0 discriminator 1
  1146 009c 0C4B     		ldr	r3, .L68+20
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 28
+
+
  1147 009e 1B68     		ldr	r3, [r3]
  1148 00a0 7A68     		ldr	r2, [r7, #4]
  1149 00a2 9A42     		cmp	r2, r3
  1150 00a4 B2DB     		blt	.L66
  1151              	.L64:
- 390:.\main.c      ****     }
- 391:.\main.c      ****     
- 392:.\main.c      ****     //when finished transmitting diff manchester encoded data, set flag 
- 393:.\main.c      ****     if(i == halfBitIndex){
- 1152              		.loc 1 393 0 is_stmt 1
+ 383:.\main.c      ****     }
+ 384:.\main.c      ****     
+ 385:.\main.c      ****     //when finished transmitting diff manchester encoded data, set flag 
+ 386:.\main.c      ****     if(i == halfBitIndex){
+ 1152              		.loc 1 386 0 is_stmt 1
  1153 00a6 0A4B     		ldr	r3, .L68+20
  1154 00a8 1B68     		ldr	r3, [r3]
  1155 00aa 7A68     		ldr	r2, [r7, #4]
  1156 00ac 9A42     		cmp	r2, r3
  1157 00ae 02D1     		bne	.L61
- 394:.\main.c      ****         dataTransmissionComplete = true;
- 1158              		.loc 1 394 0
+ 387:.\main.c      ****         dataTransmissionComplete = true;
+ 1158              		.loc 1 387 0
  1159 00b0 084B     		ldr	r3, .L68+24
  1160 00b2 0122     		movs	r2, #1
  1161 00b4 1A70     		strb	r2, [r3]
  1162              	.L61:
- 395:.\main.c      ****     }
- 396:.\main.c      **** }
- 1163              		.loc 1 396 0
+ 388:.\main.c      ****     }
+ 389:.\main.c      **** }
+ 1163              		.loc 1 389 0
  1164 00b6 0837     		adds	r7, r7, #8
  1165              		.cfi_def_cfa_offset 8
  1166 00b8 BD46     		mov	sp, r7
@@ -1678,24 +1671,24 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1187              		.thumb_func
  1188              		.type	setNetworkStateOnLEDs, %function
  1189              	setNetworkStateOnLEDs:
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 29
-
-
  1190              	.LFB72:
- 397:.\main.c      **** 
- 398:.\main.c      **** void setNetworkStateOnLEDs(){
- 1191              		.loc 1 398 0
+ 390:.\main.c      **** 
+ 391:.\main.c      **** void setNetworkStateOnLEDs(){
+ 1191              		.loc 1 391 0
  1192              		.cfi_startproc
  1193              		@ args = 0, pretend = 0, frame = 0
  1194              		@ frame_needed = 1, uses_anonymous_args = 0
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 29
+
+
  1195 0000 80B5     		push	{r7, lr}
  1196              		.cfi_def_cfa_offset 8
  1197              		.cfi_offset 7, -8
  1198              		.cfi_offset 14, -4
  1199 0002 00AF     		add	r7, sp, #0
  1200              		.cfi_def_cfa_register 7
- 399:.\main.c      **** 	 switch(networkState){
- 1201              		.loc 1 399 0
+ 392:.\main.c      **** 	 switch(networkState){
+ 1201              		.loc 1 392 0
  1202 0004 134B     		ldr	r3, .L76
  1203 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  1204 0008 012B     		cmp	r3, #1
@@ -1704,89 +1697,89 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1207 000e 16D0     		beq	.L73
  1208 0010 002B     		cmp	r3, #0
  1209 0012 0AD0     		beq	.L74
- 400:.\main.c      ****         case busy:
+ 393:.\main.c      ****         case busy:
+ 394:.\main.c      ****         {
+ 395:.\main.c      ****             LED4_Write(1);
+ 396:.\main.c      ****             LED3_Write(0);
+ 397:.\main.c      ****             LED2_Write(0);
+ 398:.\main.c      ****             break;
+ 399:.\main.c      ****         }
+ 400:.\main.c      ****         case idle:
  401:.\main.c      ****         {
- 402:.\main.c      ****             LED4_Write(1);
- 403:.\main.c      ****             LED3_Write(0);
+ 402:.\main.c      ****             LED3_Write(1);
+ 403:.\main.c      ****             LED4_Write(0);
  404:.\main.c      ****             LED2_Write(0);
  405:.\main.c      ****             break;
  406:.\main.c      ****         }
- 407:.\main.c      ****         case idle:
+ 407:.\main.c      ****         case collision:
  408:.\main.c      ****         {
- 409:.\main.c      ****             LED3_Write(1);
+ 409:.\main.c      ****             LED2_Write(1);
  410:.\main.c      ****             LED4_Write(0);
- 411:.\main.c      ****             LED2_Write(0);
+ 411:.\main.c      ****             LED3_Write(0);
  412:.\main.c      ****             break;
  413:.\main.c      ****         }
- 414:.\main.c      ****         case collision:
+ 414:.\main.c      ****         default:
  415:.\main.c      ****         {
- 416:.\main.c      ****             LED2_Write(1);
- 417:.\main.c      ****             LED4_Write(0);
- 418:.\main.c      ****             LED3_Write(0);
- 419:.\main.c      ****             break;
- 420:.\main.c      ****         }
- 421:.\main.c      ****         default:
- 422:.\main.c      ****         {
- 423:.\main.c      ****            //error
- 424:.\main.c      ****             break;
- 1210              		.loc 1 424 0
+ 416:.\main.c      ****            //error
+ 417:.\main.c      ****             break;
+ 1210              		.loc 1 417 0
  1211 0014 1DE0     		b	.L70
  1212              	.L72:
- 402:.\main.c      ****             LED3_Write(0);
- 1213              		.loc 1 402 0
+ 395:.\main.c      ****             LED3_Write(0);
+ 1213              		.loc 1 395 0
  1214 0016 0120     		movs	r0, #1
  1215 0018 FFF7FEFF 		bl	LED4_Write
- 403:.\main.c      ****             LED2_Write(0);
- 1216              		.loc 1 403 0
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 30
-
-
+ 396:.\main.c      ****             LED2_Write(0);
+ 1216              		.loc 1 396 0
  1217 001c 0020     		movs	r0, #0
  1218 001e FFF7FEFF 		bl	LED3_Write
- 404:.\main.c      ****             break;
- 1219              		.loc 1 404 0
+ 397:.\main.c      ****             break;
+ 1219              		.loc 1 397 0
  1220 0022 0020     		movs	r0, #0
  1221 0024 FFF7FEFF 		bl	LED2_Write
- 405:.\main.c      ****         }
- 1222              		.loc 1 405 0
+ 398:.\main.c      ****         }
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 30
+
+
+ 1222              		.loc 1 398 0
  1223 0028 13E0     		b	.L70
  1224              	.L74:
- 409:.\main.c      ****             LED4_Write(0);
- 1225              		.loc 1 409 0
+ 402:.\main.c      ****             LED4_Write(0);
+ 1225              		.loc 1 402 0
  1226 002a 0120     		movs	r0, #1
  1227 002c FFF7FEFF 		bl	LED3_Write
- 410:.\main.c      ****             LED2_Write(0);
- 1228              		.loc 1 410 0
+ 403:.\main.c      ****             LED2_Write(0);
+ 1228              		.loc 1 403 0
  1229 0030 0020     		movs	r0, #0
  1230 0032 FFF7FEFF 		bl	LED4_Write
- 411:.\main.c      ****             break;
- 1231              		.loc 1 411 0
+ 404:.\main.c      ****             break;
+ 1231              		.loc 1 404 0
  1232 0036 0020     		movs	r0, #0
  1233 0038 FFF7FEFF 		bl	LED2_Write
- 412:.\main.c      ****         }
- 1234              		.loc 1 412 0
+ 405:.\main.c      ****         }
+ 1234              		.loc 1 405 0
  1235 003c 09E0     		b	.L70
  1236              	.L73:
- 416:.\main.c      ****             LED4_Write(0);
- 1237              		.loc 1 416 0
+ 409:.\main.c      ****             LED4_Write(0);
+ 1237              		.loc 1 409 0
  1238 003e 0120     		movs	r0, #1
  1239 0040 FFF7FEFF 		bl	LED2_Write
- 417:.\main.c      ****             LED3_Write(0);
- 1240              		.loc 1 417 0
+ 410:.\main.c      ****             LED3_Write(0);
+ 1240              		.loc 1 410 0
  1241 0044 0020     		movs	r0, #0
  1242 0046 FFF7FEFF 		bl	LED4_Write
- 418:.\main.c      ****             break;
- 1243              		.loc 1 418 0
+ 411:.\main.c      ****             break;
+ 1243              		.loc 1 411 0
  1244 004a 0020     		movs	r0, #0
  1245 004c FFF7FEFF 		bl	LED3_Write
- 419:.\main.c      ****         }
- 1246              		.loc 1 419 0
+ 412:.\main.c      ****         }
+ 1246              		.loc 1 412 0
  1247 0050 00BF     		nop
  1248              	.L70:
- 425:.\main.c      ****         } 
- 426:.\main.c      **** 	}
- 427:.\main.c      **** }
- 1249              		.loc 1 427 0
+ 418:.\main.c      ****         } 
+ 419:.\main.c      **** 	}
+ 420:.\main.c      **** }
+ 1249              		.loc 1 420 0
  1250 0052 80BD     		pop	{r7, pc}
  1251              	.L77:
  1252              		.align	2
@@ -1798,21 +1791,21 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1258              		.section	.text.getRandomNumber,"ax",%progbits
  1259              		.align	2
  1260              		.global	getRandomNumber
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 31
-
-
  1261              		.thumb
  1262              		.thumb_func
  1263              		.type	getRandomNumber, %function
  1264              	getRandomNumber:
  1265              	.LFB73:
- 428:.\main.c      **** 
- 429:.\main.c      **** /*
- 430:.\main.c      **** Generates a random value from 1 to 128. Used in the random backoff time equation: (N/128)(0.800 sec
- 431:.\main.c      **** */
- 432:.\main.c      **** int getRandomNumber()
- 433:.\main.c      **** {
- 1266              		.loc 1 433 0
+ 421:.\main.c      **** 
+ 422:.\main.c      **** /*
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 31
+
+
+ 423:.\main.c      **** Generates a random value from 1 to 128. Used in the random backoff time equation: (N/128)(0.800 sec
+ 424:.\main.c      **** */
+ 425:.\main.c      **** int getRandomNumber()
+ 426:.\main.c      **** {
+ 1266              		.loc 1 426 0
  1267              		.cfi_startproc
  1268              		@ args = 0, pretend = 0, frame = 16
  1269              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -1824,21 +1817,21 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1275              		.cfi_def_cfa_offset 24
  1276 0004 00AF     		add	r7, sp, #0
  1277              		.cfi_def_cfa_register 7
- 434:.\main.c      ****     const int MIN_N = 1;
- 1278              		.loc 1 434 0
+ 427:.\main.c      ****     const int MIN_N = 1;
+ 1278              		.loc 1 427 0
  1279 0006 0123     		movs	r3, #1
  1280 0008 FB60     		str	r3, [r7, #12]
- 435:.\main.c      ****     const int MAX_N = 128;
- 1281              		.loc 1 435 0
+ 428:.\main.c      ****     const int MAX_N = 128;
+ 1281              		.loc 1 428 0
  1282 000a 8023     		movs	r3, #128
  1283 000c BB60     		str	r3, [r7, #8]
- 436:.\main.c      ****         
- 437:.\main.c      ****     int n;
- 438:.\main.c      **** /*
- 439:.\main.c      ****     Get first and second random numbers.
- 440:.\main.c      ****     */
- 441:.\main.c      ****     n =rand() % (MAX_N - MIN_N + 1) + MIN_N;
- 1284              		.loc 1 441 0
+ 429:.\main.c      ****         
+ 430:.\main.c      ****     int n;
+ 431:.\main.c      **** /*
+ 432:.\main.c      ****     Get first and second random numbers.
+ 433:.\main.c      ****     */
+ 434:.\main.c      ****     n =rand() % (MAX_N - MIN_N + 1) + MIN_N;
+ 1284              		.loc 1 434 0
  1285 000e FFF7FEFF 		bl	rand
  1286 0012 0246     		mov	r2, r0
  1287 0014 B968     		ldr	r1, [r7, #8]
@@ -1851,16 +1844,13 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1294 0026 FB68     		ldr	r3, [r7, #12]
  1295 0028 1344     		add	r3, r3, r2
  1296 002a 7B60     		str	r3, [r7, #4]
- 442:.\main.c      ****     return n;
- 1297              		.loc 1 442 0
+ 435:.\main.c      ****     return n;
+ 1297              		.loc 1 435 0
  1298 002c 7B68     		ldr	r3, [r7, #4]
- 443:.\main.c      **** }
- 1299              		.loc 1 443 0
+ 436:.\main.c      **** }
+ 1299              		.loc 1 436 0
  1300 002e 1846     		mov	r0, r3
  1301 0030 1037     		adds	r7, r7, #16
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 32
-
-
  1302              		.cfi_def_cfa_offset 8
  1303 0032 BD46     		mov	sp, r7
  1304              		.cfi_def_cfa_register 13
@@ -1868,6 +1858,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1306 0034 80BD     		pop	{r7, pc}
  1307              		.cfi_endproc
  1308              	.LFE73:
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 32
+
+
  1309              		.size	getRandomNumber, .-getRandomNumber
  1310 0036 00BF     		.section	.text.diffManToASCII,"ax",%progbits
  1311              		.align	2
@@ -1877,16 +1870,16 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1315              		.type	diffManToASCII, %function
  1316              	diffManToASCII:
  1317              	.LFB74:
- 444:.\main.c      **** 
- 445:.\main.c      **** /*
- 446:.\main.c      **** Helper method.
- 447:.\main.c      **** Convert differental manchester line encoded byte to ascii char
- 448:.\main.c      **** 
- 449:.\main.c      **** charPtr = pointer to char 
- 450:.\main.c      **** */
- 451:.\main.c      **** void diffManToASCII()
- 452:.\main.c      **** {
- 1318              		.loc 1 452 0
+ 437:.\main.c      **** 
+ 438:.\main.c      **** /*
+ 439:.\main.c      **** Helper method.
+ 440:.\main.c      **** Convert differental manchester line encoded byte to ascii char
+ 441:.\main.c      **** 
+ 442:.\main.c      **** charPtr = pointer to char 
+ 443:.\main.c      **** */
+ 444:.\main.c      **** void diffManToASCII()
+ 445:.\main.c      **** {
+ 1318              		.loc 1 445 0
  1319              		.cfi_startproc
  1320              		@ args = 0, pretend = 0, frame = 8
  1321              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -1898,43 +1891,43 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1327              		.cfi_def_cfa_offset 16
  1328 0004 00AF     		add	r7, sp, #0
  1329              		.cfi_def_cfa_register 7
- 453:.\main.c      ****     int i;
- 454:.\main.c      ****     for(i = 0; i < EIGHT_BITS; i++){
- 1330              		.loc 1 454 0
+ 446:.\main.c      ****     int i;
+ 447:.\main.c      ****     for(i = 0; i < EIGHT_BITS; i++){
+ 1330              		.loc 1 447 0
  1331 0006 0023     		movs	r3, #0
  1332 0008 7B60     		str	r3, [r7, #4]
  1333 000a 42E0     		b	.L81
  1334              	.L87:
  1335              	.LBB3:
- 455:.\main.c      ****         uint8 previousHalfBit = diffManReceivedData[receivedDataIndex-1];
- 1336              		.loc 1 455 0
+ 448:.\main.c      ****         uint8 previousHalfBit = diffManReceivedData[receivedDataIndex-1];
+ 1336              		.loc 1 448 0
  1337 000c 254B     		ldr	r3, .L88
  1338 000e 1B68     		ldr	r3, [r3]
  1339 0010 013B     		subs	r3, r3, #1
  1340 0012 254A     		ldr	r2, .L88+4
  1341 0014 D35C     		ldrb	r3, [r2, r3]
  1342 0016 FB70     		strb	r3, [r7, #3]
- 456:.\main.c      ****         //send starting 1 bit (encoded)
- 457:.\main.c      ****         if(diffManReceivedData[receivedDataIndex] == 1){
- 1343              		.loc 1 457 0
+ 449:.\main.c      ****         //send starting 1 bit (encoded)
+ 450:.\main.c      ****         if(diffManReceivedData[receivedDataIndex] == 1){
+ 1343              		.loc 1 450 0
  1344 0018 224B     		ldr	r3, .L88
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 33
-
-
  1345 001a 1B68     		ldr	r3, [r3]
  1346 001c 224A     		ldr	r2, .L88+4
  1347 001e D35C     		ldrb	r3, [r2, r3]	@ zero_extendqisi2
  1348 0020 012B     		cmp	r3, #1
  1349 0022 17D1     		bne	.L82
- 458:.\main.c      ****             //current half bit is 1
- 459:.\main.c      ****             if(previousHalfBit == 1)
- 1350              		.loc 1 459 0
+ 451:.\main.c      ****             //current half bit is 1
+ 452:.\main.c      ****             if(previousHalfBit == 1)
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 33
+
+
+ 1350              		.loc 1 452 0
  1351 0024 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
  1352 0026 012B     		cmp	r3, #1
  1353 0028 0FD1     		bne	.L83
- 460:.\main.c      ****             {
- 461:.\main.c      ****                 receivedChar |= (1 << (7 - i));      
- 1354              		.loc 1 461 0
+ 453:.\main.c      ****             {
+ 454:.\main.c      ****                 receivedChar |= (1 << (7 - i));      
+ 1354              		.loc 1 454 0
  1355 002a 7B68     		ldr	r3, [r7, #4]
  1356 002c C3F10703 		rsb	r3, r3, #7
  1357 0030 0122     		movs	r2, #1
@@ -1950,44 +1943,44 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1367 0046 1A70     		strb	r2, [r3]
  1368 0048 1BE0     		b	.L85
  1369              	.L83:
- 462:.\main.c      ****             }
- 463:.\main.c      ****             else
- 464:.\main.c      ****             {
- 465:.\main.c      ****                 receivedChar |= (0 << (7 - i));    
- 1370              		.loc 1 465 0
+ 455:.\main.c      ****             }
+ 456:.\main.c      ****             else
+ 457:.\main.c      ****             {
+ 458:.\main.c      ****                 receivedChar |= (0 << (7 - i));    
+ 1370              		.loc 1 458 0
  1371 004a 184B     		ldr	r3, .L88+8
  1372 004c 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
  1373 004e 174B     		ldr	r3, .L88+8
  1374 0050 1A70     		strb	r2, [r3]
  1375 0052 16E0     		b	.L85
  1376              	.L82:
- 466:.\main.c      ****             }
- 467:.\main.c      ****         }
- 468:.\main.c      ****         else{
- 469:.\main.c      ****             //current half bit is 0
- 470:.\main.c      ****             if(previousHalfBit == 1)
- 1377              		.loc 1 470 0
+ 459:.\main.c      ****             }
+ 460:.\main.c      ****         }
+ 461:.\main.c      ****         else{
+ 462:.\main.c      ****             //current half bit is 0
+ 463:.\main.c      ****             if(previousHalfBit == 1)
+ 1377              		.loc 1 463 0
  1378 0054 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
  1379 0056 012B     		cmp	r3, #1
  1380 0058 04D1     		bne	.L86
- 471:.\main.c      ****             {
- 472:.\main.c      ****                 receivedChar |= (0 << (7 - i));    
- 1381              		.loc 1 472 0
+ 464:.\main.c      ****             {
+ 465:.\main.c      ****                 receivedChar |= (0 << (7 - i));    
+ 1381              		.loc 1 465 0
  1382 005a 144B     		ldr	r3, .L88+8
  1383 005c 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
  1384 005e 134B     		ldr	r3, .L88+8
  1385 0060 1A70     		strb	r2, [r3]
  1386 0062 0EE0     		b	.L85
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 34
-
-
  1387              	.L86:
- 473:.\main.c      ****             }
- 474:.\main.c      ****             else
- 475:.\main.c      ****             {
- 476:.\main.c      ****                 receivedChar |= (1 << (7 - i));    
- 1388              		.loc 1 476 0
+ 466:.\main.c      ****             }
+ 467:.\main.c      ****             else
+ 468:.\main.c      ****             {
+ 469:.\main.c      ****                 receivedChar |= (1 << (7 - i));    
+ 1388              		.loc 1 469 0
  1389 0064 7B68     		ldr	r3, [r7, #4]
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 34
+
+
  1390 0066 C3F10703 		rsb	r3, r3, #7
  1391 006a 0122     		movs	r2, #1
  1392 006c 02FA03F3 		lsl	r3, r2, r3
@@ -2001,30 +1994,30 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1400 007e 0B4B     		ldr	r3, .L88+8
  1401 0080 1A70     		strb	r2, [r3]
  1402              	.L85:
- 477:.\main.c      ****             }
- 478:.\main.c      ****         } 
- 479:.\main.c      ****         receivedDataIndex += 2;
- 1403              		.loc 1 479 0 discriminator 2
+ 470:.\main.c      ****             }
+ 471:.\main.c      ****         } 
+ 472:.\main.c      ****         receivedDataIndex += 2;
+ 1403              		.loc 1 472 0 discriminator 2
  1404 0082 084B     		ldr	r3, .L88
  1405 0084 1B68     		ldr	r3, [r3]
  1406 0086 0233     		adds	r3, r3, #2
  1407 0088 064A     		ldr	r2, .L88
  1408 008a 1360     		str	r3, [r2]
  1409              	.LBE3:
- 454:.\main.c      ****         uint8 previousHalfBit = diffManReceivedData[receivedDataIndex-1];
- 1410              		.loc 1 454 0 discriminator 2
+ 447:.\main.c      ****         uint8 previousHalfBit = diffManReceivedData[receivedDataIndex-1];
+ 1410              		.loc 1 447 0 discriminator 2
  1411 008c 7B68     		ldr	r3, [r7, #4]
  1412 008e 0133     		adds	r3, r3, #1
  1413 0090 7B60     		str	r3, [r7, #4]
  1414              	.L81:
- 454:.\main.c      ****         uint8 previousHalfBit = diffManReceivedData[receivedDataIndex-1];
- 1415              		.loc 1 454 0 is_stmt 0 discriminator 1
+ 447:.\main.c      ****         uint8 previousHalfBit = diffManReceivedData[receivedDataIndex-1];
+ 1415              		.loc 1 447 0 is_stmt 0 discriminator 1
  1416 0092 7B68     		ldr	r3, [r7, #4]
  1417 0094 072B     		cmp	r3, #7
  1418 0096 B9DD     		ble	.L87
- 480:.\main.c      ****     }//end for loop
- 481:.\main.c      **** }
- 1419              		.loc 1 481 0 is_stmt 1
+ 473:.\main.c      ****     }//end for loop
+ 474:.\main.c      **** }
+ 1419              		.loc 1 474 0 is_stmt 1
  1420 0098 0C37     		adds	r7, r7, #12
  1421              		.cfi_def_cfa_offset 4
  1422 009a BD46     		mov	sp, r7
@@ -2038,9 +2031,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1430 00a2 00BF     		.align	2
  1431              	.L88:
  1432 00a4 00000000 		.word	receivedDataIndex
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 35
-
-
  1433 00a8 00000000 		.word	diffManReceivedData
  1434 00ac 00000000 		.word	receivedChar
  1435              		.cfi_endproc
@@ -2048,16 +2038,19 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1437              		.size	diffManToASCII, .-diffManToASCII
  1438              		.section	.text.storeChar,"ax",%progbits
  1439              		.align	2
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 35
+
+
  1440              		.global	storeChar
  1441              		.thumb
  1442              		.thumb_func
  1443              		.type	storeChar, %function
  1444              	storeChar:
  1445              	.LFB75:
- 482:.\main.c      **** 
- 483:.\main.c      **** //stores char in receive array
- 484:.\main.c      **** void storeChar(){   
- 1446              		.loc 1 484 0
+ 475:.\main.c      **** 
+ 476:.\main.c      **** //stores char in receive array
+ 477:.\main.c      **** void storeChar(){   
+ 1446              		.loc 1 477 0
  1447              		.cfi_startproc
  1448              		@ args = 0, pretend = 0, frame = 0
  1449              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -2067,40 +2060,37 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1453              		.cfi_offset 7, -4
  1454 0002 00AF     		add	r7, sp, #0
  1455              		.cfi_def_cfa_register 7
- 485:.\main.c      **** 	receivedChar &= ASCII_CHAR_MASK;
- 1456              		.loc 1 485 0
+ 478:.\main.c      **** 	receivedChar &= ASCII_CHAR_MASK;
+ 1456              		.loc 1 478 0
  1457 0004 0A4B     		ldr	r3, .L91
  1458 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  1459 0008 03F07F03 		and	r3, r3, #127
  1460 000c DAB2     		uxtb	r2, r3
  1461 000e 084B     		ldr	r3, .L91
  1462 0010 1A70     		strb	r2, [r3]
- 486:.\main.c      **** 	rxChar[currentRXCharPosition] = receivedChar;
- 1463              		.loc 1 486 0
+ 479:.\main.c      **** 	rxChar[currentRXCharPosition] = receivedChar;
+ 1463              		.loc 1 479 0
  1464 0012 084B     		ldr	r3, .L91+4
  1465 0014 1B68     		ldr	r3, [r3]
  1466 0016 064A     		ldr	r2, .L91
  1467 0018 1178     		ldrb	r1, [r2]	@ zero_extendqisi2
  1468 001a 074A     		ldr	r2, .L91+8
  1469 001c D154     		strb	r1, [r2, r3]
- 487:.\main.c      **** 	currentRXCharPosition++;
- 1470              		.loc 1 487 0
+ 480:.\main.c      **** 	currentRXCharPosition++;
+ 1470              		.loc 1 480 0
  1471 001e 054B     		ldr	r3, .L91+4
  1472 0020 1B68     		ldr	r3, [r3]
  1473 0022 0133     		adds	r3, r3, #1
  1474 0024 034A     		ldr	r2, .L91+4
  1475 0026 1360     		str	r3, [r2]
- 488:.\main.c      **** }
- 1476              		.loc 1 488 0
+ 481:.\main.c      **** }
+ 1476              		.loc 1 481 0
  1477 0028 BD46     		mov	sp, r7
  1478              		.cfi_def_cfa_register 13
  1479              		@ sp needed
  1480 002a 5DF8047B 		ldr	r7, [sp], #4
  1481              		.cfi_restore 7
  1482              		.cfi_def_cfa_offset 0
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 36
-
-
  1483 002e 7047     		bx	lr
  1484              	.L92:
  1485              		.align	2
@@ -2108,6 +2098,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1487 0030 00000000 		.word	receivedChar
  1488 0034 00000000 		.word	currentRXCharPosition
  1489 0038 00000000 		.word	rxChar
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 36
+
+
  1490              		.cfi_endproc
  1491              	.LFE75:
  1492              		.size	storeChar, .-storeChar
@@ -2119,10 +2112,10 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1498              		.type	printChar, %function
  1499              	printChar:
  1500              	.LFB76:
- 489:.\main.c      **** 
- 490:.\main.c      **** //Grabs all chars and prints to LCD
- 491:.\main.c      **** void printChar(){
- 1501              		.loc 1 491 0
+ 482:.\main.c      **** 
+ 483:.\main.c      **** //Grabs all chars and prints to LCD
+ 484:.\main.c      **** void printChar(){
+ 1501              		.loc 1 484 0
  1502              		.cfi_startproc
  1503              		@ args = 0, pretend = 0, frame = 8
  1504              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -2134,41 +2127,41 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1510              		.cfi_def_cfa_offset 16
  1511 0004 00AF     		add	r7, sp, #0
  1512              		.cfi_def_cfa_register 7
- 492:.\main.c      **** 	int i;//char position after array
- 493:.\main.c      ****     for(i = 7; i < messageLength; i++){//we are assuming messageLength from the header is valid and
- 1513              		.loc 1 493 0
+ 485:.\main.c      **** 	int i;//char position after array
+ 486:.\main.c      ****     for(i = 7; i < messageLength; i++){//we are assuming messageLength from the header is valid and
+ 1513              		.loc 1 486 0
  1514 0006 0723     		movs	r3, #7
  1515 0008 7B60     		str	r3, [r7, #4]
  1516 000a 09E0     		b	.L94
  1517              	.L95:
- 494:.\main.c      **** 		LCD_PutChar(rxChar[i]); 
- 1518              		.loc 1 494 0 discriminator 3
+ 487:.\main.c      **** 		LCD_PutChar(rxChar[i]); 
+ 1518              		.loc 1 487 0 discriminator 3
  1519 000c 084A     		ldr	r2, .L96
  1520 000e 7B68     		ldr	r3, [r7, #4]
  1521 0010 1344     		add	r3, r3, r2
  1522 0012 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  1523 0014 1846     		mov	r0, r3
  1524 0016 FFF7FEFF 		bl	LCD_PutChar
- 493:.\main.c      **** 		LCD_PutChar(rxChar[i]); 
- 1525              		.loc 1 493 0 discriminator 3
+ 486:.\main.c      **** 		LCD_PutChar(rxChar[i]); 
+ 1525              		.loc 1 486 0 discriminator 3
  1526 001a 7B68     		ldr	r3, [r7, #4]
  1527 001c 0133     		adds	r3, r3, #1
  1528 001e 7B60     		str	r3, [r7, #4]
  1529              	.L94:
- 493:.\main.c      **** 		LCD_PutChar(rxChar[i]); 
- 1530              		.loc 1 493 0 is_stmt 0 discriminator 1
+ 486:.\main.c      **** 		LCD_PutChar(rxChar[i]); 
+ 1530              		.loc 1 486 0 is_stmt 0 discriminator 1
  1531 0020 044B     		ldr	r3, .L96+4
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 37
-
-
  1532 0022 1B68     		ldr	r3, [r3]
  1533 0024 7A68     		ldr	r2, [r7, #4]
  1534 0026 9A42     		cmp	r2, r3
  1535 0028 F0DB     		blt	.L95
- 495:.\main.c      **** 		//TODO: implement USB transmit
- 496:.\main.c      ****     }
- 497:.\main.c      **** }
- 1536              		.loc 1 497 0 is_stmt 1
+ 488:.\main.c      **** 		//TODO: implement USB transmit
+ 489:.\main.c      ****     }
+ 490:.\main.c      **** }
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 37
+
+
+ 1536              		.loc 1 490 0 is_stmt 1
  1537 002a 0837     		adds	r7, r7, #8
  1538              		.cfi_def_cfa_offset 8
  1539 002c BD46     		mov	sp, r7
@@ -2191,11 +2184,11 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1556              		.type	headerCheck, %function
  1557              	headerCheck:
  1558              	.LFB77:
- 498:.\main.c      **** 
- 499:.\main.c      **** //checks received header and strips from array if valid
- 500:.\main.c      **** //otherwise, disregard contents
- 501:.\main.c      **** bool headerCheck(){
- 1559              		.loc 1 501 0
+ 491:.\main.c      **** 
+ 492:.\main.c      **** //checks received header and strips from array if valid
+ 493:.\main.c      **** //otherwise, disregard contents
+ 494:.\main.c      **** bool headerCheck(){
+ 1559              		.loc 1 494 0
  1560              		.cfi_startproc
  1561              		@ args = 0, pretend = 0, frame = 0
  1562              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -2205,68 +2198,68 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1566              		.cfi_offset 14, -4
  1567 0002 00AF     		add	r7, sp, #0
  1568              		.cfi_def_cfa_register 7
- 502:.\main.c      ****     //nested if loops are probably the easiest way to check
- 503:.\main.c      **** 	if(rxChar[0] == 'q'){
- 1569              		.loc 1 503 0
+ 495:.\main.c      ****     //nested if loops are probably the easiest way to check
+ 496:.\main.c      **** 	if(rxChar[0] == 'q'){
+ 1569              		.loc 1 496 0
  1570 0004 124B     		ldr	r3, .L102
  1571 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  1572 0008 712B     		cmp	r3, #113
  1573 000a 1ED1     		bne	.L99
- 504:.\main.c      **** 		if(rxChar[3] == 0x00 || rxChar[3] == RX_DESTINATION_ADDRESS){
- 1574              		.loc 1 504 0
+ 497:.\main.c      **** 		if(rxChar[3] == 0x00 || rxChar[3] == RX_DESTINATION_ADDRESS){
+ 1574              		.loc 1 497 0
  1575 000c 104B     		ldr	r3, .L102
  1576 000e DB78     		ldrb	r3, [r3, #3]	@ zero_extendqisi2
  1577 0010 002B     		cmp	r3, #0
  1578 0012 03D0     		beq	.L100
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 38
-
-
- 1579              		.loc 1 504 0 is_stmt 0 discriminator 1
+ 1579              		.loc 1 497 0 is_stmt 0 discriminator 1
  1580 0014 0E4B     		ldr	r3, .L102
  1581 0016 DB78     		ldrb	r3, [r3, #3]	@ zero_extendqisi2
  1582 0018 002B     		cmp	r3, #0
  1583 001a 16D1     		bne	.L99
  1584              	.L100:
- 505:.\main.c      **** 			//this is as valid as we go (CRC is optional)
- 506:.\main.c      **** 			messageLength = rxChar[4];
- 1585              		.loc 1 506 0 is_stmt 1
+ 498:.\main.c      **** 			//this is as valid as we go (CRC is optional)
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 38
+
+
+ 499:.\main.c      **** 			messageLength = rxChar[4];
+ 1585              		.loc 1 499 0 is_stmt 1
  1586 001c 0C4B     		ldr	r3, .L102
  1587 001e 1B79     		ldrb	r3, [r3, #4]	@ zero_extendqisi2
  1588 0020 1A46     		mov	r2, r3
  1589 0022 0C4B     		ldr	r3, .L102+4
  1590 0024 1A60     		str	r2, [r3]
- 507:.\main.c      ****             LCD_PrintNumber(rxChar[4]); 
- 1591              		.loc 1 507 0
+ 500:.\main.c      ****             LCD_PrintNumber(rxChar[4]); 
+ 1591              		.loc 1 500 0
  1592 0026 0A4B     		ldr	r3, .L102
  1593 0028 1B79     		ldrb	r3, [r3, #4]	@ zero_extendqisi2
  1594 002a 1846     		mov	r0, r3
  1595 002c FFF7FEFF 		bl	LCD_PrintU32Number
- 508:.\main.c      **** 			crcState = rxChar[5];
- 1596              		.loc 1 508 0
+ 501:.\main.c      **** 			crcState = rxChar[5];
+ 1596              		.loc 1 501 0
  1597 0030 074B     		ldr	r3, .L102
  1598 0032 5A79     		ldrb	r2, [r3, #5]	@ zero_extendqisi2
  1599 0034 084B     		ldr	r3, .L102+8
  1600 0036 1A70     		strb	r2, [r3]
- 509:.\main.c      **** 			headerCRC = rxChar[6];
- 1601              		.loc 1 509 0
+ 502:.\main.c      **** 			headerCRC = rxChar[6];
+ 1601              		.loc 1 502 0
  1602 0038 054B     		ldr	r3, .L102
  1603 003a 9B79     		ldrb	r3, [r3, #6]	@ zero_extendqisi2
  1604 003c 1A46     		mov	r2, r3
  1605 003e 074B     		ldr	r3, .L102+12
  1606 0040 1A60     		str	r2, [r3]
- 510:.\main.c      ****             CyDelay(1000);
- 1607              		.loc 1 510 0
+ 503:.\main.c      ****             CyDelay(1000);
+ 1607              		.loc 1 503 0
  1608 0042 4FF47A70 		mov	r0, #1000
  1609 0046 FFF7FEFF 		bl	CyDelay
  1610              	.L99:
- 511:.\main.c      **** 			//return true;
- 512:.\main.c      **** 		}
- 513:.\main.c      **** 	}
- 514:.\main.c      **** 	return false;
- 1611              		.loc 1 514 0
+ 504:.\main.c      **** 			//return true;
+ 505:.\main.c      **** 		}
+ 506:.\main.c      **** 	}
+ 507:.\main.c      **** 	return false;
+ 1611              		.loc 1 507 0
  1612 004a 0023     		movs	r3, #0
- 515:.\main.c      **** }
- 1613              		.loc 1 515 0
+ 508:.\main.c      **** }
+ 1613              		.loc 1 508 0
  1614 004c 1846     		mov	r0, r3
  1615 004e 80BD     		pop	{r7, pc}
  1616              	.L103:
@@ -2278,9 +2271,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1622 005c 00000000 		.word	headerCRC
  1623              		.cfi_endproc
  1624              	.LFE77:
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 39
-
-
  1625              		.size	headerCheck, .-headerCheck
  1626              		.text
  1627              	.Letext0:
@@ -2288,6 +2278,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1629              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
  1630              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
  1631              		.file 5 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 39
+
+
  1632              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
  1633              		.section	.debug_info,"",%progbits
  1634              	.Ldebug_info0:
@@ -2338,9 +2331,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1679 005d 15010000 		.4byte	.LASF6
  1680 0061 02       		.uleb128 0x2
  1681 0062 08       		.byte	0x8
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 40
-
-
  1682 0063 07       		.byte	0x7
  1683 0064 23010000 		.4byte	.LASF7
  1684 0068 04       		.uleb128 0x4
@@ -2348,6 +2338,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1686 006a 05       		.byte	0x5
  1687 006b 696E7400 		.ascii	"int\000"
  1688 006f 02       		.uleb128 0x2
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 40
+
+
  1689 0070 04       		.byte	0x4
  1690 0071 07       		.byte	0x7
  1691 0072 90020000 		.4byte	.LASF8
@@ -2398,9 +2391,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1736 00d0 7A       		.byte	0x7a
  1737 00d1 4C000000 		.4byte	0x4c
  1738 00d5 08       		.uleb128 0x8
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 41
-
-
  1739 00d6 27000000 		.4byte	.LASF22
  1740 00da 01       		.byte	0x1
  1741 00db 01       		.byte	0x1
@@ -2408,6 +2398,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1743 00dd F4000000 		.4byte	0xf4
  1744 00e1 09       		.uleb128 0x9
  1745 00e2 7C020000 		.4byte	.LASF19
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 41
+
+
  1746 00e6 00       		.sleb128 0
  1747 00e7 09       		.uleb128 0x9
  1748 00e8 29030000 		.4byte	.LASF20
@@ -2458,9 +2451,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1793 0142 00000000 		.4byte	.LFB65
  1794 0146 1C000000 		.4byte	.LFE65-.LFB65
  1795 014a 01       		.uleb128 0x1
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 42
-
-
  1796 014b 9C       		.byte	0x9c
  1797 014c 0C       		.uleb128 0xc
  1798 014d 89030000 		.4byte	.LASF30
@@ -2468,6 +2458,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1800 0152 4B       		.byte	0x4b
  1801 0153 00000000 		.4byte	.LFB66
  1802 0157 38000000 		.4byte	.LFE66-.LFB66
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 42
+
+
  1803 015b 01       		.uleb128 0x1
  1804 015c 9C       		.byte	0x9c
  1805 015d 0D       		.uleb128 0xd
@@ -2518,23 +2511,23 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1850 01b5 C0010000 		.4byte	0x1c0
  1851 01b9 11       		.uleb128 0x11
  1852 01ba BD000000 		.4byte	0xbd
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 43
-
-
  1853 01be 6B       		.byte	0x6b
  1854 01bf 00       		.byte	0
  1855 01c0 12       		.uleb128 0x12
  1856 01c1 49020000 		.4byte	.LASF41
  1857 01c5 01       		.byte	0x1
- 1858 01c6 0B01     		.2byte	0x10b
+ 1858 01c6 0401     		.2byte	0x104
  1859 01c8 00000000 		.4byte	.LFB68
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 43
+
+
  1860 01cc 48000000 		.4byte	.LFE68-.LFB68
  1861 01d0 01       		.uleb128 0x1
  1862 01d1 9C       		.byte	0x9c
  1863 01d2 13       		.uleb128 0x13
  1864 01d3 FF010000 		.4byte	.LASF35
  1865 01d7 01       		.byte	0x1
- 1866 01d8 1701     		.2byte	0x117
+ 1866 01d8 1001     		.2byte	0x110
  1867 01da 00000000 		.4byte	.LFB69
  1868 01de 38000000 		.4byte	.LFE69-.LFB69
  1869 01e2 01       		.uleb128 0x1
@@ -2543,7 +2536,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1872 01e8 14       		.uleb128 0x14
  1873 01e9 F4000000 		.4byte	.LASF31
  1874 01ed 01       		.byte	0x1
- 1875 01ee 1701     		.2byte	0x117
+ 1875 01ee 1001     		.2byte	0x110
  1876 01f0 C4000000 		.4byte	0xc4
  1877 01f4 02       		.uleb128 0x2
  1878 01f5 91       		.byte	0x91
@@ -2551,7 +2544,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1880 01f7 14       		.uleb128 0x14
  1881 01f8 F1020000 		.4byte	.LASF32
  1882 01fc 01       		.byte	0x1
- 1883 01fd 1701     		.2byte	0x117
+ 1883 01fd 1001     		.2byte	0x110
  1884 01ff 81000000 		.4byte	0x81
  1885 0203 02       		.uleb128 0x2
  1886 0204 91       		.byte	0x91
@@ -2559,7 +2552,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1888 0206 15       		.uleb128 0x15
  1889 0207 6900     		.ascii	"i\000"
  1890 0209 01       		.byte	0x1
- 1891 020a 1901     		.2byte	0x119
+ 1891 020a 1201     		.2byte	0x112
  1892 020c 6F000000 		.4byte	0x6f
  1893 0210 02       		.uleb128 0x2
  1894 0211 91       		.byte	0x91
@@ -2568,7 +2561,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1897 0214 16       		.uleb128 0x16
  1898 0215 6D020000 		.4byte	.LASF36
  1899 0219 01       		.byte	0x1
- 1900 021a 2301     		.2byte	0x123
+ 1900 021a 1C01     		.2byte	0x11c
  1901 021c 00000000 		.4byte	.LFB70
  1902 0220 C4010000 		.4byte	.LFE70-.LFB70
  1903 0224 01       		.uleb128 0x1
@@ -2577,10 +2570,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1906 022a 14       		.uleb128 0x14
  1907 022b CC020000 		.4byte	.LASF37
  1908 022f 01       		.byte	0x1
- 1909 0230 2301     		.2byte	0x123
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 44
-
-
+ 1909 0230 1C01     		.2byte	0x11c
  1910 0232 A5000000 		.4byte	0xa5
  1911 0236 03       		.uleb128 0x3
  1912 0237 91       		.byte	0x91
@@ -2588,7 +2578,10 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1914 023a 17       		.uleb128 0x17
  1915 023b 1B040000 		.4byte	.LASF38
  1916 023f 01       		.byte	0x1
- 1917 0240 2501     		.2byte	0x125
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 44
+
+
+ 1917 0240 1E01     		.2byte	0x11e
  1918 0242 81000000 		.4byte	0x81
  1919 0246 02       		.uleb128 0x2
  1920 0247 91       		.byte	0x91
@@ -2596,7 +2589,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1922 0249 17       		.uleb128 0x17
  1923 024a 99030000 		.4byte	.LASF39
  1924 024e 01       		.byte	0x1
- 1925 024f 3601     		.2byte	0x136
+ 1925 024f 2F01     		.2byte	0x12f
  1926 0251 74020000 		.4byte	0x274
  1927 0255 03       		.uleb128 0x3
  1928 0256 91       		.byte	0x91
@@ -2604,7 +2597,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1930 0259 15       		.uleb128 0x15
  1931 025a 6900     		.ascii	"i\000"
  1932 025c 01       		.byte	0x1
- 1933 025d 3701     		.2byte	0x137
+ 1933 025d 3001     		.2byte	0x130
  1934 025f 68000000 		.4byte	0x68
  1935 0263 02       		.uleb128 0x2
  1936 0264 91       		.byte	0x91
@@ -2612,7 +2605,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1938 0266 15       		.uleb128 0x15
  1939 0267 6A00     		.ascii	"j\000"
  1940 0269 01       		.byte	0x1
- 1941 026a 4001     		.2byte	0x140
+ 1941 026a 3901     		.2byte	0x139
  1942 026c 68000000 		.4byte	0x68
  1943 0270 02       		.uleb128 0x2
  1944 0271 91       		.byte	0x91
@@ -2628,7 +2621,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1954 0284 18       		.uleb128 0x18
  1955 0285 07000000 		.4byte	.LASF46
  1956 0289 01       		.byte	0x1
- 1957 028a 7301     		.2byte	0x173
+ 1957 028a 6C01     		.2byte	0x16c
  1958 028c 00000000 		.4byte	.LFB71
  1959 0290 D8000000 		.4byte	.LFE71-.LFB71
  1960 0294 01       		.uleb128 0x1
@@ -2637,10 +2630,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1963 029a 15       		.uleb128 0x15
  1964 029b 6900     		.ascii	"i\000"
  1965 029d 01       		.byte	0x1
- 1966 029e 7401     		.2byte	0x174
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 45
-
-
+ 1966 029e 6D01     		.2byte	0x16d
  1967 02a0 68000000 		.4byte	0x68
  1968 02a4 02       		.uleb128 0x2
  1969 02a5 91       		.byte	0x91
@@ -2648,10 +2638,13 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1971 02a7 19       		.uleb128 0x19
  1972 02a8 1C000000 		.4byte	.LBB2
  1973 02ac 50000000 		.4byte	.LBE2-.LBB2
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 45
+
+
  1974 02b0 17       		.uleb128 0x17
  1975 02b1 CA000000 		.4byte	.LASF40
  1976 02b5 01       		.byte	0x1
- 1977 02b6 7B01     		.2byte	0x17b
+ 1977 02b6 7401     		.2byte	0x174
  1978 02b8 68000000 		.4byte	0x68
  1979 02bc 02       		.uleb128 0x2
  1980 02bd 91       		.byte	0x91
@@ -2661,7 +2654,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1984 02c1 1A       		.uleb128 0x1a
  1985 02c2 DF010000 		.4byte	.LASF42
  1986 02c6 01       		.byte	0x1
- 1987 02c7 8E01     		.2byte	0x18e
+ 1987 02c7 8701     		.2byte	0x187
  1988 02c9 00000000 		.4byte	.LFB72
  1989 02cd 58000000 		.4byte	.LFE72-.LFB72
  1990 02d1 01       		.uleb128 0x1
@@ -2669,7 +2662,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  1992 02d3 1B       		.uleb128 0x1b
  1993 02d4 2D000000 		.4byte	.LASF43
  1994 02d8 01       		.byte	0x1
- 1995 02d9 B001     		.2byte	0x1b0
+ 1995 02d9 A901     		.2byte	0x1a9
  1996 02db 68000000 		.4byte	0x68
  1997 02df 00000000 		.4byte	.LFB73
  1998 02e3 36000000 		.4byte	.LFE73-.LFB73
@@ -2679,7 +2672,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2002 02ed 17       		.uleb128 0x17
  2003 02ee C6020000 		.4byte	.LASF44
  2004 02f2 01       		.byte	0x1
- 2005 02f3 B201     		.2byte	0x1b2
+ 2005 02f3 AB01     		.2byte	0x1ab
  2006 02f5 19030000 		.4byte	0x319
  2007 02f9 02       		.uleb128 0x2
  2008 02fa 91       		.byte	0x91
@@ -2687,7 +2680,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2010 02fc 17       		.uleb128 0x17
  2011 02fd CB030000 		.4byte	.LASF45
  2012 0301 01       		.byte	0x1
- 2013 0302 B301     		.2byte	0x1b3
+ 2013 0302 AC01     		.2byte	0x1ac
  2014 0304 19030000 		.4byte	0x319
  2015 0308 02       		.uleb128 0x2
  2016 0309 91       		.byte	0x91
@@ -2695,12 +2688,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2018 030b 15       		.uleb128 0x15
  2019 030c 6E00     		.ascii	"n\000"
  2020 030e 01       		.byte	0x1
- 2021 030f B501     		.2byte	0x1b5
+ 2021 030f AE01     		.2byte	0x1ae
  2022 0311 68000000 		.4byte	0x68
  2023 0315 02       		.uleb128 0x2
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 46
-
-
  2024 0316 91       		.byte	0x91
  2025 0317 6C       		.sleb128 -20
  2026 0318 00       		.byte	0
@@ -2708,8 +2698,11 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2028 031a 68000000 		.4byte	0x68
  2029 031e 1D       		.uleb128 0x1d
  2030 031f 81020000 		.4byte	.LASF47
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 46
+
+
  2031 0323 01       		.byte	0x1
- 2032 0324 C301     		.2byte	0x1c3
+ 2032 0324 BC01     		.2byte	0x1bc
  2033 0326 00000000 		.4byte	.LFB74
  2034 032a B0000000 		.4byte	.LFE74-.LFB74
  2035 032e 01       		.uleb128 0x1
@@ -2718,7 +2711,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2038 0334 15       		.uleb128 0x15
  2039 0335 6900     		.ascii	"i\000"
  2040 0337 01       		.byte	0x1
- 2041 0338 C501     		.2byte	0x1c5
+ 2041 0338 BE01     		.2byte	0x1be
  2042 033a 68000000 		.4byte	0x68
  2043 033e 02       		.uleb128 0x2
  2044 033f 91       		.byte	0x91
@@ -2729,7 +2722,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2049 034a 17       		.uleb128 0x17
  2050 034b 1B040000 		.4byte	.LASF38
  2051 034f 01       		.byte	0x1
- 2052 0350 C701     		.2byte	0x1c7
+ 2052 0350 C001     		.2byte	0x1c0
  2053 0352 81000000 		.4byte	0x81
  2054 0356 02       		.uleb128 0x2
  2055 0357 91       		.byte	0x91
@@ -2739,7 +2732,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2059 035b 12       		.uleb128 0x12
  2060 035c A8000000 		.4byte	.LASF48
  2061 0360 01       		.byte	0x1
- 2062 0361 E401     		.2byte	0x1e4
+ 2062 0361 DD01     		.2byte	0x1dd
  2063 0363 00000000 		.4byte	.LFB75
  2064 0367 3C000000 		.4byte	.LFE75-.LFB75
  2065 036b 01       		.uleb128 0x1
@@ -2747,7 +2740,7 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2067 036d 18       		.uleb128 0x18
  2068 036e F5010000 		.4byte	.LASF49
  2069 0372 01       		.byte	0x1
- 2070 0373 EB01     		.2byte	0x1eb
+ 2070 0373 E401     		.2byte	0x1e4
  2071 0375 00000000 		.4byte	.LFB76
  2072 0379 38000000 		.4byte	.LFE76-.LFB76
  2073 037d 01       		.uleb128 0x1
@@ -2756,11 +2749,8 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2076 0383 15       		.uleb128 0x15
  2077 0384 6900     		.ascii	"i\000"
  2078 0386 01       		.byte	0x1
- 2079 0387 EC01     		.2byte	0x1ec
+ 2079 0387 E501     		.2byte	0x1e5
  2080 0389 68000000 		.4byte	0x68
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 47
-
-
  2081 038d 02       		.uleb128 0x2
  2082 038e 91       		.byte	0x91
  2083 038f 74       		.sleb128 -12
@@ -2768,7 +2758,10 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2085 0391 1E       		.uleb128 0x1e
  2086 0392 9C000000 		.4byte	.LASF50
  2087 0396 01       		.byte	0x1
- 2088 0397 F501     		.2byte	0x1f5
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 47
+
+
+ 2088 0397 EE01     		.2byte	0x1ee
  2089 0399 A7030000 		.4byte	0x3a7
  2090 039d 00000000 		.4byte	.LFB77
  2091 03a1 60000000 		.4byte	.LFE77-.LFB77
@@ -2818,9 +2811,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2135 0402 21       		.uleb128 0x21
  2136 0403 82030000 		.4byte	.LASF55
  2137 0407 01       		.byte	0x1
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 48
-
-
  2138 0408 20       		.byte	0x20
  2139 0409 B0010000 		.4byte	0x1b0
  2140 040d 05       		.uleb128 0x5
@@ -2828,6 +2818,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2142 040f 00000000 		.4byte	rxChar
  2143 0413 21       		.uleb128 0x21
  2144 0414 9D020000 		.4byte	.LASF56
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 48
+
+
  2145 0418 01       		.byte	0x1
  2146 0419 21       		.byte	0x21
  2147 041a 68000000 		.4byte	0x68
@@ -2878,9 +2871,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2192 047a 60030000 		.4byte	.LASF62
  2193 047e 01       		.byte	0x1
  2194 047f 22       		.byte	0x22
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 49
-
-
  2195 0480 68000000 		.4byte	0x68
  2196 0484 05       		.uleb128 0x5
  2197 0485 03       		.byte	0x3
@@ -2888,6 +2878,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2199 048a 21       		.uleb128 0x21
  2200 048b D1030000 		.4byte	.LASF63
  2201 048f 01       		.byte	0x1
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 49
+
+
  2202 0490 22       		.byte	0x22
  2203 0491 68000000 		.4byte	0x68
  2204 0495 05       		.uleb128 0x5
@@ -2938,9 +2931,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2249 04f5 01       		.byte	0x1
  2250 04f6 24       		.byte	0x24
  2251 04f7 D5000000 		.4byte	0xd5
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 50
-
-
  2252 04fb 05       		.uleb128 0x5
  2253 04fc 03       		.byte	0x3
  2254 04fd 00000000 		.4byte	networkState
@@ -2948,6 +2938,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2256 0502 B2000000 		.4byte	.LASF70
  2257 0506 01       		.byte	0x1
  2258 0507 25       		.byte	0x25
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 50
+
+
  2259 0508 F4000000 		.4byte	0xf4
  2260 050c 05       		.uleb128 0x5
  2261 050d 03       		.byte	0x3
@@ -2998,9 +2991,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2306 0020 00       		.byte	0
  2307 0021 03       		.uleb128 0x3
  2308 0022 0E       		.uleb128 0xe
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 51
-
-
  2309 0023 3A       		.uleb128 0x3a
  2310 0024 0B       		.uleb128 0xb
  2311 0025 3B       		.uleb128 0x3b
@@ -3008,6 +2998,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2313 0027 49       		.uleb128 0x49
  2314 0028 13       		.uleb128 0x13
  2315 0029 00       		.byte	0
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 51
+
+
  2316 002a 00       		.byte	0
  2317 002b 04       		.uleb128 0x4
  2318 002c 24       		.uleb128 0x24
@@ -3058,9 +3051,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2363 0059 0B       		.uleb128 0xb
  2364 005a 3A       		.uleb128 0x3a
  2365 005b 0B       		.uleb128 0xb
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 52
-
-
  2366 005c 3B       		.uleb128 0x3b
  2367 005d 0B       		.uleb128 0xb
  2368 005e 01       		.uleb128 0x1
@@ -3068,6 +3058,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2370 0060 00       		.byte	0
  2371 0061 00       		.byte	0
  2372 0062 09       		.uleb128 0x9
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 52
+
+
  2373 0063 28       		.uleb128 0x28
  2374 0064 00       		.byte	0
  2375 0065 03       		.uleb128 0x3
@@ -3118,9 +3111,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2420 0093 2E       		.uleb128 0x2e
  2421 0094 00       		.byte	0
  2422 0095 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 53
-
-
  2423 0096 19       		.uleb128 0x19
  2424 0097 03       		.uleb128 0x3
  2425 0098 0E       		.uleb128 0xe
@@ -3128,6 +3118,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2427 009a 0B       		.uleb128 0xb
  2428 009b 3B       		.uleb128 0x3b
  2429 009c 0B       		.uleb128 0xb
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 53
+
+
  2430 009d 27       		.uleb128 0x27
  2431 009e 19       		.uleb128 0x19
  2432 009f 11       		.uleb128 0x11
@@ -3178,9 +3171,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2477 00ce 13       		.uleb128 0x13
  2478 00cf 02       		.uleb128 0x2
  2479 00d0 18       		.uleb128 0x18
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 54
-
-
  2480 00d1 00       		.byte	0
  2481 00d2 00       		.byte	0
  2482 00d3 0F       		.uleb128 0xf
@@ -3188,6 +3178,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2484 00d5 00       		.byte	0
  2485 00d6 03       		.uleb128 0x3
  2486 00d7 0E       		.uleb128 0xe
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 54
+
+
  2487 00d8 3A       		.uleb128 0x3a
  2488 00d9 0B       		.uleb128 0xb
  2489 00da 3B       		.uleb128 0x3b
@@ -3238,9 +3231,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2534 0108 00       		.byte	0
  2535 0109 00       		.byte	0
  2536 010a 13       		.uleb128 0x13
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 55
-
-
  2537 010b 2E       		.uleb128 0x2e
  2538 010c 01       		.byte	0x1
  2539 010d 3F       		.uleb128 0x3f
@@ -3248,6 +3238,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2541 010f 03       		.uleb128 0x3
  2542 0110 0E       		.uleb128 0xe
  2543 0111 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 55
+
+
  2544 0112 0B       		.uleb128 0xb
  2545 0113 3B       		.uleb128 0x3b
  2546 0114 05       		.uleb128 0x5
@@ -3298,9 +3291,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2591 0142 16       		.uleb128 0x16
  2592 0143 2E       		.uleb128 0x2e
  2593 0144 01       		.byte	0x1
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 56
-
-
  2594 0145 3F       		.uleb128 0x3f
  2595 0146 19       		.uleb128 0x19
  2596 0147 03       		.uleb128 0x3
@@ -3308,6 +3298,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2598 0149 3A       		.uleb128 0x3a
  2599 014a 0B       		.uleb128 0xb
  2600 014b 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 56
+
+
  2601 014c 05       		.uleb128 0x5
  2602 014d 27       		.uleb128 0x27
  2603 014e 19       		.uleb128 0x19
@@ -3358,9 +3351,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2648 017c 9642     		.uleb128 0x2116
  2649 017e 19       		.uleb128 0x19
  2650 017f 01       		.uleb128 0x1
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 57
-
-
  2651 0180 13       		.uleb128 0x13
  2652 0181 00       		.byte	0
  2653 0182 00       		.byte	0
@@ -3368,6 +3358,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2655 0184 0B       		.uleb128 0xb
  2656 0185 01       		.byte	0x1
  2657 0186 11       		.uleb128 0x11
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 57
+
+
  2658 0187 01       		.uleb128 0x1
  2659 0188 12       		.uleb128 0x12
  2660 0189 06       		.uleb128 0x6
@@ -3418,9 +3411,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2705 01b8 01       		.uleb128 0x1
  2706 01b9 13       		.uleb128 0x13
  2707 01ba 00       		.byte	0
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 58
-
-
  2708 01bb 00       		.byte	0
  2709 01bc 1C       		.uleb128 0x1c
  2710 01bd 26       		.uleb128 0x26
@@ -3428,6 +3418,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2712 01bf 49       		.uleb128 0x49
  2713 01c0 13       		.uleb128 0x13
  2714 01c1 00       		.byte	0
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 58
+
+
  2715 01c2 00       		.byte	0
  2716 01c3 1D       		.uleb128 0x1d
  2717 01c4 2E       		.uleb128 0x2e
@@ -3478,9 +3471,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2762 01f3 1F       		.uleb128 0x1f
  2763 01f4 34       		.uleb128 0x34
  2764 01f5 00       		.byte	0
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 59
-
-
  2765 01f6 03       		.uleb128 0x3
  2766 01f7 0E       		.uleb128 0xe
  2767 01f8 3A       		.uleb128 0x3a
@@ -3488,6 +3478,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2769 01fa 3B       		.uleb128 0x3b
  2770 01fb 05       		.uleb128 0x5
  2771 01fc 49       		.uleb128 0x49
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 59
+
+
  2772 01fd 13       		.uleb128 0x13
  2773 01fe 3F       		.uleb128 0x3f
  2774 01ff 19       		.uleb128 0x19
@@ -3538,9 +3531,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2819 0024 1C000000 		.4byte	.LFE65-.LFB65
  2820 0028 00000000 		.4byte	.LFB66
  2821 002c 38000000 		.4byte	.LFE66-.LFB66
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 60
-
-
  2822 0030 00000000 		.4byte	.LFB67
  2823 0034 80020000 		.4byte	.LFE67-.LFB67
  2824 0038 00000000 		.4byte	.LFB68
@@ -3548,6 +3538,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2826 0040 00000000 		.4byte	.LFB69
  2827 0044 38000000 		.4byte	.LFE69-.LFB69
  2828 0048 00000000 		.4byte	.LFB70
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 60
+
+
  2829 004c C4010000 		.4byte	.LFE70-.LFB70
  2830 0050 00000000 		.4byte	.LFB71
  2831 0054 D8000000 		.4byte	.LFE71-.LFB71
@@ -3598,9 +3591,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2876 0070 00000000 		.4byte	.LFB77
  2877 0074 60000000 		.4byte	.LFE77
  2878 0078 00000000 		.4byte	0
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 61
-
-
  2879 007c 00000000 		.4byte	0
  2880              		.section	.debug_line,"",%progbits
  2881              	.Ldebug_line0:
@@ -3608,6 +3598,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2882      0200C001 
  2882      00000201 
  2882      FB0E0D00 
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 61
+
+
  2882      01010101 
  2883              	.LASF24:
  2884 0000 68656164 		.ascii	"header\000"
@@ -3658,9 +3651,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2902              	.LASF50:
  2903 009c 68656164 		.ascii	"headerCheck\000"
  2903      65724368 
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 62
-
-
  2903      65636B00 
  2904              	.LASF48:
  2905 00a8 73746F72 		.ascii	"storeChar\000"
@@ -3668,6 +3658,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2905      7200
  2906              	.LASF70:
  2907 00b2 63726353 		.ascii	"crcState\000"
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 62
+
+
  2907      74617465 
  2907      00
  2908              	.LASF23:
@@ -3718,9 +3711,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2931      6720756E 
  2931      7369676E 
  2931      65642069 
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 63
-
-
  2932              	.LASF64:
  2933 013a 54585F44 		.ascii	"TX_DESTINATION_ADDRESS\000"
  2933      45535449 
@@ -3728,6 +3718,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2933      4F4E5F41 
  2933      44445245 
  2934              	.LASF72:
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 63
+
+
  2935 0151 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
  2935      4320342E 
  2935      392E3320 
@@ -3778,9 +3771,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2951 0242 74696D65 		.ascii	"time_t\000"
  2951      5F7400
  2952              	.LASF41:
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 64
-
-
  2953 0249 696E6974 		.ascii	"initDiffManEncodedArray\000"
  2953      44696666 
  2953      4D616E45 
@@ -3788,6 +3778,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2953      65644172 
  2954              	.LASF0:
  2955 0261 7369676E 		.ascii	"signed char\000"
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 64
+
+
  2955      65642063 
  2955      68617200 
  2956              	.LASF36:
@@ -3838,9 +3831,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2977      69766564 
  2977      43686172 
  2977      00
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 65
-
-
  2978              	.LASF4:
  2979 02e8 6C6F6E67 		.ascii	"long int\000"
  2979      20696E74 
@@ -3848,6 +3838,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  2980              	.LASF32:
  2981 02f1 73747269 		.ascii	"stringPosition\000"
  2981      6E67506F 
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 65
+
+
  2981      73697469 
  2981      6F6E00
  2982              	.LASF10:
@@ -3898,9 +3891,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  3005      65636569 
  3005      76656444 
  3005      61746100 
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 66
-
-
  3006              	.LASF55:
  3007 0382 72784368 		.ascii	"rxChar\000"
  3007      617200
@@ -3908,6 +3898,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  3009 0389 52656365 		.ascii	"ReceiveTimerISR\000"
  3009      69766554 
  3009      696D6572 
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 66
+
+
  3009      49535200 
  3010              	.LASF39:
  3011 0399 62696E61 		.ascii	"binaryValueOfChar\000"
@@ -3958,9 +3951,6 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  3029      00
  3030              	.LASF38:
  3031 041b 70726576 		.ascii	"previousHalfBit\000"
-ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 67
-
-
  3031      696F7573 
  3031      48616C66 
  3031      42697400 
@@ -3968,6 +3958,9 @@ ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccPnpO6A.s 			page 1
  3033 042b 74696D65 		.ascii	"timerExpired\000"
  3033      72457870 
  3033      69726564 
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\cck6NJTm.s 			page 67
+
+
  3033      00
  3034              	.LASF67:
  3035 0438 706F7765 		.ascii	"powerOnEdge\000"
