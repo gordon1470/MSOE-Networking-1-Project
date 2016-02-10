@@ -6,6 +6,7 @@
 #define TX_SOURCE_ADDRESS 0
 #define RX_DESTINATION_ADDRESS 0//these 2 are supposed to be the same
 #define VERSION_NUMBER 1
+#define HEADER_POS 7
 
 
 #include <device.h>
@@ -81,8 +82,8 @@ CY_ISR(ReceiveTimerISR){
 int main()
 {
     char rx;
-    char lineString[100];
-    uint8 stringPosition = 0;
+    char lineString[108];
+    uint8 stringPosition = HEADER_POS;//after header
     timerExpired = false;
     dataTransmissionComplete = false;
 	
@@ -120,7 +121,7 @@ int main()
     /* Start USBFS Operation with 3V operation */
     USBUART_1_Start(0u, USBUART_1_3V_OPERATION);
     
-    //start tranmission timer
+    //start transmission timer
     TimerISR_StartEx(TimerHandler);
 
     ReceiveTimerIRQ_StartEx(ReceiveTimerISR); 
@@ -128,7 +129,13 @@ int main()
     receivedDataCount = 0;
     receivedDataIndex = 0; 
    
-    
+    lineString[0] = 113;
+	lineString[1] = VERSION_NUMBER;
+	lineString[2] = TX_SOURCE_ADDRESS;
+	lineString[3] = TX_DESTINATION_ADDRESS;
+	lineString[5] = 0;
+	lineString[6] = 0x75;
+	
     /* Main Loop: */
     for(;;)
     {
@@ -216,13 +223,15 @@ int main()
                         break;
                     case 13://enter (carriage return)
                         initDiffManEncodedArray();
+						lineString[4] = stringPosition - 6;
                         stringToDiffMan(lineString, stringPosition);
                         while(USBUART_1_CDCIsReady() == 0u);
                         USBUART_1_PutCRLF();
                         
                         //keep looping until data is transmitted
-                        while(!dataTransmissionComplete){
-							//encodeHeader();//encode the header here before tx, so we can check length and such
+						
+                        while(!dataTransmissionComplete){//header is mostly encoded already, just need to put in message length
+							
                             transmitData();
                             setNetworkStateOnLEDs();
                         }
@@ -230,7 +239,7 @@ int main()
                         TX_pin_Write(1);    //set line to logic-1 after transmission
                         //reset index
                         halfBitIndex = 0;
-                        stringPosition = 0; 
+                        stringPosition = HEADER_POS; 
                         break;
                     case 27://escape
                         break;
@@ -367,8 +376,6 @@ void transmitData(){
                
                 //Back-off a random time between 0 and 0.8 seconds
                 CyDelay(value);
-                //LCD_Position(0,0);      
-               /// LCD_PrintNumber(value); TODO remove
                 break;
             }
         }
@@ -478,9 +485,10 @@ void storeChar(){
 
 //Grabs all chars and prints to LCD
 void printChar(){
-	int i = 8;//char position after array
+	int i = 7;//char position after array
     for(i; i < messageLength; i++){//we are assuming messageLength from the header is valid and corresponds to currentRXCharPosition
 		LCD_PutChar(rxChar[i]); 
+		//TODO: implement USB transmit
     }
 }
 
@@ -489,11 +497,11 @@ void printChar(){
 bool headerCheck(){
 	//nested if loops are probably the easiest way to check
 	if(rxChar[0] == 0x71){
-		if(rxChar[3] == 0x00 || rxChar[3] == DESTINATION_ADDRESS){
+		if(rxChar[3] == 0x00 || rxChar[3] == RX_DESTINATION_ADDRESS){
 			//this is as valid as we go (CRC is optional)
-			messageLength = rxChar[5];
-			crcState = rxChar[6];
-			headerCRC = rxChar[7];
+			messageLength = rxChar[4];
+			crcState = rxChar[5];
+			headerCRC = rxChar[6];
 			return true;
 		}
 	}
