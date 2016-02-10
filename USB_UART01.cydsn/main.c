@@ -129,10 +129,11 @@ int main()
     receivedDataCount = 0;
     receivedDataIndex = 0; 
    
-    lineString[0] = 113;
+    lineString[0] = 0x71;
 	lineString[1] = VERSION_NUMBER;
 	lineString[2] = TX_SOURCE_ADDRESS;
 	lineString[3] = TX_DESTINATION_ADDRESS;
+    lineString[4] = 0; 
 	lineString[5] = 0;
 	lineString[6] = 0x75;
 	
@@ -164,7 +165,9 @@ int main()
 					storeChar();
                     receivedChar = 0;       //Reset the char
                 }
-				if(headerCheck()){printChar();}
+				if(headerCheck()){
+                    printChar();
+                }
                //TODO remove
                 /*LCD_Position(0,0);
                 int i;
@@ -182,12 +185,13 @@ int main()
                 LCD_ClearDisplay();//TODO remove
                 receivedDataCount = 0;  //Reset count
                 receivedDataIndex = 0;  //Reset index
-                
+                currentRXCharPosition = 0;
             }
             else{
                 //Receive data did not start with the start bit
                 receivedDataCount = 0;
                 receivedDataIndex = 0; 
+                currentRXCharPosition = 0;
             }
         }
         else
@@ -478,15 +482,17 @@ void diffManToASCII()
 
 //stores char in receive array
 void storeChar(){
-	receivedChar &= ASCII_CHAR_MASK;
+    if(currentRXCharPosition > HEADER_POS){
+	    receivedChar &= ASCII_CHAR_MASK;
+    }
 	rxChar[currentRXCharPosition] = receivedChar;
 	currentRXCharPosition++;
 }
 
 //Grabs all chars and prints to LCD
 void printChar(){
-	int i = 7;//char position after array
-    for(i; i < messageLength; i++){//we are assuming messageLength from the header is valid and corresponds to currentRXCharPosition
+	int i;//char position after array
+    for(i = 7; i < messageLength; i++){//we are assuming messageLength from the header is valid and corresponds to currentRXCharPosition
 		LCD_PutChar(rxChar[i]); 
 		//TODO: implement USB transmit
     }
@@ -495,14 +501,16 @@ void printChar(){
 //checks received header and strips from array if valid
 //otherwise, disregard contents
 bool headerCheck(){
-	//nested if loops are probably the easiest way to check
+    //nested if loops are probably the easiest way to check
 	if(rxChar[0] == 0x71){
 		if(rxChar[3] == 0x00 || rxChar[3] == RX_DESTINATION_ADDRESS){
 			//this is as valid as we go (CRC is optional)
 			messageLength = rxChar[4];
+            LCD_PrintNumber(rxChar[4]); 
 			crcState = rxChar[5];
 			headerCRC = rxChar[6];
-			return true;
+            CyDelay(1000);
+			//return true;
 		}
 	}
 	return false;

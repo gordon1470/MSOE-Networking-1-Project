@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
   23:.\Generated_Source\PSoC5/Timer.c **** 
   24:.\Generated_Source\PSoC5/Timer.c **** #include "Timer.h"
   25:.\Generated_Source\PSoC5/Timer.c **** 
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 2
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 2
 
 
   26:.\Generated_Source\PSoC5/Timer.c **** uint8 Timer_initVar = 0u;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
   68:.\Generated_Source\PSoC5/Timer.c **** 
   69:.\Generated_Source\PSoC5/Timer.c ****         #if (Timer_RunModeUsed == 2)
   70:.\Generated_Source\PSoC5/Timer.c ****             #if (CY_PSOC5A)
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 3
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 3
 
 
   71:.\Generated_Source\PSoC5/Timer.c ****                 /* Set last 2 bits of control2 register if one shot(halt on
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
   50 0012 FFF7FEFF 		bl	Timer_WriteCounter
  120:.\Generated_Source\PSoC5/Timer.c **** 
  121:.\Generated_Source\PSoC5/Timer.c ****     #if (Timer_UsingHWCaptureCounter)/* Capture counter is enabled */
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 4
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 4
 
 
  122:.\Generated_Source\PSoC5/Timer.c ****         Timer_CAPTURE_COUNT_CTRL |= Timer_CNTR_ENABLE;
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
   67              		.loc 1 159 0
   68 0036 FFF7FEFF 		bl	Timer_ClearFIFO
  160:.\Generated_Source\PSoC5/Timer.c ****     #endif /* Configure additional features of UDB implementation */
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 5
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 5
 
 
  161:.\Generated_Source\PSoC5/Timer.c **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  102 0002 00AF     		add	r7, sp, #0
  103              		.cfi_def_cfa_register 7
  182:.\Generated_Source\PSoC5/Timer.c ****     /* Globally Enable the Fixed Function Block chosen */
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 6
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 6
 
 
  183:.\Generated_Source\PSoC5/Timer.c ****     #if (Timer_UsingFixedFunction)
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  206:.\Generated_Source\PSoC5/Timer.c **** *
  207:.\Generated_Source\PSoC5/Timer.c **** * Return:
  208:.\Generated_Source\PSoC5/Timer.c **** *  void
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 7
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 7
 
 
  209:.\Generated_Source\PSoC5/Timer.c **** *
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  171              		.thumb
  172              		.thumb_func
  173              		.type	Timer_Stop, %function
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 8
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 8
 
 
  174              	Timer_Stop:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  195 0014 BD46     		mov	sp, r7
  196              		.cfi_def_cfa_register 13
  197              		@ sp needed
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 9
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 9
 
 
  198 0016 5DF8047B 		ldr	r7, [sp], #4
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  281:.\Generated_Source\PSoC5/Timer.c ****     Timer_STATUS_MASK = interruptMode;
  231              		.loc 1 281 0
  232 000a 044A     		ldr	r2, .L15
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 10
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 10
 
 
  233 000c FB79     		ldrb	r3, [r7, #7]
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  265 0000 80B4     		push	{r7}
  266              		.cfi_def_cfa_offset 4
  267              		.cfi_offset 7, -4
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 11
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 11
 
 
  268 0002 00AF     		add	r7, sp, #0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  330:.\Generated_Source\PSoC5/Timer.c **** *  Status register bits may be clear on read.
  331:.\Generated_Source\PSoC5/Timer.c **** *
  332:.\Generated_Source\PSoC5/Timer.c **** *******************************************************************************/
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 12
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 12
 
 
  333:.\Generated_Source\PSoC5/Timer.c **** uint8   Timer_ReadStatusRegister(void) 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  349:.\Generated_Source\PSoC5/Timer.c **** * Parameters:
  350:.\Generated_Source\PSoC5/Timer.c **** *  void
  351:.\Generated_Source\PSoC5/Timer.c **** *
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 13
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 13
 
 
  352:.\Generated_Source\PSoC5/Timer.c **** * Return:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  368:.\Generated_Source\PSoC5/Timer.c **** ********************************************************************************
  369:.\Generated_Source\PSoC5/Timer.c **** *
  370:.\Generated_Source\PSoC5/Timer.c **** * Summary:
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 14
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 14
 
 
  371:.\Generated_Source\PSoC5/Timer.c **** *  Sets the bit-field of the control register.
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  410              		.thumb
  411              		.thumb_func
  412              		.type	Timer_ReadPeriod, %function
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 15
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 15
 
 
  413              	Timer_ReadPeriod:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  441 0014 54680040 		.word	1073768532
  442              		.cfi_endproc
  443              	.LFE9:
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 16
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 16
 
 
  444              		.size	Timer_ReadPeriod, .-Timer_ReadPeriod
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  471              		.loc 1 439 0
  472 0010 0C37     		adds	r7, r7, #12
  473              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 17
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 17
 
 
  474 0012 BD46     		mov	sp, r7
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  506              		.loc 1 461 0
  507 0004 034B     		ldr	r3, .L40
  508 0006 1B88     		ldrh	r3, [r3]	@ movhi
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 18
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 18
 
 
  509 0008 9BB2     		uxth	r3, r3
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  543              		.cfi_def_cfa_offset 16
  544 0004 00AF     		add	r7, sp, #0
  545              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 19
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 19
 
 
  546 0006 0346     		mov	r3, r0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  505:.\Generated_Source\PSoC5/Timer.c **** *  Present compare value.
  506:.\Generated_Source\PSoC5/Timer.c **** *
  507:.\Generated_Source\PSoC5/Timer.c **** *******************************************************************************/
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 20
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 20
 
 
  508:.\Generated_Source\PSoC5/Timer.c **** uint16 Timer_ReadCounter(void) 
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  613              		.global	Timer_ClearFIFO
  614              		.thumb
  615              		.thumb_func
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 21
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 21
 
 
  616              		.type	Timer_ClearFIFO, %function
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  577:.\Generated_Source\PSoC5/Timer.c ****         Timer_CONTROL |= captureMode;
  578:.\Generated_Source\PSoC5/Timer.c ****     #endif /* (!Timer_UDB_CONTROL_REG_REMOVED) */
  579:.\Generated_Source\PSoC5/Timer.c **** }
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 22
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 22
 
 
  580:.\Generated_Source\PSoC5/Timer.c **** #endif /* Remove API if Capture Mode is not Software Controlled */
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  634:.\Generated_Source\PSoC5/Timer.c **** * Return:
  635:.\Generated_Source\PSoC5/Timer.c **** *  void
  636:.\Generated_Source\PSoC5/Timer.c **** *
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 23
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 23
 
 
  637:.\Generated_Source\PSoC5/Timer.c **** *******************************************************************************/
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  691:.\Generated_Source\PSoC5/Timer.c ****     interruptCount &= Timer_CTRL_INTCNT_MASK;
  692:.\Generated_Source\PSoC5/Timer.c **** 
  693:.\Generated_Source\PSoC5/Timer.c ****     #if (!Timer_UDB_CONTROL_REG_REMOVED)
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 24
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 24
 
 
  694:.\Generated_Source\PSoC5/Timer.c ****         /* Clear the Current Setting */
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  748:.\Generated_Source\PSoC5/Timer.c **** 
  749:.\Generated_Source\PSoC5/Timer.c **** /*******************************************************************************
  750:.\Generated_Source\PSoC5/Timer.c **** * Function Name: Timer_ClearFIFO
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 25
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 25
 
 
  751:.\Generated_Source\PSoC5/Timer.c **** ********************************************************************************
@@ -1498,20 +1498,20 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  653 0006 00000000 		.4byte	.Ldebug_abbrev0
  654 000a 04       		.byte	0x4
  655 000b 01       		.uleb128 0x1
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 26
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 26
 
 
  656 000c E9000000 		.4byte	.LASF36
  657 0010 01       		.byte	0x1
- 658 0011 4E020000 		.4byte	.LASF37
- 659 0015 8F010000 		.4byte	.LASF38
+ 658 0011 55020000 		.4byte	.LASF37
+ 659 0015 96010000 		.4byte	.LASF38
  660 0019 00000000 		.4byte	.Ldebug_ranges0+0
  661 001d 00000000 		.4byte	0
  662 0021 00000000 		.4byte	.Ldebug_line0
  663 0025 02       		.uleb128 0x2
  664 0026 01       		.byte	0x1
  665 0027 06       		.byte	0x6
- 666 0028 D2020000 		.4byte	.LASF0
+ 666 0028 D9020000 		.4byte	.LASF0
  667 002c 02       		.uleb128 0x2
  668 002d 01       		.byte	0x1
  669 002e 08       		.byte	0x8
@@ -1519,7 +1519,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  671 0033 02       		.uleb128 0x2
  672 0034 02       		.byte	0x2
  673 0035 05       		.byte	0x5
- 674 0036 6F020000 		.4byte	.LASF2
+ 674 0036 76020000 		.4byte	.LASF2
  675 003a 02       		.uleb128 0x2
  676 003b 02       		.byte	0x2
  677 003c 07       		.byte	0x7
@@ -1527,19 +1527,19 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  679 0041 02       		.uleb128 0x2
  680 0042 04       		.byte	0x4
  681 0043 05       		.byte	0x5
- 682 0044 B9020000 		.4byte	.LASF4
+ 682 0044 C0020000 		.4byte	.LASF4
  683 0048 02       		.uleb128 0x2
  684 0049 04       		.byte	0x4
  685 004a 07       		.byte	0x7
- 686 004b F3010000 		.4byte	.LASF5
+ 686 004b FA010000 		.4byte	.LASF5
  687 004f 02       		.uleb128 0x2
  688 0050 08       		.byte	0x8
  689 0051 05       		.byte	0x5
- 690 0052 32020000 		.4byte	.LASF6
+ 690 0052 39020000 		.4byte	.LASF6
  691 0056 02       		.uleb128 0x2
  692 0057 08       		.byte	0x8
  693 0058 07       		.byte	0x7
- 694 0059 12020000 		.4byte	.LASF7
+ 694 0059 19020000 		.4byte	.LASF7
  695 005d 03       		.uleb128 0x3
  696 005e 04       		.byte	0x4
  697 005f 05       		.byte	0x5
@@ -1547,18 +1547,18 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  699 0064 02       		.uleb128 0x2
  700 0065 04       		.byte	0x4
  701 0066 07       		.byte	0x7
- 702 0067 05020000 		.4byte	.LASF8
+ 702 0067 0C020000 		.4byte	.LASF8
  703 006b 04       		.uleb128 0x4
  704 006c C5000000 		.4byte	.LASF9
  705 0070 02       		.byte	0x2
  706 0071 C2       		.byte	0xc2
  707 0072 2C000000 		.4byte	0x2c
  708 0076 04       		.uleb128 0x4
- 709 0077 C6010000 		.4byte	.LASF10
+ 709 0077 8F010000 		.4byte	.LASF10
  710 007b 02       		.byte	0x2
  711 007c C3       		.byte	0xc3
  712 007d 3A000000 		.4byte	0x3a
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 27
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 27
 
 
  713 0081 02       		.uleb128 0x2
@@ -1572,7 +1572,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  721 008f 02       		.uleb128 0x2
  722 0090 01       		.byte	0x1
  723 0091 08       		.byte	0x8
- 724 0092 C2020000 		.4byte	.LASF13
+ 724 0092 C9020000 		.4byte	.LASF13
  725 0096 05       		.uleb128 0x5
  726 0097 A9000000 		.4byte	.LASF14
  727 009b 02       		.byte	0x2
@@ -1590,9 +1590,9 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  739 00b8 02       		.uleb128 0x2
  740 00b9 04       		.byte	0x4
  741 00ba 07       		.byte	0x7
- 742 00bb 29020000 		.4byte	.LASF16
+ 742 00bb 30020000 		.4byte	.LASF16
  743 00bf 07       		.uleb128 0x7
- 744 00c0 C7020000 		.4byte	.LASF20
+ 744 00c0 CE020000 		.4byte	.LASF20
  745 00c4 01       		.byte	0x1
  746 00c5 2B       		.byte	0x2b
  747 00c6 00000000 		.4byte	.LFB0
@@ -1610,7 +1610,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  759 00e1 77       		.sleb128 -9
  760 00e2 00       		.byte	0
  761 00e3 09       		.uleb128 0x9
- 762 00e4 EC020000 		.4byte	.LASF17
+ 762 00e4 F3020000 		.4byte	.LASF17
  763 00e8 01       		.byte	0x1
  764 00e9 B4       		.byte	0xb4
  765 00ea 00000000 		.4byte	.LFB1
@@ -1618,10 +1618,10 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  767 00f2 01       		.uleb128 0x1
  768 00f3 9C       		.byte	0x9c
  769 00f4 0A       		.uleb128 0xa
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 28
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 28
 
 
- 770 00f5 E7010000 		.4byte	.LASF18
+ 770 00f5 EE010000 		.4byte	.LASF18
  771 00f9 01       		.byte	0x1
  772 00fa D7       		.byte	0xd7
  773 00fb 00000000 		.4byte	.LFB2
@@ -1646,7 +1646,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  792 0127 9C       		.byte	0x9c
  793 0128 3C010000 		.4byte	0x13c
  794 012c 0C       		.uleb128 0xc
- 795 012d 40020000 		.4byte	.LASF26
+ 795 012d 47020000 		.4byte	.LASF26
  796 0131 01       		.byte	0x1
  797 0132 1701     		.2byte	0x117
  798 0134 6B000000 		.4byte	0x6b
@@ -1672,19 +1672,19 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  818 0162 01       		.uleb128 0x1
  819 0163 9C       		.byte	0x9c
  820 0164 0E       		.uleb128 0xe
- 821 0165 CD010000 		.4byte	.LASF24
+ 821 0165 D4010000 		.4byte	.LASF24
  822 0169 01       		.byte	0x1
  823 016a 6401     		.2byte	0x164
  824 016c 6B000000 		.4byte	0x6b
  825 0170 00000000 		.4byte	.LFB7
  826 0174 18000000 		.4byte	.LFE7-.LFB7
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 29
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 29
 
 
  827 0178 01       		.uleb128 0x1
  828 0179 9C       		.byte	0x9c
  829 017a 0B       		.uleb128 0xb
- 830 017b 79020000 		.4byte	.LASF25
+ 830 017b 80020000 		.4byte	.LASF25
  831 017f 01       		.byte	0x1
  832 0180 7B01     		.2byte	0x17b
  833 0182 00000000 		.4byte	.LFB8
@@ -1729,7 +1729,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  872 01da 76       		.sleb128 -10
  873 01db 00       		.byte	0
  874 01dc 0E       		.uleb128 0xe
- 875 01dd 94020000 		.4byte	.LASF31
+ 875 01dd 9B020000 		.4byte	.LASF31
  876 01e1 01       		.byte	0x1
  877 01e2 C801     		.2byte	0x1c8
  878 01e4 76000000 		.4byte	0x76
@@ -1738,10 +1738,10 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  881 01f0 01       		.uleb128 0x1
  882 01f1 9C       		.byte	0x9c
  883 01f2 0B       		.uleb128 0xb
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 30
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 30
 
 
- 884 01f3 A6020000 		.4byte	.LASF32
+ 884 01f3 AD020000 		.4byte	.LASF32
  885 01f7 01       		.byte	0x1
  886 01f8 E001     		.2byte	0x1e0
  887 01fa 00000000 		.4byte	.LFB12
@@ -1776,7 +1776,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  916 023e 01       		.uleb128 0x1
  917 023f 9C       		.byte	0x9c
  918 0240 10       		.uleb128 0x10
- 919 0241 DE020000 		.4byte	.LASF40
+ 919 0241 E5020000 		.4byte	.LASF40
  920 0245 01       		.byte	0x1
  921 0246 1A       		.byte	0x1a
  922 0247 6B000000 		.4byte	0x6b
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  938 0009 1B       		.uleb128 0x1b
  939 000a 0E       		.uleb128 0xe
  940 000b 55       		.uleb128 0x55
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 31
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 31
 
 
  941 000c 17       		.uleb128 0x17
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  995 0042 00       		.byte	0
  996 0043 06       		.uleb128 0x6
  997 0044 35       		.uleb128 0x35
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 32
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 32
 
 
  998 0045 00       		.byte	0
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  1052 007c 3B       		.uleb128 0x3b
  1053 007d 0B       		.uleb128 0xb
  1054 007e 27       		.uleb128 0x27
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 33
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 33
 
 
  1055 007f 19       		.uleb128 0x19
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  1109 00b8 19       		.uleb128 0x19
  1110 00b9 01       		.uleb128 0x1
  1111 00ba 13       		.uleb128 0x13
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 34
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 34
 
 
  1112 00bb 00       		.byte	0
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  1166 00f2 13       		.uleb128 0x13
  1167 00f3 11       		.uleb128 0x11
  1168 00f4 01       		.uleb128 0x1
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 35
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 35
 
 
  1169 00f5 12       		.uleb128 0x12
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  1223 000b 00       		.byte	0
  1224 000c 0000     		.2byte	0
  1225 000e 0000     		.2byte	0
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 36
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 36
 
 
  1226 0010 00000000 		.4byte	.LFB0
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  1280 0050 00000000 		.4byte	.LFB10
  1281 0054 20000000 		.4byte	.LFE10
  1282 0058 00000000 		.4byte	.LFB11
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 37
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 37
 
 
  1283 005c 18000000 		.4byte	.LFE11
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  1312      74657200 
  1313              	.LASF1:
  1314 0074 756E7369 		.ascii	"unsigned char\000"
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 38
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 38
 
 
  1314      676E6564 
@@ -2278,119 +2278,121 @@ ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 1
  1334      6C6500
  1335              	.LASF28:
  1336 017e 54696D65 		.ascii	"Timer_ReadPeriod\000"
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 39
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 39
 
 
  1336      725F5265 
  1336      61645065 
  1336      72696F64 
  1336      00
- 1337              	.LASF38:
- 1338 018f 443A5C4D 		.ascii	"D:\\MyDocs\\Documents\\CE4950\\USB_UART01\\USB_UART"
- 1338      79446F63 
- 1338      735C446F 
- 1338      63756D65 
- 1338      6E74735C 
- 1339 01bd 30312E63 		.ascii	"01.cydsn\000"
- 1339      7964736E 
- 1339      00
- 1340              	.LASF10:
- 1341 01c6 75696E74 		.ascii	"uint16\000"
- 1341      313600
+ 1337              	.LASF10:
+ 1338 018f 75696E74 		.ascii	"uint16\000"
+ 1338      313600
+ 1339              	.LASF38:
+ 1340 0196 5C5C4D61 		.ascii	"\\\\Mac\\Home\\Documents\\PSoC Creator\\USB_UART01\\"
+ 1340      635C486F 
+ 1340      6D655C44 
+ 1340      6F63756D 
+ 1340      656E7473 
+ 1341 01c3 5553425F 		.ascii	"USB_UART01.cydsn\000"
+ 1341      55415254 
+ 1341      30312E63 
+ 1341      7964736E 
+ 1341      00
  1342              	.LASF24:
- 1343 01cd 54696D65 		.ascii	"Timer_ReadControlRegister\000"
+ 1343 01d4 54696D65 		.ascii	"Timer_ReadControlRegister\000"
  1343      725F5265 
  1343      6164436F 
  1343      6E74726F 
  1343      6C526567 
  1344              	.LASF18:
- 1345 01e7 54696D65 		.ascii	"Timer_Start\000"
+ 1345 01ee 54696D65 		.ascii	"Timer_Start\000"
  1345      725F5374 
  1345      61727400 
  1346              	.LASF5:
- 1347 01f3 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1347 01fa 6C6F6E67 		.ascii	"long unsigned int\000"
  1347      20756E73 
  1347      69676E65 
  1347      6420696E 
  1347      7400
  1348              	.LASF8:
- 1349 0205 756E7369 		.ascii	"unsigned int\000"
+ 1349 020c 756E7369 		.ascii	"unsigned int\000"
  1349      676E6564 
  1349      20696E74 
  1349      00
  1350              	.LASF7:
- 1351 0212 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1351 0219 6C6F6E67 		.ascii	"long long unsigned int\000"
  1351      206C6F6E 
  1351      6720756E 
  1351      7369676E 
  1351      65642069 
  1352              	.LASF16:
- 1353 0229 73697A65 		.ascii	"sizetype\000"
+ 1353 0230 73697A65 		.ascii	"sizetype\000"
  1353      74797065 
  1353      00
  1354              	.LASF6:
- 1355 0232 6C6F6E67 		.ascii	"long long int\000"
+ 1355 0239 6C6F6E67 		.ascii	"long long int\000"
  1355      206C6F6E 
  1355      6720696E 
  1355      7400
  1356              	.LASF26:
- 1357 0240 696E7465 		.ascii	"interruptMode\000"
+ 1357 0247 696E7465 		.ascii	"interruptMode\000"
  1357      72727570 
+ARM GAS  C:\Users\gordon\AppData\Local\Temp\ccuWnomp.s 			page 40
+
+
  1357      744D6F64 
  1357      6500
-ARM GAS  C:\Users\mrowiecn\AppData\Local\Temp\ccWDITFO.s 			page 40
-
-
  1358              	.LASF37:
- 1359 024e 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Timer.c\000"
+ 1359 0255 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Timer.c\000"
  1359      6E657261 
  1359      7465645F 
  1359      536F7572 
  1359      63655C50 
  1360              	.LASF2:
- 1361 026f 73686F72 		.ascii	"short int\000"
+ 1361 0276 73686F72 		.ascii	"short int\000"
  1361      7420696E 
  1361      7400
  1362              	.LASF25:
- 1363 0279 54696D65 		.ascii	"Timer_WriteControlRegister\000"
+ 1363 0280 54696D65 		.ascii	"Timer_WriteControlRegister\000"
  1363      725F5772 
  1363      69746543 
  1363      6F6E7472 
  1363      6F6C5265 
  1364              	.LASF31:
- 1365 0294 54696D65 		.ascii	"Timer_ReadCapture\000"
+ 1365 029b 54696D65 		.ascii	"Timer_ReadCapture\000"
  1365      725F5265 
  1365      61644361 
  1365      70747572 
  1365      6500
  1366              	.LASF32:
- 1367 02a6 54696D65 		.ascii	"Timer_WriteCounter\000"
+ 1367 02ad 54696D65 		.ascii	"Timer_WriteCounter\000"
  1367      725F5772 
  1367      69746543 
  1367      6F756E74 
  1367      657200
  1368              	.LASF4:
- 1369 02b9 6C6F6E67 		.ascii	"long int\000"
+ 1369 02c0 6C6F6E67 		.ascii	"long int\000"
  1369      20696E74 
  1369      00
  1370              	.LASF13:
- 1371 02c2 63686172 		.ascii	"char\000"
+ 1371 02c9 63686172 		.ascii	"char\000"
  1371      00
  1372              	.LASF20:
- 1373 02c7 54696D65 		.ascii	"Timer_Init\000"
+ 1373 02ce 54696D65 		.ascii	"Timer_Init\000"
  1373      725F496E 
  1373      697400
  1374              	.LASF0:
- 1375 02d2 7369676E 		.ascii	"signed char\000"
+ 1375 02d9 7369676E 		.ascii	"signed char\000"
  1375      65642063 
  1375      68617200 
  1376              	.LASF40:
- 1377 02de 54696D65 		.ascii	"Timer_initVar\000"
+ 1377 02e5 54696D65 		.ascii	"Timer_initVar\000"
  1377      725F696E 
  1377      69745661 
  1377      7200
  1378              	.LASF17:
- 1379 02ec 54696D65 		.ascii	"Timer_Enable\000"
+ 1379 02f3 54696D65 		.ascii	"Timer_Enable\000"
  1379      725F456E 
  1379      61626C65 
  1379      00
