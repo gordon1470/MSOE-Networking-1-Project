@@ -6,6 +6,7 @@ This file performs a transmit. No collision is detected.
 #define EIGHT_BITS 8
 #define START_BIT 2
 #define ASCII_CHAR_MASK 0x7F
+#define SOURCE_ADDRESS 0
 
 #include <device.h>
 #include <stdbool.h>
@@ -23,16 +24,14 @@ void setNetworkStateOnLEDs();
 void diffManToASCII();
 void printChar();
 
-int diffManEncodedData[800]; //TODO examine array size
-uint8 diffManReceivedData[100];//TODO examine array size
+int diffManEncodedData[864];
+uint8 diffManReceivedData[108];
 int receivedDataIndex, receivedDataCount;
-int halfBitIndex = 0, currentDataPos=0, lengthOfData;
-bool timerExpired, dataTransmissionComplete, powerOnEdge;
+int halfBitIndex = 0, currentDataPos = 0, lengthOfData, DESTINATION_ADDRESS = 0;
+bool timerExpired, dataTransmissionComplete, powerOnEdge, headerDetected;
 enum state {idle, busy, collision} networkState; 
 
-char receivedChar;//TODO remove the pointer
-
-int timerInterruptCount =0;//TODO remove
+char receivedChar;
 
 CY_ISR(Idle_Collision_ISR){ 
     networkState = idle; 
@@ -45,10 +44,10 @@ CY_ISR(Idle_Collision_ISR){
 }
 
 CY_ISR(Edge_detect_ISR){
-     //Note: onedge detect, will trigger receive timer to start (see TopDesign)
+    //Note: on edge detect, will trigger receive timer to start (see TopDesign)
     Idle_Collision_Timer_Start();
-    
-    //Ignore power on egde 
+	
+    //Ignore power on edge 
     if(!powerOnEdge){
         Receive_Timer_Start(); 
         diffManReceivedData[receivedDataCount] = Receive_Read();
@@ -72,21 +71,21 @@ CY_ISR(ReceiveTimerISR){
     diffManReceivedData[receivedDataCount] = diffManReceivedData[receivedDataCount-1];
     //or  diffManReceivedData[receivedDataCount] = Receive_Read();
     receivedDataCount++;
-    //timerInterruptCount++;//TODO remove
     Receive_Timer_STATUS;   //clear interrupt
 }
 
 int main()
 {
-
     char rx;
     char lineString[100];
     uint8 stringPosition = 0;
     timerExpired = false;
     dataTransmissionComplete = false;
+	
     powerOnEdge = true; //When the system powers up, it creates a rising edge. 
     //We want to ignore this edge on the rising edge.
-    
+	
+	headerDetected = false; 
     /*
     Get value from system clock and
     place in seconds variable.
@@ -123,7 +122,6 @@ int main()
     
     receivedDataCount = 0;
     receivedDataIndex = 0; 
-    timerInterruptCount = 0;//TODO remove
    
     
     /* Main Loop: */
@@ -151,6 +149,7 @@ int main()
 					//check first 8 bytes of ascii characters according to spec
 					//if valid, set valid flag
 					//otherwise discard contents
+					//if(recievedDataIndex == 16 && recievedChar == 'q')headerProcess();
                     printChar();
                     receivedChar = 0;       //Reset the char
                 }
@@ -218,6 +217,7 @@ int main()
                         
                         //keep looping until data is transmitted
                         while(!dataTransmissionComplete){
+							//encodeHeader();//encode the header here before tx, so we can check length and such
                             transmitData();
                             setNetworkStateOnLEDs();
                         }
