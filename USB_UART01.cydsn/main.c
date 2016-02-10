@@ -481,10 +481,8 @@ void diffManToASCII()
 }
 
 //stores char in receive array
-void storeChar(){
-    if(currentRXCharPosition > HEADER_POS){
-	    receivedChar &= ASCII_CHAR_MASK;
-    }
+void storeChar(){   
+	receivedChar &= ASCII_CHAR_MASK;
 	rxChar[currentRXCharPosition] = receivedChar;
 	currentRXCharPosition++;
 }
@@ -502,7 +500,7 @@ void printChar(){
 //otherwise, disregard contents
 bool headerCheck(){
     //nested if loops are probably the easiest way to check
-	if(rxChar[0] == 0x71){
+	if(rxChar[0] == 'q'){
 		if(rxChar[3] == 0x00 || rxChar[3] == RX_DESTINATION_ADDRESS){
 			//this is as valid as we go (CRC is optional)
 			messageLength = rxChar[4];
