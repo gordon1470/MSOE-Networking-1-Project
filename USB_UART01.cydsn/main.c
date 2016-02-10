@@ -1,12 +1,12 @@
-/*******************************************************************************
-This file performs a transmit. No collision is detected. 
-*******************************************************************************/
 #define INDEX_OF_MSB 6
 #define HIGH 1
 #define EIGHT_BITS 8
 #define START_BIT 2
 #define ASCII_CHAR_MASK 0x7F
-#define SOURCE_ADDRESS 0
+#define TX_SOURCE_ADDRESS 0
+#define RX_DESTINATION_ADDRESS 0//these 2 are supposed to be the same
+#define VERSION_NUMBER 1
+
 
 #include <device.h>
 #include <stdbool.h>
@@ -22,14 +22,18 @@ void asciiToDiffMan(char);
 void transmitData();
 void setNetworkStateOnLEDs();
 void diffManToASCII();
+void storeChar();
 void printChar();
+bool headerCheck();
 
 int diffManEncodedData[864];
 uint8 diffManReceivedData[108];
+char rxChar[108];
 int receivedDataIndex, receivedDataCount;
-int halfBitIndex = 0, currentDataPos = 0, lengthOfData, DESTINATION_ADDRESS = 0;
-bool timerExpired, dataTransmissionComplete, powerOnEdge, headerDetected;
-enum state {idle, busy, collision} networkState; 
+int halfBitIndex = 0, currentDataPos = 0, currentRXCharPosition = 0, lengthOfData, messageLength, headerCRC, TX_DESTINATION_ADDRESS = 0;
+bool timerExpired, dataTransmissionComplete, powerOnEdge, headerValid = false;
+enum state {idle, busy, collision} networkState;
+enum crc {none, header, message, both} crcState;
 
 char receivedChar;
 
@@ -82,10 +86,11 @@ int main()
     timerExpired = false;
     dataTransmissionComplete = false;
 	
+	messageLength = 0;
+	
     powerOnEdge = true; //When the system powers up, it creates a rising edge. 
     //We want to ignore this edge on the rising edge.
 	
-	headerDetected = false; 
     /*
     Get value from system clock and
     place in seconds variable.
@@ -149,10 +154,10 @@ int main()
 					//check first 8 bytes of ascii characters according to spec
 					//if valid, set valid flag
 					//otherwise discard contents
-					//if(recievedDataIndex == 16 && recievedChar == 'q')headerProcess();
-                    printChar();
+					storeChar();
                     receivedChar = 0;       //Reset the char
                 }
+				if(headerCheck()){printChar();}
                //TODO remove
                 /*LCD_Position(0,0);
                 int i;
@@ -464,11 +469,35 @@ void diffManToASCII()
     }//end for loop
 }
 
-//Formats char and prints to LCD
+//stores char in receive array
+void storeChar(){
+	receivedChar &= ASCII_CHAR_MASK;
+	rxChar[currentRXCharPosition] = receivedChar;
+	currentRXCharPosition++;
+}
+
+//Grabs all chars and prints to LCD
 void printChar(){
-    ///Remove leading 1 bit of char
-    receivedChar &= ASCII_CHAR_MASK; 
-    LCD_PutChar(receivedChar); 
+	int i = 8;//char position after array
+    for(i; i < messageLength; i++){//we are assuming messageLength from the header is valid and corresponds to currentRXCharPosition
+		LCD_PutChar(rxChar[i]); 
+    }
+}
+
+//checks received header and strips from array if valid
+//otherwise, disregard contents
+bool headerCheck(){
+	//nested if loops are probably the easiest way to check
+	if(rxChar[0] == 0x71){
+		if(rxChar[3] == 0x00 || rxChar[3] == DESTINATION_ADDRESS){
+			//this is as valid as we go (CRC is optional)
+			messageLength = rxChar[5];
+			crcState = rxChar[6];
+			headerCRC = rxChar[7];
+			return true;
+		}
+	}
+	return false;
 }
 
 /* [] END OF FILE */
