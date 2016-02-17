@@ -132,13 +132,13 @@ int main()
     receivedDataCount = 0;
     receivedDataIndex = 0;
 
-    lineString[0] = 0x71;
-	lineString[1] = VERSION_NUMBER;
-	lineString[2] = TX_SOURCE_ADDRESS;
-	lineString[3] = TX_DESTINATION_ADDRESS;
-    lineString[4] = 0;
-	lineString[5] = 0;
-	lineString[6] = 0x75;
+    headerInHex[0] = 0x71;
+	headerInHex[1] = VERSION_NUMBER;
+	headerInHex[2] = TX_SOURCE_ADDRESS;
+	headerInHex[3] = TX_DESTINATION_ADDRESS;
+    headerInHex[4] = 0;
+	headerInHex[5] = 0;
+	headerInHex[6] = 0x75;
 
     /* Main Loop: */
     for(;;)
