@@ -1,3 +1,7 @@
---------------- Rebuild Started: 01/30/2016 14:29:23 Project: main.c, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+--------------- Rebuild Started: 02/17/2016 09:42:34 Project: main.c, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Debug/main.lst -g -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\main.c -o .\ARM_GCC_493\Debug\main.o
---------------- Rebuild Succeeded: 01/30/2016 14:29:23 ---------------
+.\main.c: In function 'hexToDiffMan':
+.\main.c:269:18: warning: variable 'binaryValueOfChar' set but not used [-Wunused-but-set-variable]
+     unsigned int binaryValueOfChar[20];//index zero is LSB
+                  ^
+--------------- Rebuild Succeeded: 02/17/2016 09:42:36 ---------------

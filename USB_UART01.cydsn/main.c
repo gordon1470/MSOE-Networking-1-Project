@@ -1,4 +1,5 @@
-#define INDEX_OF_MSB 6
+#define INDEX_OF_MSB_ASCII 6
+#define INDEX_OF_MSB_HEX 6
 #define HIGH 1
 #define EIGHT_BITS 8
 #define START_BIT 2
@@ -266,11 +267,58 @@ Converts a hexadecimal value to a differental manchester line encoded version.
 Used for the header b/c does not added a leading 1 like asciiToDiffMan() method.
 */
 void hexToDiffMan(uint8 hexValue){
-    unsigned int binaryValueOfChar[20];//index zero is LSB
+    unsigned int binaryValueOfHex[20];//index zero is LSB
     int i;
     for (i = 0; i < 8; ++i){//todo test new value
-        binaryValueOfChar[i] = (hexValue >> i) & 1;
+        binaryValueOfHex[i] = (hexValue >> i) & 1;
     }
+    
+    //differential encode the 8 bits (from the binary version of the hexadecimal value)
+    //must start at the end of the array so to encode the MSB first
+    uint8 previousHalfBit = diffManEncodedData[halfBitIndex-1];
+    int j;
+    for(j=INDEX_OF_MSB;j>=0;j--)
+    {
+        if(binaryValueOfHex[j] == 1)
+        {
+            //bit == 1
+            if(previousHalfBit == 1)
+            {
+                diffManEncodedData[halfBitIndex] = 1;
+                halfBitIndex++;
+                diffManEncodedData[halfBitIndex] = 0;
+                halfBitIndex++;
+            }
+            else
+            {
+                diffManEncodedData[halfBitIndex] = 0;
+                halfBitIndex++;
+                diffManEncodedData[halfBitIndex] = 1;
+                halfBitIndex++;
+            }
+
+        }
+        else
+        {
+            //bit == 0
+            if(previousHalfBit == 1)
+            {
+                diffManEncodedData[halfBitIndex] = 0;
+                halfBitIndex++;
+                diffManEncodedData[halfBitIndex] = 1;
+                halfBitIndex++;
+            }
+            else
+            {
+                diffManEncodedData[halfBitIndex] = 1;
+                halfBitIndex++;
+                diffManEncodedData[halfBitIndex] = 0;
+                halfBitIndex++;
+            }
+        }
+
+        previousHalfBit = diffManEncodedData[halfBitIndex-1];
+    }//end for
 }
 
 /*
