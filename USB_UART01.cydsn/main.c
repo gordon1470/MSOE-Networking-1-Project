@@ -1,5 +1,6 @@
 #define INDEX_OF_MSB_ASCII 6
 #define INDEX_OF_MSB_HEX 7
+#define LENGTH_OF_HEADER 7
 #define HIGH 1
 #define EIGHT_BITS 8
 #define START_BIT 2
@@ -18,8 +19,9 @@
 
 int getRandomNumber();
 void initDiffManEncodedArray();
-void stringToDiffMan(char*, uint8);
+void headerToDiffMan(uint8 *);
 void hexToDiffMan(uint8);
+void stringToDiffMan(char*, uint8);
 void asciiToDiffMan(char);
 void transmitData();
 void setNetworkStateOnLEDs();
@@ -204,7 +206,8 @@ int main()
                         break;
                     case 13://enter (carriage return)
                         initDiffManEncodedArray();
-						headerInHex[4] = stringPosition;//set message length TODO maybe -1?
+						headerBytes[4] = stringPosition;//set message length TODO maybe -1?
+                        headerToDiffMan(headerBytes);
                         stringToDiffMan(lineString, stringPosition);
                         while(USBUART_1_CDCIsReady() == 0u);
                         USBUART_1_PutCRLF();
@@ -252,11 +255,11 @@ void initDiffManEncodedArray(){
 Enter key has been pressed, change the 7 header bytes into diff man data.
 Call from main. Requires main to access diffManEncodedData array
 */
-void headerToDiffMan(char *headerInHex, uint8 stringPosition){
+void headerToDiffMan(uint8 *headerBytes){
 
     unsigned int i = 0;
-    for(i = 0; i < stringPosition; i++){
-        asciiToDiffMan(lineString[i]);//use to be lineString[i]
+    for(i = 0; i < LENGTH_OF_HEADER; i++){
+        hexToDiffMan(headerBytes[i]);
     }
 }
 
@@ -266,13 +269,15 @@ Converts a hexadecimal value to a differental manchester line encoded version.
 Used for the header b/c does not added a leading 1 like asciiToDiffMan() method.
 */
 void hexToDiffMan(uint8 hexValue){
-    unsigned int binaryValueOfHex[20];//index zero is LSB
+    unsigned int binaryValueOfHex[8];//index zero is LSB
+    
+    //Coverts the hexadecimal value into binary
     int i;
-    for (i = 0; i < 8; ++i){//todo test new value
+    for (i = 0; i < 8; ++i){
         binaryValueOfHex[i] = (hexValue >> i) & 1;
     }
     
-    //differential encode the 8 bits (from the binary version of the hexadecimal value)
+    //Differential manchester encodes the 8 bits (the binary version of the hexadecimal value).
     //must start at the end of the array so to encode the MSB first
     uint8 previousHalfBit = diffManEncodedData[halfBitIndex-1];
     int j;
@@ -328,7 +333,7 @@ void stringToDiffMan(char *lineString, uint8 stringPosition){
 
     unsigned int i = 0;
     for(i = 0; i < stringPosition; i++){
-        asciiToDiffMan(lineString[i]);//use to be lineString[i]
+        asciiToDiffMan(lineString[i]);
     }
 }
 
