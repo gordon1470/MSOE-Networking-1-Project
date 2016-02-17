@@ -84,8 +84,8 @@ int main()
 {
     char rx;
     char lineString[108];
-    uint8 headerInHex[8];
-    uint8 stringPosition = HEADER_POS;//after header
+    uint8 headerBytes[8];
+    uint8 stringPosition = 0;//after header
     timerExpired = false;
     dataTransmissionComplete = false;
 
@@ -131,13 +131,13 @@ int main()
     receivedDataCount = 0;
     receivedDataIndex = 0;
 
-    headerInHex[0] = 0x71;  //Start of header
-	headerInHex[1] = VERSION_NUMBER;    //Always 1
-	headerInHex[2] = TX_SOURCE_ADDRESS; //Tells where messege is from
-	headerInHex[3] = TX_DESTINATION_ADDRESS;  //set by user  
-    headerInHex[4] = 0; //message length, will be set after message is entered
-	headerInHex[5] = 0; //CRC usage: 0 = CRC not being used
-	headerInHex[6] = 0x75;  //Header CRC
+    headerBytes[0] = 0x71;  //Start of header
+	headerBytes[1] = VERSION_NUMBER;    //Always 1
+	headerBytes[2] = TX_SOURCE_ADDRESS; //Tells where messege is from
+	headerBytes[3] = TX_DESTINATION_ADDRESS;  //set by user  
+    headerBytes[4] = 0; //message length, will be set after message is entered
+	headerBytes[5] = 0; //CRC usage: 0 = CRC not being used
+	headerBytes[6] = 0x75;  //Header CRC
 
     /* Main Loop: */
     for(;;)
@@ -204,7 +204,7 @@ int main()
                         break;
                     case 13://enter (carriage return)
                         initDiffManEncodedArray();
-						lineString[4] = stringPosition;//set size of string to 
+						headerInHex[4] = stringPosition;//set message length TODO maybe -1?
                         stringToDiffMan(lineString, stringPosition);
                         while(USBUART_1_CDCIsReady() == 0u);
                         USBUART_1_PutCRLF();
@@ -248,12 +248,11 @@ void initDiffManEncodedArray(){
     diffManEncodedData[halfBitIndex] = 1;
     halfBitIndex++;
 }
-
 /*
-Enter key has been pressed, change binary data into diff man data.
+Enter key has been pressed, change the 7 header bytes into diff man data.
 Call from main. Requires main to access diffManEncodedData array
 */
-void stringToDiffMan(char *lineString, uint8 stringPosition){
+void headerToDiffMan(char *headerInHex, uint8 stringPosition){
 
     unsigned int i = 0;
     for(i = 0; i < stringPosition; i++){
@@ -262,7 +261,7 @@ void stringToDiffMan(char *lineString, uint8 stringPosition){
 }
 
 /*
-Helper method. 
+Helper method. Call only from headerToDiffMan
 Converts a hexadecimal value to a differental manchester line encoded version. 
 Used for the header b/c does not added a leading 1 like asciiToDiffMan() method.
 */
@@ -322,7 +321,19 @@ void hexToDiffMan(uint8 hexValue){
 }//end hexToDiffMan function
 
 /*
-Helper method. Do not call from main.
+Enter key has been pressed, change binary data into diff man data.
+Call from main. Requires main to access diffManEncodedData array
+*/
+void stringToDiffMan(char *lineString, uint8 stringPosition){
+
+    unsigned int i = 0;
+    for(i = 0; i < stringPosition; i++){
+        asciiToDiffMan(lineString[i]);//use to be lineString[i]
+    }
+}
+
+/*
+Helper method. Call only from stringToDiffMan.
 Converts a ascii char to a differental manchester line encoded version. 
 Will add leading 1, so only use for characters, not the header.
 */
