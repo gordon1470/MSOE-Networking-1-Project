@@ -161,21 +161,7 @@ int main()
 				if(headerCheck()){
                     printChar();
                 }
-               //TODO remove
-                /*LCD_Position(0,0);
-                int i;
-                for(i=0; i<16;i++){
-                    LCD_PrintNumber(diffManReceivedData[i]);
-                }
-                LCD_Position(1,0);
 
-                for(i=16; i<32;i++){
-                    LCD_PrintNumber(diffManReceivedData[i]);
-                }*/
-                //end remove
-
-                CyDelay(1000);//TODO remove for testing only
-                LCD_ClearDisplay();//TODO remove
                 receivedDataCount = 0;  //Reset count
                 receivedDataIndex = 0;  //Reset index
                 currentRXCharPosition = 0;
