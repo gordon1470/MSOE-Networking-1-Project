@@ -29,7 +29,6 @@ void asciiToDiffMan(char);
 void transmitData();
 void setNetworkStateOnLEDs();
 void diffManToHex();
-void storeChar();
 void printChar();
 bool headerCheck(uint8 *);
 
@@ -182,10 +181,6 @@ int main()
             receivedDataIndex = 0;  //Reset index
             currentRXCharPosition = 0;
         }
-        else
-        {
-            //TODO prob remove this else
-        }
         /*End Receive*/
 
         if(USBUART_1_IsConfigurationChanged() != 0u) /* Host could send double SET_INTERFACE request */
@@ -204,8 +199,8 @@ int main()
                 switch(rx){
                     case 8://backspace
                         if(stringPosition>0){
-                            stringPosition--;
                             lineString[stringPosition] = '\0';
+                            stringPosition--;
                             //backspace space backspace
                             while(USBUART_1_CDCIsReady() == 0u);
                             USBUART_1_PutChar(8);
