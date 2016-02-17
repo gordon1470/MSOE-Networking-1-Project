@@ -1,6 +1,9 @@
 #define START_OF_HEADER 0x71
+#define HEADER_CRC 0x75
 #define TX_SOURCE_ADDRESS 0
-#define RX_DESTINATION_ADDRESS 0    //these 2 are supposed to be the same
+#define RX_DESTINATION_ADDRESS_0 0x40 
+#define RX_DESTINATION_ADDRESS_1 0x41
+#define RX_DESTINATION_ADDRESS_2 0x42
 #define INDEX_OF_MSB_ASCII 6
 #define INDEX_OF_MSB_HEX 7
 #define LENGTH_OF_HEADER 7
@@ -29,7 +32,7 @@ void setNetworkStateOnLEDs();
 void diffManToHex();
 void storeChar();
 void printChar();
-bool headerCheck();
+bool headerCheck(uint8 *);
 
 int diffManEncodedData[864];
 uint8 diffManReceivedData[108];
@@ -40,7 +43,7 @@ bool timerExpired, dataTransmissionComplete, powerOnEdge, headerValid = false;
 enum state {idle, busy, collision} networkState;
 enum crc {none, header, message, both} crcState;
 
-char receivedChar;
+char receivedHexValue;
 
 CY_ISR(Idle_Collision_ISR){
     networkState = idle;
@@ -140,7 +143,7 @@ int main()
 	headerBytes[3] = TX_DESTINATION_ADDRESS;  //set by user  
     headerBytes[4] = 0; //message length, will be set after message is entered
 	headerBytes[5] = 0; //CRC usage: 0 = CRC not being used
-	headerBytes[6] = 0x75;  //Header CRC
+	headerBytes[6] = HEADER_CRC;  //Header CRC
 
     /* Main Loop: */
     for(;;)
@@ -152,15 +155,16 @@ int main()
         if(networkState == idle && receivedDataCount >= 34){//TODO remove hardcode #
           
             //Decodes only the header of the received differential manchester encoded message
-            //Header contains 7 bytes
-            uint receivedHeaderBytes[LENGTH_OF_HEADER];
+            //Each of the 7 bytes of the header are stored in receivedHeaderBytes array
+            uint8 receivedHeaderBytes[LENGTH_OF_HEADER];
             int i;
             for(i = 0; i < LENGTH_OF_HEADER; i++){
                 diffManToHex();
-                storeHeaderByte(receivedHeaderBytes[i]);
+                receivedHeaderBytes[i] = receivedHexValue;
             }
             
-            bool headerValid = headerCheck();
+            //The received header must be check before continuing with the rest of the received message
+            bool headerValid = headerCheck(receivedHeaderBytes);
             if(headerValid){
                 //If header valid, decoded received message
             }
@@ -176,7 +180,7 @@ int main()
                 while(receivedDataIndex < receivedDataCount-1){     //Note: receivedDataCount-1 b/c gets one extra bit from Receive_Timer expiring
                     diffManToHex();
 					storeChar();
-                    receivedChar = 0;       //Reset the char
+                    receivedHexValue = 0;       //Reset the char
                 }
 				if(headerCheck()){
                     printChar();
@@ -531,32 +535,32 @@ void diffManToHex()
             //current half bit is 1
             if(previousHalfBit == 1)
             {
-                receivedChar |= (1 << (7 - i));
+                receivedHexValue |= (1 << (7 - i));
             }
             else
             {
-                receivedChar |= (0 << (7 - i));
+                receivedHexValue |= (0 << (7 - i));
             }
         }
         else{
             //current half bit is 0
             if(previousHalfBit == 1)
             {
-                receivedChar |= (0 << (7 - i));
+                receivedHexValue |= (0 << (7 - i));
             }
             else
             {
-                receivedChar |= (1 << (7 - i));
+                receivedHexValue |= (1 << (7 - i));
             }
         }
         receivedDataIndex += 2;
     }//end for loop
 }
 
-//stores char (receivedChar) in receive array
+//stores char (receivedHexValue) in receive array
 void storeChar(){
-	receivedChar &= ASCII_CHAR_MASK;
-	rxChar[currentRXCharPosition] = receivedChar;
+	receivedHexValue &= ASCII_CHAR_MASK;
+	rxChar[currentRXCharPosition] = receivedHexValue;
 	currentRXCharPosition++;
 }
 
@@ -569,17 +573,29 @@ void printChar(){
     }
 }
 
-//Checks received header 
-//
-bool headerCheck(){
-	if(rxChar[0] == START_OF_HEADER){
-		if(rxChar[3] == 0x00 || rxChar[3] == RX_DESTINATION_ADDRESS){
-			//this is as valid as we go (CRC is optional)
+/*
+Checks received header
+Header must contain the following 7 bytes:
+receivedHeaderBytes[0] = START_OF_HEADER -- Start of header, always 0x71
+receivedHeaderBytes[1] = VERSION_NUMBER -- Always 1
+receivedHeaderBytes[3] = RX_DESTINATION_ADDRESS 0 to 2 OR a value of 0 -- 
+                            This value can be 0 (which mean the message goes to all nodes),
+                            or must be one of the 3 receive node addresses
+
+Note:
+receivedHeaderBytes[2] is the TX_SOURCE_ADDRESS. Tells where messege is from.
+receivedHeaderBytes[4] is message length 
+receivedHeaderBytes[5] Tells that CRC in used, since optional, do not check
+receivedHeaderBytes[6] is HEADER_CRC, since CRC optional, do not check
+*/
+bool headerCheck(uint8 *receivedHeaderBytes){
+    //Check START_OF_HEADER and VERSION_NUMBER
+	if(receivedHeaderBytes[0]==START_OF_HEADER &&  receivedHeaderBytes[1]==VERSION_NUMBER){
+        //If valid, check that the destination address of the received message is valid
+        if(receivedHeaderBytes[3]==0 || receivedHeaderBytes[3]==RX_DESTINATION_ADDRESS_0
+            || receivedHeaderBytes[3]==RX_DESTINATION_ADDRESS_1 || receivedHeaderBytes[3]==RX_DESTINATION_ADDRESS_2){
 			messageLength = rxChar[4];
-            LCD_PrintNumber(rxChar[4]);
-			crcState = rxChar[5];
-			headerCRC = rxChar[6];
-            CyDelay(1000);
+            
 			return true;
 		}
 	}

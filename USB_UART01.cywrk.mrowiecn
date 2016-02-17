@@ -389,22 +389,22 @@
 <CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
 <indicators>
 <CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
-<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="81" DocumentName=".\USB_UART01.cydsn\main.c" />
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="84" DocumentName=".\USB_UART01.cydsn\main.c" />
 </CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
 <CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
-<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="224" DocumentName=".\USB_UART01.cydsn\main.c" />
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="228" DocumentName=".\USB_UART01.cydsn\main.c" />
 </CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
 <CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
-<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="86" DocumentName=".\USB_UART01.cydsn\main.c" />
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="89" DocumentName=".\USB_UART01.cydsn\main.c" />
 </CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
 <CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
-<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="194" DocumentName=".\USB_UART01.cydsn\main.c" />
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="198" DocumentName=".\USB_UART01.cydsn\main.c" />
 </CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
 <CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
-<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="550" DocumentName=".\USB_UART01.cydsn\main.c" />
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="554" DocumentName=".\USB_UART01.cydsn\main.c" />
 </CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
 <CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
-<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="646" DocumentName=".\USB_UART01.cydsn\main.c" />
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="662" DocumentName=".\USB_UART01.cydsn\main.c" />
 </CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
 </indicators>
 </CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
