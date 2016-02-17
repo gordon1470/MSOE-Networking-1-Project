@@ -19,6 +19,7 @@
 int getRandomNumber();
 void initDiffManEncodedArray();
 void stringToDiffMan(char*, uint8);
+void hexToDiffMan(uint8);
 void asciiToDiffMan(char);
 void transmitData();
 void setNetworkStateOnLEDs();
@@ -150,10 +151,6 @@ int main()
             if(diffManReceivedData[0] == 0 && diffManReceivedData[1] == 1){
                 receivedDataIndex = 2; //skip start bit (two half bits)
                 while(receivedDataIndex < receivedDataCount-1){     //Note: receivedDataCount-1 b/c gets one extra bit from Receive_Timer expiring
-                    //wait for 8 bits TODO bad comment
-                    //char receivedChar;     TODO move to global variable
-                    //char *charPtr = &receivedChar;
-
                     diffManToASCII();
 					storeChar();
                     receivedChar = 0;       //Reset the char
@@ -259,13 +256,27 @@ void stringToDiffMan(char *lineString, uint8 stringPosition){
 
     unsigned int i = 0;
     for(i = 0; i < stringPosition; i++){
-        asciiToDiffMan(*(lineString + i));//use to be lineString[i]
+        asciiToDiffMan(lineString[i]);//use to be lineString[i]
+    }
+}
+
+/*
+Helper method. 
+Converts a hexadecimal value to a differental manchester line encoded version. 
+Used for the header b/c does not added a leading 1 like asciiToDiffMan() method.
+*/
+void hexToDiffMan(uint8 hexValue){
+    unsigned int binaryValueOfChar[20];//index zero is LSB
+    int i;
+    for (i = 0; i < 8; ++i){//todo test new value
+        binaryValueOfChar[i] = (hexValue >> i) & 1;
     }
 }
 
 /*
 Helper method. Do not call from main.
-Converts a ascii char to a differental manchester line encoded version
+Converts a ascii char to a differental manchester line encoded version. 
+Will add leading 1, so only use for characters, not the header.
 */
 void asciiToDiffMan(char asciiChar)
 {
@@ -288,14 +299,12 @@ void asciiToDiffMan(char asciiChar)
     //convert asciil char to binary value (which will be 7 bits)
     unsigned int binaryValueOfChar[20];//index zero is LSB
     int i;
-    /*for(i=0; asciiChar>0; i++)
+    for(i=0; asciiChar>0; i++)
     {
         binaryValueOfChar[i]=asciiChar%2;
         asciiChar=asciiChar/2;
-    }*/
-    for (i = 0; i < 8; ++i){//todo test new value
-        binaryValueOfChar[i] = (asciiChar >> i) & 1;
     }
+    
     //differential encode the 7 bits (from the binary version of the char)
     //must start at the end of the array so to encode the MSB first
     int j;
@@ -426,8 +435,6 @@ int getRandomNumber()
 /*
 Helper method.
 Convert differental manchester line encoded byte to ascii char
-
-charPtr = pointer to char
 */
 void diffManToASCII()
 {
