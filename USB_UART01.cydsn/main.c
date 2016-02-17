@@ -27,7 +27,6 @@ void asciiToDiffMan(char);
 void transmitData();
 void setNetworkStateOnLEDs();
 void diffManToHex();
-void storeHeaderByte();
 void storeChar();
 void printChar();
 bool headerCheck();
@@ -151,9 +150,17 @@ int main()
         /*Receive*/
         //Precondidtion: must finished receiving data so channel state machine at idle and wait for a char
         if(networkState == idle && receivedDataCount >= 34){//TODO remove hardcode #
-            //Check header, header contains 7 bytes.
+          
+            //Decodes only the header of the received differential manchester encoded message
+            //Header contains 7 bytes
+            uint receivedHeaderBytes[LENGTH_OF_HEADER];
+            int i;
+            for(i = 0; i < LENGTH_OF_HEADER; i++){
+                diffManToHex();
+                storeHeaderByte(receivedHeaderBytes[i]);
+            }
             
-            
+            bool headerValid = headerCheck();
             if(headerValid){
                 //If header valid, decoded received message
             }
@@ -546,12 +553,6 @@ void diffManToHex()
     }//end for loop
 }
 
-/*
-Store the header byte into the receive header array
-*/
-void storeHeaderByte(){
-}
-
 //stores char (receivedChar) in receive array
 void storeChar(){
 	receivedChar &= ASCII_CHAR_MASK;
@@ -569,8 +570,8 @@ void printChar(){
 }
 
 //Checks received header 
+//
 bool headerCheck(){
-    //nested if loops are probably the easiest way to check
 	if(rxChar[0] == START_OF_HEADER){
 		if(rxChar[3] == 0x00 || rxChar[3] == RX_DESTINATION_ADDRESS){
 			//this is as valid as we go (CRC is optional)
@@ -579,7 +580,7 @@ bool headerCheck(){
 			crcState = rxChar[5];
 			headerCRC = rxChar[6];
             CyDelay(1000);
-			//return true;
+			return true;
 		}
 	}
 	return false;
