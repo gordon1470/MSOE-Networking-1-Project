@@ -220,6 +220,7 @@ int main()
 
                         while(!dataTransmissionComplete){
 
+                            hexToDiffMan(HEADER_CRC); //Add trailer
                             transmitData();
                             setNetworkStateOnLEDs();
                         }
@@ -441,7 +442,6 @@ void transmitData(){
                 break;
             }
         }
-        hexToDiffMan(HEADER_CRC); //Add trailer
         TX_pin_Write(diffManEncodedData[i]);
         Timer_Start();
         while(!timerExpired);
