@@ -2,7 +2,7 @@
 #define INDEX_OF_MSB_HEX 7
 #define LENGTH_OF_HEADER 7
 #define HIGH 1
-#define EIGHT_BITS 8
+#define LENGTH_OF_BYTE 8
 #define START_BIT 2
 #define ASCII_CHAR_MASK 0x7F
 #define TX_SOURCE_ADDRESS 0
@@ -25,7 +25,7 @@ void stringToDiffMan(char*, uint8);
 void asciiToDiffMan(char);
 void transmitData();
 void setNetworkStateOnLEDs();
-void diffManToASCII();
+void diffManToHex();
 void storeChar();
 void printChar();
 bool headerCheck();
@@ -498,12 +498,13 @@ int getRandomNumber()
 
 /*
 Helper method.
-Convert differental manchester line encoded byte to ascii char
+Convert differental manchester line encoded byte to hexadecimal value (which 
+includes header and ACSII chars)
 */
-void diffManToASCII()
+void diffManToHex()
 {
     int i;
-    for(i = 0; i < EIGHT_BITS; i++){
+    for(i = 0; i < LENGTH_OF_BYTE; i++){
         uint8 previousHalfBit = diffManReceivedData[receivedDataIndex-1];
         //send starting 1 bit (encoded)
         if(diffManReceivedData[receivedDataIndex] == 1){
