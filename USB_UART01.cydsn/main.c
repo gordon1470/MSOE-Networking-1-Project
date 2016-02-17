@@ -1,5 +1,5 @@
 #define INDEX_OF_MSB_ASCII 6
-#define INDEX_OF_MSB_HEX 6
+#define INDEX_OF_MSB_HEX 7
 #define HIGH 1
 #define EIGHT_BITS 8
 #define START_BIT 2
@@ -277,7 +277,7 @@ void hexToDiffMan(uint8 hexValue){
     //must start at the end of the array so to encode the MSB first
     uint8 previousHalfBit = diffManEncodedData[halfBitIndex-1];
     int j;
-    for(j=INDEX_OF_MSB;j>=0;j--)
+    for(j=INDEX_OF_MSB_HEX;j>=0;j--)
     {
         if(binaryValueOfHex[j] == 1)
         {
@@ -319,7 +319,7 @@ void hexToDiffMan(uint8 hexValue){
 
         previousHalfBit = diffManEncodedData[halfBitIndex-1];
     }//end for
-}
+}//end hexToDiffMan function
 
 /*
 Helper method. Do not call from main.
@@ -356,7 +356,7 @@ void asciiToDiffMan(char asciiChar)
     //differential encode the 7 bits (from the binary version of the char)
     //must start at the end of the array so to encode the MSB first
     int j;
-    for(j=INDEX_OF_MSB;j>=0;j--)
+    for(j=INDEX_OF_MSB_ASCII;j>=0;j--)
     {
         if(binaryValueOfChar[j] == 1)
         {
