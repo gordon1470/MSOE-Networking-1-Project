@@ -1,9 +1,8 @@
 #define START_OF_HEADER 0x71
 #define HEADER_CRC 0x75
-#define TX_SOURCE_ADDRESS 0
-#define RX_DESTINATION_ADDRESS_0 0x40 
-#define RX_DESTINATION_ADDRESS_1 0x41
-#define RX_DESTINATION_ADDRESS_2 0x42
+#define SOURCE_ADDRESS_0 0x40 
+#define SOURCE_ADDRESS_1 0x41
+#define SOURCE_ADDRESS_2 0x42
 #define INDEX_OF_MSB_ASCII 6
 #define INDEX_OF_MSB_HEX 7
 #define LENGTH_OF_HEADER 7
@@ -38,8 +37,8 @@ int diffManEncodedData[864];
 uint8 diffManReceivedData[108];
 char rxChar[108];
 int receivedDataIndex, receivedDataCount;
-int halfBitIndex = 0, currentDataPos = 0, currentRXCharPosition = 0, lengthOfData, messageLength, headerCRC, TX_DESTINATION_ADDRESS = 0;
-bool timerExpired, dataTransmissionComplete, powerOnEdge, headerValid = false;
+int halfBitIndex = 0, currentDataPos = 0, currentRXCharPosition = 0, lengthOfData, messageLength, TX_DESTINATION_ADDRESS = 0;
+bool timerExpired, dataTransmissionComplete, powerOnEdge;
 enum state {idle, busy, collision} networkState;
 enum crc {none, header, message, both} crcState;
 
@@ -139,8 +138,8 @@ int main()
 
     headerBytes[0] = START_OF_HEADER;  //Start of header, always 0x71
 	headerBytes[1] = VERSION_NUMBER;    //Always 1
-	headerBytes[2] = TX_SOURCE_ADDRESS; //Tells where messege is from
-	headerBytes[3] = TX_DESTINATION_ADDRESS;  //set by user  
+	headerBytes[2] = SOURCE_ADDRESS_0; //Tells receiver that message is sent from this device
+	headerBytes[3] = TX_DESTINATION_ADDRESS;  //set by user, tells where message is to be sent
     headerBytes[4] = 0; //message length, will be set after message is entered
 	headerBytes[5] = 0; //CRC usage: 0 = CRC not being used
 	headerBytes[6] = HEADER_CRC;  //Header CRC
@@ -578,28 +577,31 @@ Checks received header
 Header must contain the following 7 bytes:
 receivedHeaderBytes[0] = START_OF_HEADER -- Start of header, always 0x71
 receivedHeaderBytes[1] = VERSION_NUMBER -- Always 1
-receivedHeaderBytes[3] = RX_DESTINATION_ADDRESS 0 to 2 OR a value of 0 -- 
-                            This value can be 0 (which mean the message goes to all nodes),
-                            or must be one of the 3 receive node addresses
+receivedHeaderBytes[3] = Destination address of this device (SOURCE_ADDRESS 0 to 2) OR a value of 0 -- 
+                            This value can be 0 (which mean the recieve message goes to all nodes),
+                            or must be one of the 3 node addresses this deivce owns (SOURCE_ADDRESS_0 to SOURCE_ADDRESS_2). 
+                            See Table A.I.1 of CE4950 Interoperability Standards.
 
 Note:
-receivedHeaderBytes[2] is the TX_SOURCE_ADDRESS. Tells where messege is from.
+receivedHeaderBytes[2] is the receive source address. Tells where messege is from.
 receivedHeaderBytes[4] is message length 
 receivedHeaderBytes[5] Tells that CRC in used, since optional, do not check
 receivedHeaderBytes[6] is HEADER_CRC, since CRC optional, do not check
 */
-bool headerCheck(uint8 *receivedHeaderBytes){
+bool headerCheck(uint8 *receivedHeaderBytes)
+{
+    bool validHeader = false;
     //Check START_OF_HEADER and VERSION_NUMBER
-	if(receivedHeaderBytes[0]==START_OF_HEADER &&  receivedHeaderBytes[1]==VERSION_NUMBER){
+	if(receivedHeaderBytes[0]==START_OF_HEADER &&  receivedHeaderBytes[1]==VERSION_NUMBER)
+    {
         //If valid, check that the destination address of the received message is valid
-        if(receivedHeaderBytes[3]==0 || receivedHeaderBytes[3]==RX_DESTINATION_ADDRESS_0
-            || receivedHeaderBytes[3]==RX_DESTINATION_ADDRESS_1 || receivedHeaderBytes[3]==RX_DESTINATION_ADDRESS_2){
-			messageLength = rxChar[4];
-            
-			return true;
+        if(receivedHeaderBytes[3]==0 || receivedHeaderBytes[3]==SOURCE_ADDRESS_0
+          || receivedHeaderBytes[3]==SOURCE_ADDRESS_1 || receivedHeaderBytes[3]==SOURCE_ADDRESS_2)
+        {
+			validHeader = true;
 		}
 	}
-	return false;
+	return validHeader;
 }
 
 /* [] END OF FILE */
