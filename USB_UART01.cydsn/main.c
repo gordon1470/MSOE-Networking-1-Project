@@ -7,7 +7,6 @@
 #define TX_SOURCE_ADDRESS 0
 #define RX_DESTINATION_ADDRESS 0//these 2 are supposed to be the same
 #define VERSION_NUMBER 1
-#define HEADER_POS 7
 
 
 #include <device.h>
@@ -132,13 +131,13 @@ int main()
     receivedDataCount = 0;
     receivedDataIndex = 0;
 
-    headerInHex[0] = 0x71;
-	headerInHex[1] = VERSION_NUMBER;
-	headerInHex[2] = TX_SOURCE_ADDRESS;
-	headerInHex[3] = TX_DESTINATION_ADDRESS;
-    headerInHex[4] = 0;
-	headerInHex[5] = 0;
-	headerInHex[6] = 0x75;
+    headerInHex[0] = 0x71;  //Start of header
+	headerInHex[1] = VERSION_NUMBER;    //Always 1
+	headerInHex[2] = TX_SOURCE_ADDRESS; //Tells where messege is from
+	headerInHex[3] = TX_DESTINATION_ADDRESS;  //set by user  
+    headerInHex[4] = 0; //message length, will be set after message is entered
+	headerInHex[5] = 0; //CRC usage: 0 = CRC not being used
+	headerInHex[6] = 0x75;  //Header CRC
 
     /* Main Loop: */
     for(;;)
@@ -205,7 +204,7 @@ int main()
                         break;
                     case 13://enter (carriage return)
                         initDiffManEncodedArray();
-						lineString[4] = stringPosition - HEADER_POS;
+						lineString[4] = stringPosition;//set size of string to 
                         stringToDiffMan(lineString, stringPosition);
                         while(USBUART_1_CDCIsReady() == 0u);
                         USBUART_1_PutCRLF();
@@ -221,7 +220,7 @@ int main()
                         TX_pin_Write(1);    //set line to logic-1 after transmission
                         //reset index
                         halfBitIndex = 0;
-                        stringPosition = HEADER_POS;
+                        stringPosition = 0;
                         break;
                     case 27://escape
                         break;
