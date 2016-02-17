@@ -24,7 +24,7 @@ int getRandomNumber();
 void initDiffManEncodedArray();
 void headerToDiffMan(uint8 *);
 void hexToDiffMan(uint8);
-void stringToDiffMan(char*, uint8);
+void stringToDiffMan(char*, int);
 void asciiToDiffMan(char);
 void transmitData();
 void setNetworkStateOnLEDs();
@@ -89,7 +89,7 @@ int main()
     char rx;
     char lineString[108];
     uint8 headerBytes[8];
-    uint8 stringPosition = 0;//after header
+    int stringPosition = 0;//after header
     timerExpired = false;
     dataTransmissionComplete = false;
 
@@ -218,7 +218,7 @@ int main()
 
                         //keep looping until data is transmitted
 
-                        while(!dataTransmissionComplete){//header is mostly encoded already, just need to put in message length
+                        while(!dataTransmissionComplete){
 
                             transmitData();
                             setNetworkStateOnLEDs();
@@ -333,9 +333,9 @@ void hexToDiffMan(uint8 hexValue){
 Enter key has been pressed, change binary data into diff man data.
 Call from main. Requires main to access diffManEncodedData array
 */
-void stringToDiffMan(char *lineString, uint8 stringPosition){
+void stringToDiffMan(char *lineString, int stringPosition){
 
-    unsigned int i = 0;
+    int i;
     for(i = 0; i < stringPosition; i++){
         asciiToDiffMan(lineString[i]);
     }
@@ -441,11 +441,15 @@ void transmitData(){
                 break;
             }
         }
+        hexToDiffMan(HEADER_CRC); //Add trailer
         TX_pin_Write(diffManEncodedData[i]);
         Timer_Start();
         while(!timerExpired);
         timerExpired = false;
     }
+    
+    
+    
 
     //when finished transmitting diff manchester encoded data, set flag
     if(i == halfBitIndex){
