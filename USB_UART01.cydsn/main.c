@@ -1,3 +1,6 @@
+#define START_OF_HEADER 0x71
+#define TX_SOURCE_ADDRESS 0
+#define RX_DESTINATION_ADDRESS 0    //these 2 are supposed to be the same
 #define INDEX_OF_MSB_ASCII 6
 #define INDEX_OF_MSB_HEX 7
 #define LENGTH_OF_HEADER 7
@@ -5,8 +8,6 @@
 #define LENGTH_OF_BYTE 8
 #define START_BIT 2
 #define ASCII_CHAR_MASK 0x7F
-#define TX_SOURCE_ADDRESS 0
-#define RX_DESTINATION_ADDRESS 0//these 2 are supposed to be the same
 #define VERSION_NUMBER 1
 
 
@@ -26,6 +27,7 @@ void asciiToDiffMan(char);
 void transmitData();
 void setNetworkStateOnLEDs();
 void diffManToHex();
+void storeHeaderByte();
 void storeChar();
 void printChar();
 bool headerCheck();
@@ -133,7 +135,7 @@ int main()
     receivedDataCount = 0;
     receivedDataIndex = 0;
 
-    headerBytes[0] = 0x71;  //Start of header
+    headerBytes[0] = START_OF_HEADER;  //Start of header, always 0x71
 	headerBytes[1] = VERSION_NUMBER;    //Always 1
 	headerBytes[2] = TX_SOURCE_ADDRESS; //Tells where messege is from
 	headerBytes[3] = TX_DESTINATION_ADDRESS;  //set by user  
@@ -149,12 +151,23 @@ int main()
         /*Receive*/
         //Precondidtion: must finished receiving data so channel state machine at idle and wait for a char
         if(networkState == idle && receivedDataCount >= 34){//TODO remove hardcode #
-
+            //Check header, header contains 7 bytes.
+            
+            
+            if(headerValid){
+                //If header valid, decoded received message
+            }
+            else{
+                //If header not valid, disregard received message 
+            }
+            
+            
+            
             //Verify that have received start bit (01). Note: ignore first edge from turning system on
             if(diffManReceivedData[0] == 0 && diffManReceivedData[1] == 1){
                 receivedDataIndex = 2; //skip start bit (two half bits)
                 while(receivedDataIndex < receivedDataCount-1){     //Note: receivedDataCount-1 b/c gets one extra bit from Receive_Timer expiring
-                    diffManToASCII();
+                    diffManToHex();
 					storeChar();
                     receivedChar = 0;       //Reset the char
                 }
@@ -533,7 +546,13 @@ void diffManToHex()
     }//end for loop
 }
 
-//stores char in receive array
+/*
+Store the header byte into the receive header array
+*/
+void storeHeaderByte(){
+}
+
+//stores char (receivedChar) in receive array
 void storeChar(){
 	receivedChar &= ASCII_CHAR_MASK;
 	rxChar[currentRXCharPosition] = receivedChar;
@@ -549,11 +568,10 @@ void printChar(){
     }
 }
 
-//checks received header and strips from array if valid
-//otherwise, disregard contents
+//Checks received header 
 bool headerCheck(){
     //nested if loops are probably the easiest way to check
-	if(rxChar[0] == 'q'){
+	if(rxChar[0] == START_OF_HEADER){
 		if(rxChar[3] == 0x00 || rxChar[3] == RX_DESTINATION_ADDRESS){
 			//this is as valid as we go (CRC is optional)
 			messageLength = rxChar[4];
