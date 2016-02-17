@@ -96,7 +96,6 @@ d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/
 Allocating common symbols
 Common symbol       size              file
 
-lengthOfData        0x4               .\ARM_GCC_493\Debug\main.o
 errno               0x4               d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
 USBUART_1_ep0Mode   0x1               .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
 USBUART_1_cdc_data_out_ep
@@ -130,7 +129,6 @@ diffManReceivedData
 rxChar              0x6c              .\ARM_GCC_493\Debug\main.o
 USBUART_1_interfaceClass
                     0x4               .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
-messageLength       0x4               .\ARM_GCC_493\Debug\main.o
 USBUART_1_interfaceSetting
                     0x2               .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
 USBUART_1_currentTD
@@ -147,13 +145,12 @@ USBUART_1_transferByteCount
 USBUART_1_transferState
                     0x1               .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
 networkState        0x1               .\ARM_GCC_493\Debug\main.o
-receivedChar        0x1               .\ARM_GCC_493\Debug\main.o
 USBUART_1_device    0x1               .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
 dieTemperature      0x2               .\ARM_GCC_493\Debug\USB_UART01.a(CyFlash.o)
 USBUART_1_interfaceStatus
                     0x2               .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+receivedHexValue    0x1               .\ARM_GCC_493\Debug\main.o
 timerExpired        0x1               .\ARM_GCC_493\Debug\main.o
-headerCRC           0x4               .\ARM_GCC_493\Debug\main.o
 USBUART_1_deviceAddress
                     0x1               .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
 USBUART_1_lineChanged
@@ -259,12 +256,16 @@ Discarded input sections
                 0x00000000       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
  .text.LCD_Position
                 0x00000000       0x6c .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
+ .text.LCD_PrintString
+                0x00000000       0x38 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
  .text.LCD_PrintInt8
                 0x00000000       0x38 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
  .text.LCD_PrintInt16
                 0x00000000       0x28 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
  .text.LCD_PrintInt32
                 0x00000000       0x30 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
+ .text.LCD_PrintU32Number
+                0x00000000       0xa4 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
  .rodata        0x00000000       0x10 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
  .data          0x00000000        0x0 .\ARM_GCC_493\Debug\USB_UART01.a(CyBootAsmGnu.o)
  .bss           0x00000000        0x0 .\ARM_GCC_493\Debug\USB_UART01.a(CyBootAsmGnu.o)
@@ -799,7 +800,7 @@ END GROUP
                 0x00000040                CY_METADATA_SIZE = 0x40
                 0x00000000                CY_APPL_LOADABLE = 0x0
                 0x00000000                CY_CHECKSUM_EXCLUDE_SIZE = ALIGN (0x0, CY_FLASH_ROW_SIZE)
-                0x1fff9128                PROVIDE (__cy_heap_start, _end)
+                0x1fff9120                PROVIDE (__cy_heap_start, _end)
                 0x00000001                PROVIDE (__cy_region_num, ((__cy_regions_end - __cy_regions) / 0x10))
                 0x20008000                PROVIDE (__cy_stack, (ORIGIN (ram) + 0x10000))
                 0x20007800                PROVIDE (__cy_heap_end, (__cy_stack - 0x800))
@@ -814,7 +815,7 @@ END GROUP
                 0x00000800                ee_size = (CY_APPL_LOADABLE && ! (CY_EE_IN_BTLDR))?(CY_EE_SIZE / CY_APPL_MAX):CY_EE_SIZE
                 0x00000000                PROVIDE (CY_ECC_OFFSET, ecc_offset)
 
-.text           0x00000000     0x4b1c
+.text           0x00000000     0x4a24
  CREATE_OBJECT_SYMBOLS
                 0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
  *(.romvectors)
@@ -843,491 +844,481 @@ END GROUP
  .text.ReceiveTimerISR
                 0x00000120       0x38 .\ARM_GCC_493\Debug\main.o
                 0x00000120                ReceiveTimerISR
- .text.main     0x00000158      0x27c .\ARM_GCC_493\Debug\main.o
+ .text.main     0x00000158      0x2ac .\ARM_GCC_493\Debug\main.o
                 0x00000158                main
  .text.initDiffManEncodedArray
-                0x000003d4       0x48 .\ARM_GCC_493\Debug\main.o
-                0x000003d4                initDiffManEncodedArray
+                0x00000404       0x48 .\ARM_GCC_493\Debug\main.o
+                0x00000404                initDiffManEncodedArray
  .text.headerToDiffMan
-                0x0000041c       0x34 .\ARM_GCC_493\Debug\main.o
-                0x0000041c                headerToDiffMan
+                0x0000044c       0x34 .\ARM_GCC_493\Debug\main.o
+                0x0000044c                headerToDiffMan
  .text.hexToDiffMan
-                0x00000450      0x154 .\ARM_GCC_493\Debug\main.o
-                0x00000450                hexToDiffMan
+                0x00000480      0x154 .\ARM_GCC_493\Debug\main.o
+                0x00000480                hexToDiffMan
  .text.stringToDiffMan
-                0x000005a4       0x38 .\ARM_GCC_493\Debug\main.o
-                0x000005a4                stringToDiffMan
+                0x000005d4       0x38 .\ARM_GCC_493\Debug\main.o
+                0x000005d4                stringToDiffMan
  .text.asciiToDiffMan
-                0x000005dc      0x1c4 .\ARM_GCC_493\Debug\main.o
-                0x000005dc                asciiToDiffMan
+                0x0000060c      0x1c4 .\ARM_GCC_493\Debug\main.o
+                0x0000060c                asciiToDiffMan
  .text.transmitData
-                0x000007a0       0xd8 .\ARM_GCC_493\Debug\main.o
-                0x000007a0                transmitData
+                0x000007d0       0xd8 .\ARM_GCC_493\Debug\main.o
+                0x000007d0                transmitData
  .text.setNetworkStateOnLEDs
-                0x00000878       0x58 .\ARM_GCC_493\Debug\main.o
-                0x00000878                setNetworkStateOnLEDs
+                0x000008a8       0x58 .\ARM_GCC_493\Debug\main.o
+                0x000008a8                setNetworkStateOnLEDs
  .text.getRandomNumber
-                0x000008d0       0x38 .\ARM_GCC_493\Debug\main.o
-                0x000008d0                getRandomNumber
- .text.diffManToASCII
-                0x00000908       0xb0 .\ARM_GCC_493\Debug\main.o
-                0x00000908                diffManToASCII
- .text.storeChar
-                0x000009b8       0x3c .\ARM_GCC_493\Debug\main.o
-                0x000009b8                storeChar
+                0x00000900       0x38 .\ARM_GCC_493\Debug\main.o
+                0x00000900                getRandomNumber
+ .text.diffManToHex
+                0x00000938       0xb0 .\ARM_GCC_493\Debug\main.o
+                0x00000938                diffManToHex
  .text.printChar
-                0x000009f4       0x38 .\ARM_GCC_493\Debug\main.o
-                0x000009f4                printChar
+                0x000009e8       0x24 .\ARM_GCC_493\Debug\main.o
+                0x000009e8                printChar
  .text.headerCheck
-                0x00000a2c       0x60 .\ARM_GCC_493\Debug\main.o
-                0x00000a2c                headerCheck
+                0x00000a0c       0x68 .\ARM_GCC_493\Debug\main.o
+                0x00000a0c                headerCheck
  .text.IntDefaultHandler
-                0x00000a8c        0x8 .\ARM_GCC_493\Debug\Cm3Start.o
-                0x00000a8c                IntDefaultHandler
- .text._sbrk    0x00000a94       0x50 .\ARM_GCC_493\Debug\Cm3Start.o
-                0x00000a94                _sbrk
- .text.Start_c  0x00000ae4       0x98 .\ARM_GCC_493\Debug\Cm3Start.o
-                0x00000ae4                Start_c
+                0x00000a74        0x8 .\ARM_GCC_493\Debug\Cm3Start.o
+                0x00000a74                IntDefaultHandler
+ .text._sbrk    0x00000a7c       0x50 .\ARM_GCC_493\Debug\Cm3Start.o
+                0x00000a7c                _sbrk
+ .text.Start_c  0x00000acc       0x98 .\ARM_GCC_493\Debug\Cm3Start.o
+                0x00000acc                Start_c
  .text.initialize_psoc
-                0x00000b7c       0x8c .\ARM_GCC_493\Debug\Cm3Start.o
-                0x00000b7c                initialize_psoc
+                0x00000b64       0x8c .\ARM_GCC_493\Debug\Cm3Start.o
+                0x00000b64                initialize_psoc
  .text.CYMEMZERO
-                0x00000c08       0x1c .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
+                0x00000bf0       0x1c .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
  .text.CYCONFIGCPY
-                0x00000c24       0x1c .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
+                0x00000c0c       0x1c .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
  .text.CYCONFIGCPYCODE
-                0x00000c40       0x1c .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
+                0x00000c28       0x1c .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
  .text.CyClockStartupError
-                0x00000c5c        0xc .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
+                0x00000c44        0xc .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
  .text.cfg_write_bytes32
-                0x00000c68       0x74 .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
+                0x00000c50       0x74 .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
  .text.ClockSetup
-                0x00000cdc      0x12c .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
+                0x00000cc4      0x12c .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
  .text.AnalogSetDefault
-                0x00000e08       0x44 .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
+                0x00000df0       0x44 .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
  .text.cyfitter_cfg
-                0x00000e4c      0x178 .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
-                0x00000e4c                cyfitter_cfg
+                0x00000e34      0x178 .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
+                0x00000e34                cyfitter_cfg
  .text.USBUART_1_Start
-                0x00000fc4       0x38 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
-                0x00000fc4                USBUART_1_Start
+                0x00000fac       0x38 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
+                0x00000fac                USBUART_1_Start
  .text.USBUART_1_Init
-                0x00000ffc      0x18c .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
-                0x00000ffc                USBUART_1_Init
+                0x00000fe4      0x18c .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
+                0x00000fe4                USBUART_1_Init
  .text.USBUART_1_InitComponent
-                0x00001188       0xf8 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
-                0x00001188                USBUART_1_InitComponent
+                0x00001170       0xf8 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
+                0x00001170                USBUART_1_InitComponent
  .text.USBUART_1_ReInitComponent
-                0x00001280       0x88 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
-                0x00001280                USBUART_1_ReInitComponent
+                0x00001268       0x88 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
+                0x00001268                USBUART_1_ReInitComponent
  .text.USBUART_1_GetConfiguration
-                0x00001308       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
-                0x00001308                USBUART_1_GetConfiguration
+                0x000012f0       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
+                0x000012f0                USBUART_1_GetConfiguration
  .text.USBUART_1_IsConfigurationChanged
-                0x00001320       0x34 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
-                0x00001320                USBUART_1_IsConfigurationChanged
+                0x00001308       0x34 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
+                0x00001308                USBUART_1_IsConfigurationChanged
  .text.USBUART_1_GetEPCount
-                0x00001354       0x6c .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
-                0x00001354                USBUART_1_GetEPCount
+                0x0000133c       0x6c .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
+                0x0000133c                USBUART_1_GetEPCount
  .text.USBUART_1_LoadInEP
-                0x000013c0      0x108 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
-                0x000013c0                USBUART_1_LoadInEP
+                0x000013a8      0x108 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
+                0x000013a8                USBUART_1_LoadInEP
  .text.USBUART_1_ReadOutEP
-                0x000014c8       0x8c .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
-                0x000014c8                USBUART_1_ReadOutEP
+                0x000014b0       0x8c .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
+                0x000014b0                USBUART_1_ReadOutEP
  .text.USBUART_1_EnableOutEP
-                0x00001554       0x60 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
-                0x00001554                USBUART_1_EnableOutEP
+                0x0000153c       0x60 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
+                0x0000153c                USBUART_1_EnableOutEP
  .text.USBUART_1_DispatchCDCClassRqst
-                0x000015b4       0xcc .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
-                0x000015b4                USBUART_1_DispatchCDCClassRqst
+                0x0000159c       0xcc .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
+                0x0000159c                USBUART_1_DispatchCDCClassRqst
  .text.USBUART_1_CDC_Init
-                0x00001680       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
-                0x00001680                USBUART_1_CDC_Init
+                0x00001668       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
+                0x00001668                USBUART_1_CDC_Init
  .text.USBUART_1_PutChar
-                0x000016a0       0x2c .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
-                0x000016a0                USBUART_1_PutChar
+                0x00001688       0x2c .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
+                0x00001688                USBUART_1_PutChar
  .text.USBUART_1_PutCRLF
-                0x000016cc       0x30 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
-                0x000016cc                USBUART_1_PutCRLF
+                0x000016b4       0x30 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
+                0x000016b4                USBUART_1_PutCRLF
  .text.USBUART_1_DataIsReady
-                0x000016fc       0x30 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
-                0x000016fc                USBUART_1_DataIsReady
+                0x000016e4       0x30 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
+                0x000016e4                USBUART_1_DataIsReady
  .text.USBUART_1_CDCIsReady
-                0x0000172c       0x30 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
-                0x0000172c                USBUART_1_CDCIsReady
+                0x00001714       0x30 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
+                0x00001714                USBUART_1_CDCIsReady
  .text.USBUART_1_GetChar
-                0x0000175c       0x28 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
-                0x0000175c                USBUART_1_GetChar
+                0x00001744       0x28 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
+                0x00001744                USBUART_1_GetChar
  .text.USBUART_1_EP_0_ISR
-                0x00001784       0xf8 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
-                0x00001784                USBUART_1_EP_0_ISR
+                0x0000176c       0xf8 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+                0x0000176c                USBUART_1_EP_0_ISR
  .text.USBUART_1_HandleSetup
-                0x0000187c       0x88 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
-                0x0000187c                USBUART_1_HandleSetup
+                0x00001864       0x88 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+                0x00001864                USBUART_1_HandleSetup
  .text.USBUART_1_HandleIN
-                0x00001904       0x4c .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
-                0x00001904                USBUART_1_HandleIN
+                0x000018ec       0x4c .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+                0x000018ec                USBUART_1_HandleIN
  .text.USBUART_1_HandleOUT
-                0x00001950       0x58 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
-                0x00001950                USBUART_1_HandleOUT
+                0x00001938       0x58 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+                0x00001938                USBUART_1_HandleOUT
  .text.USBUART_1_LoadEP0
-                0x000019a8       0xd4 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
-                0x000019a8                USBUART_1_LoadEP0
+                0x00001990       0xd4 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+                0x00001990                USBUART_1_LoadEP0
  .text.USBUART_1_InitControlRead
-                0x00001a7c       0x74 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
-                0x00001a7c                USBUART_1_InitControlRead
+                0x00001a64       0x74 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+                0x00001a64                USBUART_1_InitControlRead
  .text.USBUART_1_InitZeroLengthControlTransfer
-                0x00001af0       0x44 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
-                0x00001af0                USBUART_1_InitZeroLengthControlTransfer
+                0x00001ad8       0x44 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+                0x00001ad8                USBUART_1_InitZeroLengthControlTransfer
  .text.USBUART_1_ControlReadDataStage
-                0x00001b34        0xc .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
-                0x00001b34                USBUART_1_ControlReadDataStage
+                0x00001b1c        0xc .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+                0x00001b1c                USBUART_1_ControlReadDataStage
  .text.USBUART_1_ControlReadStatusStage
-                0x00001b40       0x40 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
-                0x00001b40                USBUART_1_ControlReadStatusStage
+                0x00001b28       0x40 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+                0x00001b28                USBUART_1_ControlReadStatusStage
  .text.USBUART_1_InitControlWrite
-                0x00001b80       0x68 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
-                0x00001b80                USBUART_1_InitControlWrite
+                0x00001b68       0x68 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+                0x00001b68                USBUART_1_InitControlWrite
  .text.USBUART_1_ControlWriteDataStage
-                0x00001be8       0xb8 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
-                0x00001be8                USBUART_1_ControlWriteDataStage
+                0x00001bd0       0xb8 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+                0x00001bd0                USBUART_1_ControlWriteDataStage
  .text.USBUART_1_ControlWriteStatusStage
-                0x00001ca0       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
-                0x00001ca0                USBUART_1_ControlWriteStatusStage
+                0x00001c88       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+                0x00001c88                USBUART_1_ControlWriteStatusStage
  .text.USBUART_1_InitNoDataControlTransfer
-                0x00001cc0       0x38 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
-                0x00001cc0                USBUART_1_InitNoDataControlTransfer
+                0x00001ca8       0x38 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+                0x00001ca8                USBUART_1_InitNoDataControlTransfer
  .text.USBUART_1_NoDataControlStatusStage
-                0x00001cf8       0x48 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
-                0x00001cf8                USBUART_1_NoDataControlStatusStage
+                0x00001ce0       0x48 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+                0x00001ce0                USBUART_1_NoDataControlStatusStage
  .text.USBUART_1_UpdateStatusBlock
-                0x00001d40       0x40 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
-                0x00001d40                USBUART_1_UpdateStatusBlock
+                0x00001d28       0x40 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+                0x00001d28                USBUART_1_UpdateStatusBlock
  .text.USBUART_1_InitializeStatusBlock
-                0x00001d80       0x34 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
-                0x00001d80                USBUART_1_InitializeStatusBlock
+                0x00001d68       0x34 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+                0x00001d68                USBUART_1_InitializeStatusBlock
  .text.USBUART_1_EP_1_ISR
-                0x00001db4       0x54 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
-                0x00001db4                USBUART_1_EP_1_ISR
+                0x00001d9c       0x54 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
+                0x00001d9c                USBUART_1_EP_1_ISR
  .text.USBUART_1_EP_2_ISR
-                0x00001e08       0x54 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
-                0x00001e08                USBUART_1_EP_2_ISR
+                0x00001df0       0x54 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
+                0x00001df0                USBUART_1_EP_2_ISR
  .text.USBUART_1_EP_3_ISR
-                0x00001e5c       0x5c .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
-                0x00001e5c                USBUART_1_EP_3_ISR
+                0x00001e44       0x5c .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
+                0x00001e44                USBUART_1_EP_3_ISR
  .text.USBUART_1_SOF_ISR
-                0x00001eb8        0xc .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
-                0x00001eb8                USBUART_1_SOF_ISR
+                0x00001ea0        0xc .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
+                0x00001ea0                USBUART_1_SOF_ISR
  .text.USBUART_1_BUS_RESET_ISR
-                0x00001ec4        0xc .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
-                0x00001ec4                USBUART_1_BUS_RESET_ISR
+                0x00001eac        0xc .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
+                0x00001eac                USBUART_1_BUS_RESET_ISR
  .text.USBUART_1_DispatchHIDClassRqst
-                0x00001ed0      0x1ec .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
-                0x00001ed0                USBUART_1_DispatchHIDClassRqst
+                0x00001eb8      0x1ec .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
+                0x00001eb8                USBUART_1_DispatchHIDClassRqst
  .text.USBUART_1_FindHidClassDecriptor
-                0x000020bc       0x7c .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
-                0x000020bc                USBUART_1_FindHidClassDecriptor
+                0x000020a4       0x7c .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
+                0x000020a4                USBUART_1_FindHidClassDecriptor
  .text.USBUART_1_FindReportDescriptor
-                0x00002138       0x90 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
-                0x00002138                USBUART_1_FindReportDescriptor
+                0x00002120       0x90 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
+                0x00002120                USBUART_1_FindReportDescriptor
  .text.USBUART_1_FindReport
-                0x000021c8       0xd4 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
-                0x000021c8                USBUART_1_FindReport
+                0x000021b0       0xd4 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
+                0x000021b0                USBUART_1_FindReport
  .text.USBUART_1_HandleStandardRqst
-                0x0000229c      0x4a4 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
-                0x0000229c                USBUART_1_HandleStandardRqst
+                0x00002284      0x4a4 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
+                0x00002284                USBUART_1_HandleStandardRqst
  .text.USBUART_1_ReadDieID
-                0x00002740       0x90 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
-                0x00002740                USBUART_1_ReadDieID
+                0x00002728       0x90 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
+                0x00002728                USBUART_1_ReadDieID
  .text.USBUART_1_ConfigReg
-                0x000027d0      0x180 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
-                0x000027d0                USBUART_1_ConfigReg
+                0x000027b8      0x180 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
+                0x000027b8                USBUART_1_ConfigReg
  .text.USBUART_1_Config
-                0x00002950      0x348 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
-                0x00002950                USBUART_1_Config
+                0x00002938      0x348 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
+                0x00002938                USBUART_1_Config
  .text.USBUART_1_ConfigAltChanged
-                0x00002c98      0x27c .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
-                0x00002c98                USBUART_1_ConfigAltChanged
+                0x00002c80      0x27c .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
+                0x00002c80                USBUART_1_ConfigAltChanged
  .text.USBUART_1_GetConfigTablePtr
-                0x00002f14       0x54 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
-                0x00002f14                USBUART_1_GetConfigTablePtr
+                0x00002efc       0x54 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
+                0x00002efc                USBUART_1_GetConfigTablePtr
  .text.USBUART_1_GetDeviceTablePtr
-                0x00002f68       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
-                0x00002f68                USBUART_1_GetDeviceTablePtr
+                0x00002f50       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
+                0x00002f50                USBUART_1_GetDeviceTablePtr
  .text.USBUART_1_GetInterfaceClassTablePtr
-                0x00002f8c       0x4c .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
-                0x00002f8c                USBUART_1_GetInterfaceClassTablePtr
+                0x00002f74       0x4c .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
+                0x00002f74                USBUART_1_GetInterfaceClassTablePtr
  .text.USBUART_1_SetEndpointHalt
-                0x00002fd8       0xe0 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
-                0x00002fd8                USBUART_1_SetEndpointHalt
+                0x00002fc0       0xe0 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
+                0x00002fc0                USBUART_1_SetEndpointHalt
  .text.USBUART_1_ClearEndpointHalt
-                0x000030b8      0x144 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
-                0x000030b8                USBUART_1_ClearEndpointHalt
+                0x000030a0      0x144 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
+                0x000030a0                USBUART_1_ClearEndpointHalt
  .text.USBUART_1_ValidateAlternateSetting
-                0x000031fc       0x78 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
-                0x000031fc                USBUART_1_ValidateAlternateSetting
+                0x000031e4       0x78 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
+                0x000031e4                USBUART_1_ValidateAlternateSetting
  .text.USBUART_1_HandleVendorRqst
-                0x00003274       0x58 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_vnd.o)
-                0x00003274                USBUART_1_HandleVendorRqst
+                0x0000325c       0x58 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_vnd.o)
+                0x0000325c                USBUART_1_HandleVendorRqst
  .text.LCD_Init
-                0x000032cc       0x6c .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
-                0x000032cc                LCD_Init
+                0x000032b4       0x6c .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
+                0x000032b4                LCD_Init
  .text.LCD_Enable
-                0x00003338       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
-                0x00003338                LCD_Enable
+                0x00003320       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
+                0x00003320                LCD_Enable
  .text.LCD_Start
-                0x00003350       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
-                0x00003350                LCD_Start
- .text.LCD_PrintString
-                0x00003370       0x38 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
-                0x00003370                LCD_PrintString
+                0x00003338       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
+                0x00003338                LCD_Start
  .text.LCD_PutChar
-                0x000033a8       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
-                0x000033a8                LCD_PutChar
+                0x00003358       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
+                0x00003358                LCD_PutChar
  .text.LCD_WriteData
-                0x000033c0       0x34 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
-                0x000033c0                LCD_WriteData
+                0x00003370       0x34 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
+                0x00003370                LCD_WriteData
  .text.LCD_WriteControl
-                0x000033f4       0x34 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
-                0x000033f4                LCD_WriteControl
+                0x000033a4       0x34 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
+                0x000033a4                LCD_WriteControl
  .text.LCD_IsReady
-                0x00003428      0x178 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
-                0x00003428                LCD_IsReady
+                0x000033d8      0x178 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
+                0x000033d8                LCD_IsReady
  .text.LCD_WrDatNib
-                0x000035a0       0x78 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
+                0x00003550       0x78 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
  .text.LCD_WrCntrlNib
-                0x00003618       0x60 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
- .text.LCD_PrintU32Number
-                0x00003678       0xa4 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
-                0x00003678                LCD_PrintU32Number
- *fill*         0x0000371c        0x4 
- .text          0x00003720       0x58 .\ARM_GCC_493\Debug\USB_UART01.a(CyBootAsmGnu.o)
-                0x00003720                CyDelayCycles
-                0x0000375e                CyEnterCriticalSection
-                0x00003766                CyExitCriticalSection
- .text.CyHalt   0x00003778       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
-                0x00003778                CyHalt
- .text.CyDelay  0x00003790       0x44 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
-                0x00003790                CyDelay
+                0x000035c8       0x60 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
+ .text          0x00003628       0x58 .\ARM_GCC_493\Debug\USB_UART01.a(CyBootAsmGnu.o)
+                0x00003628                CyDelayCycles
+                0x00003666                CyEnterCriticalSection
+                0x0000366e                CyExitCriticalSection
+ .text.CyHalt   0x00003680       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
+                0x00003680                CyHalt
+ .text.CyDelay  0x00003698       0x44 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
+                0x00003698                CyDelay
  .text.CyDelayUs
-                0x000037d4       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
-                0x000037d4                CyDelayUs
+                0x000036dc       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
+                0x000036dc                CyDelayUs
  .text.CyIntSetVector
-                0x000037f8       0x50 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
-                0x000037f8                CyIntSetVector
+                0x00003700       0x50 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
+                0x00003700                CyIntSetVector
  .text.CyIntSetPriority
-                0x00003848       0x44 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
-                0x00003848                CyIntSetPriority
+                0x00003750       0x44 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
+                0x00003750                CyIntSetPriority
  .text.TX_pin_Write
-                0x0000388c       0x3c .\ARM_GCC_493\Debug\USB_UART01.a(TX_pin.o)
-                0x0000388c                TX_pin_Write
+                0x00003794       0x3c .\ARM_GCC_493\Debug\USB_UART01.a(TX_pin.o)
+                0x00003794                TX_pin_Write
  .text.Timer_Init
-                0x000038c8       0x4c .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
-                0x000038c8                Timer_Init
+                0x000037d0       0x4c .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
+                0x000037d0                Timer_Init
  .text.Timer_Enable
-                0x00003914       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
-                0x00003914                Timer_Enable
+                0x0000381c       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
+                0x0000381c                Timer_Enable
  .text.Timer_Start
-                0x00003934       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
-                0x00003934                Timer_Start
+                0x0000383c       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
+                0x0000383c                Timer_Start
  .text.Timer_Stop
-                0x00003954       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
-                0x00003954                Timer_Stop
+                0x0000385c       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
+                0x0000385c                Timer_Stop
  .text.Timer_SetInterruptMode
-                0x00003974       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
-                0x00003974                Timer_SetInterruptMode
+                0x0000387c       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
+                0x0000387c                Timer_SetInterruptMode
  .text.Timer_ReadStatusRegister
-                0x00003994       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
-                0x00003994                Timer_ReadStatusRegister
+                0x0000389c       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
+                0x0000389c                Timer_ReadStatusRegister
  .text.Timer_WritePeriod
-                0x000039ac       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
-                0x000039ac                Timer_WritePeriod
+                0x000038b4       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
+                0x000038b4                Timer_WritePeriod
  .text.Timer_ReadCapture
-                0x000039cc       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
-                0x000039cc                Timer_ReadCapture
+                0x000038d4       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
+                0x000038d4                Timer_ReadCapture
  .text.Timer_WriteCounter
-                0x000039e4       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
-                0x000039e4                Timer_WriteCounter
+                0x000038ec       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
+                0x000038ec                Timer_WriteCounter
  .text.Timer_ClearFIFO
-                0x00003a04       0x1c .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
-                0x00003a04                Timer_ClearFIFO
+                0x0000390c       0x1c .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
+                0x0000390c                Timer_ClearFIFO
  .text.TimerISR_StartEx
-                0x00003a20       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
-                0x00003a20                TimerISR_StartEx
+                0x00003928       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
+                0x00003928                TimerISR_StartEx
  .text.TimerISR_SetVector
-                0x00003a44       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
-                0x00003a44                TimerISR_SetVector
+                0x0000394c       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
+                0x0000394c                TimerISR_SetVector
  .text.TimerISR_SetPriority
-                0x00003a68       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
-                0x00003a68                TimerISR_SetPriority
+                0x00003970       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
+                0x00003970                TimerISR_SetPriority
  .text.TimerISR_Enable
-                0x00003a8c       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
-                0x00003a8c                TimerISR_Enable
+                0x00003994       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
+                0x00003994                TimerISR_Enable
  .text.TimerISR_Disable
-                0x00003aa4       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
-                0x00003aa4                TimerISR_Disable
+                0x000039ac       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
+                0x000039ac                TimerISR_Disable
  .text.LED4_Write
-                0x00003abc       0x3c .\ARM_GCC_493\Debug\USB_UART01.a(LED4.o)
-                0x00003abc                LED4_Write
+                0x000039c4       0x3c .\ARM_GCC_493\Debug\USB_UART01.a(LED4.o)
+                0x000039c4                LED4_Write
  .text.Idle_Collision_Timer_Init
-                0x00003af8       0xac .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
-                0x00003af8                Idle_Collision_Timer_Init
+                0x00003a00       0xac .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
+                0x00003a00                Idle_Collision_Timer_Init
  .text.Idle_Collision_Timer_Enable
-                0x00003ba4       0x48 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
-                0x00003ba4                Idle_Collision_Timer_Enable
+                0x00003aac       0x48 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
+                0x00003aac                Idle_Collision_Timer_Enable
  .text.Idle_Collision_Timer_Start
-                0x00003bec       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
-                0x00003bec                Idle_Collision_Timer_Start
+                0x00003af4       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
+                0x00003af4                Idle_Collision_Timer_Start
  .text.Idle_Collision_Timer_SetInterruptMode
-                0x00003c0c       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
-                0x00003c0c                Idle_Collision_Timer_SetInterruptMode
+                0x00003b14       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
+                0x00003b14                Idle_Collision_Timer_SetInterruptMode
  .text.Idle_Collision_Timer_WritePeriod
-                0x00003c2c       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
-                0x00003c2c                Idle_Collision_Timer_WritePeriod
+                0x00003b34       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
+                0x00003b34                Idle_Collision_Timer_WritePeriod
  .text.Idle_Collision_Timer_WriteCounter
-                0x00003c50       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
-                0x00003c50                Idle_Collision_Timer_WriteCounter
+                0x00003b58       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
+                0x00003b58                Idle_Collision_Timer_WriteCounter
  .text.Receive_Read
-                0x00003c70       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Receive.o)
-                0x00003c70                Receive_Read
+                0x00003b78       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Receive.o)
+                0x00003b78                Receive_Read
  .text.Receive_ClearInterrupt
-                0x00003c90       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Receive.o)
-                0x00003c90                Receive_ClearInterrupt
+                0x00003b98       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Receive.o)
+                0x00003b98                Receive_ClearInterrupt
  .text.Edge_detect_IRQ_StartEx
-                0x00003cb0       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
-                0x00003cb0                Edge_detect_IRQ_StartEx
+                0x00003bb8       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
+                0x00003bb8                Edge_detect_IRQ_StartEx
  .text.Edge_detect_IRQ_SetVector
-                0x00003cd4       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
-                0x00003cd4                Edge_detect_IRQ_SetVector
+                0x00003bdc       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
+                0x00003bdc                Edge_detect_IRQ_SetVector
  .text.Edge_detect_IRQ_SetPriority
-                0x00003cf8       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
-                0x00003cf8                Edge_detect_IRQ_SetPriority
+                0x00003c00       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
+                0x00003c00                Edge_detect_IRQ_SetPriority
  .text.Edge_detect_IRQ_Enable
-                0x00003d1c       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
-                0x00003d1c                Edge_detect_IRQ_Enable
+                0x00003c24       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
+                0x00003c24                Edge_detect_IRQ_Enable
  .text.Edge_detect_IRQ_Disable
-                0x00003d34       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
-                0x00003d34                Edge_detect_IRQ_Disable
+                0x00003c3c       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
+                0x00003c3c                Edge_detect_IRQ_Disable
  .text.Idle_Collision_IRQ_StartEx
-                0x00003d4c       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
-                0x00003d4c                Idle_Collision_IRQ_StartEx
+                0x00003c54       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
+                0x00003c54                Idle_Collision_IRQ_StartEx
  .text.Idle_Collision_IRQ_SetVector
-                0x00003d70       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
-                0x00003d70                Idle_Collision_IRQ_SetVector
+                0x00003c78       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
+                0x00003c78                Idle_Collision_IRQ_SetVector
  .text.Idle_Collision_IRQ_SetPriority
-                0x00003d94       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
-                0x00003d94                Idle_Collision_IRQ_SetPriority
+                0x00003c9c       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
+                0x00003c9c                Idle_Collision_IRQ_SetPriority
  .text.Idle_Collision_IRQ_Enable
-                0x00003db8       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
-                0x00003db8                Idle_Collision_IRQ_Enable
+                0x00003cc0       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
+                0x00003cc0                Idle_Collision_IRQ_Enable
  .text.Idle_Collision_IRQ_Disable
-                0x00003dd0       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
-                0x00003dd0                Idle_Collision_IRQ_Disable
+                0x00003cd8       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
+                0x00003cd8                Idle_Collision_IRQ_Disable
  .text.LED3_Write
-                0x00003de8       0x3c .\ARM_GCC_493\Debug\USB_UART01.a(LED3.o)
-                0x00003de8                LED3_Write
+                0x00003cf0       0x3c .\ARM_GCC_493\Debug\USB_UART01.a(LED3.o)
+                0x00003cf0                LED3_Write
  .text.LED2_Write
-                0x00003e24       0x34 .\ARM_GCC_493\Debug\USB_UART01.a(LED2.o)
-                0x00003e24                LED2_Write
+                0x00003d2c       0x34 .\ARM_GCC_493\Debug\USB_UART01.a(LED2.o)
+                0x00003d2c                LED2_Write
  .text.ReceiveTimerIRQ_StartEx
-                0x00003e58       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
-                0x00003e58                ReceiveTimerIRQ_StartEx
+                0x00003d60       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
+                0x00003d60                ReceiveTimerIRQ_StartEx
  .text.ReceiveTimerIRQ_SetVector
-                0x00003e7c       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
-                0x00003e7c                ReceiveTimerIRQ_SetVector
+                0x00003d84       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
+                0x00003d84                ReceiveTimerIRQ_SetVector
  .text.ReceiveTimerIRQ_SetPriority
-                0x00003ea0       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
-                0x00003ea0                ReceiveTimerIRQ_SetPriority
+                0x00003da8       0x24 .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
+                0x00003da8                ReceiveTimerIRQ_SetPriority
  .text.ReceiveTimerIRQ_Enable
-                0x00003ec4       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
-                0x00003ec4                ReceiveTimerIRQ_Enable
+                0x00003dcc       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
+                0x00003dcc                ReceiveTimerIRQ_Enable
  .text.ReceiveTimerIRQ_Disable
-                0x00003edc       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
-                0x00003edc                ReceiveTimerIRQ_Disable
+                0x00003de4       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
+                0x00003de4                ReceiveTimerIRQ_Disable
  .text.Receive_Timer_Init
-                0x00003ef4       0x4c .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
-                0x00003ef4                Receive_Timer_Init
+                0x00003dfc       0x4c .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
+                0x00003dfc                Receive_Timer_Init
  .text.Receive_Timer_Enable
-                0x00003f40       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
-                0x00003f40                Receive_Timer_Enable
+                0x00003e48       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
+                0x00003e48                Receive_Timer_Enable
  .text.Receive_Timer_Start
-                0x00003f60       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
-                0x00003f60                Receive_Timer_Start
+                0x00003e68       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
+                0x00003e68                Receive_Timer_Start
  .text.Receive_Timer_SetInterruptMode
-                0x00003f80       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
-                0x00003f80                Receive_Timer_SetInterruptMode
+                0x00003e88       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
+                0x00003e88                Receive_Timer_SetInterruptMode
  .text.Receive_Timer_ReadStatusRegister
-                0x00003fa0       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
-                0x00003fa0                Receive_Timer_ReadStatusRegister
+                0x00003ea8       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
+                0x00003ea8                Receive_Timer_ReadStatusRegister
  .text.Receive_Timer_WritePeriod
-                0x00003fb8       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
-                0x00003fb8                Receive_Timer_WritePeriod
+                0x00003ec0       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
+                0x00003ec0                Receive_Timer_WritePeriod
  .text.Receive_Timer_ReadCapture
-                0x00003fd8       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
-                0x00003fd8                Receive_Timer_ReadCapture
+                0x00003ee0       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
+                0x00003ee0                Receive_Timer_ReadCapture
  .text.Receive_Timer_WriteCounter
-                0x00003ff0       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
-                0x00003ff0                Receive_Timer_WriteCounter
+                0x00003ef8       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
+                0x00003ef8                Receive_Timer_WriteCounter
  .text.Receive_Timer_ClearFIFO
-                0x00004010       0x1c .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
-                0x00004010                Receive_Timer_ClearFIFO
+                0x00003f18       0x1c .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
+                0x00003f18                Receive_Timer_ClearFIFO
  .text.USBUART_1_DispatchClassRqst
-                0x0000402c       0x90 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cls.o)
-                0x0000402c                USBUART_1_DispatchClassRqst
- .text          0x000040bc      0x370 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubdf3.o)
-                0x000040bc                __aeabi_drsub
-                0x000040c4                __aeabi_dsub
-                0x000040c4                __subdf3
-                0x000040c8                __aeabi_dadd
-                0x000040c8                __adddf3
-                0x00004340                __floatunsidf
-                0x00004340                __aeabi_ui2d
-                0x00004360                __floatsidf
-                0x00004360                __aeabi_i2d
-                0x00004384                __aeabi_f2d
-                0x00004384                __extendsfdf2
-                0x000043c0                __floatundidf
-                0x000043c0                __aeabi_ul2d
-                0x000043d0                __floatdidf
-                0x000043d0                __aeabi_l2d
- .text          0x0000442c      0x424 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_muldivdf3.o)
-                0x0000442c                __aeabi_dmul
-                0x0000442c                __muldf3
-                0x00004680                __divdf3
-                0x00004680                __aeabi_ddiv
- .text          0x00004850       0x50 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_fixdfsi.o)
-                0x00004850                __aeabi_d2iz
-                0x00004850                __fixdfsi
- .text.__errno  0x000048a0        0xc d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
-                0x000048a0                __errno
+                0x00003f34       0x90 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cls.o)
+                0x00003f34                USBUART_1_DispatchClassRqst
+ .text          0x00003fc4      0x370 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubdf3.o)
+                0x00003fc4                __aeabi_drsub
+                0x00003fcc                __aeabi_dsub
+                0x00003fcc                __subdf3
+                0x00003fd0                __aeabi_dadd
+                0x00003fd0                __adddf3
+                0x00004248                __floatunsidf
+                0x00004248                __aeabi_ui2d
+                0x00004268                __floatsidf
+                0x00004268                __aeabi_i2d
+                0x0000428c                __aeabi_f2d
+                0x0000428c                __extendsfdf2
+                0x000042c8                __floatundidf
+                0x000042c8                __aeabi_ul2d
+                0x000042d8                __floatdidf
+                0x000042d8                __aeabi_l2d
+ .text          0x00004334      0x424 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_muldivdf3.o)
+                0x00004334                __aeabi_dmul
+                0x00004334                __muldf3
+                0x00004588                __divdf3
+                0x00004588                __aeabi_ddiv
+ .text          0x00004758       0x50 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_fixdfsi.o)
+                0x00004758                __aeabi_d2iz
+                0x00004758                __fixdfsi
+ .text.__errno  0x000047a8        0xc d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+                0x000047a8                __errno
  .text.__libc_init_array
-                0x000048ac       0x4c d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
-                0x000048ac                __libc_init_array
- .text.memcpy   0x000048f8       0x16 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
-                0x000048f8                memcpy
- .text.memset   0x0000490e       0x10 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
-                0x0000490e                memset
- *fill*         0x0000491e        0x2 
- .text.srand    0x00004920       0x50 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-rand.o)
-                0x00004920                srand
- .text.rand     0x00004970       0x74 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-rand.o)
-                0x00004970                rand
- .text.time     0x000049e4       0x28 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-time.o)
-                0x000049e4                time
+                0x000047b4       0x4c d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+                0x000047b4                __libc_init_array
+ .text.memcpy   0x00004800       0x16 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
+                0x00004800                memcpy
+ .text.memset   0x00004816       0x10 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+                0x00004816                memset
+ *fill*         0x00004826        0x2 
+ .text.srand    0x00004828       0x50 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-rand.o)
+                0x00004828                srand
+ .text.rand     0x00004878       0x74 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-rand.o)
+                0x00004878                rand
+ .text.time     0x000048ec       0x28 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-time.o)
+                0x000048ec                time
  .text._gettimeofday_r
-                0x00004a0c       0x24 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-gettimeofdayr.o)
-                0x00004a0c                _gettimeofday_r
- .text.malloc   0x00004a30       0x10 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-malloc.o)
-                0x00004a30                malloc
+                0x00004914       0x24 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-gettimeofdayr.o)
+                0x00004914                _gettimeofday_r
+ .text.malloc   0x00004938       0x10 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-malloc.o)
+                0x00004938                malloc
  .text._malloc_r
-                0x00004a40       0xac d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
-                0x00004a40                _malloc_r
- .text._sbrk_r  0x00004aec       0x20 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
-                0x00004aec                _sbrk_r
+                0x00004948       0xac d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
+                0x00004948                _malloc_r
+ .text._sbrk_r  0x000049f4       0x20 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
+                0x000049f4                _sbrk_r
  .text._gettimeofday
-                0x00004b0c       0x10 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libnosys.a(gettod.o)
-                0x00004b0c                _gettimeofday
+                0x00004a14       0x10 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libnosys.a(gettod.o)
+                0x00004a14                _gettimeofday
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
@@ -1340,96 +1331,96 @@ END GROUP
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
 
-.v4_bx          0x00004b1c        0x0
+.v4_bx          0x00004a24        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00004b1c        0x0
+.iplt           0x00004a24        0x0
  .iplt          0x00000000        0x0 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x00004b1c        0x4
+.eh_frame       0x00004a24        0x4
  *(.eh_frame)
- .eh_frame      0x00004b1c        0x0 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .eh_frame      0x00004b1c        0x4 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
-                0x00004b20                PROVIDE (__exidx_start, .)
+ .eh_frame      0x00004a24        0x0 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .eh_frame      0x00004a24        0x4 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
+                0x00004a28                PROVIDE (__exidx_start, .)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00004b20                __exidx_end = .
+                0x00004a28                __exidx_end = .
 
-.rodata         0x00004b20      0x4f0
+.rodata         0x00004a28      0x4f0
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x00004b20      0x2d0 .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
- .rodata        0x00004df0        0x4 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
- .rodata        0x00004df4       0x14 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
- .rodata        0x00004e08      0x1cc .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_descr.o)
-                0x00004e08                USBUART_1_DEVICE0_DESCR
-                0x00004e1c                USBUART_1_DEVICE0_CONFIGURATION0_DESCR
-                0x00004e60                USBUART_1_STRING_DESCRIPTORS
-                0x00004f00                USBUART_1_SN_STRING_DESCRIPTOR
-                0x00004f04                USBUART_1_HIDREPORT_DESCRIPTOR1
-                0x00004f3c                USBUART_1_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
-                0x00004f54                USBUART_1_DEVICE0_CONFIGURATION0_INTERFACE_CLASS
-                0x00004f58                USBUART_1_DEVICE0_CONFIGURATION0_TABLE
-                0x00004f80                USBUART_1_DEVICE0_TABLE
-                0x00004f90                USBUART_1_TABLE
-                0x00004f98                USBUART_1_MSOS_DESCRIPTOR
-                0x00004fac                USBUART_1_MSOS_CONFIGURATION_DESCR
+ .rodata        0x00004a28      0x2d0 .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
+ .rodata        0x00004cf8        0x4 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
+ .rodata        0x00004cfc       0x14 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
+ .rodata        0x00004d10      0x1cc .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_descr.o)
+                0x00004d10                USBUART_1_DEVICE0_DESCR
+                0x00004d24                USBUART_1_DEVICE0_CONFIGURATION0_DESCR
+                0x00004d68                USBUART_1_STRING_DESCRIPTORS
+                0x00004e08                USBUART_1_SN_STRING_DESCRIPTOR
+                0x00004e0c                USBUART_1_HIDREPORT_DESCRIPTOR1
+                0x00004e44                USBUART_1_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
+                0x00004e5c                USBUART_1_DEVICE0_CONFIGURATION0_INTERFACE_CLASS
+                0x00004e60                USBUART_1_DEVICE0_CONFIGURATION0_TABLE
+                0x00004e88                USBUART_1_DEVICE0_TABLE
+                0x00004e98                USBUART_1_TABLE
+                0x00004ea0                USBUART_1_MSOS_DESCRIPTOR
+                0x00004eb4                USBUART_1_MSOS_CONFIGURATION_DESCR
  .rodata.str1.1
-                0x00004fd4        0x2 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
-                0x00004fd8                . = ALIGN (0x4)
- *fill*         0x00004fd6        0x2 
+                0x00004edc        0x2 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x00004ee0                . = ALIGN (0x4)
+ *fill*         0x00004ede        0x2 
  *(.init)
- .init          0x00004fd8        0x4 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
-                0x00004fd8                _init
- .init          0x00004fdc        0x8 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
-                0x00004fe4                . = ALIGN (0x4)
-                0x00004fe4                __preinit_array_start = .
+ .init          0x00004ee0        0x4 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+                0x00004ee0                _init
+ .init          0x00004ee4        0x8 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+                0x00004eec                . = ALIGN (0x4)
+                0x00004eec                __preinit_array_start = .
  *(.preinit_array)
-                0x00004fe4                __preinit_array_end = .
-                0x00004fe4                . = ALIGN (0x4)
-                0x00004fe4                __init_array_start = .
+                0x00004eec                __preinit_array_end = .
+                0x00004eec                . = ALIGN (0x4)
+                0x00004eec                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x00004fe4        0x4 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .init_array    0x00004fe8        0x4 .\ARM_GCC_493\Debug\Cm3Start.o
-                0x00004fec                __init_array_end = .
-                0x00004fec                . = ALIGN (0x4)
+ .init_array    0x00004eec        0x4 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .init_array    0x00004ef0        0x4 .\ARM_GCC_493\Debug\Cm3Start.o
+                0x00004ef4                __init_array_end = .
+                0x00004ef4                . = ALIGN (0x4)
  *(.fini)
- .fini          0x00004fec        0x4 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
-                0x00004fec                _fini
- .fini          0x00004ff0        0x8 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
-                0x00004ff8                . = ALIGN (0x4)
-                0x00004ff8                __fini_array_start = .
+ .fini          0x00004ef4        0x4 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+                0x00004ef4                _fini
+ .fini          0x00004ef8        0x8 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+                0x00004f00                . = ALIGN (0x4)
+                0x00004f00                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x00004ff8        0x4 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .fini_array    0x00004f00        0x4 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x00004ffc                __fini_array_end = .
-                0x00004ffc                . = ALIGN (0x4)
+                0x00004f04                __fini_array_end = .
+                0x00004f04                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x00004ffc                . = ALIGN (0x4)
+                0x00004f04                . = ALIGN (0x4)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x00004ffc                . = ALIGN (0x4)
-                0x00004ffc                __cy_regions = .
-                0x00004ffc        0x4 LONG 0x5010 __cy_region_init_ram
-                0x00005000        0x4 LONG 0x1fff8108 __cy_region_start_data
-                0x00005004        0x4 LONG 0x88 __cy_region_init_size_ram
-                0x00005008        0x4 LONG 0xf98 __cy_region_zero_size_ram
-                0x0000500c                __cy_regions_end = .
-                0x00005010                . = ALIGN (0x8)
- *fill*         0x0000500c        0x4 
-                0x00005010                _etext = .
+                0x00004f04                . = ALIGN (0x4)
+                0x00004f04                __cy_regions = .
+                0x00004f04        0x4 LONG 0x4f18 __cy_region_init_ram
+                0x00004f08        0x4 LONG 0x1fff8108 __cy_region_start_data
+                0x00004f0c        0x4 LONG 0x88 __cy_region_init_size_ram
+                0x00004f10        0x4 LONG 0xf90 __cy_region_zero_size_ram
+                0x00004f14                __cy_regions_end = .
+                0x00004f18                . = ALIGN (0x8)
+ *fill*         0x00004f14        0x4 
+                0x00004f18                _etext = .
 
 .cy_checksum_exclude
-                0x00005010        0x0
+                0x00004f18        0x0
  *(.cy_checksum_exclude)
 
 .ramvectors     0x1fff8000      0x100
@@ -1444,7 +1435,7 @@ END GROUP
  .noinit        0x1fff8104        0x1 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
                 0x1fff8104                CyResetStatus
 
-.data           0x1fff8108       0x88 load address 0x00005010
+.data           0x1fff8108       0x88 load address 0x00004f18
                 0x1fff8108                __cy_region_start_data = .
  *(.jcr)
  .jcr           0x1fff8108        0x0 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
@@ -1471,10 +1462,10 @@ END GROUP
  *(.ram)
                 0x1fff8190                _edata = .
 
-.igot.plt       0x1fff8190        0x0 load address 0x00005098
+.igot.plt       0x1fff8190        0x0 load address 0x00004fa0
  .igot.plt      0x00000000        0x0 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
-.bss            0x1fff8190      0xf98 load address 0x00005098
+.bss            0x1fff8190      0xf90 load address 0x00004fa0
                 0x1fff8190                PROVIDE (__bss_start__, .)
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
@@ -1483,8 +1474,8 @@ END GROUP
                 0x1fff81ac                halfBitIndex
                 0x1fff81b0                currentDataPos
                 0x1fff81b4                currentRXCharPosition
-                0x1fff81b8                TX_DESTINATION_ADDRESS
-                0x1fff81bc                headerValid
+                0x1fff81b8                rxMessageLength
+                0x1fff81bc                TX_DESTINATION_ADDRESS
  .bss           0x1fff81c0        0x1 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
                 0x1fff81c0                USBUART_1_initVar
  *fill*         0x1fff81c1        0x3 
@@ -1506,72 +1497,71 @@ END GROUP
                 0x1fff81d4        0x4 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
                 0x1fff81d4                __malloc_free_list
  *(COMMON)
- COMMON         0x1fff81d8      0xe7c .\ARM_GCC_493\Debug\main.o
-                0x1fff81d8                lengthOfData
-                0x1fff81dc                crcState
-                0x1fff81e0                receivedDataIndex
-                0x1fff81e4                dataTransmissionComplete
-                0x1fff81e8                diffManEncodedData
-                0x1fff8f68                powerOnEdge
-                0x1fff8f6c                diffManReceivedData
-                0x1fff8fd8                rxChar
-                0x1fff9044                messageLength
-                0x1fff9048                receivedDataCount
-                0x1fff904c                networkState
-                0x1fff904d                receivedChar
-                0x1fff904e                timerExpired
-                0x1fff9050                headerCRC
- COMMON         0x1fff9054        0x5 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
-                0x1fff9054                USBUART_1_cdc_data_out_ep
-                0x1fff9055                USBUART_1_cdc_data_in_ep
-                0x1fff9056                USBUART_1_lineControlBitmap
-                0x1fff9058                USBUART_1_lineChanged
- *fill*         0x1fff9059        0x3 
- COMMON         0x1fff905c       0x97 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
-                0x1fff905c                USBUART_1_ep0Mode
-                0x1fff905d                USBUART_1_lastPacketSize
-                0x1fff905e                USBUART_1_configurationChanged
-                0x1fff905f                USBUART_1_configuration
-                0x1fff9060                USBUART_1_interfaceNumber
-                0x1fff9061                USBUART_1_deviceStatus
-                0x1fff9062                USBUART_1_ep0Toggle
-                0x1fff9064                USBUART_1_interfaceClass
-                0x1fff9068                USBUART_1_interfaceSetting
-                0x1fff906c                USBUART_1_currentTD
-                0x1fff9078                USBUART_1_ep0Count
-                0x1fff907c                USBUART_1_EP
-                0x1fff90e8                USBUART_1_interfaceSetting_last
-                0x1fff90ea                USBUART_1_transferByteCount
-                0x1fff90ec                USBUART_1_transferState
-                0x1fff90ed                USBUART_1_device
-                0x1fff90f0                USBUART_1_interfaceStatus
-                0x1fff90f2                USBUART_1_deviceAddress
- *fill*         0x1fff90f3        0x1 
- COMMON         0x1fff90f4        0xa .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
-                0x1fff90f4                USBUART_1_hidProtocol
-                0x1fff90f8                USBUART_1_hidIdleTimer
-                0x1fff90fc                USBUART_1_hidIdleRate
- *fill*         0x1fff90fe        0x2 
- COMMON         0x1fff9100       0x22 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_descr.o)
-                0x1fff9100                USBUART_1_idSerialNumberStringDescriptor
- *fill*         0x1fff9122        0x2 
- COMMON         0x1fff9124        0x4 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
-                0x1fff9124                errno
-                0x1fff9128                . = ALIGN (0x8)
+ COMMON         0x1fff81d8      0xe6f .\ARM_GCC_493\Debug\main.o
+                0x1fff81d8                crcState
+                0x1fff81dc                receivedDataIndex
+                0x1fff81e0                dataTransmissionComplete
+                0x1fff81e4                diffManEncodedData
+                0x1fff8f64                powerOnEdge
+                0x1fff8f68                diffManReceivedData
+                0x1fff8fd4                rxChar
+                0x1fff9040                receivedDataCount
+                0x1fff9044                networkState
+                0x1fff9045                receivedHexValue
+                0x1fff9046                timerExpired
+ *fill*         0x1fff9047        0x1 
+ COMMON         0x1fff9048        0x5 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
+                0x1fff9048                USBUART_1_cdc_data_out_ep
+                0x1fff9049                USBUART_1_cdc_data_in_ep
+                0x1fff904a                USBUART_1_lineControlBitmap
+                0x1fff904c                USBUART_1_lineChanged
+ *fill*         0x1fff904d        0x3 
+ COMMON         0x1fff9050       0x97 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+                0x1fff9050                USBUART_1_ep0Mode
+                0x1fff9051                USBUART_1_lastPacketSize
+                0x1fff9052                USBUART_1_configurationChanged
+                0x1fff9053                USBUART_1_configuration
+                0x1fff9054                USBUART_1_interfaceNumber
+                0x1fff9055                USBUART_1_deviceStatus
+                0x1fff9056                USBUART_1_ep0Toggle
+                0x1fff9058                USBUART_1_interfaceClass
+                0x1fff905c                USBUART_1_interfaceSetting
+                0x1fff9060                USBUART_1_currentTD
+                0x1fff906c                USBUART_1_ep0Count
+                0x1fff9070                USBUART_1_EP
+                0x1fff90dc                USBUART_1_interfaceSetting_last
+                0x1fff90de                USBUART_1_transferByteCount
+                0x1fff90e0                USBUART_1_transferState
+                0x1fff90e1                USBUART_1_device
+                0x1fff90e4                USBUART_1_interfaceStatus
+                0x1fff90e6                USBUART_1_deviceAddress
+ *fill*         0x1fff90e7        0x1 
+ COMMON         0x1fff90e8        0xa .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
+                0x1fff90e8                USBUART_1_hidProtocol
+                0x1fff90ec                USBUART_1_hidIdleTimer
+                0x1fff90f0                USBUART_1_hidIdleRate
+ *fill*         0x1fff90f2        0x2 
+ COMMON         0x1fff90f4       0x22 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_descr.o)
+                0x1fff90f4                USBUART_1_idSerialNumberStringDescriptor
+ *fill*         0x1fff9116        0x2 
+ COMMON         0x1fff9118        0x4 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
+                0x1fff9118                errno
+                0x1fff9120                . = ALIGN (0x8)
+ *fill*         0x1fff911c        0x4 
  *(.ram.b)
-                0x1fff9128                _end = .
-                0x1fff9128                __end = .
-                0x1fff9128                PROVIDE (end, .)
-                0x1fff9128                PROVIDE (__bss_end__, .)
-                0x00005010                __cy_region_init_ram = LOADADDR (.data)
+                0x1fff9120                _end = .
+                0x1fff9120                __end = .
+                0x1fff9120                PROVIDE (end, .)
+                0x1fff9120                PROVIDE (__bss_end__, .)
+                0x00004f18                __cy_region_init_ram = LOADADDR (.data)
                 0x00000088                __cy_region_init_size_ram = (_edata - ADDR (.data))
-                0x00000f98                __cy_region_zero_size_ram = (_end - _edata)
+                0x00000f90                __cy_region_zero_size_ram = (_end - _edata)
 
-.heap           0x1fff9128       0x80 load address 0x00005098
-                0x1fff9128                . = _end
-                0x1fff91a8                . = (. + 0x80)
- *fill*         0x1fff9128       0x80 
-                0x1fff91a8                __cy_heap_limit = .
+.heap           0x1fff9120       0x80 load address 0x00004fa0
+                0x1fff9120                . = _end
+                0x1fff91a0                . = (. + 0x80)
+ *fill*         0x1fff9120       0x80 
+                0x1fff91a0                __cy_heap_limit = .
 
 .stack          0x20007800      0x800
                 0x20007800                __cy_stack_limit = .
@@ -1618,7 +1608,7 @@ END GROUP
  .cymeta        0x90500000        0xc .\ARM_GCC_493\Debug\cymetadata.o
                 0x90500000                cy_metadata
 
-.rel.dyn        0x00005098        0x0 load address 0x9050000c
+.rel.dyn        0x00004fa0        0x0 load address 0x9050000c
  .rel.iplt      0x00000000        0x0 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
 .stab           0x00000000       0x24
@@ -1641,282 +1631,282 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0xe60
+.debug_aranges  0x00000000      0xe58
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0xa0 .\ARM_GCC_493\Debug\main.o
+                0x00000000       0x98 .\ARM_GCC_493\Debug\main.o
  .debug_aranges
-                0x000000a0       0x18 .\ARM_GCC_493\Debug\cymetadata.o
+                0x00000098       0x18 .\ARM_GCC_493\Debug\cymetadata.o
  .debug_aranges
-                0x000000b8       0x48 .\ARM_GCC_493\Debug\Cm3Start.o
+                0x000000b0       0x48 .\ARM_GCC_493\Debug\Cm3Start.o
  .debug_aranges
-                0x00000100       0x60 .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
+                0x000000f8       0x60 .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
  .debug_aranges
-                0x00000160       0xb0 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
+                0x00000158       0xb0 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
  .debug_aranges
-                0x00000210       0xb0 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
+                0x00000208       0xb0 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
  .debug_aranges
-                0x000002c0       0x98 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+                0x000002b8       0x98 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
  .debug_aranges
-                0x00000358       0x40 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
+                0x00000350       0x40 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
  .debug_aranges
-                0x00000398       0x48 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
+                0x00000390       0x48 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
  .debug_aranges
-                0x000003e0       0x78 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
+                0x000003d8       0x78 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
  .debug_aranges
-                0x00000458       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_vnd.o)
+                0x00000450       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_vnd.o)
  .debug_aranges
-                0x00000478       0x98 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
+                0x00000470       0x98 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
  .debug_aranges
-                0x00000510       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(CyBootAsmGnu.o)
+                0x00000508       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(CyBootAsmGnu.o)
  .debug_aranges
-                0x00000530      0x298 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
+                0x00000528      0x298 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
  .debug_aranges
-                0x000007c8       0x98 .\ARM_GCC_493\Debug\USB_UART01.a(cyPm.o)
+                0x000007c0       0x98 .\ARM_GCC_493\Debug\USB_UART01.a(cyPm.o)
  .debug_aranges
-                0x00000860       0x38 .\ARM_GCC_493\Debug\USB_UART01.a(TX_pin.o)
+                0x00000858       0x38 .\ARM_GCC_493\Debug\USB_UART01.a(TX_pin.o)
  .debug_aranges
-                0x00000898       0x90 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
+                0x00000890       0x90 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
  .debug_aranges
-                0x00000928       0x80 .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
+                0x00000920       0x80 .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
  .debug_aranges
-                0x000009a8       0x38 .\ARM_GCC_493\Debug\USB_UART01.a(LED4.o)
+                0x000009a0       0x38 .\ARM_GCC_493\Debug\USB_UART01.a(LED4.o)
  .debug_aranges
-                0x000009e0       0x88 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
+                0x000009d8       0x88 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
  .debug_aranges
-                0x00000a68       0x40 .\ARM_GCC_493\Debug\USB_UART01.a(Receive.o)
+                0x00000a60       0x40 .\ARM_GCC_493\Debug\USB_UART01.a(Receive.o)
  .debug_aranges
-                0x00000aa8       0x80 .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
+                0x00000aa0       0x80 .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
  .debug_aranges
-                0x00000b28       0x80 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
+                0x00000b20       0x80 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
  .debug_aranges
-                0x00000ba8       0x38 .\ARM_GCC_493\Debug\USB_UART01.a(LED3.o)
+                0x00000ba0       0x38 .\ARM_GCC_493\Debug\USB_UART01.a(LED3.o)
  .debug_aranges
-                0x00000be0       0x38 .\ARM_GCC_493\Debug\USB_UART01.a(LED2.o)
+                0x00000bd8       0x38 .\ARM_GCC_493\Debug\USB_UART01.a(LED2.o)
  .debug_aranges
-                0x00000c18       0x80 .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
+                0x00000c10       0x80 .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
  .debug_aranges
-                0x00000c98       0x90 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
+                0x00000c90       0x90 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
  .debug_aranges
-                0x00000d28       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cls.o)
+                0x00000d20       0x20 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cls.o)
  .debug_aranges
-                0x00000d48       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_descr.o)
+                0x00000d40       0x18 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_descr.o)
  .debug_aranges
-                0x00000d60       0x88 .\ARM_GCC_493\Debug\USB_UART01.a(CyFlash.o)
+                0x00000d58       0x88 .\ARM_GCC_493\Debug\USB_UART01.a(CyFlash.o)
  .debug_aranges
-                0x00000de8       0x78 .\ARM_GCC_493\Debug\USB_UART01.a(CySpc.o)
+                0x00000de0       0x78 .\ARM_GCC_493\Debug\USB_UART01.a(CySpc.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x6744
+.debug_info     0x00000000     0x6749
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x5e9 .\ARM_GCC_493\Debug\main.o
- .debug_info    0x000005e9      0x139 .\ARM_GCC_493\Debug\cymetadata.o
- .debug_info    0x00000722      0x317 .\ARM_GCC_493\Debug\Cm3Start.o
- .debug_info    0x00000a39      0x4a2 .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
- .debug_info    0x00000edb      0x601 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
- .debug_info    0x000014dc      0x56f .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
- .debug_info    0x00001a4b      0x4ed .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
- .debug_info    0x00001f38      0x1a6 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
- .debug_info    0x000020de      0x34e .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
- .debug_info    0x0000242c      0x7bb .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
- .debug_info    0x00002be7      0x177 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_vnd.o)
- .debug_info    0x00002d5e      0x3c4 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
- .debug_info    0x00003122       0x87 .\ARM_GCC_493\Debug\USB_UART01.a(CyBootAsmGnu.o)
- .debug_info    0x000031a9      0xe31 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
- .debug_info    0x00003fda      0x55f .\ARM_GCC_493\Debug\USB_UART01.a(cyPm.o)
- .debug_info    0x00004539      0x11d .\ARM_GCC_493\Debug\USB_UART01.a(TX_pin.o)
- .debug_info    0x00004656      0x252 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
- .debug_info    0x000048a8      0x238 .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
- .debug_info    0x00004ae0      0x11d .\ARM_GCC_493\Debug\USB_UART01.a(LED4.o)
- .debug_info    0x00004bfd      0x23c .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
- .debug_info    0x00004e39      0x132 .\ARM_GCC_493\Debug\USB_UART01.a(Receive.o)
- .debug_info    0x00004f6b      0x238 .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
- .debug_info    0x000051a3      0x238 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
- .debug_info    0x000053db      0x11d .\ARM_GCC_493\Debug\USB_UART01.a(LED3.o)
- .debug_info    0x000054f8      0x11d .\ARM_GCC_493\Debug\USB_UART01.a(LED2.o)
- .debug_info    0x00005615      0x238 .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
- .debug_info    0x0000584d      0x252 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
- .debug_info    0x00005a9f      0x19b .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cls.o)
- .debug_info    0x00005c3a      0x2f3 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_descr.o)
- .debug_info    0x00005f2d      0x3c1 .\ARM_GCC_493\Debug\USB_UART01.a(CyFlash.o)
- .debug_info    0x000062ee      0x456 .\ARM_GCC_493\Debug\USB_UART01.a(CySpc.o)
+ .debug_info    0x00000000      0x5ee .\ARM_GCC_493\Debug\main.o
+ .debug_info    0x000005ee      0x139 .\ARM_GCC_493\Debug\cymetadata.o
+ .debug_info    0x00000727      0x317 .\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_info    0x00000a3e      0x4a2 .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
+ .debug_info    0x00000ee0      0x601 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
+ .debug_info    0x000014e1      0x56f .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
+ .debug_info    0x00001a50      0x4ed .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+ .debug_info    0x00001f3d      0x1a6 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
+ .debug_info    0x000020e3      0x34e .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
+ .debug_info    0x00002431      0x7bb .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
+ .debug_info    0x00002bec      0x177 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_vnd.o)
+ .debug_info    0x00002d63      0x3c4 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
+ .debug_info    0x00003127       0x87 .\ARM_GCC_493\Debug\USB_UART01.a(CyBootAsmGnu.o)
+ .debug_info    0x000031ae      0xe31 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
+ .debug_info    0x00003fdf      0x55f .\ARM_GCC_493\Debug\USB_UART01.a(cyPm.o)
+ .debug_info    0x0000453e      0x11d .\ARM_GCC_493\Debug\USB_UART01.a(TX_pin.o)
+ .debug_info    0x0000465b      0x252 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
+ .debug_info    0x000048ad      0x238 .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
+ .debug_info    0x00004ae5      0x11d .\ARM_GCC_493\Debug\USB_UART01.a(LED4.o)
+ .debug_info    0x00004c02      0x23c .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
+ .debug_info    0x00004e3e      0x132 .\ARM_GCC_493\Debug\USB_UART01.a(Receive.o)
+ .debug_info    0x00004f70      0x238 .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
+ .debug_info    0x000051a8      0x238 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
+ .debug_info    0x000053e0      0x11d .\ARM_GCC_493\Debug\USB_UART01.a(LED3.o)
+ .debug_info    0x000054fd      0x11d .\ARM_GCC_493\Debug\USB_UART01.a(LED2.o)
+ .debug_info    0x0000561a      0x238 .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
+ .debug_info    0x00005852      0x252 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
+ .debug_info    0x00005aa4      0x19b .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cls.o)
+ .debug_info    0x00005c3f      0x2f3 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_descr.o)
+ .debug_info    0x00005f32      0x3c1 .\ARM_GCC_493\Debug\USB_UART01.a(CyFlash.o)
+ .debug_info    0x000062f3      0x456 .\ARM_GCC_493\Debug\USB_UART01.a(CySpc.o)
 
-.debug_abbrev   0x00000000     0x24ae
+.debug_abbrev   0x00000000     0x249c
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x235 .\ARM_GCC_493\Debug\main.o
- .debug_abbrev  0x00000235       0x5d .\ARM_GCC_493\Debug\cymetadata.o
- .debug_abbrev  0x00000292      0x1b6 .\ARM_GCC_493\Debug\Cm3Start.o
- .debug_abbrev  0x00000448      0x187 .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
- .debug_abbrev  0x000005cf      0x1bf .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
- .debug_abbrev  0x0000078e      0x1db .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
- .debug_abbrev  0x00000969      0x179 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
- .debug_abbrev  0x00000ae2       0xd2 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
- .debug_abbrev  0x00000bb4      0x15e .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
- .debug_abbrev  0x00000d12      0x1ac .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
- .debug_abbrev  0x00000ebe       0xc5 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_vnd.o)
- .debug_abbrev  0x00000f83      0x12d .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
- .debug_abbrev  0x000010b0       0x14 .\ARM_GCC_493\Debug\USB_UART01.a(CyBootAsmGnu.o)
- .debug_abbrev  0x000010c4      0x217 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
- .debug_abbrev  0x000012db      0x16e .\ARM_GCC_493\Debug\USB_UART01.a(cyPm.o)
- .debug_abbrev  0x00001449       0x9d .\ARM_GCC_493\Debug\USB_UART01.a(TX_pin.o)
- .debug_abbrev  0x000014e6      0x128 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
- .debug_abbrev  0x0000160e      0x17f .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
- .debug_abbrev  0x0000178d       0x9d .\ARM_GCC_493\Debug\USB_UART01.a(LED4.o)
- .debug_abbrev  0x0000182a       0xf6 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
- .debug_abbrev  0x00001920       0x9d .\ARM_GCC_493\Debug\USB_UART01.a(Receive.o)
- .debug_abbrev  0x000019bd      0x17f .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
- .debug_abbrev  0x00001b3c      0x17f .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
- .debug_abbrev  0x00001cbb       0x9d .\ARM_GCC_493\Debug\USB_UART01.a(LED3.o)
- .debug_abbrev  0x00001d58       0x9d .\ARM_GCC_493\Debug\USB_UART01.a(LED2.o)
- .debug_abbrev  0x00001df5      0x17f .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
- .debug_abbrev  0x00001f74      0x128 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
- .debug_abbrev  0x0000209c       0xc5 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cls.o)
- .debug_abbrev  0x00002161       0xa7 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_descr.o)
- .debug_abbrev  0x00002208      0x12d .\ARM_GCC_493\Debug\USB_UART01.a(CyFlash.o)
- .debug_abbrev  0x00002335      0x179 .\ARM_GCC_493\Debug\USB_UART01.a(CySpc.o)
+ .debug_abbrev  0x00000000      0x223 .\ARM_GCC_493\Debug\main.o
+ .debug_abbrev  0x00000223       0x5d .\ARM_GCC_493\Debug\cymetadata.o
+ .debug_abbrev  0x00000280      0x1b6 .\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_abbrev  0x00000436      0x187 .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
+ .debug_abbrev  0x000005bd      0x1bf .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
+ .debug_abbrev  0x0000077c      0x1db .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
+ .debug_abbrev  0x00000957      0x179 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+ .debug_abbrev  0x00000ad0       0xd2 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
+ .debug_abbrev  0x00000ba2      0x15e .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
+ .debug_abbrev  0x00000d00      0x1ac .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
+ .debug_abbrev  0x00000eac       0xc5 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_vnd.o)
+ .debug_abbrev  0x00000f71      0x12d .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
+ .debug_abbrev  0x0000109e       0x14 .\ARM_GCC_493\Debug\USB_UART01.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x000010b2      0x217 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
+ .debug_abbrev  0x000012c9      0x16e .\ARM_GCC_493\Debug\USB_UART01.a(cyPm.o)
+ .debug_abbrev  0x00001437       0x9d .\ARM_GCC_493\Debug\USB_UART01.a(TX_pin.o)
+ .debug_abbrev  0x000014d4      0x128 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
+ .debug_abbrev  0x000015fc      0x17f .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
+ .debug_abbrev  0x0000177b       0x9d .\ARM_GCC_493\Debug\USB_UART01.a(LED4.o)
+ .debug_abbrev  0x00001818       0xf6 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
+ .debug_abbrev  0x0000190e       0x9d .\ARM_GCC_493\Debug\USB_UART01.a(Receive.o)
+ .debug_abbrev  0x000019ab      0x17f .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
+ .debug_abbrev  0x00001b2a      0x17f .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
+ .debug_abbrev  0x00001ca9       0x9d .\ARM_GCC_493\Debug\USB_UART01.a(LED3.o)
+ .debug_abbrev  0x00001d46       0x9d .\ARM_GCC_493\Debug\USB_UART01.a(LED2.o)
+ .debug_abbrev  0x00001de3      0x17f .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
+ .debug_abbrev  0x00001f62      0x128 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
+ .debug_abbrev  0x0000208a       0xc5 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cls.o)
+ .debug_abbrev  0x0000214f       0xa7 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_descr.o)
+ .debug_abbrev  0x000021f6      0x12d .\ARM_GCC_493\Debug\USB_UART01.a(CyFlash.o)
+ .debug_abbrev  0x00002323      0x179 .\ARM_GCC_493\Debug\USB_UART01.a(CySpc.o)
 
-.debug_line     0x00000000     0x3826
+.debug_line     0x00000000     0x383e
  *(.debug_line)
- .debug_line    0x00000000      0x499 .\ARM_GCC_493\Debug\main.o
- .debug_line    0x00000499       0x53 .\ARM_GCC_493\Debug\cymetadata.o
- .debug_line    0x000004ec      0x1d6 .\ARM_GCC_493\Debug\Cm3Start.o
- .debug_line    0x000006c2      0x1f3 .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
- .debug_line    0x000008b5      0x2e2 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
- .debug_line    0x00000b97      0x242 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
- .debug_line    0x00000dd9      0x21a .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
- .debug_line    0x00000ff3       0xec .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
- .debug_line    0x000010df      0x199 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
- .debug_line    0x00001278      0x459 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
- .debug_line    0x000016d1       0x97 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_vnd.o)
- .debug_line    0x00001768      0x1e3 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
- .debug_line    0x0000194b       0x7f .\ARM_GCC_493\Debug\USB_UART01.a(CyBootAsmGnu.o)
- .debug_line    0x000019ca      0x872 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
- .debug_line    0x0000223c      0x381 .\ARM_GCC_493\Debug\USB_UART01.a(cyPm.o)
- .debug_line    0x000025bd       0x97 .\ARM_GCC_493\Debug\USB_UART01.a(TX_pin.o)
- .debug_line    0x00002654      0x170 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
- .debug_line    0x000027c4      0x16c .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
- .debug_line    0x00002930       0x95 .\ARM_GCC_493\Debug\USB_UART01.a(LED4.o)
- .debug_line    0x000029c5      0x16f .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
- .debug_line    0x00002b34       0xaa .\ARM_GCC_493\Debug\USB_UART01.a(Receive.o)
- .debug_line    0x00002bde      0x163 .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
- .debug_line    0x00002d41      0x176 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
- .debug_line    0x00002eb7       0x95 .\ARM_GCC_493\Debug\USB_UART01.a(LED3.o)
- .debug_line    0x00002f4c       0x95 .\ARM_GCC_493\Debug\USB_UART01.a(LED2.o)
- .debug_line    0x00002fe1      0x173 .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
- .debug_line    0x00003154      0x178 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
- .debug_line    0x000032cc       0xa2 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cls.o)
- .debug_line    0x0000336e       0x67 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_descr.o)
- .debug_line    0x000033d5      0x21a .\ARM_GCC_493\Debug\USB_UART01.a(CyFlash.o)
- .debug_line    0x000035ef      0x237 .\ARM_GCC_493\Debug\USB_UART01.a(CySpc.o)
+ .debug_line    0x00000000      0x4b1 .\ARM_GCC_493\Debug\main.o
+ .debug_line    0x000004b1       0x53 .\ARM_GCC_493\Debug\cymetadata.o
+ .debug_line    0x00000504      0x1d6 .\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_line    0x000006da      0x1f3 .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
+ .debug_line    0x000008cd      0x2e2 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
+ .debug_line    0x00000baf      0x242 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
+ .debug_line    0x00000df1      0x21a .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+ .debug_line    0x0000100b       0xec .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
+ .debug_line    0x000010f7      0x199 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
+ .debug_line    0x00001290      0x459 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
+ .debug_line    0x000016e9       0x97 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_vnd.o)
+ .debug_line    0x00001780      0x1e3 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
+ .debug_line    0x00001963       0x7f .\ARM_GCC_493\Debug\USB_UART01.a(CyBootAsmGnu.o)
+ .debug_line    0x000019e2      0x872 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
+ .debug_line    0x00002254      0x381 .\ARM_GCC_493\Debug\USB_UART01.a(cyPm.o)
+ .debug_line    0x000025d5       0x97 .\ARM_GCC_493\Debug\USB_UART01.a(TX_pin.o)
+ .debug_line    0x0000266c      0x170 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
+ .debug_line    0x000027dc      0x16c .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
+ .debug_line    0x00002948       0x95 .\ARM_GCC_493\Debug\USB_UART01.a(LED4.o)
+ .debug_line    0x000029dd      0x16f .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
+ .debug_line    0x00002b4c       0xaa .\ARM_GCC_493\Debug\USB_UART01.a(Receive.o)
+ .debug_line    0x00002bf6      0x163 .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
+ .debug_line    0x00002d59      0x176 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
+ .debug_line    0x00002ecf       0x95 .\ARM_GCC_493\Debug\USB_UART01.a(LED3.o)
+ .debug_line    0x00002f64       0x95 .\ARM_GCC_493\Debug\USB_UART01.a(LED2.o)
+ .debug_line    0x00002ff9      0x173 .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
+ .debug_line    0x0000316c      0x178 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
+ .debug_line    0x000032e4       0xa2 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cls.o)
+ .debug_line    0x00003386       0x67 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_descr.o)
+ .debug_line    0x000033ed      0x21a .\ARM_GCC_493\Debug\USB_UART01.a(CyFlash.o)
+ .debug_line    0x00003607      0x237 .\ARM_GCC_493\Debug\USB_UART01.a(CySpc.o)
 
-.debug_frame    0x00000000     0x39a4
+.debug_frame    0x00000000     0x3980
  *(.debug_frame)
- .debug_frame   0x00000000      0x270 .\ARM_GCC_493\Debug\main.o
- .debug_frame   0x00000270       0xd8 .\ARM_GCC_493\Debug\Cm3Start.o
- .debug_frame   0x00000348      0x16c .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
- .debug_frame   0x000004b4      0x308 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
- .debug_frame   0x000007bc      0x2e4 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
- .debug_frame   0x00000aa0      0x23c .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
- .debug_frame   0x00000cdc       0xbc .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
- .debug_frame   0x00000d98      0x100 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
- .debug_frame   0x00000e98      0x1f4 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
- .debug_frame   0x0000108c       0x38 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_vnd.o)
- .debug_frame   0x000010c4      0x260 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
- .debug_frame   0x00001324      0xbe8 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
- .debug_frame   0x00001f0c      0x234 .\ARM_GCC_493\Debug\USB_UART01.a(cyPm.o)
- .debug_frame   0x00002140       0xa8 .\ARM_GCC_493\Debug\USB_UART01.a(TX_pin.o)
- .debug_frame   0x000021e8      0x230 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
- .debug_frame   0x00002418      0x1e8 .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
- .debug_frame   0x00002600       0xa8 .\ARM_GCC_493\Debug\USB_UART01.a(LED4.o)
- .debug_frame   0x000026a8      0x208 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
- .debug_frame   0x000028b0       0xcc .\ARM_GCC_493\Debug\USB_UART01.a(Receive.o)
- .debug_frame   0x0000297c      0x1e8 .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
- .debug_frame   0x00002b64      0x1e8 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
- .debug_frame   0x00002d4c       0xa8 .\ARM_GCC_493\Debug\USB_UART01.a(LED3.o)
- .debug_frame   0x00002df4       0xa8 .\ARM_GCC_493\Debug\USB_UART01.a(LED2.o)
- .debug_frame   0x00002e9c      0x1e8 .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
- .debug_frame   0x00003084      0x230 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
- .debug_frame   0x000032b4       0x38 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cls.o)
- .debug_frame   0x000032ec      0x238 .\ARM_GCC_493\Debug\USB_UART01.a(CyFlash.o)
- .debug_frame   0x00003524      0x1f8 .\ARM_GCC_493\Debug\USB_UART01.a(CySpc.o)
- .debug_frame   0x0000371c       0x20 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
- .debug_frame   0x0000373c       0x28 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
- .debug_frame   0x00003764       0x2c d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
- .debug_frame   0x00003790       0x28 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
- .debug_frame   0x000037b8       0x20 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
- .debug_frame   0x000037d8       0x44 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-rand.o)
- .debug_frame   0x0000381c       0x2c d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-time.o)
- .debug_frame   0x00003848       0x2c d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-gettimeofdayr.o)
- .debug_frame   0x00003874       0x30 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-malloc.o)
- .debug_frame   0x000038a4       0x2c d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x000038d0       0x2c d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x000038fc       0x5c d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
- .debug_frame   0x00003958       0x2c d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
- .debug_frame   0x00003984       0x20 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libnosys.a(gettod.o)
+ .debug_frame   0x00000000      0x24c .\ARM_GCC_493\Debug\main.o
+ .debug_frame   0x0000024c       0xd8 .\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_frame   0x00000324      0x16c .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
+ .debug_frame   0x00000490      0x308 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
+ .debug_frame   0x00000798      0x2e4 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
+ .debug_frame   0x00000a7c      0x23c .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+ .debug_frame   0x00000cb8       0xbc .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
+ .debug_frame   0x00000d74      0x100 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
+ .debug_frame   0x00000e74      0x1f4 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
+ .debug_frame   0x00001068       0x38 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_vnd.o)
+ .debug_frame   0x000010a0      0x260 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
+ .debug_frame   0x00001300      0xbe8 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
+ .debug_frame   0x00001ee8      0x234 .\ARM_GCC_493\Debug\USB_UART01.a(cyPm.o)
+ .debug_frame   0x0000211c       0xa8 .\ARM_GCC_493\Debug\USB_UART01.a(TX_pin.o)
+ .debug_frame   0x000021c4      0x230 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
+ .debug_frame   0x000023f4      0x1e8 .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
+ .debug_frame   0x000025dc       0xa8 .\ARM_GCC_493\Debug\USB_UART01.a(LED4.o)
+ .debug_frame   0x00002684      0x208 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
+ .debug_frame   0x0000288c       0xcc .\ARM_GCC_493\Debug\USB_UART01.a(Receive.o)
+ .debug_frame   0x00002958      0x1e8 .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
+ .debug_frame   0x00002b40      0x1e8 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
+ .debug_frame   0x00002d28       0xa8 .\ARM_GCC_493\Debug\USB_UART01.a(LED3.o)
+ .debug_frame   0x00002dd0       0xa8 .\ARM_GCC_493\Debug\USB_UART01.a(LED2.o)
+ .debug_frame   0x00002e78      0x1e8 .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
+ .debug_frame   0x00003060      0x230 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
+ .debug_frame   0x00003290       0x38 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cls.o)
+ .debug_frame   0x000032c8      0x238 .\ARM_GCC_493\Debug\USB_UART01.a(CyFlash.o)
+ .debug_frame   0x00003500      0x1f8 .\ARM_GCC_493\Debug\USB_UART01.a(CySpc.o)
+ .debug_frame   0x000036f8       0x20 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x00003718       0x28 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x00003740       0x2c d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x0000376c       0x28 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
+ .debug_frame   0x00003794       0x20 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x000037b4       0x44 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-rand.o)
+ .debug_frame   0x000037f8       0x2c d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-time.o)
+ .debug_frame   0x00003824       0x2c d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-gettimeofdayr.o)
+ .debug_frame   0x00003850       0x30 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-malloc.o)
+ .debug_frame   0x00003880       0x2c d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x000038ac       0x2c d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x000038d8       0x5c d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
+ .debug_frame   0x00003934       0x2c d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x00003960       0x20 d:/program files/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libnosys.a(gettod.o)
 
-.debug_str      0x00000000     0x32af
+.debug_str      0x00000000     0x32b2
  *(.debug_str)
- .debug_str     0x00000000      0x437 .\ARM_GCC_493\Debug\main.o
-                                0x480 (size before relaxing)
- .debug_str     0x00000437       0xb5 .\ARM_GCC_493\Debug\cymetadata.o
+ .debug_str     0x00000000      0x433 .\ARM_GCC_493\Debug\main.o
+                                0x47c (size before relaxing)
+ .debug_str     0x00000433       0xb5 .\ARM_GCC_493\Debug\cymetadata.o
                                 0x1e8 (size before relaxing)
- .debug_str     0x000004ec      0x139 .\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_str     0x000004e8      0x139 .\ARM_GCC_493\Debug\Cm3Start.o
                                 0x2c9 (size before relaxing)
- .debug_str     0x00000625      0x1d6 .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
+ .debug_str     0x00000621      0x1dd .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
                                 0x389 (size before relaxing)
- .debug_str     0x000007fb      0x397 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
+ .debug_str     0x000007fe      0x397 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
                                 0x538 (size before relaxing)
- .debug_str     0x00000b92      0x2e9 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
+ .debug_str     0x00000b95      0x2e9 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
                                 0x51c (size before relaxing)
- .debug_str     0x00000e7b      0x2c0 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+ .debug_str     0x00000e7e      0x2c0 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
                                 0x61b (size before relaxing)
- .debug_str     0x0000113b       0x8e .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
+ .debug_str     0x0000113e       0x8e .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
                                 0x282 (size before relaxing)
- .debug_str     0x000011c9      0x136 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
+ .debug_str     0x000011cc      0x136 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
                                 0x38d (size before relaxing)
- .debug_str     0x000012ff      0x2c8 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
+ .debug_str     0x00001302      0x2c8 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
                                 0x6a4 (size before relaxing)
- .debug_str     0x000015c7       0x67 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_vnd.o)
+ .debug_str     0x000015ca       0x67 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_vnd.o)
                                 0x25b (size before relaxing)
- .debug_str     0x0000162e      0x16c .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
+ .debug_str     0x00001631      0x16c .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
                                 0x30b (size before relaxing)
- .debug_str     0x0000179a      0x7cd .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
+ .debug_str     0x0000179d      0x7cd .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
                                 0x9c4 (size before relaxing)
- .debug_str     0x00001f67      0x367 .\ARM_GCC_493\Debug\USB_UART01.a(cyPm.o)
+ .debug_str     0x00001f6a      0x367 .\ARM_GCC_493\Debug\USB_UART01.a(cyPm.o)
                                 0x529 (size before relaxing)
- .debug_str     0x000022ce       0x6d .\ARM_GCC_493\Debug\USB_UART01.a(TX_pin.o)
+ .debug_str     0x000022d1       0x6d .\ARM_GCC_493\Debug\USB_UART01.a(TX_pin.o)
                                 0x1e5 (size before relaxing)
- .debug_str     0x0000233b       0x46 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
+ .debug_str     0x0000233e       0x46 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
                                 0x300 (size before relaxing)
- .debug_str     0x00002381      0x112 .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
+ .debug_str     0x00002384      0x112 .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
                                 0x2c2 (size before relaxing)
- .debug_str     0x00002493       0x58 .\ARM_GCC_493\Debug\USB_UART01.a(LED4.o)
+ .debug_str     0x00002496       0x58 .\ARM_GCC_493\Debug\USB_UART01.a(LED4.o)
                                 0x1db (size before relaxing)
- .debug_str     0x000024eb      0x22f .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
+ .debug_str     0x000024ee      0x22f .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
                                 0x3d7 (size before relaxing)
- .debug_str     0x0000271a       0x7e .\ARM_GCC_493\Debug\USB_UART01.a(Receive.o)
+ .debug_str     0x0000271d       0x7e .\ARM_GCC_493\Debug\USB_UART01.a(Receive.o)
                                 0x201 (size before relaxing)
- .debug_str     0x00002798      0x174 .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
+ .debug_str     0x0000279b      0x174 .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
                                 0x324 (size before relaxing)
- .debug_str     0x0000290c      0x19e .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
+ .debug_str     0x0000290f      0x19e .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
                                 0x34e (size before relaxing)
- .debug_str     0x00002aaa       0x58 .\ARM_GCC_493\Debug\USB_UART01.a(LED3.o)
+ .debug_str     0x00002aad       0x58 .\ARM_GCC_493\Debug\USB_UART01.a(LED3.o)
                                 0x1db (size before relaxing)
- .debug_str     0x00002b02       0x58 .\ARM_GCC_493\Debug\USB_UART01.a(LED2.o)
+ .debug_str     0x00002b05       0x58 .\ARM_GCC_493\Debug\USB_UART01.a(LED2.o)
                                 0x1db (size before relaxing)
- .debug_str     0x00002b5a      0x174 .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
+ .debug_str     0x00002b5d      0x174 .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
                                 0x31d (size before relaxing)
- .debug_str     0x00002cce      0x1e8 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
+ .debug_str     0x00002cd1      0x1e8 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
                                 0x389 (size before relaxing)
- .debug_str     0x00002eb6       0x45 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cls.o)
+ .debug_str     0x00002eb9       0x45 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cls.o)
                                 0x271 (size before relaxing)
- .debug_str     0x00002efb      0x134 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_descr.o)
+ .debug_str     0x00002efe      0x134 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_descr.o)
                                 0x3c2 (size before relaxing)
- .debug_str     0x0000302f      0x15f .\ARM_GCC_493\Debug\USB_UART01.a(CyFlash.o)
+ .debug_str     0x00003032      0x15f .\ARM_GCC_493\Debug\USB_UART01.a(CyFlash.o)
                                 0x300 (size before relaxing)
- .debug_str     0x0000318e      0x121 .\ARM_GCC_493\Debug\USB_UART01.a(CySpc.o)
+ .debug_str     0x00003191      0x121 .\ARM_GCC_493\Debug\USB_UART01.a(CySpc.o)
                                 0x2e5 (size before relaxing)
 
 .debug_loc
@@ -1925,36 +1915,36 @@ END GROUP
 .debug_macinfo
  *(.debug_macinfo)
 
-.debug_ranges   0x00000000      0xc50
+.debug_ranges   0x00000000      0xc48
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x90 .\ARM_GCC_493\Debug\main.o
- .debug_ranges  0x00000090       0x38 .\ARM_GCC_493\Debug\Cm3Start.o
- .debug_ranges  0x000000c8       0x50 .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
- .debug_ranges  0x00000118       0xa0 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
- .debug_ranges  0x000001b8       0xa0 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
- .debug_ranges  0x00000258       0x88 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
- .debug_ranges  0x000002e0       0x30 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
- .debug_ranges  0x00000310       0x38 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
- .debug_ranges  0x00000348       0x68 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
- .debug_ranges  0x000003b0       0x10 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_vnd.o)
- .debug_ranges  0x000003c0       0x88 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
- .debug_ranges  0x00000448      0x288 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
- .debug_ranges  0x000006d0       0x88 .\ARM_GCC_493\Debug\USB_UART01.a(cyPm.o)
- .debug_ranges  0x00000758       0x28 .\ARM_GCC_493\Debug\USB_UART01.a(TX_pin.o)
- .debug_ranges  0x00000780       0x80 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
- .debug_ranges  0x00000800       0x70 .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
- .debug_ranges  0x00000870       0x28 .\ARM_GCC_493\Debug\USB_UART01.a(LED4.o)
- .debug_ranges  0x00000898       0x78 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
- .debug_ranges  0x00000910       0x30 .\ARM_GCC_493\Debug\USB_UART01.a(Receive.o)
- .debug_ranges  0x00000940       0x70 .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
- .debug_ranges  0x000009b0       0x70 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
- .debug_ranges  0x00000a20       0x28 .\ARM_GCC_493\Debug\USB_UART01.a(LED3.o)
- .debug_ranges  0x00000a48       0x28 .\ARM_GCC_493\Debug\USB_UART01.a(LED2.o)
- .debug_ranges  0x00000a70       0x70 .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
- .debug_ranges  0x00000ae0       0x80 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
- .debug_ranges  0x00000b60       0x10 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cls.o)
- .debug_ranges  0x00000b70       0x78 .\ARM_GCC_493\Debug\USB_UART01.a(CyFlash.o)
- .debug_ranges  0x00000be8       0x68 .\ARM_GCC_493\Debug\USB_UART01.a(CySpc.o)
+ .debug_ranges  0x00000000       0x88 .\ARM_GCC_493\Debug\main.o
+ .debug_ranges  0x00000088       0x38 .\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_ranges  0x000000c0       0x50 .\ARM_GCC_493\Debug\USB_UART01.a(cyfitter_cfg.o)
+ .debug_ranges  0x00000110       0xa0 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1.o)
+ .debug_ranges  0x000001b0       0xa0 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cdc.o)
+ .debug_ranges  0x00000250       0x88 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_drv.o)
+ .debug_ranges  0x000002d8       0x30 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_episr.o)
+ .debug_ranges  0x00000308       0x38 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_hid.o)
+ .debug_ranges  0x00000340       0x68 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_std.o)
+ .debug_ranges  0x000003a8       0x10 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_vnd.o)
+ .debug_ranges  0x000003b8       0x88 .\ARM_GCC_493\Debug\USB_UART01.a(LCD.o)
+ .debug_ranges  0x00000440      0x288 .\ARM_GCC_493\Debug\USB_UART01.a(CyLib.o)
+ .debug_ranges  0x000006c8       0x88 .\ARM_GCC_493\Debug\USB_UART01.a(cyPm.o)
+ .debug_ranges  0x00000750       0x28 .\ARM_GCC_493\Debug\USB_UART01.a(TX_pin.o)
+ .debug_ranges  0x00000778       0x80 .\ARM_GCC_493\Debug\USB_UART01.a(Timer.o)
+ .debug_ranges  0x000007f8       0x70 .\ARM_GCC_493\Debug\USB_UART01.a(TimerISR.o)
+ .debug_ranges  0x00000868       0x28 .\ARM_GCC_493\Debug\USB_UART01.a(LED4.o)
+ .debug_ranges  0x00000890       0x78 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_Timer.o)
+ .debug_ranges  0x00000908       0x30 .\ARM_GCC_493\Debug\USB_UART01.a(Receive.o)
+ .debug_ranges  0x00000938       0x70 .\ARM_GCC_493\Debug\USB_UART01.a(Edge_detect_IRQ.o)
+ .debug_ranges  0x000009a8       0x70 .\ARM_GCC_493\Debug\USB_UART01.a(Idle_Collision_IRQ.o)
+ .debug_ranges  0x00000a18       0x28 .\ARM_GCC_493\Debug\USB_UART01.a(LED3.o)
+ .debug_ranges  0x00000a40       0x28 .\ARM_GCC_493\Debug\USB_UART01.a(LED2.o)
+ .debug_ranges  0x00000a68       0x70 .\ARM_GCC_493\Debug\USB_UART01.a(ReceiveTimerIRQ.o)
+ .debug_ranges  0x00000ad8       0x80 .\ARM_GCC_493\Debug\USB_UART01.a(Receive_Timer.o)
+ .debug_ranges  0x00000b58       0x10 .\ARM_GCC_493\Debug\USB_UART01.a(USBUART_1_cls.o)
+ .debug_ranges  0x00000b68       0x78 .\ARM_GCC_493\Debug\USB_UART01.a(CyFlash.o)
+ .debug_ranges  0x00000be0       0x68 .\ARM_GCC_493\Debug\USB_UART01.a(CySpc.o)
 
 .comment        0x00000000       0x70
  .comment       0x00000000       0x70 .\ARM_GCC_493\Debug\main.o

@@ -37,7 +37,7 @@ int diffManEncodedData[864];
 uint8 diffManReceivedData[108];
 char rxChar[108];
 int receivedDataIndex, receivedDataCount;
-int halfBitIndex = 0, currentDataPos = 0, currentRXCharPosition = 0, lengthOfData, messageLength, TX_DESTINATION_ADDRESS = 0;
+int halfBitIndex = 0, currentDataPos = 0, currentRXCharPosition = 0, rxMessageLength=0, TX_DESTINATION_ADDRESS = 0;
 bool timerExpired, dataTransmissionComplete, powerOnEdge;
 enum state {idle, busy, collision} networkState;
 enum crc {none, header, message, both} crcState;
@@ -93,8 +93,6 @@ int main()
     uint8 stringPosition = 0;//after header
     timerExpired = false;
     dataTransmissionComplete = false;
-
-	messageLength = 0;
 
     powerOnEdge = true; //When the system powers up, it creates a rising edge.
     //We want to ignore this edge on the rising edge.
@@ -152,49 +150,37 @@ int main()
         /*Receive*/
         //Precondidtion: must finished receiving data so channel state machine at idle and wait for a char
         if(networkState == idle && receivedDataCount >= 34){//TODO remove hardcode #
-          
-            //Decodes only the header of the received differential manchester encoded message
-            //Each of the 7 bytes of the header are stored in receivedHeaderBytes array
-            uint8 receivedHeaderBytes[LENGTH_OF_HEADER];
-            int i;
-            for(i = 0; i < LENGTH_OF_HEADER; i++){
-                diffManToHex();
-                receivedHeaderBytes[i] = receivedHexValue;
-            }
-            
-            //The received header must be check before continuing with the rest of the received message
-            bool headerValid = headerCheck(receivedHeaderBytes);
-            if(headerValid){
-                //If header valid, decoded received message
-            }
-            else{
-                //If header not valid, disregard received message 
-            }
-            
-            
-            
             //Verify that have received start bit (01). Note: ignore first edge from turning system on
             if(diffManReceivedData[0] == 0 && diffManReceivedData[1] == 1){
+                //Decodes only the header of the received differential manchester encoded message
+                //Each of the 7 bytes of the header are stored in receivedHeaderBytes array
+                uint8 receivedHeaderBytes[LENGTH_OF_HEADER];
                 receivedDataIndex = 2; //skip start bit (two half bits)
-                while(receivedDataIndex < receivedDataCount-1){     //Note: receivedDataCount-1 b/c gets one extra bit from Receive_Timer expiring
+                int i;
+                for(i = 0; i < LENGTH_OF_HEADER; i++){
                     diffManToHex();
-					storeChar();
-                    receivedHexValue = 0;       //Reset the char
+                    receivedHeaderBytes[i] = receivedHexValue;
+                    receivedHexValue = 0;   //Clears temp variable which was stored 
                 }
-				if(headerCheck()){
-                    printChar();
+                
+                //The received header must be check before continuing with the rest of the received message
+                bool headerValid = headerCheck(receivedHeaderBytes);
+                if(headerValid){
+                    //If header valid, decoded received message
+                    for(i=0; i < rxMessageLength; i++){
+                        diffManToHex(); //Note: function updates receivedDataIndex
+    					printChar();
+                        receivedHexValue = 0;   //Clears temp variable which was stored 
+                    }
+                    
                 }
-
-                receivedDataCount = 0;  //Reset count
-                receivedDataIndex = 0;  //Reset index
-                currentRXCharPosition = 0;
-            }
-            else{
-                //Receive data did not start with the start bit
-                receivedDataCount = 0;
-                receivedDataIndex = 0;
-                currentRXCharPosition = 0;
-            }
+                else{
+                    //If header not valid, disregard received message 
+                }
+            }//end start bit check
+            receivedDataCount = 0;  //Reset count
+            receivedDataIndex = 0;  //Reset index
+            currentRXCharPosition = 0;
         }
         else
         {
@@ -556,20 +542,11 @@ void diffManToHex()
     }//end for loop
 }
 
-//stores char (receivedHexValue) in receive array
-void storeChar(){
-	receivedHexValue &= ASCII_CHAR_MASK;
-	rxChar[currentRXCharPosition] = receivedHexValue;
-	currentRXCharPosition++;
-}
-
-//Grabs all chars and prints to LCD
+//Prints char to LCD
 void printChar(){
-	int i;//char position after array
-    for(i = 7; i < messageLength; i++){//we are assuming messageLength from the header is valid and corresponds to currentRXCharPosition
-		LCD_PutChar(rxChar[i]);
-		//TODO: implement USB transmit
-    }
+    ///Remove leading 1 bit of char
+    receivedHexValue &= ASCII_CHAR_MASK; 
+    LCD_PutChar(receivedHexValue); 
 }
 
 /*
@@ -598,6 +575,7 @@ bool headerCheck(uint8 *receivedHeaderBytes)
         if(receivedHeaderBytes[3]==0 || receivedHeaderBytes[3]==SOURCE_ADDRESS_0
           || receivedHeaderBytes[3]==SOURCE_ADDRESS_1 || receivedHeaderBytes[3]==SOURCE_ADDRESS_2)
         {
+            rxMessageLength = receivedHeaderBytes[4]; //saves message length from header
 			validHeader = true;
 		}
 	}
