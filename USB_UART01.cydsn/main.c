@@ -85,6 +85,7 @@ int main()
 {
     char rx;
     char lineString[108];
+    uint8 headerInHex[8];
     uint8 stringPosition = HEADER_POS;//after header
     timerExpired = false;
     dataTransmissionComplete = false;
