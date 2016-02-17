@@ -308,7 +308,7 @@ void asciiToDiffMan(char asciiChar)
         asciiChar=asciiChar/2;
     }*/
     for (i = 0; i < 8; ++i){//todo test new value
-        binaryValueOfChar[i] = (mychar >> i) & 1;
+        binaryValueOfChar[i] = (asciiChar >> i) & 1;
     }
     //differential encode the 7 bits (from the binary version of the char)
     //must start at the end of the array so to encode the MSB first
